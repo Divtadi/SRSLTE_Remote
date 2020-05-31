@@ -31,6 +31,7 @@
 #include "srslte/common/rwlock_guard.h"
 #include "srslte/common/time_prof.h"
 
+#include <iostream>
 //#define WRITE_SIB_PCAP
 using namespace asn1::rrc;
 
@@ -143,7 +144,7 @@ int mac::ue_qci_value(uint16_t rnti, uint32_t qci)
   if (ue_db.count(rnti)) {
     ue_db[rnti]->set_qci(qci);
     ret = 0;
-    cout << "The QCI Value for this UE is" << ue_db[rnti]->ue_qci ;
+    std::cout << "The QCI Value for this UE is" << ue_db[rnti]->ue_qci ;
   } else {
     Error("User rnti=0x%x not found\n", rnti);
   }
