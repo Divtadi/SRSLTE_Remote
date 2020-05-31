@@ -104,6 +104,8 @@ public:
   bool is_phy_added = false;
   int  read_pdu(uint32_t lcid, uint8_t* payload, uint32_t requested_bytes) final;
 
+  uint32_t      ue_qci       = 0; // to store qci
+
 private:
   uint32_t allocate_cc_buffers(const uint32_t num_cc = 1); ///< Add and initialize softbuffers for CC
 
@@ -127,7 +129,6 @@ private:
   uint32_t          nof_failures     = 0;
   int               nof_rx_harq_proc = 0;
   int               nof_tx_harq_proc = 0;
-  uint32_t 	    ue_qci 	     = 0; // to store qci
 
 
   typedef std::vector<srslte_softbuffer_tx_t>
