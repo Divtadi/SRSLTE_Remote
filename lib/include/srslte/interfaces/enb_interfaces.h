@@ -299,13 +299,13 @@ public:
   virtual void
   write_mcch(asn1::rrc::sib_type2_s* sib2, asn1::rrc::sib_type13_r9_s* sib13, asn1::rrc::mcch_msg_s* mcch) = 0;
 
-  // ADD INTERFACE FUNCTION TO INCLUDE QCI with RNTI MAPPING TOWARDS MAC
-  virtual int  ue_qci_value(uint16_t rnti, uint32_t qci)                                        = 0;
-
   /**
    * Allocate a C-RNTI for a new user, without adding it to the phy layer and scheduler yet
    * @return value of the allocated C-RNTI
    */
+  // ADD INTERFACE FUNCTION TO INCLUDE QCI with RNTI MAPPING TOWARDS MAC
+  virtual int  ue_qci_value(uint16_t rnti, uint32_t qci)                                        = 0;
+  
   virtual uint16_t allocate_rnti() = 0;
 };
 

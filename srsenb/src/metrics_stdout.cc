@@ -92,8 +92,8 @@ void metrics_stdout::set_metrics(const enb_metrics_t& metrics, const uint32_t pe
   if (++n_reports > 10) {
     n_reports = 0;
     cout << endl;
-    cout << "------DL-------------------------------------UL------------------------------------" << endl;
-    cout << "rnti cqi  ri mcs brate   QCI  ok  nok  (%)  snr  phr mcs brate   ok  nok  (%)   bsr" << endl;
+    cout << "------DL--------------------------------UL------------------------------------" << endl;
+    cout << "rnti cqi  ri mcs brate   ok  nok  (%)  snr  phr mcs brate   ok  nok  (%)   bsr" << endl;
   }
 
   for (int i = 0; i < metrics.stack.rrc.n_ues; i++) {
@@ -118,7 +118,6 @@ void metrics_stdout::set_metrics(const enb_metrics_t& metrics, const uint32_t pe
     } else {
       cout << float_to_string(0, 1, 6) << "";
     }
-    cout << float_to_string(metrics.stack.mac[i].ue_qci_metric, 1, 4);
     cout << std::setw(5) << metrics.stack.mac[i].tx_pkts - metrics.stack.mac[i].tx_errors;
     cout << std::setw(5) << metrics.stack.mac[i].tx_errors;
     if (metrics.stack.mac[i].tx_pkts > 0 && metrics.stack.mac[i].tx_errors) {
