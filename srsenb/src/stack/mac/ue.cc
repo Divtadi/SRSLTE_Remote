@@ -39,8 +39,7 @@ ue::ue(uint16_t                 rnti_,
        srslte::log_ref          log_,
        uint32_t                 nof_cells_,
        uint32_t                 nof_rx_harq_proc_,
-       uint32_t                 nof_tx_harq_proc_,
-       uint32_t                 ue_qci_) :
+       uint32_t                 nof_tx_harq_proc_) :
   rnti(rnti_),
   nof_prb(nof_prb_),
   sched(sched_),
@@ -54,7 +53,6 @@ ue::ue(uint16_t                 rnti_,
   pdus(128),
   nof_rx_harq_proc(nof_rx_harq_proc_),
   nof_tx_harq_proc(nof_tx_harq_proc_),
-  ue_qci(ue_qci_),
   ta_fsm(this)
 {
   srslte::byte_buffer_pool* pool = srslte::byte_buffer_pool::get_instance();
