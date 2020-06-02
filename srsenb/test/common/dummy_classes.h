@@ -41,7 +41,7 @@ public:
   {}
   
   // ADD INTERFACE FUNCTION TO INCLUDE QCI with RNTI MAPPING TOWARDS MAC
-  int  ue_qci_value(uint16_t rnti, uint32_t qci)  override { return 0; }
+  void  ue_qci_value(uint16_t rnti, uint32_t qci)  override {}
 
   uint16_t allocate_rnti() override { return last_rnti++; }
 
