@@ -304,7 +304,7 @@ public:
    * @return value of the allocated C-RNTI
    */
   // ADD INTERFACE FUNCTION TO INCLUDE QCI with RNTI MAPPING TOWARDS MAC
-  virtual int  ue_qci_value(uint16_t rnti, uint32_t qci)                                        = 0;
+  virtual void  ue_qci_value(uint16_t rnti, uint32_t qci)                                        = 0;
   
   virtual uint16_t allocate_rnti() = 0;
 };

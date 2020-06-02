@@ -138,17 +138,15 @@ void mac::start_pcap(srslte::mac_pcap* pcap_)
   }
 }
 
-int mac::ue_qci_value(uint16_t rnti, uint32_t qci)
+void mac::ue_qci_value(uint16_t rnti, uint32_t qci)
 {
-  int                                  ret = -1;
-  if (ue_db.count(rnti)) {
+    if (ue_db.count(rnti)) {
     ue_db[rnti]->set_qci(qci);
-    ret = 0;
-    std::cout << "The QCI Value for this UE is" << ue_db[rnti]->ue_qci ;
+    std::cout << "The QCI Value for this UE is" << ue_db[rnti]->ue_qci;
   } else {
     Error("User rnti=0x%x not found\n", rnti);
+    std::cout << "The QCI Value for this UE is" << ue_db[rnti]->ue_qci;
   }
-  return ret;
 }
 
 
