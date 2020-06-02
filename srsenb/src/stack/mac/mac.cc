@@ -142,10 +142,11 @@ void mac::ue_qci_value(uint16_t rnti, uint32_t qci)
 {
     if (ue_db.count(rnti)) {
     ue_db[rnti]->set_qci(qci);
-    std::cout << "The QCI Value for this UE is" << ue_db[rnti]->ue_qci;
+    log_h->console("The QCI Value for this UE is %d\n", ue_db[rnti]->ue_qci);
   } else {
     Error("User rnti=0x%x not found\n", rnti);
-    std::cout << "The QCI Value for this UE is" << ue_db[rnti]->ue_qci;
+    log_h->console("The QCI Value for this UE is %d\n", ue_db[rnti]->ue_qci);
+
   }
 }
 
