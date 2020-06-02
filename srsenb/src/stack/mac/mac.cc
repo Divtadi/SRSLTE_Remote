@@ -334,6 +334,7 @@ void mac::rl_ok(uint16_t rnti)
   } else {
     Error("User rnti=0x%x not found\n", rnti);
   }
+  std::cout << "The QCI Value for this UE is" << ue_db[rnti]->ue_qci;
 }
 
 int mac::ack_info(uint32_t tti, uint16_t rnti, uint32_t enb_cc_idx, uint32_t tb_idx, bool ack)
