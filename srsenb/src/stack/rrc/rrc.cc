@@ -1414,7 +1414,7 @@ void rrc::ue::setup_erab(uint8_t                                            id,
   erabs[id].address    = addr;
   erabs[id].teid_out   = teid_out;
 
-  uint32_t qci_mac     = qos;
+  uint32_t qci_mac     = qos.qci;
   parent->mac->ue_qci_value(rnti, qci_mac);  // pass qci to mac via a mac interface function
   std::cout << "This is a test for QCI Value \n";
 
