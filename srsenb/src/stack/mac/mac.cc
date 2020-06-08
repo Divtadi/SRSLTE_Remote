@@ -136,6 +136,7 @@ void mac::start_pcap(srslte::mac_pcap* pcap_)
   for (auto& u : ue_db) {
     u.second->start_pcap(pcap);
   }
+  std::cout << "This is a test message" << std::endl;
 }
 
 void mac::ue_qci_value(uint16_t rnti, uint32_t qci)
