@@ -1416,7 +1416,6 @@ void rrc::ue::setup_erab(uint8_t                                            id,
 
   uint32_t qci_mac     = qos.qci;
   parent->mac->ue_qci_value(rnti, qci_mac);  // pass qci to mac via a mac interface function
-  std::cout << "This is a test for QCI Value \n";
 
   if (addr.length() > 32) {
     parent->rrc_log->error("Only addresses with length <= 32 are supported\n");
