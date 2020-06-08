@@ -193,11 +193,7 @@ void rrc::add_user(uint16_t rnti, const sched_interface::ue_cfg_t& sched_ue_cfg)
   } else {
     rrc_log->error("Adding user rnti=0x%x (already exists)\n", rnti);
 
-//   uint32_t qci     = erabs[erab_id].qos_params.qci;
-//
-//   parent->mac->ue_qci_value(rnti, qci);  // pass qci to mac via a mac interface function
-//   parent->rrc_log->console("The QCI Value for this UE is %d\n", qci);
-      std::cout << "This is a test for QCI Value" std::endl;
+
   }
 
   if (rnti == SRSLTE_MRNTI) {
@@ -1418,6 +1414,10 @@ void rrc::ue::setup_erab(uint8_t                                            id,
   erabs[id].address    = addr;
   erabs[id].teid_out   = teid_out;
 
+  uint32_t qci_mac     = qos;
+  parent->mac->ue_qci_value(rnti, qci_mac);  // pass qci to mac via a mac interface function
+  std::cout << "This is a test for QCI Value \n";
+
   if (addr.length() > 32) {
     parent->rrc_log->error("Only addresses with length <= 32 are supported\n");
     return;
@@ -1670,9 +1670,6 @@ int rrc::ue::get_drbid_config(drb_to_add_mod_s* drb, int drb_id)
   uint32_t erab_id = lc_id + 2;
   uint32_t qci     = erabs[erab_id].qos_params.qci;
 
-//  parent->mac->ue_qci_value(rnti, qci);  // pass qci to mac via a mac interface function
-//  parent->rrc_log->console("The QCI Value for this UE is %d\n", qci);
-//  std::cout << "The QCI Value for this UE is " << qci << std::endl;
   if (qci >= MAX_NOF_QCI) {
     parent->rrc_log->error("Invalid QCI=%d for ERAB_id=%d, DRB_id=%d\n", qci, erab_id, drb_id);
     return SRSLTE_ERROR;
