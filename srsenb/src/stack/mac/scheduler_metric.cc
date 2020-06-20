@@ -47,20 +47,16 @@ void dl_metric_rr::sched_users(std::map<uint16_t, sched_ue>& ue_db, dl_sf_sched_
     return;
   }
 
-  }
-
-  void dl_metric_rr::qci_weight(std::map<uint16_t, sched_ue>& ue_db) {
-    vector<int> Active_QCI_Values {};
-    vector<int> Unique_QCI {};
-      auto     iter         = ue_db.begin();
-      for (uint32_t ue_count = 0; ue_count < ue_db.size(); ++iter) {
-          if (iter == ue_db.end()) {
-              iter = ue_db.begin(); // wrap around
-          }
+//  void dl_metric_rr::qci_weight(std::map<uint16_t, sched_ue>& ue_db) {
+//    vector<int> Active_QCI_Values {};
+//    vector<int> Unique_QCI {};
+//      auto     iter         = ue_db.begin();
+//      for (uint32_t ue_count = 0; ue_count < ue_db.size(); ++iter) {
+//          if (iter == ue_db.end()) {
+//              iter = ue_db.begin(); // wrap around
+//          }
 //          Active_QCI_Values.push_back(&iter->second->)
-      }
-
-  }
+//      }
 
         // give priority in a time-domain RR basis.
   uint32_t priority_idx = tti_alloc->get_tti_tx_dl() % (uint32_t)ue_db.size();

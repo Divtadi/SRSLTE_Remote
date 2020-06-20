@@ -5,7 +5,7 @@
  *
  * srsLTE is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Affero General Public License as
- * published by the Free Software Foundation, either version 3 of
+ * published by the Free Software Foundation, either version 3
  * the License, or (at your option) any later version.
  *
  * srsLTE is distributed in the hope that it will be useful,
@@ -154,18 +154,10 @@ void sched_ue::set_cfg(const sched_interface::ue_cfg_t& cfg_)
   }
 }
 
-void sched::set_qci(uint32_t qci_)
+void sched_ue::set_qci(uint32_t qci_)
 {
     qci             = qci_;
 }
-
-void sched_ue::init(uint16_t rnti_, const std::vector<sched_cell_params_t>& cell_list_params_)
-    {
-        rnti             = rnti_;
-        cell_params_list = &cell_list_params_;
-        Info("SCHED: Added user rnti=0x%x\n", rnti);
-    }
-
 
 void sched_ue::reset()
 {

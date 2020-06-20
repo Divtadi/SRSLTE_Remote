@@ -21,6 +21,7 @@
 
 #include <srsenb/hdr/stack/mac/scheduler_ue.h>
 #include <string.h>
+#include <iostream>
 
 #include "srsenb/hdr/stack/mac/scheduler.h"
 #include "srsenb/hdr/stack/mac/scheduler_carrier.h"
@@ -345,8 +346,6 @@ void  sched::ue_qci_value(uint16_t rnti, uint32_t qci){
         ue_db[rnti].set_qci(qci); // function to set QCI in sched_ue
         std::cout << "The QCI Value for UE " << rnti << " is " << ue_db[rnti].qci << " in the scheduler\n";
     }
-
-}
 
 
 void sched::tpc_inc(uint16_t rnti)
