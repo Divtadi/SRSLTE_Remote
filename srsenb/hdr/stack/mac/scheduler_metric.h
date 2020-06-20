@@ -33,7 +33,7 @@ class dl_metric_rr : public sched::metric_dl
 public:
   void set_params(const sched_cell_params_t& cell_params_) final;
   void sched_users(std::map<uint16_t, sched_ue>& ue_db, dl_sf_sched_itf* tti_sched) final;
-  void qci_weight(std::map<uint16_t, sched_ue>& ue_db);
+//  void qci_weight(std::map<uint16_t, sched_ue>& ue_db);
 
 private:
   bool          find_allocation(uint32_t min_nof_rbg, uint32_t max_nof_rbg, rbgmask_t* rbgmask);

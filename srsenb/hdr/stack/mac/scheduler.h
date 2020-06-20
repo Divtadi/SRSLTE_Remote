@@ -134,8 +134,10 @@ public:
   void                                 tpc_inc(uint16_t rnti);
   void                                 tpc_dec(uint16_t rnti);
   std::array<int, SRSLTE_MAX_CARRIERS> get_enb_ue_cc_map(uint16_t rnti) final;
+  void  ue_qci_value(uint16_t rnti, uint32_t qci) final;
 
-  class carrier_sched;
+
+    class carrier_sched;
 
 protected:
   // Helper methods

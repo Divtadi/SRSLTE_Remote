@@ -191,6 +191,8 @@ public:
                         bool      is_ul,
                         uint32_t* mcs);
 
+  uint32_t qci             = 0;
+
 private:
   struct ue_bearer_t {
     sched_interface::ue_bearer_cfg_t cfg      = {};
@@ -263,7 +265,6 @@ private:
   uint32_t cqi_request_tti = 0;
   uint16_t rnti            = 0;
   uint32_t max_msg3retx    = 0;
-  uint32_t qci             = 0;
 
   /* User State */
   int next_tpc_pusch = 0;

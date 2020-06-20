@@ -342,11 +342,8 @@ void sched::set_dl_tti_mask(uint8_t* tti_mask, uint32_t nof_sfs)
 }
 
 void  sched::ue_qci_value(uint16_t rnti, uint32_t qci){
-    if (ue_db.count(rnti)) {
         ue_db[rnti].set_qci(qci); // function to set QCI in sched_ue
-        std::cout << "The QCI Value for UE " << rnti << " is " << ue_db[rnti].qci << "\n";
-    } else {
-        Error("User rnti=0x%x not found\n", rnti);
+        std::cout << "The QCI Value for UE " << rnti << " is " << ue_db[rnti].qci << " in the scheduler\n";
     }
 
 }
