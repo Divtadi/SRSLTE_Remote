@@ -298,6 +298,7 @@ public:
   /* Custom */
   virtual void                                 set_dl_tti_mask(uint8_t* tti_mask, uint32_t nof_sfs) = 0;
   virtual std::array<int, SRSLTE_MAX_CARRIERS> get_enb_ue_cc_map(uint16_t rnti)                     = 0;
+  virtual void  ue_qci_value(uint16_t rnti, uint32_t qci)                                        = 0;
 };
 
 } // namespace srsenb

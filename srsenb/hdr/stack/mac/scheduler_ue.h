@@ -98,6 +98,7 @@ public:
   void phy_config_enabled(uint32_t tti, bool enabled);
   void init(uint16_t rnti, const std::vector<sched_cell_params_t>& cell_list_params_);
   void set_cfg(const sched_interface::ue_cfg_t& cfg);
+  void set_qci(uint32_t qci);
 
   void set_bearer_cfg(uint32_t lc_id, srsenb::sched_interface::ue_bearer_cfg_t* cfg);
   void rem_bearer(uint32_t lc_id);
@@ -262,6 +263,7 @@ private:
   uint32_t cqi_request_tti = 0;
   uint16_t rnti            = 0;
   uint32_t max_msg3retx    = 0;
+  uint32_t qci             = 0;
 
   /* User State */
   int next_tpc_pusch = 0;

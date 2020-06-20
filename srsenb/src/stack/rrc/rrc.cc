@@ -1415,7 +1415,9 @@ void rrc::ue::setup_erab(uint8_t                                            id,
   erabs[id].teid_out   = teid_out;
 
   uint32_t qci_mac     = qos.qci;
-  parent->mac->ue_qci_value(rnti, qci_mac);  // pass qci to mac via a mac interface function
+  // parent->mac->ue_qci_value(rnti, qci_mac);  // pass qci to mac via a mac interface function
+  srsenb::sched_interface::ue_qci_value(rnti, qci_mac); // pass qci to mac scheduler a mac interface function
+
 
   if (addr.length() > 32) {
     parent->rrc_log->error("Only addresses with length <= 32 are supported\n");
