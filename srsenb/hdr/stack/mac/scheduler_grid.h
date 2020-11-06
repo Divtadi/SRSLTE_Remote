@@ -51,6 +51,9 @@ struct sf_sched_result {
   sched_interface::dl_sched_res_t dl_sched_result = {};
   sched_interface::ul_sched_res_t ul_sched_result = {};
   rbgmask_t                       dl_mask         = {}; ///< Accumulation of all DL RBG allocations
+  rbgmask_t                       dl_mask_1         = {}; ///< Accumulation of all DL RBG allocations slice 1
+  rbgmask_t                       dl_mask_2         = {}; ///< Accumulation of all DL RBG allocations slice 2
+  // consider creating array/vector of dl_masks for each separate slice
   prbmask_t                       ul_mask         = {}; ///< Accumulation of all UL PRB allocations
   pdcch_mask_t                    pdcch_mask      = {}; ///< Accumulation of all CCE allocations
 };
@@ -142,11 +145,24 @@ public:
   alloc_outcome_t alloc_ul_data(sched_ue* user, ul_harq_proc::ul_alloc_t alloc, bool needs_pdcch);
   bool            reserve_ul_prbs(const prbmask_t& prbmask, bool strict);
 
+  std::deque<double>* get_slice_perf(uint16_t slice);
+  void set_mask(uint16_t mask_number, double new_mask_start, double new_mask_end);
+
+
+
   // getters
   const rbgmask_t&    get_dl_mask() const { return dl_mask; }
+  const rbgmask_t&    get_dl_mask_1() const { return dl_mask_1; }
+  const rbgmask_t&    get_dl_mask_2() const { return dl_mask_2; }
   const prbmask_t&    get_ul_mask() const { return ul_mask; }
   uint32_t            get_cfi() const { return pdcch_alloc.get_cfi(); }
   const pdcch_grid_t& get_pdcch_grid() const { return pdcch_alloc; }
+  const uint32_t get_nof_rbgs() const {return nof_rbgs; }
+  std::pair<double, double> get_mask_1() const { return std::pair<double, double> {mask_1_start,mask_1_end};}
+  std::pair<double, double> get_mask_2() const { return std::pair<double, double> {mask_2_start,mask_2_end};}
+  double get_s1_perf() {return s1_min_perf;}
+  double get_s2_perf() {return s2_min_perf;}
+  size_t get_window() const {return TTI_Window;}
 
 private:
   alloc_outcome_t alloc_dl(uint32_t aggr_lvl, alloc_type_t alloc_type, rbgmask_t alloc_mask, sched_ue* user = nullptr);
@@ -157,6 +173,23 @@ private:
   uint32_t                   nof_rbgs = 0;
   uint32_t                   si_n_rbg = 0, rar_n_rbg = 0;
 
+  // Slice Parameters
+
+  // TTI window in which performance is tracked
+  size_t TTI_Window = 20;
+
+  // Slice 1 Parameters
+  double mask_1_start = 0;
+  double mask_1_end = 25;
+  std::deque<double> slice_1_perf {};
+  double s1_min_perf = 0.8;
+
+  // Slice 2 Parameters
+  double mask_2_start = mask_1_end;
+  double mask_2_end = 100;
+  std::deque<double> slice_2_perf {};
+  double s2_min_perf = 0.7;
+
   // tti const
   const tti_params_t* tti_params = nullptr;
   // derived
@@ -165,6 +198,12 @@ private:
   // internal state
   uint32_t  avail_rbg = 0;
   rbgmask_t dl_mask   = {};
+
+  rbgmask_t dl_mask_1 = {};
+  uint32_t avail_rbg_s1 = 0;
+  rbgmask_t dl_mask_2 = {};
+  uint32_t avail_rbg_s2 = 0;
+
   prbmask_t ul_mask   = {};
 };
 
@@ -174,9 +213,17 @@ class dl_sf_sched_itf
 public:
   virtual alloc_outcome_t  alloc_dl_user(sched_ue* user, const rbgmask_t& user_mask, uint32_t pid) = 0;
   virtual const rbgmask_t& get_dl_mask() const                                                     = 0;
+  virtual const rbgmask_t& get_dl_mask_1() const                                                   = 0;
+  virtual const rbgmask_t& get_dl_mask_2() const                                                   = 0;
   virtual uint32_t         get_tti_tx_dl() const                                                   = 0;
   virtual uint32_t         get_nof_ctrl_symbols() const                                            = 0;
   virtual bool             is_dl_alloc(sched_ue* user) const                                       = 0;
+  virtual const uint32_t         get_nof_rbgs() const                                              = 0;
+  virtual std::pair<double, double> get_mask_1() const                                             = 0;
+  virtual std::pair<double, double> get_mask_2() const                                             = 0;
+  virtual size_t get_window() const                                                                = 0;
+  virtual void add_perf(uint16_t slice, double perf)                                               = 0;
+  virtual void track_perf()                                                                        = 0;
 };
 
 //! generic interface used by UL scheduler algorithm
@@ -274,6 +321,18 @@ public:
   uint32_t         get_tti_tx_dl() const final { return tti_params.tti_tx_dl; }
   uint32_t         get_nof_ctrl_symbols() const final;
   const rbgmask_t& get_dl_mask() const final { return tti_alloc.get_dl_mask(); }
+  const rbgmask_t& get_dl_mask_1() const final { return tti_alloc.get_dl_mask_1(); }
+  const rbgmask_t& get_dl_mask_2() const final { return tti_alloc.get_dl_mask_2(); }
+  const uint32_t   get_nof_rbgs() const final { return tti_alloc.get_nof_rbgs(); }
+  std::pair<double, double> get_mask_1() const final { return tti_alloc.get_mask_1();}
+  std::pair<double, double> get_mask_2() const final { return tti_alloc.get_mask_2();}
+  size_t get_window() const final;
+
+
+  void add_perf(uint16_t slice, double perf) final;
+  void track_perf() final;
+
+
   // ul_tti_sched itf
   alloc_outcome_t  alloc_ul_user(sched_ue* user, ul_harq_proc::ul_alloc_t alloc) final;
   const prbmask_t& get_ul_mask() const final { return tti_alloc.get_ul_mask(); }
@@ -313,6 +372,9 @@ private:
 
   // Next TTI state
   tti_params_t tti_params{10241};
+
+  // Slice Parameters
+
 };
 
 } // namespace srsenb

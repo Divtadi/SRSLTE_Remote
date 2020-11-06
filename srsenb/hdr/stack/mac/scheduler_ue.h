@@ -22,6 +22,7 @@
 #ifndef SRSENB_SCHEDULER_UE_H
 #define SRSENB_SCHEDULER_UE_H
 
+#include "mac_metrics.h"
 #include "scheduler_common.h"
 #include "srslte/common/log.h"
 #include "srslte/mac/pdu.h"
@@ -128,6 +129,8 @@ public:
   std::pair<bool, uint32_t>        get_cell_index(uint32_t enb_cc_idx) const;
   const sched_interface::ue_cfg_t& get_ue_cfg() const { return cfg; }
   uint32_t                         get_aggr_level(uint32_t ue_cc_idx, uint32_t nof_bits);
+  uint32_t                         get_qci() const {return qci; }
+
 
   /*******************************************************
    * Functions used by scheduler metric objects
@@ -145,6 +148,9 @@ public:
   dl_harq_proc* get_pending_dl_harq(uint32_t tti_tx_dl, uint32_t cc_idx);
   dl_harq_proc* get_empty_dl_harq(uint32_t tti_tx_dl, uint32_t cc_idx);
   ul_harq_proc* get_ul_harq(uint32_t tti, uint32_t ue_cc_idx);
+
+
+  mac_metrics_t metrics_sched        = {};
 
   /*******************************************************
    * Functions used by the scheduler carrier object
@@ -191,7 +197,6 @@ public:
                         bool      is_ul,
                         uint32_t* mcs);
 
-  uint32_t qci             = 0;
 
 private:
   struct ue_bearer_t {
@@ -265,10 +270,12 @@ private:
   uint32_t cqi_request_tti = 0;
   uint16_t rnti            = 0;
   uint32_t max_msg3retx    = 0;
+  uint32_t qci             = 0;
 
   /* User State */
   int next_tpc_pusch = 0;
   int next_tpc_pucch = 0;
+
 
   bool phy_config_dedicated_enabled = false;
 

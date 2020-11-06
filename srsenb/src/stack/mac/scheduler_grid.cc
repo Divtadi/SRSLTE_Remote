@@ -24,6 +24,9 @@
 #include "srslte/common/log_helper.h"
 #include "srslte/common/logmap.h"
 #include <srslte/interfaces/sched_interface.h>
+#include <iostream>
+#include <math.h>
+#include <numeric>
 
 namespace srsenb {
 
@@ -332,6 +335,15 @@ void sf_grid_t::init(const sched_cell_params_t& cell_params_)
   rar_n_rbg = srslte::ceil_div(3, cc_cfg->P);
 
   dl_mask.resize(nof_rbgs);
+
+  dl_mask_1.resize(nof_rbgs);
+  dl_mask_2.resize(nof_rbgs);
+  dl_mask_1.fill(std::ceil(mask_1_start*nof_rbgs/100.0), std::ceil(mask_1_end*nof_rbgs/100.0));
+  dl_mask_2.fill(std::ceil(mask_2_start*nof_rbgs/100.0), std::ceil(mask_2_end*nof_rbgs/100.0));
+
+  dl_mask_1 = ~(dl_mask_1);
+  dl_mask_2 = ~(dl_mask_2);
+
   ul_mask.resize(cc_cfg->nof_prb());
 
   pdcch_alloc.init(*cc_cfg);
@@ -344,6 +356,19 @@ void sf_grid_t::new_tti(const tti_params_t& tti_params_)
   dl_mask.reset();
   ul_mask.reset();
   avail_rbg = nof_rbgs;
+  avail_rbg_s1 = std::floor(mask_1_end*nof_rbgs/100.0);
+  avail_rbg_s2 = std::floor(mask_2_end*nof_rbgs/100.0);
+
+  // Create DL Masks here
+
+  dl_mask_1.reset();
+  dl_mask_2.reset();
+
+  dl_mask_1.fill(std::ceil(mask_1_start*nof_rbgs/100.0), std::floor(mask_1_end*nof_rbgs/100.0));
+  dl_mask_2.fill(std::ceil(mask_2_start*nof_rbgs/100.0), std::floor(mask_2_end*nof_rbgs/100.0));
+
+  dl_mask_1 = ~(dl_mask_1);
+  dl_mask_2 = ~(dl_mask_2);
 
   // internal state
   pdcch_alloc.new_tti(*tti_params);
@@ -352,7 +377,82 @@ void sf_grid_t::new_tti(const tti_params_t& tti_params_)
 //! Allocates CCEs and RBs for the given mask and allocation type (e.g. data, BC, RAR, paging)
 alloc_outcome_t sf_grid_t::alloc_dl(uint32_t aggr_idx, alloc_type_t alloc_type, rbgmask_t alloc_mask, sched_ue* user)
 {
-  // Check RBG collision
+    if (user != nullptr) {
+      // Check QCI here to make sure the appropriate dl_mask is updated
+      if (user->get_qci() == 7) { // Slice 1
+        // Check RBG collision
+        if ((dl_mask_1 & alloc_mask).any()) {
+          return alloc_outcome_t::RB_COLLISION;
+        }
+
+        // Allocate DCI in PDCCH
+        if (not pdcch_alloc.alloc_dci(alloc_type, aggr_idx, user)) {
+          if (user != nullptr) {
+            if (log_h->get_level() == srslte::LOG_LEVEL_DEBUG) {
+              log_h->debug("No space in PDCCH for rnti=0x%x DL tx. Current PDCCH allocation: %s\n",
+                           user->get_rnti(),
+                           pdcch_alloc.result_to_string(true).c_str());
+            }
+          }
+          return alloc_outcome_t::DCI_COLLISION;
+        }
+
+        // Allocate RBGs
+        dl_mask_1 |= alloc_mask;
+        avail_rbg -= alloc_mask.count();
+
+        return alloc_outcome_t::SUCCESS;
+      } else if (user->get_qci() == 9) // Slice 2
+      {
+        // Check RBG collision
+        if ((dl_mask_2 & alloc_mask).any()) {
+          return alloc_outcome_t::RB_COLLISION;
+        }
+
+        // Allocate DCI in PDCCH
+        if (not pdcch_alloc.alloc_dci(alloc_type, aggr_idx, user)) {
+          if (user != nullptr) {
+            if (log_h->get_level() == srslte::LOG_LEVEL_DEBUG) {
+              log_h->debug("No space in PDCCH for rnti=0x%x DL tx. Current PDCCH allocation: %s\n",
+                           user->get_rnti(),
+                           pdcch_alloc.result_to_string(true).c_str());
+            }
+          }
+          return alloc_outcome_t::DCI_COLLISION;
+        }
+
+        // Allocate RBGs
+        dl_mask_2 |= alloc_mask;
+        avail_rbg -= alloc_mask.count();
+
+        return alloc_outcome_t::SUCCESS;
+      } else { // Best effort, included with slice 2
+        // Check RBG collision
+        if ((dl_mask_2 & alloc_mask).any()) {
+          return alloc_outcome_t::RB_COLLISION;
+        }
+
+        // Allocate DCI in PDCCH
+        if (not pdcch_alloc.alloc_dci(alloc_type, aggr_idx, user)) {
+          if (user != nullptr) {
+            if (log_h->get_level() == srslte::LOG_LEVEL_DEBUG) {
+              log_h->debug("No space in PDCCH for rnti=0x%x DL tx. Current PDCCH allocation: %s\n",
+                           user->get_rnti(),
+                           pdcch_alloc.result_to_string(true).c_str());
+            }
+          }
+          return alloc_outcome_t::DCI_COLLISION;
+        }
+
+        // Allocate RBGs
+        dl_mask_2 |= alloc_mask;
+        avail_rbg -= alloc_mask.count();
+
+        return alloc_outcome_t::SUCCESS;
+      }
+    }
+
+
   if ((dl_mask & alloc_mask).any()) {
     return alloc_outcome_t::RB_COLLISION;
   }
@@ -374,11 +474,13 @@ alloc_outcome_t sf_grid_t::alloc_dl(uint32_t aggr_idx, alloc_type_t alloc_type, 
   avail_rbg -= alloc_mask.count();
 
   return alloc_outcome_t::SUCCESS;
+
 }
+
 
 //! Allocates CCEs and RBs for control allocs. It allocates RBs in a contiguous manner.
 sf_grid_t::dl_ctrl_alloc_t sf_grid_t::alloc_dl_ctrl(uint32_t aggr_idx, alloc_type_t alloc_type)
-{
+{ // Investigate Slicing here, could be the issue
   rbg_range_t range;
   range.rbg_min = nof_rbgs - avail_rbg;
   range.rbg_max = range.rbg_min + ((alloc_type == alloc_type_t::DL_RAR) ? rar_n_rbg : si_n_rbg);
@@ -460,6 +562,25 @@ bool sf_grid_t::reserve_ul_prbs(const prbmask_t& prbmask, bool strict)
   return ret;
 }
 
+
+std::deque<double>* sf_grid_t::get_slice_perf(uint16_t slice) {
+  if (slice == 1)
+    return &slice_1_perf;
+  else
+    return &slice_2_perf;
+}
+
+void sf_grid_t::set_mask(uint16_t mask_number, double new_mask_start, double new_mask_end) {
+  if (mask_number == 1){
+    mask_1_start = new_mask_start;
+    mask_1_end = new_mask_end;
+  } else if(mask_number == 2){
+    mask_2_start = new_mask_start;
+    mask_2_end = new_mask_end;
+  }
+}
+
+
 /*******************************************************
  *          TTI resource Scheduling Methods
  *******************************************************/
@@ -525,6 +646,7 @@ sf_sched::ctrl_code_t sf_sched::alloc_dl_ctrl(uint32_t aggr_lvl, uint32_t tbs_by
   }
 
   /* Allocate space in the DL RBG and PDCCH grids */
+  // Consider Passing Slice Number here with Control Function
   sf_grid_t::dl_ctrl_alloc_t ret = tti_alloc.alloc_dl_ctrl(aggr_lvl, alloc_type);
   if (not ret.outcome) {
     return {ret.outcome, ctrl_alloc};
@@ -1008,9 +1130,80 @@ void sf_sched::generate_sched_results(sf_sched_result* sf_result)
   set_ul_sched_result(dci_result, &sf_result->ul_sched_result);
 
   /* Store remaining sf_sched results for this TTI */
-  sf_result->dl_mask    = tti_alloc.get_dl_mask();
+  sf_result->dl_mask   = tti_alloc.get_dl_mask();
+  sf_result->dl_mask_1 = tti_alloc.get_dl_mask_1();
+  sf_result->dl_mask_2 = tti_alloc.get_dl_mask_2();
+
   sf_result->ul_mask    = tti_alloc.get_ul_mask();
   sf_result->tti_params = tti_params;
+}
+
+size_t sf_sched::get_window() const {return tti_alloc.get_window();}
+
+void sf_sched::add_perf(uint16_t slice, double perf) {
+  // This function is called after each TTI scheduling function. It collects the served user percentage per slice in a deque every TTI_Window, then it resets the counter
+    if (slice == 1){
+      if(tti_alloc.get_slice_perf(1)->size() >= tti_alloc.get_window()){
+        tti_alloc.get_slice_perf(1)->clear();
+      }
+      tti_alloc.get_slice_perf(1)->push_front(perf);
+    } else if(slice == 2){
+      if(tti_alloc.get_slice_perf(2)->size() >= tti_alloc.get_window()){
+        tti_alloc.get_slice_perf(2)->clear();
+      }
+      tti_alloc.get_slice_perf(2)->push_front(perf);
+    }
+}
+
+
+void sf_sched::track_perf() {
+  // This function takes the average performance of each slice and compares it to a set threshold. Depending on the comparison,
+  // RBG allocation between each slice is increased/decreased by 5-10%.
+
+  double Q_s1 {};
+  double Q_s2 {};
+
+  if(tti_alloc.get_slice_perf(1)->size() == tti_alloc.get_window()){
+  Q_s1 = std::accumulate(tti_alloc.get_slice_perf(1)->begin(),tti_alloc.get_slice_perf(1)->end(),0.0)/tti_alloc.get_window();
+  Q_s2 = std::accumulate(tti_alloc.get_slice_perf(2)->begin(),tti_alloc.get_slice_perf(2)->end(),0.0)/tti_alloc.get_window();
+
+  //  The next conditional statements check the current satisfaction to see if resource allocation needs to be changed.
+  // First, if Satsifaction of S1 is below the threshold, we need to change allocation depending on S1 satisfaction
+  // If S2 is over the threshold, we add 10% more resources to S1
+  // If S2 is under the threshol, we add 5% more resources to S1
+
+  // If S1 satsifaction is over the threshold AND S2 satisfaction is under the threshold, we add 5% resources to S2
+  // If both are satisfied, no changes to be made.
+
+  if (Q_s1 < tti_alloc.get_s1_perf()){
+    if (Q_s2 > tti_alloc.get_s2_perf()){
+      tti_alloc.set_mask(1, get_mask_1().first, get_mask_1().second+10);
+      tti_alloc.set_mask(2, get_mask_2().first+10, get_mask_2().second);
+      std::cout << "S1++ \t ";
+
+    } else {
+      tti_alloc.set_mask(1, get_mask_1().first, get_mask_1().second+5);
+      tti_alloc.set_mask(2, get_mask_2().first+5, get_mask_2().second);
+      std::cout << "S1+ \t ";
+    }
+  } else {
+    if (Q_s2 < tti_alloc.get_s2_perf()){
+      tti_alloc.set_mask(1, get_mask_1().first, get_mask_1().second-5);
+      tti_alloc.set_mask(2, get_mask_2().first-5, get_mask_2().second);
+      std::cout << "S1- \t";
+    }
+  }
+
+  // If resource allocation for Slice 1 goes above 80% or below 50%, allocation is corrected not to go beyond them (Slice 1 always between 50-80%)
+  if (get_mask_1().second > 80) {
+    tti_alloc.set_mask(1,0, 80);
+    tti_alloc.set_mask(2,80,100);
+  } else if (get_mask_1().second < 50){
+    tti_alloc.set_mask(1, 0, 50);
+    tti_alloc.set_mask(2,50,100);
+  }
+  std::cout << tti_alloc.get_mask_1().second << std::endl;
+}
 }
 
 uint32_t sf_sched::get_nof_ctrl_symbols() const
@@ -1067,5 +1260,7 @@ int sf_sched::generate_format1a(uint32_t         rb_start,
 
   return tbs;
 }
+
+
 
 } // namespace srsenb

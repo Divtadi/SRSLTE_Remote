@@ -279,6 +279,7 @@ int mac::ue_set_crnti(uint16_t temp_crnti, uint16_t crnti, sched_interface::ue_c
   if (temp_crnti == crnti) {
     // if RNTI is maintained, Msg3 contained a RRC Setup Request
     scheduler.dl_mac_buffer_state(crnti, (uint32_t)srslte::dl_sch_lcid::CON_RES_ID);
+    scheduler.dl_mac_buffer_state(crnti, (uint32_t)srslte::dl_sch_lcid::CON_RES_ID);
   } else {
     // C-RNTI corresponds to older user. Handover scenario.
     phy_h->rem_rnti(crnti);
@@ -342,7 +343,7 @@ int mac::ack_info(uint32_t tti, uint16_t rnti, uint32_t enb_cc_idx, uint32_t tb_
   if (ue_db.count(rnti)) {
     uint32_t nof_bytes = scheduler.dl_ack_info(tti, rnti, enb_cc_idx, tb_idx, ack);
     ue_db[rnti]->metrics_tx(ack, nof_bytes);
-
+//    scheduler.pass_metrics_tx(rnti, ue_db[rnti]->get_metrics().tx_brate, ue_db[rnti]->get_metrics().tx_errors, ue_db[rnti]->get_metrics().tx_pkts);
     if (ack) {
       if (nof_bytes > 64) { // do not count RLC status messages only
         rrc_h->set_activity_user(rnti);
@@ -362,6 +363,7 @@ int mac::crc_info(uint32_t tti_rx, uint16_t rnti, uint32_t enb_cc_idx, uint32_t 
   if (ue_db.count(rnti)) {
     ue_db[rnti]->set_tti(tti_rx);
     ue_db[rnti]->metrics_rx(crc, nof_bytes);
+//    scheduler.pass_metrics_rx(rnti,ue_db[rnti]->get_metrics().rx_brate,ue_db[rnti]->get_metrics().rx_errors,ue_db[rnti]->get_metrics().rx_pkts);
 
     std::array<int, SRSLTE_MAX_CARRIERS> enb_ue_cc_map = scheduler.get_enb_ue_cc_map(rnti);
     if (enb_ue_cc_map[enb_cc_idx] < 0) {
@@ -431,6 +433,7 @@ int mac::cqi_info(uint32_t tti, uint16_t rnti, uint32_t enb_cc_idx, uint32_t cqi
   if (ue_db.count(rnti)) {
     scheduler.dl_cqi_info(tti, rnti, enb_cc_idx, cqi_value);
     ue_db[rnti]->metrics_dl_cqi(cqi_value);
+//    scheduler.pass_metrics_cqi(rnti, cqi_value);
     ret = SRSLTE_SUCCESS;
   } else {
     Error("User rnti=0x%x not found\n", rnti);
@@ -537,6 +540,7 @@ void mac::rach_detected(uint32_t tti, uint32_t enb_cc_idx, uint32_t preamble_idx
       Error("Registering new user rnti=0x%x to SCHED\n", rnti);
       return;
     }
+//    scheduler.pass_metrics(rnti, ue_db[rnti]->get_metrics());
 
     // Register new user in RRC
     rrc_h->add_user(rnti, ue_cfg);
@@ -684,6 +688,7 @@ int mac::get_dl_sched(uint32_t tti_tx_dl, dl_sched_list_t& dl_sched_res_list)
   // Count number of TTIs for all active users
   for (auto& u : ue_db) {
     u.second->metrics_cnt();
+//    scheduler.pass_metrics_tti_cnt(u.first);
   }
 
   return SRSLTE_SUCCESS;
@@ -791,6 +796,7 @@ int mac::get_mch_sched(uint32_t tti, bool is_mcch, dl_sched_list_t& dl_sched_res
   // Count number of TTIs for all active users
   for (auto& u : ue_db) {
     u.second->metrics_cnt();
+//    scheduler.pass_metrics_tti_cnt(u.first);
   }
   return SRSLTE_SUCCESS;
 }

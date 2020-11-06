@@ -23,6 +23,8 @@
 #define SRSENB_SCHEDULER_METRIC_H
 
 #include "scheduler.h"
+#include <math.h>
+#include <iostream>
 
 namespace srsenb {
 
@@ -33,11 +35,16 @@ class dl_metric_rr : public sched::metric_dl
 public:
   void set_params(const sched_cell_params_t& cell_params_) final;
   void sched_users(std::map<uint16_t, sched_ue>& ue_db, dl_sf_sched_itf* tti_sched) final;
-//  void qci_weight(std::map<uint16_t, sched_ue>& ue_db);
+  void sched_users_s1(std::map<uint16_t, sched_ue*>& ue_db, dl_sf_sched_itf* tti_sched) final;
+  void sched_users_s2(std::map<uint16_t, sched_ue*>& ue_db, dl_sf_sched_itf* tti_sched) final;
+
 
 private:
   bool          find_allocation(uint32_t min_nof_rbg, uint32_t max_nof_rbg, rbgmask_t* rbgmask);
+  bool          find_allocation_slice(uint32_t min_nof_rbg, uint32_t max_nof_rbg, rbgmask_t* rbgmask, uint16_t slice);
   dl_harq_proc* allocate_user(sched_ue* user);
+  dl_harq_proc* allocate_user_slice(sched_ue* user, uint16_t Slice);
+
 
   const sched_cell_params_t* cc_cfg = nullptr;
   srslte::log_ref            log_h;

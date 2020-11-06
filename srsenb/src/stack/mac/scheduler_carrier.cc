@@ -136,9 +136,9 @@ void bc_sched::reset()
  *******************************************************/
 
 ra_sched::ra_sched(const sched_cell_params_t& cfg_, std::map<uint16_t, sched_ue>& ue_db_) :
-  cc_cfg(&cfg_),
-  log_h(srslte::logmap::get("MAC")),
-  ue_db(&ue_db_)
+    cc_cfg(&cfg_),
+    log_h(srslte::logmap::get("MAC")),
+    ue_db(&ue_db_)
 {}
 
 // Schedules RAR
@@ -260,10 +260,10 @@ void ra_sched::reset()
 sched::carrier_sched::carrier_sched(rrc_interface_mac*            rrc_,
                                     std::map<uint16_t, sched_ue>* ue_db_,
                                     uint32_t                      enb_cc_idx_) :
-  rrc(rrc_),
-  ue_db(ue_db_),
-  log_h(srslte::logmap::get("MAC ")),
-  enb_cc_idx(enb_cc_idx_)
+    rrc(rrc_),
+    ue_db(ue_db_),
+    log_h(srslte::logmap::get("MAC ")),
+    enb_cc_idx(enb_cc_idx_)
 {
   sf_dl_mask.resize(1, 0);
 }
@@ -366,10 +366,23 @@ const sf_sched_result& sched::carrier_sched::generate_tti_result(uint32_t tti_rx
 
 void sched::carrier_sched::alloc_dl_users(sf_sched* tti_result)
 {
+  std::map<uint16_t, sched_ue*> ue_db_slice_1 {};
+  std::map<uint16_t, sched_ue*> ue_db_slice_2 {};
   if (sf_dl_mask[tti_result->get_tti_tx_dl() % sf_dl_mask.size()] != 0) {
     return;
   }
-
+// Create a sliced map of ue_db to point to each UE in ue_db
+  if (!ue_db->empty()) {
+    std::map<uint16_t, sched_ue>::iterator iter = ue_db->begin();
+    while (iter != ue_db->end()) {
+      if(iter->second.get_qci() == 7){
+      ue_db_slice_1[iter->first] = &iter->second;
+      } else{
+      ue_db_slice_2[iter->first] = &iter->second;
+      }
+      iter++;
+    }
+  }
   // NOTE: In case of 6 PRBs, do not transmit if there is going to be a PRACH in the UL to avoid collisions
   if (cc_cfg->nof_prb() == 6) {
     uint32_t tti_rx_ack = tti_result->get_tti_params().tti_rx_ack_dl();
@@ -379,7 +392,18 @@ void sched::carrier_sched::alloc_dl_users(sf_sched* tti_result)
   }
 
   // call DL scheduler metric to fill RB grid
-  dl_metric->sched_users(*ue_db, tti_result);
+//  dl_metric->sched_users(*ue_db, tti_result);
+  dl_metric->sched_users_s1(ue_db_slice_1, tti_result);
+  dl_metric->sched_users_s2(ue_db_slice_2, tti_result);
+
+//  // Interslice Tracking and controls. Only track if
+//  if (!ue_db_slice_1.empty() || !ue_db_slice_2.empty()){
+//    tti_result->track_perf();
+//  }
+
+  ue_db_slice_1.clear();
+  ue_db_slice_2.clear();
+
 }
 
 int sched::carrier_sched::alloc_ul_users(sf_sched* tti_sched)

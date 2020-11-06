@@ -98,6 +98,7 @@ public:
   void metrics_dl_pmi(uint32_t dl_cqi);
   void metrics_dl_cqi(uint32_t dl_cqi);
   void metrics_cnt();
+  mac_metrics_t get_metrics() {return temp_metrics;}
 
 
 
@@ -120,6 +121,7 @@ private:
   uint32_t      dl_ri_counter  = 0;
   uint32_t      dl_pmi_counter = 0;
   mac_metrics_t metrics        = {};
+  mac_metrics_t temp_metrics        = {};
 
   srslte::mac_pcap* pcap             = nullptr;
   uint64_t          conres_id        = 0;

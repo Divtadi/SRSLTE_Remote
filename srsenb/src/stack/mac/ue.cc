@@ -94,6 +94,7 @@ ue::~ue()
 void ue::reset()
 {
   metrics      = {};
+  temp_metrics = {};
   nof_failures = 0;
 
   for (auto cc : softbuffer_rx) {
@@ -576,6 +577,7 @@ void ue::metrics_read(mac_metrics_t* metrics_)
 
   phr_counter    = 0;
   dl_cqi_counter = 0;
+  temp_metrics = metrics;
   metrics        = {};
 }
 

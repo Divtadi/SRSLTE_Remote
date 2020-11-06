@@ -22,6 +22,8 @@
 #include <srsenb/hdr/stack/mac/scheduler_ue.h>
 #include <string.h>
 #include <iostream>
+#include <algorithm>
+#include <iterator>
 
 #include "srsenb/hdr/stack/mac/scheduler.h"
 #include "srsenb/hdr/stack/mac/scheduler_carrier.h"
@@ -214,7 +216,6 @@ int sched::ue_cfg(uint16_t rnti, const sched_interface::ue_cfg_t& ue_cfg)
     it = ue_db.find(rnti);
   }
   it->second.set_cfg(ue_cfg);
-
   return SRSLTE_SUCCESS;
 }
 
@@ -342,10 +343,37 @@ void sched::set_dl_tti_mask(uint8_t* tti_mask, uint32_t nof_sfs)
   carrier_schedulers[0]->set_dl_tti_mask(tti_mask, nof_sfs);
 }
 
+// Function to pass QCI value from upper layers to MAC scheduler. Each time it updates the QCI list and unique vector.
 void  sched::ue_qci_value(uint16_t rnti, uint32_t qci){
         ue_db[rnti].set_qci(qci); // function to set QCI in sched_ue
-        std::cout << "The QCI Value for UE " << rnti << " is " << ue_db[rnti].qci << " in the scheduler\n";
+        std::cout << "The QCI Value for UE " << rnti << " is " << ue_db[rnti].get_qci() << " in the scheduler\n";
     }
+
+void sched::pass_metrics(uint16_t rnti, mac_metrics_t metrics_) {
+
+  ue_db[rnti].metrics_sched = metrics_;
+
+}
+
+void sched::pass_metrics_cqi(uint16_t rnti, float dl_cqi) {
+  ue_db[rnti].metrics_sched.dl_cqi = dl_cqi;
+}
+
+void sched::pass_metrics_rx(uint16_t rnti, int rx_brate_, int rx_errors_, int rx_pkts_) {
+  ue_db[rnti].metrics_sched.rx_brate = rx_brate_;
+  ue_db[rnti].metrics_sched.rx_errors = rx_errors_;
+  ue_db[rnti].metrics_sched.rx_pkts = rx_pkts_;
+}
+
+void sched::pass_metrics_tx(uint16_t rnti, int tx_brate_, int tx_errors_, int tx_pkts_) {
+  ue_db[rnti].metrics_sched.tx_brate = tx_brate_;
+  ue_db[rnti].metrics_sched.tx_errors = tx_errors_;
+  ue_db[rnti].metrics_sched.tx_pkts = tx_pkts_;
+}
+
+void sched::pass_metrics_tti_cnt(uint16_t rnti) {
+  ue_db[rnti].metrics_sched.nof_tti++;
+}
 
 
 void sched::tpc_inc(uint16_t rnti)

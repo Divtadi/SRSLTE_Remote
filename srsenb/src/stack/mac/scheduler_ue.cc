@@ -20,6 +20,7 @@
  */
 
 #include <string.h>
+#include <iostream>
 
 #include "srsenb/hdr/stack/mac/scheduler.h"
 #include "srsenb/hdr/stack/mac/scheduler_ue.h"
@@ -69,8 +70,10 @@ uint32_t get_mac_subheader_sdu_size(uint32_t sdu_bytes)
  */
 uint32_t count_prb_per_tb(const sched_cell_params_t& cell_params, const rbgmask_t& bitmask)
 {
+
   uint32_t nof_prb = 0;
-  for (uint32_t i = 0; i < bitmask.size(); i++) {
+
+  for(uint32_t i = 0; i < bitmask.size(); i++) {
     if (bitmask.test(i)) {
       nof_prb += std::min(cell_params.cfg.cell.nof_prb - (i * cell_params.P), cell_params.P);
     }
@@ -158,6 +161,7 @@ void sched_ue::set_qci(uint32_t qci_)
 {
     qci             = qci_;
 }
+
 
 void sched_ue::reset()
 {
@@ -512,7 +516,6 @@ int sched_ue::generate_format1(uint32_t                          pid,
 
   dci->alloc_type              = SRSLTE_RA_ALLOC_TYPE0;
   dci->type0_alloc.rbg_bitmask = (uint32_t)user_mask.to_uint64();
-
   if (h->is_empty(0)) {
     auto ret = allocate_new_dl_mac_pdu(data, h, user_mask, tti_tx_dl, ue_cc_idx, cfi, 0, "1");
     tbs      = ret.first;
@@ -1064,6 +1067,7 @@ const dl_harq_proc& sched_ue::get_dl_harq(uint32_t idx, uint32_t ue_cc_idx) cons
 {
   return carriers[ue_cc_idx].harq_ent.dl_harq_procs()[idx];
 }
+
 
 std::pair<bool, uint32_t> sched_ue::get_cell_index(uint32_t enb_cc_idx) const
 {

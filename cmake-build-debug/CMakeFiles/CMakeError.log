@@ -1,0 +1,97 @@
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_65c71/fast && /usr/bin/make -f CMakeFiles/cmTC_65c71.dir/build.make CMakeFiles/cmTC_65c71.dir/build
+make[1]: Entering directory '/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_65c71.dir/src.c.o
+/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_65c71.dir/src.c.o   -c /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_65c71
+/opt/clion-2020.1.2/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_65c71.dir/link.txt --verbose=1
+/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    -rdynamic CMakeFiles/cmTC_65c71.dir/src.c.o  -o cmTC_65c71 
+CMakeFiles/cmTC_65c71.dir/src.c.o: In function `main':
+src.c:(.text+0x3e): undefined reference to `pthread_create'
+src.c:(.text+0x4a): undefined reference to `pthread_detach'
+src.c:(.text+0x5b): undefined reference to `pthread_join'
+src.c:(.text+0x6f): undefined reference to `pthread_atfork'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_65c71.dir/build.make:86: recipe for target 'cmTC_65c71' failed
+make[1]: *** [cmTC_65c71] Error 1
+make[1]: Leaving directory '/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/CMakeFiles/CMakeTmp'
+Makefile:121: recipe for target 'cmTC_65c71/fast' failed
+make: *** [cmTC_65c71/fast] Error 2
+
+
+Source file was:
+#include <pthread.h>
+
+void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_60565/fast && /usr/bin/make -f CMakeFiles/cmTC_60565.dir/build.make CMakeFiles/cmTC_60565.dir/build
+make[1]: Entering directory '/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_60565.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_60565.dir/CheckFunctionExists.c.o   -c /opt/clion-2020.1.2/bin/cmake/linux/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_60565
+/opt/clion-2020.1.2/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_60565.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_60565.dir/CheckFunctionExists.c.o  -o cmTC_60565  -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_60565.dir/build.make:86: recipe for target 'cmTC_60565' failed
+make[1]: *** [cmTC_60565] Error 1
+make[1]: Leaving directory '/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/CMakeFiles/CMakeTmp'
+Makefile:121: recipe for target 'cmTC_60565/fast' failed
+make: *** [cmTC_60565/fast] Error 2
+
+
+
+Performing C SOURCE FILE Test HAVE_AVX512 failed with the following output:
+Change Dir: /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_90147/fast && /usr/bin/make -f CMakeFiles/cmTC_90147.dir/build.make CMakeFiles/cmTC_90147.dir/build
+make[1]: Entering directory '/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_90147.dir/src.c.o
+/usr/bin/cc   -Wno-unused-but-set-variable -DHAVE_AVX512 -mavx512f -mavx512cd -mavx512bw -mavx512dq -DLV_HAVE_AVX512   -o CMakeFiles/cmTC_90147.dir/src.c.o   -c /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_90147
+/opt/clion-2020.1.2/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_90147.dir/link.txt --verbose=1
+/usr/bin/cc  -Wno-unused-but-set-variable -DHAVE_AVX512 -mavx512f -mavx512cd -mavx512bw -mavx512dq -DLV_HAVE_AVX512    -rdynamic CMakeFiles/cmTC_90147.dir/src.c.o  -o cmTC_90147 
+make[1]: Leaving directory '/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/CMakeFiles/CMakeTmp'
+
+
+Return value: FAILED_TO_RUN
+Source file was:
+
+          #include <immintrin.h>
+          int main()
+          {
+            __m512i a, b, c;
+            const int src[16] = { 0x0, 0x1, 0x2, 0x3, 0x4, 0x5, 0x6, 0x7, 0x8 , 0x9, 0xA, 0xB, 0xC, 0xD, 0xE, 0xF};
+            int dst[16];
+            a =  _mm512_loadu_si512( (__m512i*)src );
+            b =  _mm512_loadu_si512( (__m512i*)src );
+            c = _mm512_add_epi32( a, b );
+            _mm512_storeu_si512( (__m512i*)dst, c );
+            int i = 0;
+            for( i = 0; i < 16; i++ ){
+              if( ( src[i] + src[i] ) != dst[i] ){
+                return -1;
+              }
+            }
+            return 0;
+          }

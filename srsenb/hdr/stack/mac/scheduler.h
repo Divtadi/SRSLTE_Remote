@@ -32,6 +32,7 @@
 #include <mutex>
 #include <pthread.h>
 #include <queue>
+#include <vector>
 
 namespace srsenb {
 
@@ -73,6 +74,10 @@ public:
     /* Virtual methods for user metric calculation */
     virtual void set_params(const sched_cell_params_t& cell_params_)                          = 0;
     virtual void sched_users(std::map<uint16_t, sched_ue>& ue_db, dl_sf_sched_itf* tti_sched) = 0;
+    virtual void sched_users_s1(std::map<uint16_t, sched_ue*>& ue_db, dl_sf_sched_itf* tti_sched) = 0;
+    virtual void sched_users_s2(std::map<uint16_t, sched_ue*>& ue_db, dl_sf_sched_itf* tti_sched) = 0;
+
+
   };
 
   class metric_ul
@@ -82,6 +87,7 @@ public:
     /* Virtual methods for user metric calculation */
     virtual void set_params(const sched_cell_params_t& cell_params_)                          = 0;
     virtual void sched_users(std::map<uint16_t, sched_ue>& ue_db, ul_sf_sched_itf* tti_sched) = 0;
+
   };
 
   /*************************************************************
@@ -134,10 +140,22 @@ public:
   void                                 tpc_inc(uint16_t rnti);
   void                                 tpc_dec(uint16_t rnti);
   std::array<int, SRSLTE_MAX_CARRIERS> get_enb_ue_cc_map(uint16_t rnti) final;
+
+
+  /*
+   * Custom Functions to pass QCI from RRC to MAC
+   * And to pass MAC Metrics (CQI, Bitrate etc..) to Scheduler
+   */
   void  ue_qci_value(uint16_t rnti, uint32_t qci) final;
+  void pass_metrics(uint16_t rnti, mac_metrics_t metrics_) final;
+  void pass_metrics_cqi(uint16_t rnti, float dl_cqi) final;
+  void pass_metrics_rx(uint16_t rnti, int rx_brate, int rx_errors, int rx_pkts) final;
+  void pass_metrics_tx(uint16_t rnti, int tx_brate, int tx_errors, int tx_pkts) final;
+  void pass_metrics_tti_cnt(uint16_t rnti) final;
+
+  class carrier_sched;
 
 
-    class carrier_sched;
 
 protected:
   // Helper methods
@@ -152,12 +170,14 @@ protected:
 
   std::map<uint16_t, sched_ue> ue_db;
 
+
   // independent schedulers for each carrier
   std::vector<std::unique_ptr<carrier_sched> > carrier_schedulers;
 
   uint32_t   last_tti = 0;
   std::mutex sched_mutex;
   bool       configured = false;
+
 };
 
 } // namespace srsenb

@@ -24,6 +24,8 @@
 #include "srslte/common/log_helper.h"
 #include "srslte/common/logmap.h"
 #include <string.h>
+#include <iterator>
+#include <iostream>
 
 namespace srsenb {
 
@@ -47,18 +49,9 @@ void dl_metric_rr::sched_users(std::map<uint16_t, sched_ue>& ue_db, dl_sf_sched_
     return;
   }
 
-//  void dl_metric_rr::qci_weight(std::map<uint16_t, sched_ue>& ue_db) {
-//    vector<int> Active_QCI_Values {};
-//    vector<int> Unique_QCI {};
-//      auto     iter         = ue_db.begin();
-//      for (uint32_t ue_count = 0; ue_count < ue_db.size(); ++iter) {
-//          if (iter == ue_db.end()) {
-//              iter = ue_db.begin(); // wrap around
-//          }
-//          Active_QCI_Values.push_back(&iter->second->)
-//      }
+  // Create a variable for slice numbering to pass to scheduling functions
 
-        // give priority in a time-domain RR basis.
+  // give priority in a time-domain RR basis.
   uint32_t priority_idx = tti_alloc->get_tti_tx_dl() % (uint32_t)ue_db.size();
   auto     iter         = ue_db.begin();
   std::advance(iter, priority_idx);
@@ -71,11 +64,106 @@ void dl_metric_rr::sched_users(std::map<uint16_t, sched_ue>& ue_db, dl_sf_sched_
   }
 }
 
+void dl_metric_rr::sched_users_s1(std::map<uint16_t, sched_ue*>& ue_db, dl_sf_sched_itf* tti_sched)
+{
+  tti_alloc = tti_sched;
+
+  if (ue_db.empty()) {
+    tti_alloc->add_perf(1,1.0);
+    return;
+  }
+
+  // give priority in a time-domain RR basis.
+  uint32_t priority_idx = tti_alloc->get_tti_tx_dl() % (uint32_t)ue_db.size();
+  auto     iter         = ue_db.begin();
+  auto     iter_buffer      = ue_db.begin();
+  std::advance(iter, priority_idx);
+  std::vector<std::map<uint16_t,sched_ue*>::iterator> iterators {};
+  uint32_t scheduled_users {};
+
+  for (uint32_t ue_count = 0; ue_count < ue_db.size(); ++iter_buffer, ++ue_count){
+    iterators.push_back(iter_buffer);
+  }
+
+  for (size_t i = 0; i < ue_db.size() ; ++i) {
+    for (size_t j = 0; j < ue_db.size() ; ++j) {
+      if (iterators[i]->second->get_pending_dl_new_data_total() > iterators[j]->second->get_pending_dl_new_data_total()){
+        std::swap(iterators[i], iterators[j]);
+      }
+    }
+  }
+
+  for (auto it : iterators){
+    sched_ue* user = it->second;
+    allocate_user_slice(user, 1);
+    scheduled_users += tti_alloc->is_dl_alloc(user);
+  }
+
+////  for (uint32_t ue_count = 0; ue_count < ue_db.size(); ++iter, ++ue_count) {
+////    if (iter == ue_db.end()) {
+////      iter = ue_db.begin(); // wrap around
+////    }
+////    sched_ue* user = iter->second;
+////    allocate_user_slice(user, 1);
+////    scheduled_users += tti_alloc->is_dl_alloc(user);
+//  }
+
+  tti_alloc->add_perf(1,(double)(scheduled_users/ue_db.size()));
+}
+
+void dl_metric_rr::sched_users_s2(std::map<uint16_t, sched_ue*>& ue_db, dl_sf_sched_itf* tti_sched)
+{
+  tti_alloc = tti_sched;
+
+  if (ue_db.empty()) {
+    tti_alloc->add_perf(2,1.0);
+    return;
+  }
+
+  // Create a variable for slice numbering to pass to scheduling functions
+
+  // give priority in a time-domain RR basis.
+
+  uint32_t priority_idx = tti_alloc->get_tti_tx_dl() % (uint32_t)ue_db.size();
+  auto     iter         = ue_db.begin();
+  auto     iter_mt         = ue_db.begin();
+  std::advance(iter, priority_idx);
+//  std::vector<std::map<uint16_t,sched_ue*>::iterator> iterators {};
+  uint32_t scheduled_users {};
+
+//  for (uint32_t ue_count = 0; ue_count < ue_db.size(); ++iter_mt, ++ue_count){
+//  iterators.push_back(iter_mt);
+//  }
+
+//  for (int i = 0; i < ue_db.size() ; ++i) {
+//    for (int j = 0; j < ue_db.size() ; ++j) {
+//    if (iterators[i]->second->metrics_sched.tx_pkts < iterators[j]->second->metrics_sched.tx_pkts){
+//      std::swap(iterators[i], iterators[j]);
+//    }
+//    }
+//  }
+
+  for (uint32_t ue_count = 0; ue_count < ue_db.size(); ++iter, ++ue_count) {
+    if (iter == ue_db.end()) {
+      iter = ue_db.begin(); // wrap around
+    }
+
+    // Change scheduler for Slice 2 to Maximum Throughput
+
+    sched_ue* user = iter->second;
+    allocate_user_slice(user, 2);
+    scheduled_users += tti_alloc->is_dl_alloc(user);
+  }
+  tti_alloc->add_perf(2,(double)(scheduled_users/ue_db.size()));
+}
+
 bool dl_metric_rr::find_allocation(uint32_t min_nof_rbg, uint32_t max_nof_rbg, rbgmask_t* rbgmask)
 {
   if (tti_alloc->get_dl_mask().all()) {
     return false;
   }
+
+
   // 1's for free rbgs
   rbgmask_t localmask = ~(tti_alloc->get_dl_mask());
 
@@ -93,7 +181,7 @@ bool dl_metric_rr::find_allocation(uint32_t min_nof_rbg, uint32_t max_nof_rbg, r
   return true;
 }
 
-dl_harq_proc* dl_metric_rr::allocate_user(sched_ue* user)
+dl_harq_proc* dl_metric_rr::allocate_user(sched_ue* user) // Copy function to work with different slices, allocate_user_slice1 etc
 {
   // Do not allocate a user multiple times in the same tti
   if (tti_alloc->is_dl_alloc(user)) {
@@ -145,6 +233,7 @@ dl_harq_proc* dl_metric_rr::allocate_user(sched_ue* user)
     rbg_range_t req_rbgs = user->get_required_dl_rbgs(cell_idx);
     if (req_rbgs.rbg_min > 0) {
       rbgmask_t newtx_mask(tti_alloc->get_dl_mask().size());
+      // Create RBG mask based on
       if (find_allocation(req_rbgs.rbg_min, req_rbgs.rbg_max, &newtx_mask)) {
         // some empty spaces were found
         code = tti_alloc->alloc_dl_user(user, newtx_mask, h->get_id());
@@ -157,6 +246,120 @@ dl_harq_proc* dl_metric_rr::allocate_user(sched_ue* user)
     }
   }
 
+  return nullptr;
+}
+
+bool dl_metric_rr::find_allocation_slice(uint32_t min_nof_rbg, uint32_t max_nof_rbg, rbgmask_t* rbgmask, uint16_t Slice)
+{
+  rbgmask_t localmask;
+  std::pair<double, double> mask_points;
+
+  if(Slice == 1){
+    if (tti_alloc->get_dl_mask_1().all()) {
+      return false;
+    }
+   localmask = ~(tti_alloc->get_dl_mask_1());
+   mask_points = tti_alloc->get_mask_1();
+  } else if(Slice == 2){
+    if (tti_alloc->get_dl_mask_2().all()) {
+      return false;
+    }
+  localmask = ~(tti_alloc->get_dl_mask_2());
+  mask_points = tti_alloc->get_mask_2();
+  } else
+    {
+      if (tti_alloc->get_dl_mask_2().all()) {
+        return false;
+      }
+      localmask = ~(tti_alloc->get_dl_mask_2());
+      mask_points = tti_alloc->get_mask_2();
+    }
+
+    // 1's for free rbgs
+
+
+  uint32_t i = std::ceil(mask_points.first*tti_alloc->get_nof_rbgs()/100.0);
+  uint32_t end_bit = std::floor(mask_points.second*tti_alloc->get_nof_rbgs()/100.0);
+  uint32_t nof_alloc = 0;
+  for (; (i < end_bit) and (nof_alloc < max_nof_rbg); ++i) {
+    if (localmask.test(i)) {
+      nof_alloc++;
+    }
+  }
+  if (nof_alloc < min_nof_rbg) {
+    return false;
+  }
+  localmask.fill(i, end_bit, false);
+  *rbgmask = localmask;
+  return true;
+}
+
+dl_harq_proc* dl_metric_rr::allocate_user_slice(sched_ue* user, uint16_t slice ) // Copy function to work with different slices, allocate_user_slice1 etc
+{
+
+  // Do not allocate a user multiple times in the same tti
+  if (tti_alloc->is_dl_alloc(user)) {
+    return nullptr;
+  }
+  // Do not allocate a user to an inactive carrier
+  auto p = user->get_cell_index(cc_cfg->enb_cc_idx);
+  if (not p.first) {
+    return nullptr;
+  }
+  uint32_t cell_idx = p.second;
+
+  alloc_outcome_t code;
+  uint32_t        tti_dl = tti_alloc->get_tti_tx_dl();
+  dl_harq_proc*   h      = user->get_pending_dl_harq(tti_dl, cell_idx);
+
+  // Schedule retx if we have space
+  if (h != nullptr) {
+    // Try to reuse the same mask
+    rbgmask_t retx_mask = h->get_rbgmask();
+    code                = tti_alloc->alloc_dl_user(user, retx_mask, h->get_id());
+    if (code == alloc_outcome_t::SUCCESS) {
+      return h;
+    }
+    if (code == alloc_outcome_t::DCI_COLLISION) {
+      // No DCIs available for this user. Move to next
+      log_h->warning("SCHED: Couldn't find space in PDCCH for DL retx for rnti=0x%x\n", user->get_rnti());
+      return nullptr;
+    }
+
+    // If previous mask does not fit, find another with exact same number of rbgs
+    size_t nof_rbg = retx_mask.count();
+
+    if (find_allocation_slice(nof_rbg, nof_rbg, &retx_mask, slice)) {
+      code = tti_alloc->alloc_dl_user(user, retx_mask, h->get_id());
+      if (code == alloc_outcome_t::SUCCESS) {
+        return h;
+      }
+      if (code == alloc_outcome_t::DCI_COLLISION) {
+        log_h->warning("SCHED: Couldn't find space in PDCCH for DL retx for rnti=0x%x\n", user->get_rnti());
+        return nullptr;
+      }
+    }
+  }
+
+  // If could not schedule the reTx, or there wasn't any pending retx, find an empty PID
+  h = user->get_empty_dl_harq(tti_dl, cell_idx);
+  if (h != nullptr) {
+    // Allocate resources based on pending data
+    rbg_range_t req_rbgs = user->get_required_dl_rbgs(cell_idx);
+    if (req_rbgs.rbg_min > 0) {
+      rbgmask_t newtx_mask(tti_alloc->get_dl_mask_1().size());
+      // Create RBG mask based on
+      if (find_allocation_slice(req_rbgs.rbg_min, req_rbgs.rbg_max, &newtx_mask, slice)) {
+        // some empty spaces were found
+        code = tti_alloc->alloc_dl_user(user, newtx_mask, h->get_id());
+        if (code == alloc_outcome_t::SUCCESS) {
+          return h;
+        } else if (code == alloc_outcome_t::DCI_COLLISION) {
+          log_h->warning("SCHED: Couldn't find space in PDCCH for DL tx for rnti=0x%x\n", user->get_rnti());
+        }
+      }
+    }
+  }
   return nullptr;
 }
 

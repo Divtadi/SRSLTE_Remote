@@ -22,6 +22,8 @@
 #ifndef SRSENB_MAC_METRICS_H
 #define SRSENB_MAC_METRICS_H
 
+#include <cstdint>
+
 namespace srsenb {
 
 // MAC metrics per user
