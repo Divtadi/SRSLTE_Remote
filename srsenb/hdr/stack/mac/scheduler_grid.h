@@ -158,6 +158,7 @@ public:
   uint32_t            get_cfi() const { return pdcch_alloc.get_cfi(); }
   const pdcch_grid_t& get_pdcch_grid() const { return pdcch_alloc; }
   const uint32_t get_nof_rbgs() const {return nof_rbgs; }
+  double get_midpoint() const {return mask_midpoint;}
   std::pair<double, double> get_mask_1() const { return std::pair<double, double> {mask_1_start,mask_1_end};}
   std::pair<double, double> get_mask_2() const { return std::pair<double, double> {mask_2_start,mask_2_end};}
   double get_s1_perf() {return s1_min_perf;}
@@ -179,8 +180,9 @@ private:
   size_t TTI_Window = 20;
 
   // Slice 1 Parameters
+  double mask_midpoint = 25;
   double mask_1_start = 0;
-  double mask_1_end = 25;
+  double mask_1_end = mask_midpoint;
   std::deque<double> slice_1_perf {};
   double s1_min_perf = 0.8;
 
@@ -219,11 +221,13 @@ public:
   virtual uint32_t         get_nof_ctrl_symbols() const                                            = 0;
   virtual bool             is_dl_alloc(sched_ue* user) const                                       = 0;
   virtual const uint32_t         get_nof_rbgs() const                                              = 0;
+  virtual double                 get_midpoint() const                                              = 0;
   virtual std::pair<double, double> get_mask_1() const                                             = 0;
   virtual std::pair<double, double> get_mask_2() const                                             = 0;
   virtual size_t get_window() const                                                                = 0;
   virtual void add_perf(uint16_t slice, double perf)                                               = 0;
   virtual void track_perf()                                                                        = 0;
+  virtual void block_tti()                                                                         = 0;
 };
 
 //! generic interface used by UL scheduler algorithm
@@ -324,13 +328,14 @@ public:
   const rbgmask_t& get_dl_mask_1() const final { return tti_alloc.get_dl_mask_1(); }
   const rbgmask_t& get_dl_mask_2() const final { return tti_alloc.get_dl_mask_2(); }
   const uint32_t   get_nof_rbgs() const final { return tti_alloc.get_nof_rbgs(); }
+  double get_midpoint() const final {return tti_alloc.get_midpoint();}
   std::pair<double, double> get_mask_1() const final { return tti_alloc.get_mask_1();}
   std::pair<double, double> get_mask_2() const final { return tti_alloc.get_mask_2();}
   size_t get_window() const final;
 
-
   void add_perf(uint16_t slice, double perf) final;
   void track_perf() final;
+  void block_tti()  final;
 
 
   // ul_tti_sched itf

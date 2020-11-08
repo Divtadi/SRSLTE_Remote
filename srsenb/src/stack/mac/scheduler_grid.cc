@@ -364,8 +364,8 @@ void sf_grid_t::new_tti(const tti_params_t& tti_params_)
   dl_mask_1.reset();
   dl_mask_2.reset();
 
-  dl_mask_1.fill(std::ceil(mask_1_start*nof_rbgs/100.0), std::floor(mask_1_end*nof_rbgs/100.0));
-  dl_mask_2.fill(std::ceil(mask_2_start*nof_rbgs/100.0), std::floor(mask_2_end*nof_rbgs/100.0));
+  dl_mask_1.fill(std::floor(mask_1_start*nof_rbgs/100.0), std::floor(mask_1_end*nof_rbgs/100.0));
+  dl_mask_2.fill(std::floor(mask_2_start*nof_rbgs/100.0), std::floor(mask_2_end*nof_rbgs/100.0));
 
   dl_mask_1 = ~(dl_mask_1);
   dl_mask_2 = ~(dl_mask_2);
@@ -399,7 +399,7 @@ alloc_outcome_t sf_grid_t::alloc_dl(uint32_t aggr_idx, alloc_type_t alloc_type, 
 
         // Allocate RBGs
         dl_mask_1 |= alloc_mask;
-        avail_rbg -= alloc_mask.count();
+        avail_rbg_s1 -= alloc_mask.count();
 
         return alloc_outcome_t::SUCCESS;
       } else if (user->get_qci() == 9) // Slice 2
@@ -423,7 +423,7 @@ alloc_outcome_t sf_grid_t::alloc_dl(uint32_t aggr_idx, alloc_type_t alloc_type, 
 
         // Allocate RBGs
         dl_mask_2 |= alloc_mask;
-        avail_rbg -= alloc_mask.count();
+        avail_rbg_s2 -= alloc_mask.count();
 
         return alloc_outcome_t::SUCCESS;
       } else { // Best effort, included with slice 2
@@ -446,7 +446,7 @@ alloc_outcome_t sf_grid_t::alloc_dl(uint32_t aggr_idx, alloc_type_t alloc_type, 
 
         // Allocate RBGs
         dl_mask_2 |= alloc_mask;
-        avail_rbg -= alloc_mask.count();
+        avail_rbg_s2 -= alloc_mask.count();
 
         return alloc_outcome_t::SUCCESS;
       }
@@ -482,8 +482,15 @@ alloc_outcome_t sf_grid_t::alloc_dl(uint32_t aggr_idx, alloc_type_t alloc_type, 
 sf_grid_t::dl_ctrl_alloc_t sf_grid_t::alloc_dl_ctrl(uint32_t aggr_idx, alloc_type_t alloc_type)
 { // Investigate Slicing here, could be the issue
   rbg_range_t range;
+//  rbg_range_t range_s1;
+//  rbg_range_t range_s2;
   range.rbg_min = nof_rbgs - avail_rbg;
   range.rbg_max = range.rbg_min + ((alloc_type == alloc_type_t::DL_RAR) ? rar_n_rbg : si_n_rbg);
+
+//  range_s1.rbg_min = nof_rbgs - avail_rbg_s1;
+//  range_s1.rbg_max = range_s1.rbg_min +  + ((alloc_type == alloc_type_t::DL_RAR) ? rar_n_rbg : si_n_rbg);
+//  range_s2.rbg_min = nof_rbgs - avail_rbg_s2;
+//  range_s2.rbg_max = range_s2.rbg_min + ((alloc_type == alloc_type_t::DL_RAR) ? rar_n_rbg : si_n_rbg);;
 
   if (alloc_type != alloc_type_t::DL_RAR and alloc_type != alloc_type_t::DL_BC and
       alloc_type != alloc_type_t::DL_PCCH) {
@@ -644,7 +651,7 @@ sf_sched::ctrl_code_t sf_sched::alloc_dl_ctrl(uint32_t aggr_lvl, uint32_t tbs_by
   } else if (rnti == SRSLTE_PRNTI) {
     alloc_type = alloc_type_t::DL_PCCH;
   }
-
+  uint16_t slice {};
   /* Allocate space in the DL RBG and PDCCH grids */
   // Consider Passing Slice Number here with Control Function
   sf_grid_t::dl_ctrl_alloc_t ret = tti_alloc.alloc_dl_ctrl(aggr_lvl, alloc_type);
@@ -1204,6 +1211,23 @@ void sf_sched::track_perf() {
   }
   std::cout << tti_alloc.get_mask_1().second << std::endl;
 }
+}
+
+void sf_sched::block_tti() {
+
+  uint16_t tti_odd_even = get_tti_tx_dl()%2; // This counter seperates current TTIs into odd and even. If TTI is even, value = 0, odd value = 1.
+
+  if (tti_odd_even == 0){
+    // For even TTIs, allocate all resources to slice 2
+  tti_alloc.set_mask(1,0,0);
+  tti_alloc.set_mask(2,0,100);
+  } else{
+    tti_alloc.set_mask(1,0, get_midpoint());
+    tti_alloc.set_mask(2,get_midpoint(), 100);
+  }
+  std::cout << "TTI Number " << get_tti_tx_dl() << " which is (0 Even, 1 Odd) " << tti_odd_even << std::endl;
+  std::cout << "Slice 1 Mask " << get_dl_mask_1().to_string() << "\t Slice 2 Mask " << get_dl_mask_2().to_string() << std::endl;
+
 }
 
 uint32_t sf_sched::get_nof_ctrl_symbols() const

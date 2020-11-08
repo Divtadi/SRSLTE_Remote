@@ -400,7 +400,7 @@ void sched::carrier_sched::alloc_dl_users(sf_sched* tti_result)
 //  if (!ue_db_slice_1.empty() || !ue_db_slice_2.empty()){
 //    tti_result->track_perf();
 //  }
-
+  tti_result->block_tti();
   ue_db_slice_1.clear();
   ue_db_slice_2.clear();
 

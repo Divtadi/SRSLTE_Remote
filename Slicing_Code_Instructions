@@ -1,0 +1,55 @@
+srsLTE_Slicing Instructions
+
+These instructions were written on Novemebr 6th by Ayman Maghrabi.
+
+*************
+
+The modified srsLTE code implements slicing on the scheduler level to slice RBGs on the Downlink for each slice. UEs are identified by the QCI value set at the srsEPC HSS.
+
+The main functions of the code can be broken down as follows:
+
+
+- Pass QCI Value from RRC Layer to MAC scheduler
+
+- Seperate Users at Scheduler Level based on QCI value
+
+- Create seperate scheduling functions for each slice
+
+- Modifiy the current RBG mask function to include the slice parameter
+
+- Include Slice Parameters as fixed values in the Scheduler Grid file
+
+- Include a Slice Performance metric (Percentage of scheduled users per slice) for tracking and dynamic control
+
+- A tracking function in the Scheduler Grid that tracks performance of each slice scheduler.
+
+- An optional Tracking function in the Scheduler Grid to allow regularity scheduling, meaning some TTI's can be assigned entirely to a slice. Useful for sensory scheduled application
+
+
+Each of these functions will be referenced in the code in the below text file.
+
+
+= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
+
+(*) Pass QCI Value from RRC Layer to MAC Scheduler
+
+The QCI value is programed in the EPC side, in the user_db.csv file. From eNodeB side, this value is only recevied from EPC after RRC layer and RRC connection is established.
+
+The first part of the code is to pass the value from RRC once it's read to MAC:
+
+1- Modify ~/srsLTE/lib/include/srslte/interfaces/enb_interfaces.h file to include a function to read QCI from RRC to MAC
+   [function: ue_qci_value; row: 307]
+
+2- Modify ~/srsLTE/srsenb/src/stack/mac/mac.cc to define the interface function ue_qci_value [row 141]
+
+3- MAC has UE class that is different from the scheduler, SCHED_UE class. Create another function in the scheduler to pass QCI from MAC UE to SCHED_UE 
+   ~/srsLTE/srsenb/src/stack/mac/scheduler.cc function ue_qci_value [row 347] 
+
+3- Call function in ~/srsLTE/srsenb/src/stack/rrc/rrc.cc after QCI is read [row 1418]
+
+The previous modification allows QCI value to be passed to MAC UE object, and then immediatly passes it to SCHED_UE object.
+
+
+= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
+
+
