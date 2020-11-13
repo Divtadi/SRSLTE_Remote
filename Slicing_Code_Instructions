@@ -15,11 +15,9 @@ The main functions of the code can be broken down as follows:
 
 - Create seperate scheduling functions for each slice
 
-- Modifiy the current RBG mask function to include the slice parameter
-
 - Include Slice Parameters as fixed values in the Scheduler Grid file
 
-- Include a Slice Performance metric (Percentage of scheduled users per slice) for tracking and dynamic control
+- Modifiy the current RBG mask function to include the slice parameter
 
 - A tracking function in the Scheduler Grid that tracks performance of each slice scheduler.
 
@@ -51,5 +49,93 @@ The previous modification allows QCI value to be passed to MAC UE object, and th
 
 
 = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
+
+(*) Seperate Users at Scheduler Level based on QCI value
+
+Now, each sched_ue object in the scheduler has a QCI value that can be inquired with get_qci function. In the scheduler, sched_ue objects are stored in a MAP data container called ue_db, each RNTI has an associated sched_ue object. We do the following in the scheduler_grid.cc function alloc_dl_users :
+
+1- Create a new MAP data container for each slice that contains pointers to sched_ue objects (sched_ue)
+scheduler_grid.cc [row 369], create std::map<uint16_t, sched_ue*> ue_db_slice_X {};
+
+2- Iterate over each element in ue_db, get the QCI value and then point to that object in the corresponding ue_db slice.
+scheduler_grid.cc [rows 376 - 386];
+
+3- Call the corresponding schedluer function for each slice (these functions will be created in the following step)
+scheduler_grid.cc [rows 397-399]
+
+
+= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
+
+(*) Create seperate scheduling functions for each slice
+
+In the scheduler_metric.cc file, one scheduling function is defined by default. To make better use of slicing, we create a scheduling function per slice, as this will help implement different scheduling strategies for each scheduler.
+
+1- Copy the original functions sched_users and create sched_users_s1 or sx, where x is slice number. The default scheduling strategy is Round-Robin
+scheduler_metric.cc [rows 67 , 114] contain sched_users_s1 and sched_users_s2.
+
+2- Implement a different scheduling strategy for slice 1, where we prioritize users based on the current buffer size, the largets being the highest priority, to try and better serve low-latency applications.
+scheduler_metric.cc [rows 84 - 94]
+
+3- After UE are arranged in descending order of buffer, go through each element and call the allocation function along with the slice number.
+scheduler_metric.cc [rows 96-100, 146-153].
+
+4- For each slice, count the number of scheduled users to find the percentage of scheduled users for tracking and controlling purposes to be defined later.
+
+
+= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
+
+(*) Include Slice Parameters as fixed values in the Scheduler Grid file
+
+We define static slice parameters in the scheduler_grid.h file [rows 177-194]. These include:
+
+1- TTI_Window , the number of TTIs that we want to track the performance over. Tracking every TTI might cause to constant changes.
+
+2- Mask_Midpoint , this is a static placeholder for the midpoint between two slices on a scale from 0 to 100. This means that if this is 25, slice 1 will get <0-25> of the resources, and slice 2 will get <25-100> of the resources. This can be better coded or optimized.
+
+3- mask_start , for slice 1, this should be zero. For subsequent slices, the mask_start should be the end of the previous mask (mask_2_start = mask_1_end)
+
+4- mask_end , for the first slice, this should be the midpoint (control functions will later modifiy this value). For the last slice, this should be 100.
+
+5- deque containter to track each slice's perofrmance.
+
+6- Minimum performance, this will be a percentage value (from 0 to 1) to indicate the minimum performance threshold before requiring to modifiy the current RBG distribution.
+
+7- Create a DL_Mask for each slice in every TTI such that bits with 1 will be unavailable for the slice, bits with 0 will be available. The DL_Masks are filled in scheduler_grid.cc [rows 341-345].
+
+8- Getter functions were defined to help get the previous values to be used when allocating RBG masks in the next step
+
+= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
+
+(*) Modifiy the current RBG mask function to include the slice parameter
+
+1- We create a new allocation function, allocate_user_slice that will recieve as input the user and the slice number. Based on the slice number, the function will check required RBGs, retx etc... and then call find_allocation_slice function to properly fill the RBG mask for the user
+scheduler_metric.cc [rows 294-339]
+
+2- We create a new allocation function, find_allocation_slice that will recieve as input the user, the minimum RBG, the maximum RBG and the slice number that will identify the slice parameters defined in scheduler_grid.h
+scheduler_metric.cc [rows 249-292]
+
+3- find_allocation_slice will first check the slice number and store the corresponding slice paramters such as mask_start and mask_end as well as correpsonding DL_Mask.
+
+4- find_allocation_slice will fill the mask starting from i = mask_start upto endbit = mask_end or untill enough RBGs are allocated. If there is enough RBGs, the mask will be created successfulyl and returned as true
+scheduler_metric.cc [rows 278-291].
+
+= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
+
+(*) A tracking function in the Scheduler Grid that tracks performance of each slice scheduler.
+
+
+
+= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
+
+(*) An optional Tracking function in the Scheduler Grid to allow regularity scheduling, meaning some TTI's can be assigned entirely to a slice. Useful for sensory scheduled application
+
+
+
+= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
+
+
+
+
+
 
 
