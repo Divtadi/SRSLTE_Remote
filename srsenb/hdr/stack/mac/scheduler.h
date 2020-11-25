@@ -147,11 +147,6 @@ public:
    * And to pass MAC Metrics (CQI, Bitrate etc..) to Scheduler
    */
   void  ue_qci_value(uint16_t rnti, uint32_t qci) final;
-  void pass_metrics(uint16_t rnti, mac_metrics_t metrics_) final;
-  void pass_metrics_cqi(uint16_t rnti, float dl_cqi) final;
-  void pass_metrics_rx(uint16_t rnti, int rx_brate, int rx_errors, int rx_pkts) final;
-  void pass_metrics_tx(uint16_t rnti, int tx_brate, int tx_errors, int tx_pkts) final;
-  void pass_metrics_tti_cnt(uint16_t rnti) final;
 
   class carrier_sched;
 
