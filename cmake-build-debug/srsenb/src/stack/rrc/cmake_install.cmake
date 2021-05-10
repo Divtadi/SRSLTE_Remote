@@ -1,4 +1,4 @@
-# Install script for directory: /home/atm/Ayman/srsLTE_Slicing/srsenb/src/stack/rrc
+# Install script for directory: /home/atm/Divya/srsenb/src/stack/rrc
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

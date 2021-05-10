@@ -48,10 +48,10 @@ RM = /opt/clion-2020.1.2/bin/cmake/linux/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/atm/Ayman/srsLTE_Slicing
+CMAKE_SOURCE_DIR = /home/atm/Divya
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug
+CMAKE_BINARY_DIR = /home/atm/Divya/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -138,7 +138,7 @@ test/fast: test
 # Special rule for the target package
 package: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool..."
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && /opt/clion-2020.1.2/bin/cmake/linux/bin/cpack --config ./CPackConfig.cmake
+	cd /home/atm/Divya/cmake-build-debug && /opt/clion-2020.1.2/bin/cmake/linux/bin/cpack --config ./CPackConfig.cmake
 .PHONY : package
 
 # Special rule for the target package
@@ -149,7 +149,7 @@ package/fast: package
 # Special rule for the target package_source
 package_source:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool for source..."
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && /opt/clion-2020.1.2/bin/cmake/linux/bin/cpack --config ./CPackSourceConfig.cmake /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/CPackSourceConfig.cmake
+	cd /home/atm/Divya/cmake-build-debug && /opt/clion-2020.1.2/bin/cmake/linux/bin/cpack --config ./CPackSourceConfig.cmake /home/atm/Divya/cmake-build-debug/CPackSourceConfig.cmake
 .PHONY : package_source
 
 # Special rule for the target package_source
@@ -159,14 +159,14 @@ package_source/fast: package_source
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_progress_start /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/CMakeFiles /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/phy/fec/CMakeFiles/progress.marks
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 lib/src/phy/fec/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/CMakeFiles 0
+	cd /home/atm/Divya/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_progress_start /home/atm/Divya/cmake-build-debug/CMakeFiles /home/atm/Divya/cmake-build-debug/lib/src/phy/fec/CMakeFiles/progress.marks
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 lib/src/phy/fec/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/atm/Divya/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 lib/src/phy/fec/clean
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 lib/src/phy/fec/clean
 .PHONY : clean
 
 # The main clean target
@@ -176,22 +176,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: cmake_check_build_system
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 lib/src/phy/fec/preinstall
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 lib/src/phy/fec/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 lib/src/phy/fec/preinstall
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 lib/src/phy/fec/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/atm/Divya/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 lib/src/phy/fec/CMakeFiles/srslte_fec.dir/rule:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 lib/src/phy/fec/CMakeFiles/srslte_fec.dir/rule
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 lib/src/phy/fec/CMakeFiles/srslte_fec.dir/rule
 .PHONY : lib/src/phy/fec/CMakeFiles/srslte_fec.dir/rule
 
 # Convenience name for target.
@@ -201,7 +201,7 @@ srslte_fec: lib/src/phy/fec/CMakeFiles/srslte_fec.dir/rule
 
 # fast build rule for target.
 srslte_fec/fast:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/fec/CMakeFiles/srslte_fec.dir/build.make lib/src/phy/fec/CMakeFiles/srslte_fec.dir/build
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/fec/CMakeFiles/srslte_fec.dir/build.make lib/src/phy/fec/CMakeFiles/srslte_fec.dir/build
 .PHONY : srslte_fec/fast
 
 cbsegm.o: cbsegm.c.o
@@ -210,7 +210,7 @@ cbsegm.o: cbsegm.c.o
 
 # target to build an object file
 cbsegm.c.o:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/fec/CMakeFiles/srslte_fec.dir/build.make lib/src/phy/fec/CMakeFiles/srslte_fec.dir/cbsegm.c.o
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/fec/CMakeFiles/srslte_fec.dir/build.make lib/src/phy/fec/CMakeFiles/srslte_fec.dir/cbsegm.c.o
 .PHONY : cbsegm.c.o
 
 cbsegm.i: cbsegm.c.i
@@ -219,7 +219,7 @@ cbsegm.i: cbsegm.c.i
 
 # target to preprocess a source file
 cbsegm.c.i:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/fec/CMakeFiles/srslte_fec.dir/build.make lib/src/phy/fec/CMakeFiles/srslte_fec.dir/cbsegm.c.i
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/fec/CMakeFiles/srslte_fec.dir/build.make lib/src/phy/fec/CMakeFiles/srslte_fec.dir/cbsegm.c.i
 .PHONY : cbsegm.c.i
 
 cbsegm.s: cbsegm.c.s
@@ -228,7 +228,7 @@ cbsegm.s: cbsegm.c.s
 
 # target to generate assembly for a file
 cbsegm.c.s:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/fec/CMakeFiles/srslte_fec.dir/build.make lib/src/phy/fec/CMakeFiles/srslte_fec.dir/cbsegm.c.s
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/fec/CMakeFiles/srslte_fec.dir/build.make lib/src/phy/fec/CMakeFiles/srslte_fec.dir/cbsegm.c.s
 .PHONY : cbsegm.c.s
 
 convcoder.o: convcoder.c.o
@@ -237,7 +237,7 @@ convcoder.o: convcoder.c.o
 
 # target to build an object file
 convcoder.c.o:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/fec/CMakeFiles/srslte_fec.dir/build.make lib/src/phy/fec/CMakeFiles/srslte_fec.dir/convcoder.c.o
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/fec/CMakeFiles/srslte_fec.dir/build.make lib/src/phy/fec/CMakeFiles/srslte_fec.dir/convcoder.c.o
 .PHONY : convcoder.c.o
 
 convcoder.i: convcoder.c.i
@@ -246,7 +246,7 @@ convcoder.i: convcoder.c.i
 
 # target to preprocess a source file
 convcoder.c.i:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/fec/CMakeFiles/srslte_fec.dir/build.make lib/src/phy/fec/CMakeFiles/srslte_fec.dir/convcoder.c.i
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/fec/CMakeFiles/srslte_fec.dir/build.make lib/src/phy/fec/CMakeFiles/srslte_fec.dir/convcoder.c.i
 .PHONY : convcoder.c.i
 
 convcoder.s: convcoder.c.s
@@ -255,7 +255,7 @@ convcoder.s: convcoder.c.s
 
 # target to generate assembly for a file
 convcoder.c.s:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/fec/CMakeFiles/srslte_fec.dir/build.make lib/src/phy/fec/CMakeFiles/srslte_fec.dir/convcoder.c.s
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/fec/CMakeFiles/srslte_fec.dir/build.make lib/src/phy/fec/CMakeFiles/srslte_fec.dir/convcoder.c.s
 .PHONY : convcoder.c.s
 
 crc.o: crc.c.o
@@ -264,7 +264,7 @@ crc.o: crc.c.o
 
 # target to build an object file
 crc.c.o:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/fec/CMakeFiles/srslte_fec.dir/build.make lib/src/phy/fec/CMakeFiles/srslte_fec.dir/crc.c.o
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/fec/CMakeFiles/srslte_fec.dir/build.make lib/src/phy/fec/CMakeFiles/srslte_fec.dir/crc.c.o
 .PHONY : crc.c.o
 
 crc.i: crc.c.i
@@ -273,7 +273,7 @@ crc.i: crc.c.i
 
 # target to preprocess a source file
 crc.c.i:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/fec/CMakeFiles/srslte_fec.dir/build.make lib/src/phy/fec/CMakeFiles/srslte_fec.dir/crc.c.i
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/fec/CMakeFiles/srslte_fec.dir/build.make lib/src/phy/fec/CMakeFiles/srslte_fec.dir/crc.c.i
 .PHONY : crc.c.i
 
 crc.s: crc.c.s
@@ -282,7 +282,7 @@ crc.s: crc.c.s
 
 # target to generate assembly for a file
 crc.c.s:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/fec/CMakeFiles/srslte_fec.dir/build.make lib/src/phy/fec/CMakeFiles/srslte_fec.dir/crc.c.s
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/fec/CMakeFiles/srslte_fec.dir/build.make lib/src/phy/fec/CMakeFiles/srslte_fec.dir/crc.c.s
 .PHONY : crc.c.s
 
 parity.o: parity.c.o
@@ -291,7 +291,7 @@ parity.o: parity.c.o
 
 # target to build an object file
 parity.c.o:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/fec/CMakeFiles/srslte_fec.dir/build.make lib/src/phy/fec/CMakeFiles/srslte_fec.dir/parity.c.o
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/fec/CMakeFiles/srslte_fec.dir/build.make lib/src/phy/fec/CMakeFiles/srslte_fec.dir/parity.c.o
 .PHONY : parity.c.o
 
 parity.i: parity.c.i
@@ -300,7 +300,7 @@ parity.i: parity.c.i
 
 # target to preprocess a source file
 parity.c.i:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/fec/CMakeFiles/srslte_fec.dir/build.make lib/src/phy/fec/CMakeFiles/srslte_fec.dir/parity.c.i
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/fec/CMakeFiles/srslte_fec.dir/build.make lib/src/phy/fec/CMakeFiles/srslte_fec.dir/parity.c.i
 .PHONY : parity.c.i
 
 parity.s: parity.c.s
@@ -309,7 +309,7 @@ parity.s: parity.c.s
 
 # target to generate assembly for a file
 parity.c.s:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/fec/CMakeFiles/srslte_fec.dir/build.make lib/src/phy/fec/CMakeFiles/srslte_fec.dir/parity.c.s
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/fec/CMakeFiles/srslte_fec.dir/build.make lib/src/phy/fec/CMakeFiles/srslte_fec.dir/parity.c.s
 .PHONY : parity.c.s
 
 rm_conv.o: rm_conv.c.o
@@ -318,7 +318,7 @@ rm_conv.o: rm_conv.c.o
 
 # target to build an object file
 rm_conv.c.o:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/fec/CMakeFiles/srslte_fec.dir/build.make lib/src/phy/fec/CMakeFiles/srslte_fec.dir/rm_conv.c.o
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/fec/CMakeFiles/srslte_fec.dir/build.make lib/src/phy/fec/CMakeFiles/srslte_fec.dir/rm_conv.c.o
 .PHONY : rm_conv.c.o
 
 rm_conv.i: rm_conv.c.i
@@ -327,7 +327,7 @@ rm_conv.i: rm_conv.c.i
 
 # target to preprocess a source file
 rm_conv.c.i:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/fec/CMakeFiles/srslte_fec.dir/build.make lib/src/phy/fec/CMakeFiles/srslte_fec.dir/rm_conv.c.i
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/fec/CMakeFiles/srslte_fec.dir/build.make lib/src/phy/fec/CMakeFiles/srslte_fec.dir/rm_conv.c.i
 .PHONY : rm_conv.c.i
 
 rm_conv.s: rm_conv.c.s
@@ -336,7 +336,7 @@ rm_conv.s: rm_conv.c.s
 
 # target to generate assembly for a file
 rm_conv.c.s:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/fec/CMakeFiles/srslte_fec.dir/build.make lib/src/phy/fec/CMakeFiles/srslte_fec.dir/rm_conv.c.s
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/fec/CMakeFiles/srslte_fec.dir/build.make lib/src/phy/fec/CMakeFiles/srslte_fec.dir/rm_conv.c.s
 .PHONY : rm_conv.c.s
 
 rm_turbo.o: rm_turbo.c.o
@@ -345,7 +345,7 @@ rm_turbo.o: rm_turbo.c.o
 
 # target to build an object file
 rm_turbo.c.o:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/fec/CMakeFiles/srslte_fec.dir/build.make lib/src/phy/fec/CMakeFiles/srslte_fec.dir/rm_turbo.c.o
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/fec/CMakeFiles/srslte_fec.dir/build.make lib/src/phy/fec/CMakeFiles/srslte_fec.dir/rm_turbo.c.o
 .PHONY : rm_turbo.c.o
 
 rm_turbo.i: rm_turbo.c.i
@@ -354,7 +354,7 @@ rm_turbo.i: rm_turbo.c.i
 
 # target to preprocess a source file
 rm_turbo.c.i:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/fec/CMakeFiles/srslte_fec.dir/build.make lib/src/phy/fec/CMakeFiles/srslte_fec.dir/rm_turbo.c.i
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/fec/CMakeFiles/srslte_fec.dir/build.make lib/src/phy/fec/CMakeFiles/srslte_fec.dir/rm_turbo.c.i
 .PHONY : rm_turbo.c.i
 
 rm_turbo.s: rm_turbo.c.s
@@ -363,7 +363,7 @@ rm_turbo.s: rm_turbo.c.s
 
 # target to generate assembly for a file
 rm_turbo.c.s:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/fec/CMakeFiles/srslte_fec.dir/build.make lib/src/phy/fec/CMakeFiles/srslte_fec.dir/rm_turbo.c.s
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/fec/CMakeFiles/srslte_fec.dir/build.make lib/src/phy/fec/CMakeFiles/srslte_fec.dir/rm_turbo.c.s
 .PHONY : rm_turbo.c.s
 
 softbuffer.o: softbuffer.c.o
@@ -372,7 +372,7 @@ softbuffer.o: softbuffer.c.o
 
 # target to build an object file
 softbuffer.c.o:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/fec/CMakeFiles/srslte_fec.dir/build.make lib/src/phy/fec/CMakeFiles/srslte_fec.dir/softbuffer.c.o
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/fec/CMakeFiles/srslte_fec.dir/build.make lib/src/phy/fec/CMakeFiles/srslte_fec.dir/softbuffer.c.o
 .PHONY : softbuffer.c.o
 
 softbuffer.i: softbuffer.c.i
@@ -381,7 +381,7 @@ softbuffer.i: softbuffer.c.i
 
 # target to preprocess a source file
 softbuffer.c.i:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/fec/CMakeFiles/srslte_fec.dir/build.make lib/src/phy/fec/CMakeFiles/srslte_fec.dir/softbuffer.c.i
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/fec/CMakeFiles/srslte_fec.dir/build.make lib/src/phy/fec/CMakeFiles/srslte_fec.dir/softbuffer.c.i
 .PHONY : softbuffer.c.i
 
 softbuffer.s: softbuffer.c.s
@@ -390,7 +390,7 @@ softbuffer.s: softbuffer.c.s
 
 # target to generate assembly for a file
 softbuffer.c.s:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/fec/CMakeFiles/srslte_fec.dir/build.make lib/src/phy/fec/CMakeFiles/srslte_fec.dir/softbuffer.c.s
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/fec/CMakeFiles/srslte_fec.dir/build.make lib/src/phy/fec/CMakeFiles/srslte_fec.dir/softbuffer.c.s
 .PHONY : softbuffer.c.s
 
 tc_interl_lte.o: tc_interl_lte.c.o
@@ -399,7 +399,7 @@ tc_interl_lte.o: tc_interl_lte.c.o
 
 # target to build an object file
 tc_interl_lte.c.o:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/fec/CMakeFiles/srslte_fec.dir/build.make lib/src/phy/fec/CMakeFiles/srslte_fec.dir/tc_interl_lte.c.o
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/fec/CMakeFiles/srslte_fec.dir/build.make lib/src/phy/fec/CMakeFiles/srslte_fec.dir/tc_interl_lte.c.o
 .PHONY : tc_interl_lte.c.o
 
 tc_interl_lte.i: tc_interl_lte.c.i
@@ -408,7 +408,7 @@ tc_interl_lte.i: tc_interl_lte.c.i
 
 # target to preprocess a source file
 tc_interl_lte.c.i:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/fec/CMakeFiles/srslte_fec.dir/build.make lib/src/phy/fec/CMakeFiles/srslte_fec.dir/tc_interl_lte.c.i
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/fec/CMakeFiles/srslte_fec.dir/build.make lib/src/phy/fec/CMakeFiles/srslte_fec.dir/tc_interl_lte.c.i
 .PHONY : tc_interl_lte.c.i
 
 tc_interl_lte.s: tc_interl_lte.c.s
@@ -417,7 +417,7 @@ tc_interl_lte.s: tc_interl_lte.c.s
 
 # target to generate assembly for a file
 tc_interl_lte.c.s:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/fec/CMakeFiles/srslte_fec.dir/build.make lib/src/phy/fec/CMakeFiles/srslte_fec.dir/tc_interl_lte.c.s
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/fec/CMakeFiles/srslte_fec.dir/build.make lib/src/phy/fec/CMakeFiles/srslte_fec.dir/tc_interl_lte.c.s
 .PHONY : tc_interl_lte.c.s
 
 tc_interl_umts.o: tc_interl_umts.c.o
@@ -426,7 +426,7 @@ tc_interl_umts.o: tc_interl_umts.c.o
 
 # target to build an object file
 tc_interl_umts.c.o:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/fec/CMakeFiles/srslte_fec.dir/build.make lib/src/phy/fec/CMakeFiles/srslte_fec.dir/tc_interl_umts.c.o
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/fec/CMakeFiles/srslte_fec.dir/build.make lib/src/phy/fec/CMakeFiles/srslte_fec.dir/tc_interl_umts.c.o
 .PHONY : tc_interl_umts.c.o
 
 tc_interl_umts.i: tc_interl_umts.c.i
@@ -435,7 +435,7 @@ tc_interl_umts.i: tc_interl_umts.c.i
 
 # target to preprocess a source file
 tc_interl_umts.c.i:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/fec/CMakeFiles/srslte_fec.dir/build.make lib/src/phy/fec/CMakeFiles/srslte_fec.dir/tc_interl_umts.c.i
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/fec/CMakeFiles/srslte_fec.dir/build.make lib/src/phy/fec/CMakeFiles/srslte_fec.dir/tc_interl_umts.c.i
 .PHONY : tc_interl_umts.c.i
 
 tc_interl_umts.s: tc_interl_umts.c.s
@@ -444,7 +444,7 @@ tc_interl_umts.s: tc_interl_umts.c.s
 
 # target to generate assembly for a file
 tc_interl_umts.c.s:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/fec/CMakeFiles/srslte_fec.dir/build.make lib/src/phy/fec/CMakeFiles/srslte_fec.dir/tc_interl_umts.c.s
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/fec/CMakeFiles/srslte_fec.dir/build.make lib/src/phy/fec/CMakeFiles/srslte_fec.dir/tc_interl_umts.c.s
 .PHONY : tc_interl_umts.c.s
 
 turbocoder.o: turbocoder.c.o
@@ -453,7 +453,7 @@ turbocoder.o: turbocoder.c.o
 
 # target to build an object file
 turbocoder.c.o:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/fec/CMakeFiles/srslte_fec.dir/build.make lib/src/phy/fec/CMakeFiles/srslte_fec.dir/turbocoder.c.o
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/fec/CMakeFiles/srslte_fec.dir/build.make lib/src/phy/fec/CMakeFiles/srslte_fec.dir/turbocoder.c.o
 .PHONY : turbocoder.c.o
 
 turbocoder.i: turbocoder.c.i
@@ -462,7 +462,7 @@ turbocoder.i: turbocoder.c.i
 
 # target to preprocess a source file
 turbocoder.c.i:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/fec/CMakeFiles/srslte_fec.dir/build.make lib/src/phy/fec/CMakeFiles/srslte_fec.dir/turbocoder.c.i
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/fec/CMakeFiles/srslte_fec.dir/build.make lib/src/phy/fec/CMakeFiles/srslte_fec.dir/turbocoder.c.i
 .PHONY : turbocoder.c.i
 
 turbocoder.s: turbocoder.c.s
@@ -471,7 +471,7 @@ turbocoder.s: turbocoder.c.s
 
 # target to generate assembly for a file
 turbocoder.c.s:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/fec/CMakeFiles/srslte_fec.dir/build.make lib/src/phy/fec/CMakeFiles/srslte_fec.dir/turbocoder.c.s
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/fec/CMakeFiles/srslte_fec.dir/build.make lib/src/phy/fec/CMakeFiles/srslte_fec.dir/turbocoder.c.s
 .PHONY : turbocoder.c.s
 
 turbodecoder.o: turbodecoder.c.o
@@ -480,7 +480,7 @@ turbodecoder.o: turbodecoder.c.o
 
 # target to build an object file
 turbodecoder.c.o:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/fec/CMakeFiles/srslte_fec.dir/build.make lib/src/phy/fec/CMakeFiles/srslte_fec.dir/turbodecoder.c.o
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/fec/CMakeFiles/srslte_fec.dir/build.make lib/src/phy/fec/CMakeFiles/srslte_fec.dir/turbodecoder.c.o
 .PHONY : turbodecoder.c.o
 
 turbodecoder.i: turbodecoder.c.i
@@ -489,7 +489,7 @@ turbodecoder.i: turbodecoder.c.i
 
 # target to preprocess a source file
 turbodecoder.c.i:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/fec/CMakeFiles/srslte_fec.dir/build.make lib/src/phy/fec/CMakeFiles/srslte_fec.dir/turbodecoder.c.i
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/fec/CMakeFiles/srslte_fec.dir/build.make lib/src/phy/fec/CMakeFiles/srslte_fec.dir/turbodecoder.c.i
 .PHONY : turbodecoder.c.i
 
 turbodecoder.s: turbodecoder.c.s
@@ -498,7 +498,7 @@ turbodecoder.s: turbodecoder.c.s
 
 # target to generate assembly for a file
 turbodecoder.c.s:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/fec/CMakeFiles/srslte_fec.dir/build.make lib/src/phy/fec/CMakeFiles/srslte_fec.dir/turbodecoder.c.s
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/fec/CMakeFiles/srslte_fec.dir/build.make lib/src/phy/fec/CMakeFiles/srslte_fec.dir/turbodecoder.c.s
 .PHONY : turbodecoder.c.s
 
 turbodecoder_gen.o: turbodecoder_gen.c.o
@@ -507,7 +507,7 @@ turbodecoder_gen.o: turbodecoder_gen.c.o
 
 # target to build an object file
 turbodecoder_gen.c.o:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/fec/CMakeFiles/srslte_fec.dir/build.make lib/src/phy/fec/CMakeFiles/srslte_fec.dir/turbodecoder_gen.c.o
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/fec/CMakeFiles/srslte_fec.dir/build.make lib/src/phy/fec/CMakeFiles/srslte_fec.dir/turbodecoder_gen.c.o
 .PHONY : turbodecoder_gen.c.o
 
 turbodecoder_gen.i: turbodecoder_gen.c.i
@@ -516,7 +516,7 @@ turbodecoder_gen.i: turbodecoder_gen.c.i
 
 # target to preprocess a source file
 turbodecoder_gen.c.i:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/fec/CMakeFiles/srslte_fec.dir/build.make lib/src/phy/fec/CMakeFiles/srslte_fec.dir/turbodecoder_gen.c.i
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/fec/CMakeFiles/srslte_fec.dir/build.make lib/src/phy/fec/CMakeFiles/srslte_fec.dir/turbodecoder_gen.c.i
 .PHONY : turbodecoder_gen.c.i
 
 turbodecoder_gen.s: turbodecoder_gen.c.s
@@ -525,7 +525,7 @@ turbodecoder_gen.s: turbodecoder_gen.c.s
 
 # target to generate assembly for a file
 turbodecoder_gen.c.s:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/fec/CMakeFiles/srslte_fec.dir/build.make lib/src/phy/fec/CMakeFiles/srslte_fec.dir/turbodecoder_gen.c.s
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/fec/CMakeFiles/srslte_fec.dir/build.make lib/src/phy/fec/CMakeFiles/srslte_fec.dir/turbodecoder_gen.c.s
 .PHONY : turbodecoder_gen.c.s
 
 turbodecoder_sse.o: turbodecoder_sse.c.o
@@ -534,7 +534,7 @@ turbodecoder_sse.o: turbodecoder_sse.c.o
 
 # target to build an object file
 turbodecoder_sse.c.o:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/fec/CMakeFiles/srslte_fec.dir/build.make lib/src/phy/fec/CMakeFiles/srslte_fec.dir/turbodecoder_sse.c.o
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/fec/CMakeFiles/srslte_fec.dir/build.make lib/src/phy/fec/CMakeFiles/srslte_fec.dir/turbodecoder_sse.c.o
 .PHONY : turbodecoder_sse.c.o
 
 turbodecoder_sse.i: turbodecoder_sse.c.i
@@ -543,7 +543,7 @@ turbodecoder_sse.i: turbodecoder_sse.c.i
 
 # target to preprocess a source file
 turbodecoder_sse.c.i:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/fec/CMakeFiles/srslte_fec.dir/build.make lib/src/phy/fec/CMakeFiles/srslte_fec.dir/turbodecoder_sse.c.i
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/fec/CMakeFiles/srslte_fec.dir/build.make lib/src/phy/fec/CMakeFiles/srslte_fec.dir/turbodecoder_sse.c.i
 .PHONY : turbodecoder_sse.c.i
 
 turbodecoder_sse.s: turbodecoder_sse.c.s
@@ -552,7 +552,7 @@ turbodecoder_sse.s: turbodecoder_sse.c.s
 
 # target to generate assembly for a file
 turbodecoder_sse.c.s:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/fec/CMakeFiles/srslte_fec.dir/build.make lib/src/phy/fec/CMakeFiles/srslte_fec.dir/turbodecoder_sse.c.s
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/fec/CMakeFiles/srslte_fec.dir/build.make lib/src/phy/fec/CMakeFiles/srslte_fec.dir/turbodecoder_sse.c.s
 .PHONY : turbodecoder_sse.c.s
 
 viterbi.o: viterbi.c.o
@@ -561,7 +561,7 @@ viterbi.o: viterbi.c.o
 
 # target to build an object file
 viterbi.c.o:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/fec/CMakeFiles/srslte_fec.dir/build.make lib/src/phy/fec/CMakeFiles/srslte_fec.dir/viterbi.c.o
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/fec/CMakeFiles/srslte_fec.dir/build.make lib/src/phy/fec/CMakeFiles/srslte_fec.dir/viterbi.c.o
 .PHONY : viterbi.c.o
 
 viterbi.i: viterbi.c.i
@@ -570,7 +570,7 @@ viterbi.i: viterbi.c.i
 
 # target to preprocess a source file
 viterbi.c.i:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/fec/CMakeFiles/srslte_fec.dir/build.make lib/src/phy/fec/CMakeFiles/srslte_fec.dir/viterbi.c.i
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/fec/CMakeFiles/srslte_fec.dir/build.make lib/src/phy/fec/CMakeFiles/srslte_fec.dir/viterbi.c.i
 .PHONY : viterbi.c.i
 
 viterbi.s: viterbi.c.s
@@ -579,7 +579,7 @@ viterbi.s: viterbi.c.s
 
 # target to generate assembly for a file
 viterbi.c.s:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/fec/CMakeFiles/srslte_fec.dir/build.make lib/src/phy/fec/CMakeFiles/srslte_fec.dir/viterbi.c.s
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/fec/CMakeFiles/srslte_fec.dir/build.make lib/src/phy/fec/CMakeFiles/srslte_fec.dir/viterbi.c.s
 .PHONY : viterbi.c.s
 
 viterbi37_avx2.o: viterbi37_avx2.c.o
@@ -588,7 +588,7 @@ viterbi37_avx2.o: viterbi37_avx2.c.o
 
 # target to build an object file
 viterbi37_avx2.c.o:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/fec/CMakeFiles/srslte_fec.dir/build.make lib/src/phy/fec/CMakeFiles/srslte_fec.dir/viterbi37_avx2.c.o
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/fec/CMakeFiles/srslte_fec.dir/build.make lib/src/phy/fec/CMakeFiles/srslte_fec.dir/viterbi37_avx2.c.o
 .PHONY : viterbi37_avx2.c.o
 
 viterbi37_avx2.i: viterbi37_avx2.c.i
@@ -597,7 +597,7 @@ viterbi37_avx2.i: viterbi37_avx2.c.i
 
 # target to preprocess a source file
 viterbi37_avx2.c.i:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/fec/CMakeFiles/srslte_fec.dir/build.make lib/src/phy/fec/CMakeFiles/srslte_fec.dir/viterbi37_avx2.c.i
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/fec/CMakeFiles/srslte_fec.dir/build.make lib/src/phy/fec/CMakeFiles/srslte_fec.dir/viterbi37_avx2.c.i
 .PHONY : viterbi37_avx2.c.i
 
 viterbi37_avx2.s: viterbi37_avx2.c.s
@@ -606,7 +606,7 @@ viterbi37_avx2.s: viterbi37_avx2.c.s
 
 # target to generate assembly for a file
 viterbi37_avx2.c.s:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/fec/CMakeFiles/srslte_fec.dir/build.make lib/src/phy/fec/CMakeFiles/srslte_fec.dir/viterbi37_avx2.c.s
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/fec/CMakeFiles/srslte_fec.dir/build.make lib/src/phy/fec/CMakeFiles/srslte_fec.dir/viterbi37_avx2.c.s
 .PHONY : viterbi37_avx2.c.s
 
 viterbi37_avx2_16bit.o: viterbi37_avx2_16bit.c.o
@@ -615,7 +615,7 @@ viterbi37_avx2_16bit.o: viterbi37_avx2_16bit.c.o
 
 # target to build an object file
 viterbi37_avx2_16bit.c.o:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/fec/CMakeFiles/srslte_fec.dir/build.make lib/src/phy/fec/CMakeFiles/srslte_fec.dir/viterbi37_avx2_16bit.c.o
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/fec/CMakeFiles/srslte_fec.dir/build.make lib/src/phy/fec/CMakeFiles/srslte_fec.dir/viterbi37_avx2_16bit.c.o
 .PHONY : viterbi37_avx2_16bit.c.o
 
 viterbi37_avx2_16bit.i: viterbi37_avx2_16bit.c.i
@@ -624,7 +624,7 @@ viterbi37_avx2_16bit.i: viterbi37_avx2_16bit.c.i
 
 # target to preprocess a source file
 viterbi37_avx2_16bit.c.i:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/fec/CMakeFiles/srslte_fec.dir/build.make lib/src/phy/fec/CMakeFiles/srslte_fec.dir/viterbi37_avx2_16bit.c.i
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/fec/CMakeFiles/srslte_fec.dir/build.make lib/src/phy/fec/CMakeFiles/srslte_fec.dir/viterbi37_avx2_16bit.c.i
 .PHONY : viterbi37_avx2_16bit.c.i
 
 viterbi37_avx2_16bit.s: viterbi37_avx2_16bit.c.s
@@ -633,7 +633,7 @@ viterbi37_avx2_16bit.s: viterbi37_avx2_16bit.c.s
 
 # target to generate assembly for a file
 viterbi37_avx2_16bit.c.s:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/fec/CMakeFiles/srslte_fec.dir/build.make lib/src/phy/fec/CMakeFiles/srslte_fec.dir/viterbi37_avx2_16bit.c.s
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/fec/CMakeFiles/srslte_fec.dir/build.make lib/src/phy/fec/CMakeFiles/srslte_fec.dir/viterbi37_avx2_16bit.c.s
 .PHONY : viterbi37_avx2_16bit.c.s
 
 viterbi37_neon.o: viterbi37_neon.c.o
@@ -642,7 +642,7 @@ viterbi37_neon.o: viterbi37_neon.c.o
 
 # target to build an object file
 viterbi37_neon.c.o:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/fec/CMakeFiles/srslte_fec.dir/build.make lib/src/phy/fec/CMakeFiles/srslte_fec.dir/viterbi37_neon.c.o
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/fec/CMakeFiles/srslte_fec.dir/build.make lib/src/phy/fec/CMakeFiles/srslte_fec.dir/viterbi37_neon.c.o
 .PHONY : viterbi37_neon.c.o
 
 viterbi37_neon.i: viterbi37_neon.c.i
@@ -651,7 +651,7 @@ viterbi37_neon.i: viterbi37_neon.c.i
 
 # target to preprocess a source file
 viterbi37_neon.c.i:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/fec/CMakeFiles/srslte_fec.dir/build.make lib/src/phy/fec/CMakeFiles/srslte_fec.dir/viterbi37_neon.c.i
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/fec/CMakeFiles/srslte_fec.dir/build.make lib/src/phy/fec/CMakeFiles/srslte_fec.dir/viterbi37_neon.c.i
 .PHONY : viterbi37_neon.c.i
 
 viterbi37_neon.s: viterbi37_neon.c.s
@@ -660,7 +660,7 @@ viterbi37_neon.s: viterbi37_neon.c.s
 
 # target to generate assembly for a file
 viterbi37_neon.c.s:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/fec/CMakeFiles/srslte_fec.dir/build.make lib/src/phy/fec/CMakeFiles/srslte_fec.dir/viterbi37_neon.c.s
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/fec/CMakeFiles/srslte_fec.dir/build.make lib/src/phy/fec/CMakeFiles/srslte_fec.dir/viterbi37_neon.c.s
 .PHONY : viterbi37_neon.c.s
 
 viterbi37_port.o: viterbi37_port.c.o
@@ -669,7 +669,7 @@ viterbi37_port.o: viterbi37_port.c.o
 
 # target to build an object file
 viterbi37_port.c.o:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/fec/CMakeFiles/srslte_fec.dir/build.make lib/src/phy/fec/CMakeFiles/srslte_fec.dir/viterbi37_port.c.o
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/fec/CMakeFiles/srslte_fec.dir/build.make lib/src/phy/fec/CMakeFiles/srslte_fec.dir/viterbi37_port.c.o
 .PHONY : viterbi37_port.c.o
 
 viterbi37_port.i: viterbi37_port.c.i
@@ -678,7 +678,7 @@ viterbi37_port.i: viterbi37_port.c.i
 
 # target to preprocess a source file
 viterbi37_port.c.i:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/fec/CMakeFiles/srslte_fec.dir/build.make lib/src/phy/fec/CMakeFiles/srslte_fec.dir/viterbi37_port.c.i
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/fec/CMakeFiles/srslte_fec.dir/build.make lib/src/phy/fec/CMakeFiles/srslte_fec.dir/viterbi37_port.c.i
 .PHONY : viterbi37_port.c.i
 
 viterbi37_port.s: viterbi37_port.c.s
@@ -687,7 +687,7 @@ viterbi37_port.s: viterbi37_port.c.s
 
 # target to generate assembly for a file
 viterbi37_port.c.s:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/fec/CMakeFiles/srslte_fec.dir/build.make lib/src/phy/fec/CMakeFiles/srslte_fec.dir/viterbi37_port.c.s
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/fec/CMakeFiles/srslte_fec.dir/build.make lib/src/phy/fec/CMakeFiles/srslte_fec.dir/viterbi37_port.c.s
 .PHONY : viterbi37_port.c.s
 
 viterbi37_sse.o: viterbi37_sse.c.o
@@ -696,7 +696,7 @@ viterbi37_sse.o: viterbi37_sse.c.o
 
 # target to build an object file
 viterbi37_sse.c.o:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/fec/CMakeFiles/srslte_fec.dir/build.make lib/src/phy/fec/CMakeFiles/srslte_fec.dir/viterbi37_sse.c.o
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/fec/CMakeFiles/srslte_fec.dir/build.make lib/src/phy/fec/CMakeFiles/srslte_fec.dir/viterbi37_sse.c.o
 .PHONY : viterbi37_sse.c.o
 
 viterbi37_sse.i: viterbi37_sse.c.i
@@ -705,7 +705,7 @@ viterbi37_sse.i: viterbi37_sse.c.i
 
 # target to preprocess a source file
 viterbi37_sse.c.i:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/fec/CMakeFiles/srslte_fec.dir/build.make lib/src/phy/fec/CMakeFiles/srslte_fec.dir/viterbi37_sse.c.i
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/fec/CMakeFiles/srslte_fec.dir/build.make lib/src/phy/fec/CMakeFiles/srslte_fec.dir/viterbi37_sse.c.i
 .PHONY : viterbi37_sse.c.i
 
 viterbi37_sse.s: viterbi37_sse.c.s
@@ -714,7 +714,7 @@ viterbi37_sse.s: viterbi37_sse.c.s
 
 # target to generate assembly for a file
 viterbi37_sse.c.s:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/fec/CMakeFiles/srslte_fec.dir/build.make lib/src/phy/fec/CMakeFiles/srslte_fec.dir/viterbi37_sse.c.s
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/fec/CMakeFiles/srslte_fec.dir/build.make lib/src/phy/fec/CMakeFiles/srslte_fec.dir/viterbi37_sse.c.s
 .PHONY : viterbi37_sse.c.s
 
 # Help Target
@@ -801,6 +801,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/atm/Divya/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

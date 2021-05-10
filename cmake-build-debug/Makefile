@@ -48,10 +48,10 @@ RM = /opt/clion-2020.1.2/bin/cmake/linux/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/atm/Ayman/srsLTE_Slicing
+CMAKE_SOURCE_DIR = /home/atm/Divya
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug
+CMAKE_BINARY_DIR = /home/atm/Divya/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -138,7 +138,7 @@ install/local/fast: preinstall/fast
 # Special rule for the target package_source
 package_source:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool for source..."
-	/opt/clion-2020.1.2/bin/cmake/linux/bin/cpack --config ./CPackSourceConfig.cmake /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/CPackSourceConfig.cmake
+	/opt/clion-2020.1.2/bin/cmake/linux/bin/cpack --config ./CPackSourceConfig.cmake /home/atm/Divya/cmake-build-debug/CPackSourceConfig.cmake
 .PHONY : package_source
 
 # Special rule for the target package_source
@@ -159,9 +159,9 @@ test/fast: test
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/CMakeFiles /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/atm/Divya/cmake-build-debug/CMakeFiles /home/atm/Divya/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/atm/Divya/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -2803,17 +2803,43 @@ ue_phy_test/fast:
 .PHONY : ue_phy_test/fast
 
 #=============================================================================
-# Target rules for targets named nas_test
+# Target rules for targets named rrc_meas_test
 
 # Build rule for target.
-nas_test: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 nas_test
-.PHONY : nas_test
+rrc_meas_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 rrc_meas_test
+.PHONY : rrc_meas_test
 
 # fast build rule for target.
-nas_test/fast:
-	$(MAKE) -f srsue/test/upper/CMakeFiles/nas_test.dir/build.make srsue/test/upper/CMakeFiles/nas_test.dir/build
-.PHONY : nas_test/fast
+rrc_meas_test/fast:
+	$(MAKE) -f srsue/test/upper/CMakeFiles/rrc_meas_test.dir/build.make srsue/test/upper/CMakeFiles/rrc_meas_test.dir/build
+.PHONY : rrc_meas_test/fast
+
+#=============================================================================
+# Target rules for targets named pcsc_usim_test
+
+# Build rule for target.
+pcsc_usim_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 pcsc_usim_test
+.PHONY : pcsc_usim_test
+
+# fast build rule for target.
+pcsc_usim_test/fast:
+	$(MAKE) -f srsue/test/upper/CMakeFiles/pcsc_usim_test.dir/build.make srsue/test/upper/CMakeFiles/pcsc_usim_test.dir/build
+.PHONY : pcsc_usim_test/fast
+
+#=============================================================================
+# Target rules for targets named usim_test
+
+# Build rule for target.
+usim_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 usim_test
+.PHONY : usim_test
+
+# fast build rule for target.
+usim_test/fast:
+	$(MAKE) -f srsue/test/upper/CMakeFiles/usim_test.dir/build.make srsue/test/upper/CMakeFiles/usim_test.dir/build
+.PHONY : usim_test/fast
 
 #=============================================================================
 # Target rules for targets named rrc_reconfig_test
@@ -2829,30 +2855,17 @@ rrc_reconfig_test/fast:
 .PHONY : rrc_reconfig_test/fast
 
 #=============================================================================
-# Target rules for targets named rrc_meas_test
+# Target rules for targets named nas_test
 
 # Build rule for target.
-rrc_meas_test: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 rrc_meas_test
-.PHONY : rrc_meas_test
+nas_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 nas_test
+.PHONY : nas_test
 
 # fast build rule for target.
-rrc_meas_test/fast:
-	$(MAKE) -f srsue/test/upper/CMakeFiles/rrc_meas_test.dir/build.make srsue/test/upper/CMakeFiles/rrc_meas_test.dir/build
-.PHONY : rrc_meas_test/fast
-
-#=============================================================================
-# Target rules for targets named usim_test
-
-# Build rule for target.
-usim_test: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 usim_test
-.PHONY : usim_test
-
-# fast build rule for target.
-usim_test/fast:
-	$(MAKE) -f srsue/test/upper/CMakeFiles/usim_test.dir/build.make srsue/test/upper/CMakeFiles/usim_test.dir/build
-.PHONY : usim_test/fast
+nas_test/fast:
+	$(MAKE) -f srsue/test/upper/CMakeFiles/nas_test.dir/build.make srsue/test/upper/CMakeFiles/nas_test.dir/build
+.PHONY : nas_test/fast
 
 #=============================================================================
 # Target rules for targets named tft_test
@@ -3369,10 +3382,11 @@ help:
 	@echo "... metrics_test"
 	@echo "... scell_search_test"
 	@echo "... ue_phy_test"
-	@echo "... nas_test"
-	@echo "... rrc_reconfig_test"
 	@echo "... rrc_meas_test"
+	@echo "... pcsc_usim_test"
 	@echo "... usim_test"
+	@echo "... rrc_reconfig_test"
+	@echo "... nas_test"
 	@echo "... tft_test"
 	@echo "... enb_cfg_parser"
 	@echo "... srsenb"

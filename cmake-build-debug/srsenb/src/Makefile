@@ -48,10 +48,10 @@ RM = /opt/clion-2020.1.2/bin/cmake/linux/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/atm/Ayman/srsLTE_Slicing
+CMAKE_SOURCE_DIR = /home/atm/Divya
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug
+CMAKE_BINARY_DIR = /home/atm/Divya/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -59,7 +59,7 @@ CMAKE_BINARY_DIR = /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug
 # Special rule for the target package
 package: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool..."
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && /opt/clion-2020.1.2/bin/cmake/linux/bin/cpack --config ./CPackConfig.cmake
+	cd /home/atm/Divya/cmake-build-debug && /opt/clion-2020.1.2/bin/cmake/linux/bin/cpack --config ./CPackConfig.cmake
 .PHONY : package
 
 # Special rule for the target package
@@ -92,7 +92,7 @@ edit_cache/fast: edit_cache
 # Special rule for the target package_source
 package_source:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool for source..."
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && /opt/clion-2020.1.2/bin/cmake/linux/bin/cpack --config ./CPackSourceConfig.cmake /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/CPackSourceConfig.cmake
+	cd /home/atm/Divya/cmake-build-debug && /opt/clion-2020.1.2/bin/cmake/linux/bin/cpack --config ./CPackSourceConfig.cmake /home/atm/Divya/cmake-build-debug/CPackSourceConfig.cmake
 .PHONY : package_source
 
 # Special rule for the target package_source
@@ -159,14 +159,14 @@ install/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_progress_start /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/CMakeFiles /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/srsenb/src/CMakeFiles/progress.marks
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 srsenb/src/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/CMakeFiles 0
+	cd /home/atm/Divya/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_progress_start /home/atm/Divya/cmake-build-debug/CMakeFiles /home/atm/Divya/cmake-build-debug/srsenb/src/CMakeFiles/progress.marks
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 srsenb/src/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/atm/Divya/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 srsenb/src/clean
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 srsenb/src/clean
 .PHONY : clean
 
 # The main clean target
@@ -176,22 +176,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: cmake_check_build_system
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 srsenb/src/preinstall
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 srsenb/src/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 srsenb/src/preinstall
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 srsenb/src/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/atm/Divya/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 srsenb/src/CMakeFiles/enb_cfg_parser.dir/rule:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 srsenb/src/CMakeFiles/enb_cfg_parser.dir/rule
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 srsenb/src/CMakeFiles/enb_cfg_parser.dir/rule
 .PHONY : srsenb/src/CMakeFiles/enb_cfg_parser.dir/rule
 
 # Convenience name for target.
@@ -201,12 +201,12 @@ enb_cfg_parser: srsenb/src/CMakeFiles/enb_cfg_parser.dir/rule
 
 # fast build rule for target.
 enb_cfg_parser/fast:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f srsenb/src/CMakeFiles/enb_cfg_parser.dir/build.make srsenb/src/CMakeFiles/enb_cfg_parser.dir/build
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f srsenb/src/CMakeFiles/enb_cfg_parser.dir/build.make srsenb/src/CMakeFiles/enb_cfg_parser.dir/build
 .PHONY : enb_cfg_parser/fast
 
 # Convenience name for target.
 srsenb/src/CMakeFiles/srsenb.dir/rule:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 srsenb/src/CMakeFiles/srsenb.dir/rule
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 srsenb/src/CMakeFiles/srsenb.dir/rule
 .PHONY : srsenb/src/CMakeFiles/srsenb.dir/rule
 
 # Convenience name for target.
@@ -216,7 +216,7 @@ srsenb: srsenb/src/CMakeFiles/srsenb.dir/rule
 
 # fast build rule for target.
 srsenb/fast:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f srsenb/src/CMakeFiles/srsenb.dir/build.make srsenb/src/CMakeFiles/srsenb.dir/build
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f srsenb/src/CMakeFiles/srsenb.dir/build.make srsenb/src/CMakeFiles/srsenb.dir/build
 .PHONY : srsenb/fast
 
 enb.o: enb.cc.o
@@ -225,7 +225,7 @@ enb.o: enb.cc.o
 
 # target to build an object file
 enb.cc.o:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f srsenb/src/CMakeFiles/srsenb.dir/build.make srsenb/src/CMakeFiles/srsenb.dir/enb.cc.o
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f srsenb/src/CMakeFiles/srsenb.dir/build.make srsenb/src/CMakeFiles/srsenb.dir/enb.cc.o
 .PHONY : enb.cc.o
 
 enb.i: enb.cc.i
@@ -234,7 +234,7 @@ enb.i: enb.cc.i
 
 # target to preprocess a source file
 enb.cc.i:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f srsenb/src/CMakeFiles/srsenb.dir/build.make srsenb/src/CMakeFiles/srsenb.dir/enb.cc.i
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f srsenb/src/CMakeFiles/srsenb.dir/build.make srsenb/src/CMakeFiles/srsenb.dir/enb.cc.i
 .PHONY : enb.cc.i
 
 enb.s: enb.cc.s
@@ -243,7 +243,7 @@ enb.s: enb.cc.s
 
 # target to generate assembly for a file
 enb.cc.s:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f srsenb/src/CMakeFiles/srsenb.dir/build.make srsenb/src/CMakeFiles/srsenb.dir/enb.cc.s
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f srsenb/src/CMakeFiles/srsenb.dir/build.make srsenb/src/CMakeFiles/srsenb.dir/enb.cc.s
 .PHONY : enb.cc.s
 
 enb_cfg_parser.o: enb_cfg_parser.cc.o
@@ -252,7 +252,7 @@ enb_cfg_parser.o: enb_cfg_parser.cc.o
 
 # target to build an object file
 enb_cfg_parser.cc.o:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f srsenb/src/CMakeFiles/enb_cfg_parser.dir/build.make srsenb/src/CMakeFiles/enb_cfg_parser.dir/enb_cfg_parser.cc.o
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f srsenb/src/CMakeFiles/enb_cfg_parser.dir/build.make srsenb/src/CMakeFiles/enb_cfg_parser.dir/enb_cfg_parser.cc.o
 .PHONY : enb_cfg_parser.cc.o
 
 enb_cfg_parser.i: enb_cfg_parser.cc.i
@@ -261,7 +261,7 @@ enb_cfg_parser.i: enb_cfg_parser.cc.i
 
 # target to preprocess a source file
 enb_cfg_parser.cc.i:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f srsenb/src/CMakeFiles/enb_cfg_parser.dir/build.make srsenb/src/CMakeFiles/enb_cfg_parser.dir/enb_cfg_parser.cc.i
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f srsenb/src/CMakeFiles/enb_cfg_parser.dir/build.make srsenb/src/CMakeFiles/enb_cfg_parser.dir/enb_cfg_parser.cc.i
 .PHONY : enb_cfg_parser.cc.i
 
 enb_cfg_parser.s: enb_cfg_parser.cc.s
@@ -270,7 +270,7 @@ enb_cfg_parser.s: enb_cfg_parser.cc.s
 
 # target to generate assembly for a file
 enb_cfg_parser.cc.s:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f srsenb/src/CMakeFiles/enb_cfg_parser.dir/build.make srsenb/src/CMakeFiles/enb_cfg_parser.dir/enb_cfg_parser.cc.s
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f srsenb/src/CMakeFiles/enb_cfg_parser.dir/build.make srsenb/src/CMakeFiles/enb_cfg_parser.dir/enb_cfg_parser.cc.s
 .PHONY : enb_cfg_parser.cc.s
 
 main.o: main.cc.o
@@ -279,7 +279,7 @@ main.o: main.cc.o
 
 # target to build an object file
 main.cc.o:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f srsenb/src/CMakeFiles/srsenb.dir/build.make srsenb/src/CMakeFiles/srsenb.dir/main.cc.o
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f srsenb/src/CMakeFiles/srsenb.dir/build.make srsenb/src/CMakeFiles/srsenb.dir/main.cc.o
 .PHONY : main.cc.o
 
 main.i: main.cc.i
@@ -288,7 +288,7 @@ main.i: main.cc.i
 
 # target to preprocess a source file
 main.cc.i:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f srsenb/src/CMakeFiles/srsenb.dir/build.make srsenb/src/CMakeFiles/srsenb.dir/main.cc.i
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f srsenb/src/CMakeFiles/srsenb.dir/build.make srsenb/src/CMakeFiles/srsenb.dir/main.cc.i
 .PHONY : main.cc.i
 
 main.s: main.cc.s
@@ -297,7 +297,7 @@ main.s: main.cc.s
 
 # target to generate assembly for a file
 main.cc.s:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f srsenb/src/CMakeFiles/srsenb.dir/build.make srsenb/src/CMakeFiles/srsenb.dir/main.cc.s
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f srsenb/src/CMakeFiles/srsenb.dir/build.make srsenb/src/CMakeFiles/srsenb.dir/main.cc.s
 .PHONY : main.cc.s
 
 metrics_csv.o: metrics_csv.cc.o
@@ -306,7 +306,7 @@ metrics_csv.o: metrics_csv.cc.o
 
 # target to build an object file
 metrics_csv.cc.o:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f srsenb/src/CMakeFiles/srsenb.dir/build.make srsenb/src/CMakeFiles/srsenb.dir/metrics_csv.cc.o
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f srsenb/src/CMakeFiles/srsenb.dir/build.make srsenb/src/CMakeFiles/srsenb.dir/metrics_csv.cc.o
 .PHONY : metrics_csv.cc.o
 
 metrics_csv.i: metrics_csv.cc.i
@@ -315,7 +315,7 @@ metrics_csv.i: metrics_csv.cc.i
 
 # target to preprocess a source file
 metrics_csv.cc.i:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f srsenb/src/CMakeFiles/srsenb.dir/build.make srsenb/src/CMakeFiles/srsenb.dir/metrics_csv.cc.i
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f srsenb/src/CMakeFiles/srsenb.dir/build.make srsenb/src/CMakeFiles/srsenb.dir/metrics_csv.cc.i
 .PHONY : metrics_csv.cc.i
 
 metrics_csv.s: metrics_csv.cc.s
@@ -324,7 +324,7 @@ metrics_csv.s: metrics_csv.cc.s
 
 # target to generate assembly for a file
 metrics_csv.cc.s:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f srsenb/src/CMakeFiles/srsenb.dir/build.make srsenb/src/CMakeFiles/srsenb.dir/metrics_csv.cc.s
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f srsenb/src/CMakeFiles/srsenb.dir/build.make srsenb/src/CMakeFiles/srsenb.dir/metrics_csv.cc.s
 .PHONY : metrics_csv.cc.s
 
 metrics_stdout.o: metrics_stdout.cc.o
@@ -333,7 +333,7 @@ metrics_stdout.o: metrics_stdout.cc.o
 
 # target to build an object file
 metrics_stdout.cc.o:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f srsenb/src/CMakeFiles/srsenb.dir/build.make srsenb/src/CMakeFiles/srsenb.dir/metrics_stdout.cc.o
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f srsenb/src/CMakeFiles/srsenb.dir/build.make srsenb/src/CMakeFiles/srsenb.dir/metrics_stdout.cc.o
 .PHONY : metrics_stdout.cc.o
 
 metrics_stdout.i: metrics_stdout.cc.i
@@ -342,7 +342,7 @@ metrics_stdout.i: metrics_stdout.cc.i
 
 # target to preprocess a source file
 metrics_stdout.cc.i:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f srsenb/src/CMakeFiles/srsenb.dir/build.make srsenb/src/CMakeFiles/srsenb.dir/metrics_stdout.cc.i
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f srsenb/src/CMakeFiles/srsenb.dir/build.make srsenb/src/CMakeFiles/srsenb.dir/metrics_stdout.cc.i
 .PHONY : metrics_stdout.cc.i
 
 metrics_stdout.s: metrics_stdout.cc.s
@@ -351,7 +351,7 @@ metrics_stdout.s: metrics_stdout.cc.s
 
 # target to generate assembly for a file
 metrics_stdout.cc.s:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f srsenb/src/CMakeFiles/srsenb.dir/build.make srsenb/src/CMakeFiles/srsenb.dir/metrics_stdout.cc.s
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f srsenb/src/CMakeFiles/srsenb.dir/build.make srsenb/src/CMakeFiles/srsenb.dir/metrics_stdout.cc.s
 .PHONY : metrics_stdout.cc.s
 
 parser.o: parser.cc.o
@@ -360,7 +360,7 @@ parser.o: parser.cc.o
 
 # target to build an object file
 parser.cc.o:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f srsenb/src/CMakeFiles/enb_cfg_parser.dir/build.make srsenb/src/CMakeFiles/enb_cfg_parser.dir/parser.cc.o
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f srsenb/src/CMakeFiles/enb_cfg_parser.dir/build.make srsenb/src/CMakeFiles/enb_cfg_parser.dir/parser.cc.o
 .PHONY : parser.cc.o
 
 parser.i: parser.cc.i
@@ -369,7 +369,7 @@ parser.i: parser.cc.i
 
 # target to preprocess a source file
 parser.cc.i:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f srsenb/src/CMakeFiles/enb_cfg_parser.dir/build.make srsenb/src/CMakeFiles/enb_cfg_parser.dir/parser.cc.i
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f srsenb/src/CMakeFiles/enb_cfg_parser.dir/build.make srsenb/src/CMakeFiles/enb_cfg_parser.dir/parser.cc.i
 .PHONY : parser.cc.i
 
 parser.s: parser.cc.s
@@ -378,7 +378,7 @@ parser.s: parser.cc.s
 
 # target to generate assembly for a file
 parser.cc.s:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f srsenb/src/CMakeFiles/enb_cfg_parser.dir/build.make srsenb/src/CMakeFiles/enb_cfg_parser.dir/parser.cc.s
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f srsenb/src/CMakeFiles/enb_cfg_parser.dir/build.make srsenb/src/CMakeFiles/enb_cfg_parser.dir/parser.cc.s
 .PHONY : parser.cc.s
 
 # Help Target
@@ -427,6 +427,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/atm/Divya/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

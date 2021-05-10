@@ -48,10 +48,10 @@ RM = /opt/clion-2020.1.2/bin/cmake/linux/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/atm/Ayman/srsLTE_Slicing
+CMAKE_SOURCE_DIR = /home/atm/Divya
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug
+CMAKE_BINARY_DIR = /home/atm/Divya/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -127,7 +127,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target package_source
 package_source:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool for source..."
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && /opt/clion-2020.1.2/bin/cmake/linux/bin/cpack --config ./CPackSourceConfig.cmake /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/CPackSourceConfig.cmake
+	cd /home/atm/Divya/cmake-build-debug && /opt/clion-2020.1.2/bin/cmake/linux/bin/cpack --config ./CPackSourceConfig.cmake /home/atm/Divya/cmake-build-debug/CPackSourceConfig.cmake
 .PHONY : package_source
 
 # Special rule for the target package_source
@@ -138,7 +138,7 @@ package_source/fast: package_source
 # Special rule for the target package
 package: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool..."
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && /opt/clion-2020.1.2/bin/cmake/linux/bin/cpack --config ./CPackConfig.cmake
+	cd /home/atm/Divya/cmake-build-debug && /opt/clion-2020.1.2/bin/cmake/linux/bin/cpack --config ./CPackConfig.cmake
 .PHONY : package
 
 # Special rule for the target package
@@ -159,14 +159,14 @@ test/fast: test
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_progress_start /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/CMakeFiles /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/srsenb/src/stack/mac/CMakeFiles/progress.marks
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 srsenb/src/stack/mac/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/CMakeFiles 0
+	cd /home/atm/Divya/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_progress_start /home/atm/Divya/cmake-build-debug/CMakeFiles /home/atm/Divya/cmake-build-debug/srsenb/src/stack/mac/CMakeFiles/progress.marks
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 srsenb/src/stack/mac/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/atm/Divya/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 srsenb/src/stack/mac/clean
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 srsenb/src/stack/mac/clean
 .PHONY : clean
 
 # The main clean target
@@ -176,22 +176,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: cmake_check_build_system
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 srsenb/src/stack/mac/preinstall
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 srsenb/src/stack/mac/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 srsenb/src/stack/mac/preinstall
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 srsenb/src/stack/mac/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/atm/Divya/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 srsenb/src/stack/mac/CMakeFiles/srsenb_mac.dir/rule:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 srsenb/src/stack/mac/CMakeFiles/srsenb_mac.dir/rule
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 srsenb/src/stack/mac/CMakeFiles/srsenb_mac.dir/rule
 .PHONY : srsenb/src/stack/mac/CMakeFiles/srsenb_mac.dir/rule
 
 # Convenience name for target.
@@ -201,7 +201,7 @@ srsenb_mac: srsenb/src/stack/mac/CMakeFiles/srsenb_mac.dir/rule
 
 # fast build rule for target.
 srsenb_mac/fast:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f srsenb/src/stack/mac/CMakeFiles/srsenb_mac.dir/build.make srsenb/src/stack/mac/CMakeFiles/srsenb_mac.dir/build
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f srsenb/src/stack/mac/CMakeFiles/srsenb_mac.dir/build.make srsenb/src/stack/mac/CMakeFiles/srsenb_mac.dir/build
 .PHONY : srsenb_mac/fast
 
 mac.o: mac.cc.o
@@ -210,7 +210,7 @@ mac.o: mac.cc.o
 
 # target to build an object file
 mac.cc.o:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f srsenb/src/stack/mac/CMakeFiles/srsenb_mac.dir/build.make srsenb/src/stack/mac/CMakeFiles/srsenb_mac.dir/mac.cc.o
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f srsenb/src/stack/mac/CMakeFiles/srsenb_mac.dir/build.make srsenb/src/stack/mac/CMakeFiles/srsenb_mac.dir/mac.cc.o
 .PHONY : mac.cc.o
 
 mac.i: mac.cc.i
@@ -219,7 +219,7 @@ mac.i: mac.cc.i
 
 # target to preprocess a source file
 mac.cc.i:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f srsenb/src/stack/mac/CMakeFiles/srsenb_mac.dir/build.make srsenb/src/stack/mac/CMakeFiles/srsenb_mac.dir/mac.cc.i
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f srsenb/src/stack/mac/CMakeFiles/srsenb_mac.dir/build.make srsenb/src/stack/mac/CMakeFiles/srsenb_mac.dir/mac.cc.i
 .PHONY : mac.cc.i
 
 mac.s: mac.cc.s
@@ -228,7 +228,7 @@ mac.s: mac.cc.s
 
 # target to generate assembly for a file
 mac.cc.s:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f srsenb/src/stack/mac/CMakeFiles/srsenb_mac.dir/build.make srsenb/src/stack/mac/CMakeFiles/srsenb_mac.dir/mac.cc.s
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f srsenb/src/stack/mac/CMakeFiles/srsenb_mac.dir/build.make srsenb/src/stack/mac/CMakeFiles/srsenb_mac.dir/mac.cc.s
 .PHONY : mac.cc.s
 
 scheduler.o: scheduler.cc.o
@@ -237,7 +237,7 @@ scheduler.o: scheduler.cc.o
 
 # target to build an object file
 scheduler.cc.o:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f srsenb/src/stack/mac/CMakeFiles/srsenb_mac.dir/build.make srsenb/src/stack/mac/CMakeFiles/srsenb_mac.dir/scheduler.cc.o
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f srsenb/src/stack/mac/CMakeFiles/srsenb_mac.dir/build.make srsenb/src/stack/mac/CMakeFiles/srsenb_mac.dir/scheduler.cc.o
 .PHONY : scheduler.cc.o
 
 scheduler.i: scheduler.cc.i
@@ -246,7 +246,7 @@ scheduler.i: scheduler.cc.i
 
 # target to preprocess a source file
 scheduler.cc.i:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f srsenb/src/stack/mac/CMakeFiles/srsenb_mac.dir/build.make srsenb/src/stack/mac/CMakeFiles/srsenb_mac.dir/scheduler.cc.i
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f srsenb/src/stack/mac/CMakeFiles/srsenb_mac.dir/build.make srsenb/src/stack/mac/CMakeFiles/srsenb_mac.dir/scheduler.cc.i
 .PHONY : scheduler.cc.i
 
 scheduler.s: scheduler.cc.s
@@ -255,7 +255,7 @@ scheduler.s: scheduler.cc.s
 
 # target to generate assembly for a file
 scheduler.cc.s:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f srsenb/src/stack/mac/CMakeFiles/srsenb_mac.dir/build.make srsenb/src/stack/mac/CMakeFiles/srsenb_mac.dir/scheduler.cc.s
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f srsenb/src/stack/mac/CMakeFiles/srsenb_mac.dir/build.make srsenb/src/stack/mac/CMakeFiles/srsenb_mac.dir/scheduler.cc.s
 .PHONY : scheduler.cc.s
 
 scheduler_carrier.o: scheduler_carrier.cc.o
@@ -264,7 +264,7 @@ scheduler_carrier.o: scheduler_carrier.cc.o
 
 # target to build an object file
 scheduler_carrier.cc.o:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f srsenb/src/stack/mac/CMakeFiles/srsenb_mac.dir/build.make srsenb/src/stack/mac/CMakeFiles/srsenb_mac.dir/scheduler_carrier.cc.o
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f srsenb/src/stack/mac/CMakeFiles/srsenb_mac.dir/build.make srsenb/src/stack/mac/CMakeFiles/srsenb_mac.dir/scheduler_carrier.cc.o
 .PHONY : scheduler_carrier.cc.o
 
 scheduler_carrier.i: scheduler_carrier.cc.i
@@ -273,7 +273,7 @@ scheduler_carrier.i: scheduler_carrier.cc.i
 
 # target to preprocess a source file
 scheduler_carrier.cc.i:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f srsenb/src/stack/mac/CMakeFiles/srsenb_mac.dir/build.make srsenb/src/stack/mac/CMakeFiles/srsenb_mac.dir/scheduler_carrier.cc.i
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f srsenb/src/stack/mac/CMakeFiles/srsenb_mac.dir/build.make srsenb/src/stack/mac/CMakeFiles/srsenb_mac.dir/scheduler_carrier.cc.i
 .PHONY : scheduler_carrier.cc.i
 
 scheduler_carrier.s: scheduler_carrier.cc.s
@@ -282,7 +282,7 @@ scheduler_carrier.s: scheduler_carrier.cc.s
 
 # target to generate assembly for a file
 scheduler_carrier.cc.s:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f srsenb/src/stack/mac/CMakeFiles/srsenb_mac.dir/build.make srsenb/src/stack/mac/CMakeFiles/srsenb_mac.dir/scheduler_carrier.cc.s
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f srsenb/src/stack/mac/CMakeFiles/srsenb_mac.dir/build.make srsenb/src/stack/mac/CMakeFiles/srsenb_mac.dir/scheduler_carrier.cc.s
 .PHONY : scheduler_carrier.cc.s
 
 scheduler_grid.o: scheduler_grid.cc.o
@@ -291,7 +291,7 @@ scheduler_grid.o: scheduler_grid.cc.o
 
 # target to build an object file
 scheduler_grid.cc.o:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f srsenb/src/stack/mac/CMakeFiles/srsenb_mac.dir/build.make srsenb/src/stack/mac/CMakeFiles/srsenb_mac.dir/scheduler_grid.cc.o
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f srsenb/src/stack/mac/CMakeFiles/srsenb_mac.dir/build.make srsenb/src/stack/mac/CMakeFiles/srsenb_mac.dir/scheduler_grid.cc.o
 .PHONY : scheduler_grid.cc.o
 
 scheduler_grid.i: scheduler_grid.cc.i
@@ -300,7 +300,7 @@ scheduler_grid.i: scheduler_grid.cc.i
 
 # target to preprocess a source file
 scheduler_grid.cc.i:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f srsenb/src/stack/mac/CMakeFiles/srsenb_mac.dir/build.make srsenb/src/stack/mac/CMakeFiles/srsenb_mac.dir/scheduler_grid.cc.i
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f srsenb/src/stack/mac/CMakeFiles/srsenb_mac.dir/build.make srsenb/src/stack/mac/CMakeFiles/srsenb_mac.dir/scheduler_grid.cc.i
 .PHONY : scheduler_grid.cc.i
 
 scheduler_grid.s: scheduler_grid.cc.s
@@ -309,7 +309,7 @@ scheduler_grid.s: scheduler_grid.cc.s
 
 # target to generate assembly for a file
 scheduler_grid.cc.s:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f srsenb/src/stack/mac/CMakeFiles/srsenb_mac.dir/build.make srsenb/src/stack/mac/CMakeFiles/srsenb_mac.dir/scheduler_grid.cc.s
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f srsenb/src/stack/mac/CMakeFiles/srsenb_mac.dir/build.make srsenb/src/stack/mac/CMakeFiles/srsenb_mac.dir/scheduler_grid.cc.s
 .PHONY : scheduler_grid.cc.s
 
 scheduler_harq.o: scheduler_harq.cc.o
@@ -318,7 +318,7 @@ scheduler_harq.o: scheduler_harq.cc.o
 
 # target to build an object file
 scheduler_harq.cc.o:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f srsenb/src/stack/mac/CMakeFiles/srsenb_mac.dir/build.make srsenb/src/stack/mac/CMakeFiles/srsenb_mac.dir/scheduler_harq.cc.o
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f srsenb/src/stack/mac/CMakeFiles/srsenb_mac.dir/build.make srsenb/src/stack/mac/CMakeFiles/srsenb_mac.dir/scheduler_harq.cc.o
 .PHONY : scheduler_harq.cc.o
 
 scheduler_harq.i: scheduler_harq.cc.i
@@ -327,7 +327,7 @@ scheduler_harq.i: scheduler_harq.cc.i
 
 # target to preprocess a source file
 scheduler_harq.cc.i:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f srsenb/src/stack/mac/CMakeFiles/srsenb_mac.dir/build.make srsenb/src/stack/mac/CMakeFiles/srsenb_mac.dir/scheduler_harq.cc.i
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f srsenb/src/stack/mac/CMakeFiles/srsenb_mac.dir/build.make srsenb/src/stack/mac/CMakeFiles/srsenb_mac.dir/scheduler_harq.cc.i
 .PHONY : scheduler_harq.cc.i
 
 scheduler_harq.s: scheduler_harq.cc.s
@@ -336,7 +336,7 @@ scheduler_harq.s: scheduler_harq.cc.s
 
 # target to generate assembly for a file
 scheduler_harq.cc.s:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f srsenb/src/stack/mac/CMakeFiles/srsenb_mac.dir/build.make srsenb/src/stack/mac/CMakeFiles/srsenb_mac.dir/scheduler_harq.cc.s
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f srsenb/src/stack/mac/CMakeFiles/srsenb_mac.dir/build.make srsenb/src/stack/mac/CMakeFiles/srsenb_mac.dir/scheduler_harq.cc.s
 .PHONY : scheduler_harq.cc.s
 
 scheduler_metric.o: scheduler_metric.cc.o
@@ -345,7 +345,7 @@ scheduler_metric.o: scheduler_metric.cc.o
 
 # target to build an object file
 scheduler_metric.cc.o:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f srsenb/src/stack/mac/CMakeFiles/srsenb_mac.dir/build.make srsenb/src/stack/mac/CMakeFiles/srsenb_mac.dir/scheduler_metric.cc.o
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f srsenb/src/stack/mac/CMakeFiles/srsenb_mac.dir/build.make srsenb/src/stack/mac/CMakeFiles/srsenb_mac.dir/scheduler_metric.cc.o
 .PHONY : scheduler_metric.cc.o
 
 scheduler_metric.i: scheduler_metric.cc.i
@@ -354,7 +354,7 @@ scheduler_metric.i: scheduler_metric.cc.i
 
 # target to preprocess a source file
 scheduler_metric.cc.i:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f srsenb/src/stack/mac/CMakeFiles/srsenb_mac.dir/build.make srsenb/src/stack/mac/CMakeFiles/srsenb_mac.dir/scheduler_metric.cc.i
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f srsenb/src/stack/mac/CMakeFiles/srsenb_mac.dir/build.make srsenb/src/stack/mac/CMakeFiles/srsenb_mac.dir/scheduler_metric.cc.i
 .PHONY : scheduler_metric.cc.i
 
 scheduler_metric.s: scheduler_metric.cc.s
@@ -363,7 +363,7 @@ scheduler_metric.s: scheduler_metric.cc.s
 
 # target to generate assembly for a file
 scheduler_metric.cc.s:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f srsenb/src/stack/mac/CMakeFiles/srsenb_mac.dir/build.make srsenb/src/stack/mac/CMakeFiles/srsenb_mac.dir/scheduler_metric.cc.s
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f srsenb/src/stack/mac/CMakeFiles/srsenb_mac.dir/build.make srsenb/src/stack/mac/CMakeFiles/srsenb_mac.dir/scheduler_metric.cc.s
 .PHONY : scheduler_metric.cc.s
 
 scheduler_ue.o: scheduler_ue.cc.o
@@ -372,7 +372,7 @@ scheduler_ue.o: scheduler_ue.cc.o
 
 # target to build an object file
 scheduler_ue.cc.o:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f srsenb/src/stack/mac/CMakeFiles/srsenb_mac.dir/build.make srsenb/src/stack/mac/CMakeFiles/srsenb_mac.dir/scheduler_ue.cc.o
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f srsenb/src/stack/mac/CMakeFiles/srsenb_mac.dir/build.make srsenb/src/stack/mac/CMakeFiles/srsenb_mac.dir/scheduler_ue.cc.o
 .PHONY : scheduler_ue.cc.o
 
 scheduler_ue.i: scheduler_ue.cc.i
@@ -381,7 +381,7 @@ scheduler_ue.i: scheduler_ue.cc.i
 
 # target to preprocess a source file
 scheduler_ue.cc.i:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f srsenb/src/stack/mac/CMakeFiles/srsenb_mac.dir/build.make srsenb/src/stack/mac/CMakeFiles/srsenb_mac.dir/scheduler_ue.cc.i
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f srsenb/src/stack/mac/CMakeFiles/srsenb_mac.dir/build.make srsenb/src/stack/mac/CMakeFiles/srsenb_mac.dir/scheduler_ue.cc.i
 .PHONY : scheduler_ue.cc.i
 
 scheduler_ue.s: scheduler_ue.cc.s
@@ -390,7 +390,7 @@ scheduler_ue.s: scheduler_ue.cc.s
 
 # target to generate assembly for a file
 scheduler_ue.cc.s:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f srsenb/src/stack/mac/CMakeFiles/srsenb_mac.dir/build.make srsenb/src/stack/mac/CMakeFiles/srsenb_mac.dir/scheduler_ue.cc.s
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f srsenb/src/stack/mac/CMakeFiles/srsenb_mac.dir/build.make srsenb/src/stack/mac/CMakeFiles/srsenb_mac.dir/scheduler_ue.cc.s
 .PHONY : scheduler_ue.cc.s
 
 ue.o: ue.cc.o
@@ -399,7 +399,7 @@ ue.o: ue.cc.o
 
 # target to build an object file
 ue.cc.o:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f srsenb/src/stack/mac/CMakeFiles/srsenb_mac.dir/build.make srsenb/src/stack/mac/CMakeFiles/srsenb_mac.dir/ue.cc.o
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f srsenb/src/stack/mac/CMakeFiles/srsenb_mac.dir/build.make srsenb/src/stack/mac/CMakeFiles/srsenb_mac.dir/ue.cc.o
 .PHONY : ue.cc.o
 
 ue.i: ue.cc.i
@@ -408,7 +408,7 @@ ue.i: ue.cc.i
 
 # target to preprocess a source file
 ue.cc.i:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f srsenb/src/stack/mac/CMakeFiles/srsenb_mac.dir/build.make srsenb/src/stack/mac/CMakeFiles/srsenb_mac.dir/ue.cc.i
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f srsenb/src/stack/mac/CMakeFiles/srsenb_mac.dir/build.make srsenb/src/stack/mac/CMakeFiles/srsenb_mac.dir/ue.cc.i
 .PHONY : ue.cc.i
 
 ue.s: ue.cc.s
@@ -417,7 +417,7 @@ ue.s: ue.cc.s
 
 # target to generate assembly for a file
 ue.cc.s:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f srsenb/src/stack/mac/CMakeFiles/srsenb_mac.dir/build.make srsenb/src/stack/mac/CMakeFiles/srsenb_mac.dir/ue.cc.s
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f srsenb/src/stack/mac/CMakeFiles/srsenb_mac.dir/build.make srsenb/src/stack/mac/CMakeFiles/srsenb_mac.dir/ue.cc.s
 .PHONY : ue.cc.s
 
 # Help Target
@@ -471,6 +471,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/atm/Divya/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

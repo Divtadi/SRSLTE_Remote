@@ -48,10 +48,10 @@ RM = /opt/clion-2020.1.2/bin/cmake/linux/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/atm/Ayman/srsLTE_Slicing
+CMAKE_SOURCE_DIR = /home/atm/Divya
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug
+CMAKE_BINARY_DIR = /home/atm/Divya/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -138,7 +138,7 @@ test/fast: test
 # Special rule for the target package
 package: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool..."
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && /opt/clion-2020.1.2/bin/cmake/linux/bin/cpack --config ./CPackConfig.cmake
+	cd /home/atm/Divya/cmake-build-debug && /opt/clion-2020.1.2/bin/cmake/linux/bin/cpack --config ./CPackConfig.cmake
 .PHONY : package
 
 # Special rule for the target package
@@ -149,7 +149,7 @@ package/fast: package
 # Special rule for the target package_source
 package_source:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool for source..."
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && /opt/clion-2020.1.2/bin/cmake/linux/bin/cpack --config ./CPackSourceConfig.cmake /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/CPackSourceConfig.cmake
+	cd /home/atm/Divya/cmake-build-debug && /opt/clion-2020.1.2/bin/cmake/linux/bin/cpack --config ./CPackSourceConfig.cmake /home/atm/Divya/cmake-build-debug/CPackSourceConfig.cmake
 .PHONY : package_source
 
 # Special rule for the target package_source
@@ -159,14 +159,14 @@ package_source/fast: package_source
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_progress_start /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/CMakeFiles /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/phy/channel/CMakeFiles/progress.marks
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 lib/src/phy/channel/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/CMakeFiles 0
+	cd /home/atm/Divya/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_progress_start /home/atm/Divya/cmake-build-debug/CMakeFiles /home/atm/Divya/cmake-build-debug/lib/src/phy/channel/CMakeFiles/progress.marks
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 lib/src/phy/channel/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/atm/Divya/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 lib/src/phy/channel/clean
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 lib/src/phy/channel/clean
 .PHONY : clean
 
 # The main clean target
@@ -176,22 +176,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: cmake_check_build_system
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 lib/src/phy/channel/preinstall
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 lib/src/phy/channel/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 lib/src/phy/channel/preinstall
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 lib/src/phy/channel/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/atm/Divya/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 lib/src/phy/channel/CMakeFiles/srslte_channel.dir/rule:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 lib/src/phy/channel/CMakeFiles/srslte_channel.dir/rule
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 lib/src/phy/channel/CMakeFiles/srslte_channel.dir/rule
 .PHONY : lib/src/phy/channel/CMakeFiles/srslte_channel.dir/rule
 
 # Convenience name for target.
@@ -201,7 +201,7 @@ srslte_channel: lib/src/phy/channel/CMakeFiles/srslte_channel.dir/rule
 
 # fast build rule for target.
 srslte_channel/fast:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/channel/CMakeFiles/srslte_channel.dir/build.make lib/src/phy/channel/CMakeFiles/srslte_channel.dir/build
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/channel/CMakeFiles/srslte_channel.dir/build.make lib/src/phy/channel/CMakeFiles/srslte_channel.dir/build
 .PHONY : srslte_channel/fast
 
 ch_awgn.o: ch_awgn.c.o
@@ -210,7 +210,7 @@ ch_awgn.o: ch_awgn.c.o
 
 # target to build an object file
 ch_awgn.c.o:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/channel/CMakeFiles/srslte_channel.dir/build.make lib/src/phy/channel/CMakeFiles/srslte_channel.dir/ch_awgn.c.o
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/channel/CMakeFiles/srslte_channel.dir/build.make lib/src/phy/channel/CMakeFiles/srslte_channel.dir/ch_awgn.c.o
 .PHONY : ch_awgn.c.o
 
 ch_awgn.i: ch_awgn.c.i
@@ -219,7 +219,7 @@ ch_awgn.i: ch_awgn.c.i
 
 # target to preprocess a source file
 ch_awgn.c.i:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/channel/CMakeFiles/srslte_channel.dir/build.make lib/src/phy/channel/CMakeFiles/srslte_channel.dir/ch_awgn.c.i
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/channel/CMakeFiles/srslte_channel.dir/build.make lib/src/phy/channel/CMakeFiles/srslte_channel.dir/ch_awgn.c.i
 .PHONY : ch_awgn.c.i
 
 ch_awgn.s: ch_awgn.c.s
@@ -228,7 +228,7 @@ ch_awgn.s: ch_awgn.c.s
 
 # target to generate assembly for a file
 ch_awgn.c.s:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/channel/CMakeFiles/srslte_channel.dir/build.make lib/src/phy/channel/CMakeFiles/srslte_channel.dir/ch_awgn.c.s
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/channel/CMakeFiles/srslte_channel.dir/build.make lib/src/phy/channel/CMakeFiles/srslte_channel.dir/ch_awgn.c.s
 .PHONY : ch_awgn.c.s
 
 channel.o: channel.cc.o
@@ -237,7 +237,7 @@ channel.o: channel.cc.o
 
 # target to build an object file
 channel.cc.o:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/channel/CMakeFiles/srslte_channel.dir/build.make lib/src/phy/channel/CMakeFiles/srslte_channel.dir/channel.cc.o
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/channel/CMakeFiles/srslte_channel.dir/build.make lib/src/phy/channel/CMakeFiles/srslte_channel.dir/channel.cc.o
 .PHONY : channel.cc.o
 
 channel.i: channel.cc.i
@@ -246,7 +246,7 @@ channel.i: channel.cc.i
 
 # target to preprocess a source file
 channel.cc.i:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/channel/CMakeFiles/srslte_channel.dir/build.make lib/src/phy/channel/CMakeFiles/srslte_channel.dir/channel.cc.i
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/channel/CMakeFiles/srslte_channel.dir/build.make lib/src/phy/channel/CMakeFiles/srslte_channel.dir/channel.cc.i
 .PHONY : channel.cc.i
 
 channel.s: channel.cc.s
@@ -255,7 +255,7 @@ channel.s: channel.cc.s
 
 # target to generate assembly for a file
 channel.cc.s:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/channel/CMakeFiles/srslte_channel.dir/build.make lib/src/phy/channel/CMakeFiles/srslte_channel.dir/channel.cc.s
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/channel/CMakeFiles/srslte_channel.dir/build.make lib/src/phy/channel/CMakeFiles/srslte_channel.dir/channel.cc.s
 .PHONY : channel.cc.s
 
 delay.o: delay.c.o
@@ -264,7 +264,7 @@ delay.o: delay.c.o
 
 # target to build an object file
 delay.c.o:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/channel/CMakeFiles/srslte_channel.dir/build.make lib/src/phy/channel/CMakeFiles/srslte_channel.dir/delay.c.o
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/channel/CMakeFiles/srslte_channel.dir/build.make lib/src/phy/channel/CMakeFiles/srslte_channel.dir/delay.c.o
 .PHONY : delay.c.o
 
 delay.i: delay.c.i
@@ -273,7 +273,7 @@ delay.i: delay.c.i
 
 # target to preprocess a source file
 delay.c.i:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/channel/CMakeFiles/srslte_channel.dir/build.make lib/src/phy/channel/CMakeFiles/srslte_channel.dir/delay.c.i
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/channel/CMakeFiles/srslte_channel.dir/build.make lib/src/phy/channel/CMakeFiles/srslte_channel.dir/delay.c.i
 .PHONY : delay.c.i
 
 delay.s: delay.c.s
@@ -282,7 +282,7 @@ delay.s: delay.c.s
 
 # target to generate assembly for a file
 delay.c.s:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/channel/CMakeFiles/srslte_channel.dir/build.make lib/src/phy/channel/CMakeFiles/srslte_channel.dir/delay.c.s
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/channel/CMakeFiles/srslte_channel.dir/build.make lib/src/phy/channel/CMakeFiles/srslte_channel.dir/delay.c.s
 .PHONY : delay.c.s
 
 fading.o: fading.c.o
@@ -291,7 +291,7 @@ fading.o: fading.c.o
 
 # target to build an object file
 fading.c.o:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/channel/CMakeFiles/srslte_channel.dir/build.make lib/src/phy/channel/CMakeFiles/srslte_channel.dir/fading.c.o
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/channel/CMakeFiles/srslte_channel.dir/build.make lib/src/phy/channel/CMakeFiles/srslte_channel.dir/fading.c.o
 .PHONY : fading.c.o
 
 fading.i: fading.c.i
@@ -300,7 +300,7 @@ fading.i: fading.c.i
 
 # target to preprocess a source file
 fading.c.i:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/channel/CMakeFiles/srslte_channel.dir/build.make lib/src/phy/channel/CMakeFiles/srslte_channel.dir/fading.c.i
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/channel/CMakeFiles/srslte_channel.dir/build.make lib/src/phy/channel/CMakeFiles/srslte_channel.dir/fading.c.i
 .PHONY : fading.c.i
 
 fading.s: fading.c.s
@@ -309,7 +309,7 @@ fading.s: fading.c.s
 
 # target to generate assembly for a file
 fading.c.s:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/channel/CMakeFiles/srslte_channel.dir/build.make lib/src/phy/channel/CMakeFiles/srslte_channel.dir/fading.c.s
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/channel/CMakeFiles/srslte_channel.dir/build.make lib/src/phy/channel/CMakeFiles/srslte_channel.dir/fading.c.s
 .PHONY : fading.c.s
 
 gauss.o: gauss.c.o
@@ -318,7 +318,7 @@ gauss.o: gauss.c.o
 
 # target to build an object file
 gauss.c.o:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/channel/CMakeFiles/srslte_channel.dir/build.make lib/src/phy/channel/CMakeFiles/srslte_channel.dir/gauss.c.o
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/channel/CMakeFiles/srslte_channel.dir/build.make lib/src/phy/channel/CMakeFiles/srslte_channel.dir/gauss.c.o
 .PHONY : gauss.c.o
 
 gauss.i: gauss.c.i
@@ -327,7 +327,7 @@ gauss.i: gauss.c.i
 
 # target to preprocess a source file
 gauss.c.i:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/channel/CMakeFiles/srslte_channel.dir/build.make lib/src/phy/channel/CMakeFiles/srslte_channel.dir/gauss.c.i
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/channel/CMakeFiles/srslte_channel.dir/build.make lib/src/phy/channel/CMakeFiles/srslte_channel.dir/gauss.c.i
 .PHONY : gauss.c.i
 
 gauss.s: gauss.c.s
@@ -336,7 +336,7 @@ gauss.s: gauss.c.s
 
 # target to generate assembly for a file
 gauss.c.s:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/channel/CMakeFiles/srslte_channel.dir/build.make lib/src/phy/channel/CMakeFiles/srslte_channel.dir/gauss.c.s
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/channel/CMakeFiles/srslte_channel.dir/build.make lib/src/phy/channel/CMakeFiles/srslte_channel.dir/gauss.c.s
 .PHONY : gauss.c.s
 
 hst.o: hst.c.o
@@ -345,7 +345,7 @@ hst.o: hst.c.o
 
 # target to build an object file
 hst.c.o:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/channel/CMakeFiles/srslte_channel.dir/build.make lib/src/phy/channel/CMakeFiles/srslte_channel.dir/hst.c.o
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/channel/CMakeFiles/srslte_channel.dir/build.make lib/src/phy/channel/CMakeFiles/srslte_channel.dir/hst.c.o
 .PHONY : hst.c.o
 
 hst.i: hst.c.i
@@ -354,7 +354,7 @@ hst.i: hst.c.i
 
 # target to preprocess a source file
 hst.c.i:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/channel/CMakeFiles/srslte_channel.dir/build.make lib/src/phy/channel/CMakeFiles/srslte_channel.dir/hst.c.i
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/channel/CMakeFiles/srslte_channel.dir/build.make lib/src/phy/channel/CMakeFiles/srslte_channel.dir/hst.c.i
 .PHONY : hst.c.i
 
 hst.s: hst.c.s
@@ -363,7 +363,7 @@ hst.s: hst.c.s
 
 # target to generate assembly for a file
 hst.c.s:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/channel/CMakeFiles/srslte_channel.dir/build.make lib/src/phy/channel/CMakeFiles/srslte_channel.dir/hst.c.s
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/channel/CMakeFiles/srslte_channel.dir/build.make lib/src/phy/channel/CMakeFiles/srslte_channel.dir/hst.c.s
 .PHONY : hst.c.s
 
 rlf.o: rlf.c.o
@@ -372,7 +372,7 @@ rlf.o: rlf.c.o
 
 # target to build an object file
 rlf.c.o:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/channel/CMakeFiles/srslte_channel.dir/build.make lib/src/phy/channel/CMakeFiles/srslte_channel.dir/rlf.c.o
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/channel/CMakeFiles/srslte_channel.dir/build.make lib/src/phy/channel/CMakeFiles/srslte_channel.dir/rlf.c.o
 .PHONY : rlf.c.o
 
 rlf.i: rlf.c.i
@@ -381,7 +381,7 @@ rlf.i: rlf.c.i
 
 # target to preprocess a source file
 rlf.c.i:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/channel/CMakeFiles/srslte_channel.dir/build.make lib/src/phy/channel/CMakeFiles/srslte_channel.dir/rlf.c.i
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/channel/CMakeFiles/srslte_channel.dir/build.make lib/src/phy/channel/CMakeFiles/srslte_channel.dir/rlf.c.i
 .PHONY : rlf.c.i
 
 rlf.s: rlf.c.s
@@ -390,7 +390,7 @@ rlf.s: rlf.c.s
 
 # target to generate assembly for a file
 rlf.c.s:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/channel/CMakeFiles/srslte_channel.dir/build.make lib/src/phy/channel/CMakeFiles/srslte_channel.dir/rlf.c.s
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/channel/CMakeFiles/srslte_channel.dir/build.make lib/src/phy/channel/CMakeFiles/srslte_channel.dir/rlf.c.s
 .PHONY : rlf.c.s
 
 # Help Target
@@ -441,6 +441,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/atm/Divya/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

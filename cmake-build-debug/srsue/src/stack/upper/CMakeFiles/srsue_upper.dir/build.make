@@ -43,10 +43,10 @@ RM = /opt/clion-2020.1.2/bin/cmake/linux/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/atm/Ayman/srsLTE_Slicing
+CMAKE_SOURCE_DIR = /home/atm/Divya
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug
+CMAKE_BINARY_DIR = /home/atm/Divya/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include srsue/src/stack/upper/CMakeFiles/srsue_upper.dir/depend.make
@@ -59,68 +59,81 @@ include srsue/src/stack/upper/CMakeFiles/srsue_upper.dir/flags.make
 
 srsue/src/stack/upper/CMakeFiles/srsue_upper.dir/gw.cc.o: srsue/src/stack/upper/CMakeFiles/srsue_upper.dir/flags.make
 srsue/src/stack/upper/CMakeFiles/srsue_upper.dir/gw.cc.o: ../srsue/src/stack/upper/gw.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object srsue/src/stack/upper/CMakeFiles/srsue_upper.dir/gw.cc.o"
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/srsue/src/stack/upper && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/srsue_upper.dir/gw.cc.o -c /home/atm/Ayman/srsLTE_Slicing/srsue/src/stack/upper/gw.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/atm/Divya/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object srsue/src/stack/upper/CMakeFiles/srsue_upper.dir/gw.cc.o"
+	cd /home/atm/Divya/cmake-build-debug/srsue/src/stack/upper && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/srsue_upper.dir/gw.cc.o -c /home/atm/Divya/srsue/src/stack/upper/gw.cc
 
 srsue/src/stack/upper/CMakeFiles/srsue_upper.dir/gw.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/srsue_upper.dir/gw.cc.i"
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/srsue/src/stack/upper && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/atm/Ayman/srsLTE_Slicing/srsue/src/stack/upper/gw.cc > CMakeFiles/srsue_upper.dir/gw.cc.i
+	cd /home/atm/Divya/cmake-build-debug/srsue/src/stack/upper && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/atm/Divya/srsue/src/stack/upper/gw.cc > CMakeFiles/srsue_upper.dir/gw.cc.i
 
 srsue/src/stack/upper/CMakeFiles/srsue_upper.dir/gw.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/srsue_upper.dir/gw.cc.s"
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/srsue/src/stack/upper && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/atm/Ayman/srsLTE_Slicing/srsue/src/stack/upper/gw.cc -o CMakeFiles/srsue_upper.dir/gw.cc.s
+	cd /home/atm/Divya/cmake-build-debug/srsue/src/stack/upper && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/atm/Divya/srsue/src/stack/upper/gw.cc -o CMakeFiles/srsue_upper.dir/gw.cc.s
 
 srsue/src/stack/upper/CMakeFiles/srsue_upper.dir/nas.cc.o: srsue/src/stack/upper/CMakeFiles/srsue_upper.dir/flags.make
 srsue/src/stack/upper/CMakeFiles/srsue_upper.dir/nas.cc.o: ../srsue/src/stack/upper/nas.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object srsue/src/stack/upper/CMakeFiles/srsue_upper.dir/nas.cc.o"
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/srsue/src/stack/upper && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/srsue_upper.dir/nas.cc.o -c /home/atm/Ayman/srsLTE_Slicing/srsue/src/stack/upper/nas.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/atm/Divya/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object srsue/src/stack/upper/CMakeFiles/srsue_upper.dir/nas.cc.o"
+	cd /home/atm/Divya/cmake-build-debug/srsue/src/stack/upper && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/srsue_upper.dir/nas.cc.o -c /home/atm/Divya/srsue/src/stack/upper/nas.cc
 
 srsue/src/stack/upper/CMakeFiles/srsue_upper.dir/nas.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/srsue_upper.dir/nas.cc.i"
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/srsue/src/stack/upper && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/atm/Ayman/srsLTE_Slicing/srsue/src/stack/upper/nas.cc > CMakeFiles/srsue_upper.dir/nas.cc.i
+	cd /home/atm/Divya/cmake-build-debug/srsue/src/stack/upper && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/atm/Divya/srsue/src/stack/upper/nas.cc > CMakeFiles/srsue_upper.dir/nas.cc.i
 
 srsue/src/stack/upper/CMakeFiles/srsue_upper.dir/nas.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/srsue_upper.dir/nas.cc.s"
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/srsue/src/stack/upper && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/atm/Ayman/srsLTE_Slicing/srsue/src/stack/upper/nas.cc -o CMakeFiles/srsue_upper.dir/nas.cc.s
+	cd /home/atm/Divya/cmake-build-debug/srsue/src/stack/upper && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/atm/Divya/srsue/src/stack/upper/nas.cc -o CMakeFiles/srsue_upper.dir/nas.cc.s
 
 srsue/src/stack/upper/CMakeFiles/srsue_upper.dir/usim_base.cc.o: srsue/src/stack/upper/CMakeFiles/srsue_upper.dir/flags.make
 srsue/src/stack/upper/CMakeFiles/srsue_upper.dir/usim_base.cc.o: ../srsue/src/stack/upper/usim_base.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object srsue/src/stack/upper/CMakeFiles/srsue_upper.dir/usim_base.cc.o"
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/srsue/src/stack/upper && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/srsue_upper.dir/usim_base.cc.o -c /home/atm/Ayman/srsLTE_Slicing/srsue/src/stack/upper/usim_base.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/atm/Divya/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object srsue/src/stack/upper/CMakeFiles/srsue_upper.dir/usim_base.cc.o"
+	cd /home/atm/Divya/cmake-build-debug/srsue/src/stack/upper && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/srsue_upper.dir/usim_base.cc.o -c /home/atm/Divya/srsue/src/stack/upper/usim_base.cc
 
 srsue/src/stack/upper/CMakeFiles/srsue_upper.dir/usim_base.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/srsue_upper.dir/usim_base.cc.i"
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/srsue/src/stack/upper && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/atm/Ayman/srsLTE_Slicing/srsue/src/stack/upper/usim_base.cc > CMakeFiles/srsue_upper.dir/usim_base.cc.i
+	cd /home/atm/Divya/cmake-build-debug/srsue/src/stack/upper && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/atm/Divya/srsue/src/stack/upper/usim_base.cc > CMakeFiles/srsue_upper.dir/usim_base.cc.i
 
 srsue/src/stack/upper/CMakeFiles/srsue_upper.dir/usim_base.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/srsue_upper.dir/usim_base.cc.s"
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/srsue/src/stack/upper && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/atm/Ayman/srsLTE_Slicing/srsue/src/stack/upper/usim_base.cc -o CMakeFiles/srsue_upper.dir/usim_base.cc.s
+	cd /home/atm/Divya/cmake-build-debug/srsue/src/stack/upper && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/atm/Divya/srsue/src/stack/upper/usim_base.cc -o CMakeFiles/srsue_upper.dir/usim_base.cc.s
 
 srsue/src/stack/upper/CMakeFiles/srsue_upper.dir/usim.cc.o: srsue/src/stack/upper/CMakeFiles/srsue_upper.dir/flags.make
 srsue/src/stack/upper/CMakeFiles/srsue_upper.dir/usim.cc.o: ../srsue/src/stack/upper/usim.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object srsue/src/stack/upper/CMakeFiles/srsue_upper.dir/usim.cc.o"
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/srsue/src/stack/upper && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/srsue_upper.dir/usim.cc.o -c /home/atm/Ayman/srsLTE_Slicing/srsue/src/stack/upper/usim.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/atm/Divya/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object srsue/src/stack/upper/CMakeFiles/srsue_upper.dir/usim.cc.o"
+	cd /home/atm/Divya/cmake-build-debug/srsue/src/stack/upper && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/srsue_upper.dir/usim.cc.o -c /home/atm/Divya/srsue/src/stack/upper/usim.cc
 
 srsue/src/stack/upper/CMakeFiles/srsue_upper.dir/usim.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/srsue_upper.dir/usim.cc.i"
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/srsue/src/stack/upper && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/atm/Ayman/srsLTE_Slicing/srsue/src/stack/upper/usim.cc > CMakeFiles/srsue_upper.dir/usim.cc.i
+	cd /home/atm/Divya/cmake-build-debug/srsue/src/stack/upper && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/atm/Divya/srsue/src/stack/upper/usim.cc > CMakeFiles/srsue_upper.dir/usim.cc.i
 
 srsue/src/stack/upper/CMakeFiles/srsue_upper.dir/usim.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/srsue_upper.dir/usim.cc.s"
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/srsue/src/stack/upper && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/atm/Ayman/srsLTE_Slicing/srsue/src/stack/upper/usim.cc -o CMakeFiles/srsue_upper.dir/usim.cc.s
+	cd /home/atm/Divya/cmake-build-debug/srsue/src/stack/upper && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/atm/Divya/srsue/src/stack/upper/usim.cc -o CMakeFiles/srsue_upper.dir/usim.cc.s
 
 srsue/src/stack/upper/CMakeFiles/srsue_upper.dir/tft_packet_filter.cc.o: srsue/src/stack/upper/CMakeFiles/srsue_upper.dir/flags.make
 srsue/src/stack/upper/CMakeFiles/srsue_upper.dir/tft_packet_filter.cc.o: ../srsue/src/stack/upper/tft_packet_filter.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object srsue/src/stack/upper/CMakeFiles/srsue_upper.dir/tft_packet_filter.cc.o"
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/srsue/src/stack/upper && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/srsue_upper.dir/tft_packet_filter.cc.o -c /home/atm/Ayman/srsLTE_Slicing/srsue/src/stack/upper/tft_packet_filter.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/atm/Divya/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object srsue/src/stack/upper/CMakeFiles/srsue_upper.dir/tft_packet_filter.cc.o"
+	cd /home/atm/Divya/cmake-build-debug/srsue/src/stack/upper && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/srsue_upper.dir/tft_packet_filter.cc.o -c /home/atm/Divya/srsue/src/stack/upper/tft_packet_filter.cc
 
 srsue/src/stack/upper/CMakeFiles/srsue_upper.dir/tft_packet_filter.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/srsue_upper.dir/tft_packet_filter.cc.i"
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/srsue/src/stack/upper && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/atm/Ayman/srsLTE_Slicing/srsue/src/stack/upper/tft_packet_filter.cc > CMakeFiles/srsue_upper.dir/tft_packet_filter.cc.i
+	cd /home/atm/Divya/cmake-build-debug/srsue/src/stack/upper && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/atm/Divya/srsue/src/stack/upper/tft_packet_filter.cc > CMakeFiles/srsue_upper.dir/tft_packet_filter.cc.i
 
 srsue/src/stack/upper/CMakeFiles/srsue_upper.dir/tft_packet_filter.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/srsue_upper.dir/tft_packet_filter.cc.s"
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/srsue/src/stack/upper && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/atm/Ayman/srsLTE_Slicing/srsue/src/stack/upper/tft_packet_filter.cc -o CMakeFiles/srsue_upper.dir/tft_packet_filter.cc.s
+	cd /home/atm/Divya/cmake-build-debug/srsue/src/stack/upper && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/atm/Divya/srsue/src/stack/upper/tft_packet_filter.cc -o CMakeFiles/srsue_upper.dir/tft_packet_filter.cc.s
+
+srsue/src/stack/upper/CMakeFiles/srsue_upper.dir/pcsc_usim.cc.o: srsue/src/stack/upper/CMakeFiles/srsue_upper.dir/flags.make
+srsue/src/stack/upper/CMakeFiles/srsue_upper.dir/pcsc_usim.cc.o: ../srsue/src/stack/upper/pcsc_usim.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/atm/Divya/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object srsue/src/stack/upper/CMakeFiles/srsue_upper.dir/pcsc_usim.cc.o"
+	cd /home/atm/Divya/cmake-build-debug/srsue/src/stack/upper && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/srsue_upper.dir/pcsc_usim.cc.o -c /home/atm/Divya/srsue/src/stack/upper/pcsc_usim.cc
+
+srsue/src/stack/upper/CMakeFiles/srsue_upper.dir/pcsc_usim.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/srsue_upper.dir/pcsc_usim.cc.i"
+	cd /home/atm/Divya/cmake-build-debug/srsue/src/stack/upper && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/atm/Divya/srsue/src/stack/upper/pcsc_usim.cc > CMakeFiles/srsue_upper.dir/pcsc_usim.cc.i
+
+srsue/src/stack/upper/CMakeFiles/srsue_upper.dir/pcsc_usim.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/srsue_upper.dir/pcsc_usim.cc.s"
+	cd /home/atm/Divya/cmake-build-debug/srsue/src/stack/upper && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/atm/Divya/srsue/src/stack/upper/pcsc_usim.cc -o CMakeFiles/srsue_upper.dir/pcsc_usim.cc.s
 
 # Object files for target srsue_upper
 srsue_upper_OBJECTS = \
@@ -128,7 +141,8 @@ srsue_upper_OBJECTS = \
 "CMakeFiles/srsue_upper.dir/nas.cc.o" \
 "CMakeFiles/srsue_upper.dir/usim_base.cc.o" \
 "CMakeFiles/srsue_upper.dir/usim.cc.o" \
-"CMakeFiles/srsue_upper.dir/tft_packet_filter.cc.o"
+"CMakeFiles/srsue_upper.dir/tft_packet_filter.cc.o" \
+"CMakeFiles/srsue_upper.dir/pcsc_usim.cc.o"
 
 # External object files for target srsue_upper
 srsue_upper_EXTERNAL_OBJECTS =
@@ -138,11 +152,12 @@ srsue/src/stack/upper/libsrsue_upper.a: srsue/src/stack/upper/CMakeFiles/srsue_u
 srsue/src/stack/upper/libsrsue_upper.a: srsue/src/stack/upper/CMakeFiles/srsue_upper.dir/usim_base.cc.o
 srsue/src/stack/upper/libsrsue_upper.a: srsue/src/stack/upper/CMakeFiles/srsue_upper.dir/usim.cc.o
 srsue/src/stack/upper/libsrsue_upper.a: srsue/src/stack/upper/CMakeFiles/srsue_upper.dir/tft_packet_filter.cc.o
+srsue/src/stack/upper/libsrsue_upper.a: srsue/src/stack/upper/CMakeFiles/srsue_upper.dir/pcsc_usim.cc.o
 srsue/src/stack/upper/libsrsue_upper.a: srsue/src/stack/upper/CMakeFiles/srsue_upper.dir/build.make
 srsue/src/stack/upper/libsrsue_upper.a: srsue/src/stack/upper/CMakeFiles/srsue_upper.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX static library libsrsue_upper.a"
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/srsue/src/stack/upper && $(CMAKE_COMMAND) -P CMakeFiles/srsue_upper.dir/cmake_clean_target.cmake
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/srsue/src/stack/upper && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/srsue_upper.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/atm/Divya/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX static library libsrsue_upper.a"
+	cd /home/atm/Divya/cmake-build-debug/srsue/src/stack/upper && $(CMAKE_COMMAND) -P CMakeFiles/srsue_upper.dir/cmake_clean_target.cmake
+	cd /home/atm/Divya/cmake-build-debug/srsue/src/stack/upper && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/srsue_upper.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 srsue/src/stack/upper/CMakeFiles/srsue_upper.dir/build: srsue/src/stack/upper/libsrsue_upper.a
@@ -150,10 +165,10 @@ srsue/src/stack/upper/CMakeFiles/srsue_upper.dir/build: srsue/src/stack/upper/li
 .PHONY : srsue/src/stack/upper/CMakeFiles/srsue_upper.dir/build
 
 srsue/src/stack/upper/CMakeFiles/srsue_upper.dir/clean:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/srsue/src/stack/upper && $(CMAKE_COMMAND) -P CMakeFiles/srsue_upper.dir/cmake_clean.cmake
+	cd /home/atm/Divya/cmake-build-debug/srsue/src/stack/upper && $(CMAKE_COMMAND) -P CMakeFiles/srsue_upper.dir/cmake_clean.cmake
 .PHONY : srsue/src/stack/upper/CMakeFiles/srsue_upper.dir/clean
 
 srsue/src/stack/upper/CMakeFiles/srsue_upper.dir/depend:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/atm/Ayman/srsLTE_Slicing /home/atm/Ayman/srsLTE_Slicing/srsue/src/stack/upper /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/srsue/src/stack/upper /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/srsue/src/stack/upper/CMakeFiles/srsue_upper.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/atm/Divya/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/atm/Divya /home/atm/Divya/srsue/src/stack/upper /home/atm/Divya/cmake-build-debug /home/atm/Divya/cmake-build-debug/srsue/src/stack/upper /home/atm/Divya/cmake-build-debug/srsue/src/stack/upper/CMakeFiles/srsue_upper.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : srsue/src/stack/upper/CMakeFiles/srsue_upper.dir/depend
 

@@ -48,10 +48,10 @@ RM = /opt/clion-2020.1.2/bin/cmake/linux/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/atm/Ayman/srsLTE_Slicing
+CMAKE_SOURCE_DIR = /home/atm/Divya
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug
+CMAKE_BINARY_DIR = /home/atm/Divya/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -127,7 +127,7 @@ edit_cache/fast: edit_cache
 # Special rule for the target package_source
 package_source:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool for source..."
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && /opt/clion-2020.1.2/bin/cmake/linux/bin/cpack --config ./CPackSourceConfig.cmake /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/CPackSourceConfig.cmake
+	cd /home/atm/Divya/cmake-build-debug && /opt/clion-2020.1.2/bin/cmake/linux/bin/cpack --config ./CPackSourceConfig.cmake /home/atm/Divya/cmake-build-debug/CPackSourceConfig.cmake
 .PHONY : package_source
 
 # Special rule for the target package_source
@@ -138,7 +138,7 @@ package_source/fast: package_source
 # Special rule for the target package
 package: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool..."
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && /opt/clion-2020.1.2/bin/cmake/linux/bin/cpack --config ./CPackConfig.cmake
+	cd /home/atm/Divya/cmake-build-debug && /opt/clion-2020.1.2/bin/cmake/linux/bin/cpack --config ./CPackConfig.cmake
 .PHONY : package
 
 # Special rule for the target package
@@ -159,14 +159,14 @@ test/fast: test
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_progress_start /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/CMakeFiles /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/srsepc/src/mme/CMakeFiles/progress.marks
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 srsepc/src/mme/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/CMakeFiles 0
+	cd /home/atm/Divya/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_progress_start /home/atm/Divya/cmake-build-debug/CMakeFiles /home/atm/Divya/cmake-build-debug/srsepc/src/mme/CMakeFiles/progress.marks
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 srsepc/src/mme/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/atm/Divya/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 srsepc/src/mme/clean
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 srsepc/src/mme/clean
 .PHONY : clean
 
 # The main clean target
@@ -176,22 +176,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: cmake_check_build_system
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 srsepc/src/mme/preinstall
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 srsepc/src/mme/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 srsepc/src/mme/preinstall
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 srsepc/src/mme/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/atm/Divya/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 srsepc/src/mme/CMakeFiles/srsepc_mme.dir/rule:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 srsepc/src/mme/CMakeFiles/srsepc_mme.dir/rule
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 srsepc/src/mme/CMakeFiles/srsepc_mme.dir/rule
 .PHONY : srsepc/src/mme/CMakeFiles/srsepc_mme.dir/rule
 
 # Convenience name for target.
@@ -201,7 +201,7 @@ srsepc_mme: srsepc/src/mme/CMakeFiles/srsepc_mme.dir/rule
 
 # fast build rule for target.
 srsepc_mme/fast:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f srsepc/src/mme/CMakeFiles/srsepc_mme.dir/build.make srsepc/src/mme/CMakeFiles/srsepc_mme.dir/build
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f srsepc/src/mme/CMakeFiles/srsepc_mme.dir/build.make srsepc/src/mme/CMakeFiles/srsepc_mme.dir/build
 .PHONY : srsepc_mme/fast
 
 mme.o: mme.cc.o
@@ -210,7 +210,7 @@ mme.o: mme.cc.o
 
 # target to build an object file
 mme.cc.o:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f srsepc/src/mme/CMakeFiles/srsepc_mme.dir/build.make srsepc/src/mme/CMakeFiles/srsepc_mme.dir/mme.cc.o
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f srsepc/src/mme/CMakeFiles/srsepc_mme.dir/build.make srsepc/src/mme/CMakeFiles/srsepc_mme.dir/mme.cc.o
 .PHONY : mme.cc.o
 
 mme.i: mme.cc.i
@@ -219,7 +219,7 @@ mme.i: mme.cc.i
 
 # target to preprocess a source file
 mme.cc.i:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f srsepc/src/mme/CMakeFiles/srsepc_mme.dir/build.make srsepc/src/mme/CMakeFiles/srsepc_mme.dir/mme.cc.i
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f srsepc/src/mme/CMakeFiles/srsepc_mme.dir/build.make srsepc/src/mme/CMakeFiles/srsepc_mme.dir/mme.cc.i
 .PHONY : mme.cc.i
 
 mme.s: mme.cc.s
@@ -228,7 +228,7 @@ mme.s: mme.cc.s
 
 # target to generate assembly for a file
 mme.cc.s:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f srsepc/src/mme/CMakeFiles/srsepc_mme.dir/build.make srsepc/src/mme/CMakeFiles/srsepc_mme.dir/mme.cc.s
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f srsepc/src/mme/CMakeFiles/srsepc_mme.dir/build.make srsepc/src/mme/CMakeFiles/srsepc_mme.dir/mme.cc.s
 .PHONY : mme.cc.s
 
 mme_gtpc.o: mme_gtpc.cc.o
@@ -237,7 +237,7 @@ mme_gtpc.o: mme_gtpc.cc.o
 
 # target to build an object file
 mme_gtpc.cc.o:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f srsepc/src/mme/CMakeFiles/srsepc_mme.dir/build.make srsepc/src/mme/CMakeFiles/srsepc_mme.dir/mme_gtpc.cc.o
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f srsepc/src/mme/CMakeFiles/srsepc_mme.dir/build.make srsepc/src/mme/CMakeFiles/srsepc_mme.dir/mme_gtpc.cc.o
 .PHONY : mme_gtpc.cc.o
 
 mme_gtpc.i: mme_gtpc.cc.i
@@ -246,7 +246,7 @@ mme_gtpc.i: mme_gtpc.cc.i
 
 # target to preprocess a source file
 mme_gtpc.cc.i:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f srsepc/src/mme/CMakeFiles/srsepc_mme.dir/build.make srsepc/src/mme/CMakeFiles/srsepc_mme.dir/mme_gtpc.cc.i
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f srsepc/src/mme/CMakeFiles/srsepc_mme.dir/build.make srsepc/src/mme/CMakeFiles/srsepc_mme.dir/mme_gtpc.cc.i
 .PHONY : mme_gtpc.cc.i
 
 mme_gtpc.s: mme_gtpc.cc.s
@@ -255,7 +255,7 @@ mme_gtpc.s: mme_gtpc.cc.s
 
 # target to generate assembly for a file
 mme_gtpc.cc.s:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f srsepc/src/mme/CMakeFiles/srsepc_mme.dir/build.make srsepc/src/mme/CMakeFiles/srsepc_mme.dir/mme_gtpc.cc.s
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f srsepc/src/mme/CMakeFiles/srsepc_mme.dir/build.make srsepc/src/mme/CMakeFiles/srsepc_mme.dir/mme_gtpc.cc.s
 .PHONY : mme_gtpc.cc.s
 
 nas.o: nas.cc.o
@@ -264,7 +264,7 @@ nas.o: nas.cc.o
 
 # target to build an object file
 nas.cc.o:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f srsepc/src/mme/CMakeFiles/srsepc_mme.dir/build.make srsepc/src/mme/CMakeFiles/srsepc_mme.dir/nas.cc.o
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f srsepc/src/mme/CMakeFiles/srsepc_mme.dir/build.make srsepc/src/mme/CMakeFiles/srsepc_mme.dir/nas.cc.o
 .PHONY : nas.cc.o
 
 nas.i: nas.cc.i
@@ -273,7 +273,7 @@ nas.i: nas.cc.i
 
 # target to preprocess a source file
 nas.cc.i:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f srsepc/src/mme/CMakeFiles/srsepc_mme.dir/build.make srsepc/src/mme/CMakeFiles/srsepc_mme.dir/nas.cc.i
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f srsepc/src/mme/CMakeFiles/srsepc_mme.dir/build.make srsepc/src/mme/CMakeFiles/srsepc_mme.dir/nas.cc.i
 .PHONY : nas.cc.i
 
 nas.s: nas.cc.s
@@ -282,7 +282,7 @@ nas.s: nas.cc.s
 
 # target to generate assembly for a file
 nas.cc.s:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f srsepc/src/mme/CMakeFiles/srsepc_mme.dir/build.make srsepc/src/mme/CMakeFiles/srsepc_mme.dir/nas.cc.s
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f srsepc/src/mme/CMakeFiles/srsepc_mme.dir/build.make srsepc/src/mme/CMakeFiles/srsepc_mme.dir/nas.cc.s
 .PHONY : nas.cc.s
 
 s1ap.o: s1ap.cc.o
@@ -291,7 +291,7 @@ s1ap.o: s1ap.cc.o
 
 # target to build an object file
 s1ap.cc.o:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f srsepc/src/mme/CMakeFiles/srsepc_mme.dir/build.make srsepc/src/mme/CMakeFiles/srsepc_mme.dir/s1ap.cc.o
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f srsepc/src/mme/CMakeFiles/srsepc_mme.dir/build.make srsepc/src/mme/CMakeFiles/srsepc_mme.dir/s1ap.cc.o
 .PHONY : s1ap.cc.o
 
 s1ap.i: s1ap.cc.i
@@ -300,7 +300,7 @@ s1ap.i: s1ap.cc.i
 
 # target to preprocess a source file
 s1ap.cc.i:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f srsepc/src/mme/CMakeFiles/srsepc_mme.dir/build.make srsepc/src/mme/CMakeFiles/srsepc_mme.dir/s1ap.cc.i
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f srsepc/src/mme/CMakeFiles/srsepc_mme.dir/build.make srsepc/src/mme/CMakeFiles/srsepc_mme.dir/s1ap.cc.i
 .PHONY : s1ap.cc.i
 
 s1ap.s: s1ap.cc.s
@@ -309,7 +309,7 @@ s1ap.s: s1ap.cc.s
 
 # target to generate assembly for a file
 s1ap.cc.s:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f srsepc/src/mme/CMakeFiles/srsepc_mme.dir/build.make srsepc/src/mme/CMakeFiles/srsepc_mme.dir/s1ap.cc.s
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f srsepc/src/mme/CMakeFiles/srsepc_mme.dir/build.make srsepc/src/mme/CMakeFiles/srsepc_mme.dir/s1ap.cc.s
 .PHONY : s1ap.cc.s
 
 s1ap_ctx_mngmt_proc.o: s1ap_ctx_mngmt_proc.cc.o
@@ -318,7 +318,7 @@ s1ap_ctx_mngmt_proc.o: s1ap_ctx_mngmt_proc.cc.o
 
 # target to build an object file
 s1ap_ctx_mngmt_proc.cc.o:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f srsepc/src/mme/CMakeFiles/srsepc_mme.dir/build.make srsepc/src/mme/CMakeFiles/srsepc_mme.dir/s1ap_ctx_mngmt_proc.cc.o
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f srsepc/src/mme/CMakeFiles/srsepc_mme.dir/build.make srsepc/src/mme/CMakeFiles/srsepc_mme.dir/s1ap_ctx_mngmt_proc.cc.o
 .PHONY : s1ap_ctx_mngmt_proc.cc.o
 
 s1ap_ctx_mngmt_proc.i: s1ap_ctx_mngmt_proc.cc.i
@@ -327,7 +327,7 @@ s1ap_ctx_mngmt_proc.i: s1ap_ctx_mngmt_proc.cc.i
 
 # target to preprocess a source file
 s1ap_ctx_mngmt_proc.cc.i:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f srsepc/src/mme/CMakeFiles/srsepc_mme.dir/build.make srsepc/src/mme/CMakeFiles/srsepc_mme.dir/s1ap_ctx_mngmt_proc.cc.i
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f srsepc/src/mme/CMakeFiles/srsepc_mme.dir/build.make srsepc/src/mme/CMakeFiles/srsepc_mme.dir/s1ap_ctx_mngmt_proc.cc.i
 .PHONY : s1ap_ctx_mngmt_proc.cc.i
 
 s1ap_ctx_mngmt_proc.s: s1ap_ctx_mngmt_proc.cc.s
@@ -336,7 +336,7 @@ s1ap_ctx_mngmt_proc.s: s1ap_ctx_mngmt_proc.cc.s
 
 # target to generate assembly for a file
 s1ap_ctx_mngmt_proc.cc.s:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f srsepc/src/mme/CMakeFiles/srsepc_mme.dir/build.make srsepc/src/mme/CMakeFiles/srsepc_mme.dir/s1ap_ctx_mngmt_proc.cc.s
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f srsepc/src/mme/CMakeFiles/srsepc_mme.dir/build.make srsepc/src/mme/CMakeFiles/srsepc_mme.dir/s1ap_ctx_mngmt_proc.cc.s
 .PHONY : s1ap_ctx_mngmt_proc.cc.s
 
 s1ap_mngmt_proc.o: s1ap_mngmt_proc.cc.o
@@ -345,7 +345,7 @@ s1ap_mngmt_proc.o: s1ap_mngmt_proc.cc.o
 
 # target to build an object file
 s1ap_mngmt_proc.cc.o:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f srsepc/src/mme/CMakeFiles/srsepc_mme.dir/build.make srsepc/src/mme/CMakeFiles/srsepc_mme.dir/s1ap_mngmt_proc.cc.o
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f srsepc/src/mme/CMakeFiles/srsepc_mme.dir/build.make srsepc/src/mme/CMakeFiles/srsepc_mme.dir/s1ap_mngmt_proc.cc.o
 .PHONY : s1ap_mngmt_proc.cc.o
 
 s1ap_mngmt_proc.i: s1ap_mngmt_proc.cc.i
@@ -354,7 +354,7 @@ s1ap_mngmt_proc.i: s1ap_mngmt_proc.cc.i
 
 # target to preprocess a source file
 s1ap_mngmt_proc.cc.i:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f srsepc/src/mme/CMakeFiles/srsepc_mme.dir/build.make srsepc/src/mme/CMakeFiles/srsepc_mme.dir/s1ap_mngmt_proc.cc.i
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f srsepc/src/mme/CMakeFiles/srsepc_mme.dir/build.make srsepc/src/mme/CMakeFiles/srsepc_mme.dir/s1ap_mngmt_proc.cc.i
 .PHONY : s1ap_mngmt_proc.cc.i
 
 s1ap_mngmt_proc.s: s1ap_mngmt_proc.cc.s
@@ -363,7 +363,7 @@ s1ap_mngmt_proc.s: s1ap_mngmt_proc.cc.s
 
 # target to generate assembly for a file
 s1ap_mngmt_proc.cc.s:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f srsepc/src/mme/CMakeFiles/srsepc_mme.dir/build.make srsepc/src/mme/CMakeFiles/srsepc_mme.dir/s1ap_mngmt_proc.cc.s
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f srsepc/src/mme/CMakeFiles/srsepc_mme.dir/build.make srsepc/src/mme/CMakeFiles/srsepc_mme.dir/s1ap_mngmt_proc.cc.s
 .PHONY : s1ap_mngmt_proc.cc.s
 
 s1ap_nas_transport.o: s1ap_nas_transport.cc.o
@@ -372,7 +372,7 @@ s1ap_nas_transport.o: s1ap_nas_transport.cc.o
 
 # target to build an object file
 s1ap_nas_transport.cc.o:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f srsepc/src/mme/CMakeFiles/srsepc_mme.dir/build.make srsepc/src/mme/CMakeFiles/srsepc_mme.dir/s1ap_nas_transport.cc.o
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f srsepc/src/mme/CMakeFiles/srsepc_mme.dir/build.make srsepc/src/mme/CMakeFiles/srsepc_mme.dir/s1ap_nas_transport.cc.o
 .PHONY : s1ap_nas_transport.cc.o
 
 s1ap_nas_transport.i: s1ap_nas_transport.cc.i
@@ -381,7 +381,7 @@ s1ap_nas_transport.i: s1ap_nas_transport.cc.i
 
 # target to preprocess a source file
 s1ap_nas_transport.cc.i:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f srsepc/src/mme/CMakeFiles/srsepc_mme.dir/build.make srsepc/src/mme/CMakeFiles/srsepc_mme.dir/s1ap_nas_transport.cc.i
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f srsepc/src/mme/CMakeFiles/srsepc_mme.dir/build.make srsepc/src/mme/CMakeFiles/srsepc_mme.dir/s1ap_nas_transport.cc.i
 .PHONY : s1ap_nas_transport.cc.i
 
 s1ap_nas_transport.s: s1ap_nas_transport.cc.s
@@ -390,7 +390,7 @@ s1ap_nas_transport.s: s1ap_nas_transport.cc.s
 
 # target to generate assembly for a file
 s1ap_nas_transport.cc.s:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f srsepc/src/mme/CMakeFiles/srsepc_mme.dir/build.make srsepc/src/mme/CMakeFiles/srsepc_mme.dir/s1ap_nas_transport.cc.s
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f srsepc/src/mme/CMakeFiles/srsepc_mme.dir/build.make srsepc/src/mme/CMakeFiles/srsepc_mme.dir/s1ap_nas_transport.cc.s
 .PHONY : s1ap_nas_transport.cc.s
 
 s1ap_paging.o: s1ap_paging.cc.o
@@ -399,7 +399,7 @@ s1ap_paging.o: s1ap_paging.cc.o
 
 # target to build an object file
 s1ap_paging.cc.o:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f srsepc/src/mme/CMakeFiles/srsepc_mme.dir/build.make srsepc/src/mme/CMakeFiles/srsepc_mme.dir/s1ap_paging.cc.o
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f srsepc/src/mme/CMakeFiles/srsepc_mme.dir/build.make srsepc/src/mme/CMakeFiles/srsepc_mme.dir/s1ap_paging.cc.o
 .PHONY : s1ap_paging.cc.o
 
 s1ap_paging.i: s1ap_paging.cc.i
@@ -408,7 +408,7 @@ s1ap_paging.i: s1ap_paging.cc.i
 
 # target to preprocess a source file
 s1ap_paging.cc.i:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f srsepc/src/mme/CMakeFiles/srsepc_mme.dir/build.make srsepc/src/mme/CMakeFiles/srsepc_mme.dir/s1ap_paging.cc.i
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f srsepc/src/mme/CMakeFiles/srsepc_mme.dir/build.make srsepc/src/mme/CMakeFiles/srsepc_mme.dir/s1ap_paging.cc.i
 .PHONY : s1ap_paging.cc.i
 
 s1ap_paging.s: s1ap_paging.cc.s
@@ -417,7 +417,7 @@ s1ap_paging.s: s1ap_paging.cc.s
 
 # target to generate assembly for a file
 s1ap_paging.cc.s:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f srsepc/src/mme/CMakeFiles/srsepc_mme.dir/build.make srsepc/src/mme/CMakeFiles/srsepc_mme.dir/s1ap_paging.cc.s
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f srsepc/src/mme/CMakeFiles/srsepc_mme.dir/build.make srsepc/src/mme/CMakeFiles/srsepc_mme.dir/s1ap_paging.cc.s
 .PHONY : s1ap_paging.cc.s
 
 # Help Target
@@ -471,6 +471,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/atm/Divya/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

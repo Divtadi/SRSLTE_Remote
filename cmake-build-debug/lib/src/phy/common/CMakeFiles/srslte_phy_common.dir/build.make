@@ -43,10 +43,10 @@ RM = /opt/clion-2020.1.2/bin/cmake/linux/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/atm/Ayman/srsLTE_Slicing
+CMAKE_SOURCE_DIR = /home/atm/Divya
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug
+CMAKE_BINARY_DIR = /home/atm/Divya/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include lib/src/phy/common/CMakeFiles/srslte_phy_common.dir/depend.make
@@ -59,55 +59,55 @@ include lib/src/phy/common/CMakeFiles/srslte_phy_common.dir/flags.make
 
 lib/src/phy/common/CMakeFiles/srslte_phy_common.dir/phy_common.c.o: lib/src/phy/common/CMakeFiles/srslte_phy_common.dir/flags.make
 lib/src/phy/common/CMakeFiles/srslte_phy_common.dir/phy_common.c.o: ../lib/src/phy/common/phy_common.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object lib/src/phy/common/CMakeFiles/srslte_phy_common.dir/phy_common.c.o"
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/phy/common && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/srslte_phy_common.dir/phy_common.c.o   -c /home/atm/Ayman/srsLTE_Slicing/lib/src/phy/common/phy_common.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/atm/Divya/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object lib/src/phy/common/CMakeFiles/srslte_phy_common.dir/phy_common.c.o"
+	cd /home/atm/Divya/cmake-build-debug/lib/src/phy/common && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/srslte_phy_common.dir/phy_common.c.o   -c /home/atm/Divya/lib/src/phy/common/phy_common.c
 
 lib/src/phy/common/CMakeFiles/srslte_phy_common.dir/phy_common.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/srslte_phy_common.dir/phy_common.c.i"
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/phy/common && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/atm/Ayman/srsLTE_Slicing/lib/src/phy/common/phy_common.c > CMakeFiles/srslte_phy_common.dir/phy_common.c.i
+	cd /home/atm/Divya/cmake-build-debug/lib/src/phy/common && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/atm/Divya/lib/src/phy/common/phy_common.c > CMakeFiles/srslte_phy_common.dir/phy_common.c.i
 
 lib/src/phy/common/CMakeFiles/srslte_phy_common.dir/phy_common.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/srslte_phy_common.dir/phy_common.c.s"
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/phy/common && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/atm/Ayman/srsLTE_Slicing/lib/src/phy/common/phy_common.c -o CMakeFiles/srslte_phy_common.dir/phy_common.c.s
+	cd /home/atm/Divya/cmake-build-debug/lib/src/phy/common && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/atm/Divya/lib/src/phy/common/phy_common.c -o CMakeFiles/srslte_phy_common.dir/phy_common.c.s
 
 lib/src/phy/common/CMakeFiles/srslte_phy_common.dir/phy_common_sl.c.o: lib/src/phy/common/CMakeFiles/srslte_phy_common.dir/flags.make
 lib/src/phy/common/CMakeFiles/srslte_phy_common.dir/phy_common_sl.c.o: ../lib/src/phy/common/phy_common_sl.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object lib/src/phy/common/CMakeFiles/srslte_phy_common.dir/phy_common_sl.c.o"
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/phy/common && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/srslte_phy_common.dir/phy_common_sl.c.o   -c /home/atm/Ayman/srsLTE_Slicing/lib/src/phy/common/phy_common_sl.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/atm/Divya/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object lib/src/phy/common/CMakeFiles/srslte_phy_common.dir/phy_common_sl.c.o"
+	cd /home/atm/Divya/cmake-build-debug/lib/src/phy/common && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/srslte_phy_common.dir/phy_common_sl.c.o   -c /home/atm/Divya/lib/src/phy/common/phy_common_sl.c
 
 lib/src/phy/common/CMakeFiles/srslte_phy_common.dir/phy_common_sl.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/srslte_phy_common.dir/phy_common_sl.c.i"
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/phy/common && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/atm/Ayman/srsLTE_Slicing/lib/src/phy/common/phy_common_sl.c > CMakeFiles/srslte_phy_common.dir/phy_common_sl.c.i
+	cd /home/atm/Divya/cmake-build-debug/lib/src/phy/common && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/atm/Divya/lib/src/phy/common/phy_common_sl.c > CMakeFiles/srslte_phy_common.dir/phy_common_sl.c.i
 
 lib/src/phy/common/CMakeFiles/srslte_phy_common.dir/phy_common_sl.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/srslte_phy_common.dir/phy_common_sl.c.s"
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/phy/common && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/atm/Ayman/srsLTE_Slicing/lib/src/phy/common/phy_common_sl.c -o CMakeFiles/srslte_phy_common.dir/phy_common_sl.c.s
+	cd /home/atm/Divya/cmake-build-debug/lib/src/phy/common && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/atm/Divya/lib/src/phy/common/phy_common_sl.c -o CMakeFiles/srslte_phy_common.dir/phy_common_sl.c.s
 
 lib/src/phy/common/CMakeFiles/srslte_phy_common.dir/sequence.c.o: lib/src/phy/common/CMakeFiles/srslte_phy_common.dir/flags.make
 lib/src/phy/common/CMakeFiles/srslte_phy_common.dir/sequence.c.o: ../lib/src/phy/common/sequence.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object lib/src/phy/common/CMakeFiles/srslte_phy_common.dir/sequence.c.o"
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/phy/common && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/srslte_phy_common.dir/sequence.c.o   -c /home/atm/Ayman/srsLTE_Slicing/lib/src/phy/common/sequence.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/atm/Divya/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object lib/src/phy/common/CMakeFiles/srslte_phy_common.dir/sequence.c.o"
+	cd /home/atm/Divya/cmake-build-debug/lib/src/phy/common && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/srslte_phy_common.dir/sequence.c.o   -c /home/atm/Divya/lib/src/phy/common/sequence.c
 
 lib/src/phy/common/CMakeFiles/srslte_phy_common.dir/sequence.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/srslte_phy_common.dir/sequence.c.i"
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/phy/common && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/atm/Ayman/srsLTE_Slicing/lib/src/phy/common/sequence.c > CMakeFiles/srslte_phy_common.dir/sequence.c.i
+	cd /home/atm/Divya/cmake-build-debug/lib/src/phy/common && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/atm/Divya/lib/src/phy/common/sequence.c > CMakeFiles/srslte_phy_common.dir/sequence.c.i
 
 lib/src/phy/common/CMakeFiles/srslte_phy_common.dir/sequence.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/srslte_phy_common.dir/sequence.c.s"
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/phy/common && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/atm/Ayman/srsLTE_Slicing/lib/src/phy/common/sequence.c -o CMakeFiles/srslte_phy_common.dir/sequence.c.s
+	cd /home/atm/Divya/cmake-build-debug/lib/src/phy/common && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/atm/Divya/lib/src/phy/common/sequence.c -o CMakeFiles/srslte_phy_common.dir/sequence.c.s
 
 lib/src/phy/common/CMakeFiles/srslte_phy_common.dir/timestamp.c.o: lib/src/phy/common/CMakeFiles/srslte_phy_common.dir/flags.make
 lib/src/phy/common/CMakeFiles/srslte_phy_common.dir/timestamp.c.o: ../lib/src/phy/common/timestamp.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object lib/src/phy/common/CMakeFiles/srslte_phy_common.dir/timestamp.c.o"
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/phy/common && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/srslte_phy_common.dir/timestamp.c.o   -c /home/atm/Ayman/srsLTE_Slicing/lib/src/phy/common/timestamp.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/atm/Divya/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object lib/src/phy/common/CMakeFiles/srslte_phy_common.dir/timestamp.c.o"
+	cd /home/atm/Divya/cmake-build-debug/lib/src/phy/common && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/srslte_phy_common.dir/timestamp.c.o   -c /home/atm/Divya/lib/src/phy/common/timestamp.c
 
 lib/src/phy/common/CMakeFiles/srslte_phy_common.dir/timestamp.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/srslte_phy_common.dir/timestamp.c.i"
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/phy/common && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/atm/Ayman/srsLTE_Slicing/lib/src/phy/common/timestamp.c > CMakeFiles/srslte_phy_common.dir/timestamp.c.i
+	cd /home/atm/Divya/cmake-build-debug/lib/src/phy/common && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/atm/Divya/lib/src/phy/common/timestamp.c > CMakeFiles/srslte_phy_common.dir/timestamp.c.i
 
 lib/src/phy/common/CMakeFiles/srslte_phy_common.dir/timestamp.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/srslte_phy_common.dir/timestamp.c.s"
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/phy/common && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/atm/Ayman/srsLTE_Slicing/lib/src/phy/common/timestamp.c -o CMakeFiles/srslte_phy_common.dir/timestamp.c.s
+	cd /home/atm/Divya/cmake-build-debug/lib/src/phy/common && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/atm/Divya/lib/src/phy/common/timestamp.c -o CMakeFiles/srslte_phy_common.dir/timestamp.c.s
 
 srslte_phy_common: lib/src/phy/common/CMakeFiles/srslte_phy_common.dir/phy_common.c.o
 srslte_phy_common: lib/src/phy/common/CMakeFiles/srslte_phy_common.dir/phy_common_sl.c.o
@@ -123,10 +123,10 @@ lib/src/phy/common/CMakeFiles/srslte_phy_common.dir/build: srslte_phy_common
 .PHONY : lib/src/phy/common/CMakeFiles/srslte_phy_common.dir/build
 
 lib/src/phy/common/CMakeFiles/srslte_phy_common.dir/clean:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/phy/common && $(CMAKE_COMMAND) -P CMakeFiles/srslte_phy_common.dir/cmake_clean.cmake
+	cd /home/atm/Divya/cmake-build-debug/lib/src/phy/common && $(CMAKE_COMMAND) -P CMakeFiles/srslte_phy_common.dir/cmake_clean.cmake
 .PHONY : lib/src/phy/common/CMakeFiles/srslte_phy_common.dir/clean
 
 lib/src/phy/common/CMakeFiles/srslte_phy_common.dir/depend:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/atm/Ayman/srsLTE_Slicing /home/atm/Ayman/srsLTE_Slicing/lib/src/phy/common /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/phy/common /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/phy/common/CMakeFiles/srslte_phy_common.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/atm/Divya/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/atm/Divya /home/atm/Divya/lib/src/phy/common /home/atm/Divya/cmake-build-debug /home/atm/Divya/cmake-build-debug/lib/src/phy/common /home/atm/Divya/cmake-build-debug/lib/src/phy/common/CMakeFiles/srslte_phy_common.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : lib/src/phy/common/CMakeFiles/srslte_phy_common.dir/depend
 

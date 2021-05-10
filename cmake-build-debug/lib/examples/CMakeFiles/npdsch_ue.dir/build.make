@@ -43,10 +43,10 @@ RM = /opt/clion-2020.1.2/bin/cmake/linux/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/atm/Ayman/srsLTE_Slicing
+CMAKE_SOURCE_DIR = /home/atm/Divya
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug
+CMAKE_BINARY_DIR = /home/atm/Divya/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include lib/examples/CMakeFiles/npdsch_ue.dir/depend.make
@@ -59,29 +59,29 @@ include lib/examples/CMakeFiles/npdsch_ue.dir/flags.make
 
 lib/examples/CMakeFiles/npdsch_ue.dir/npdsch_ue.c.o: lib/examples/CMakeFiles/npdsch_ue.dir/flags.make
 lib/examples/CMakeFiles/npdsch_ue.dir/npdsch_ue.c.o: ../lib/examples/npdsch_ue.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object lib/examples/CMakeFiles/npdsch_ue.dir/npdsch_ue.c.o"
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/examples && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/npdsch_ue.dir/npdsch_ue.c.o   -c /home/atm/Ayman/srsLTE_Slicing/lib/examples/npdsch_ue.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/atm/Divya/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object lib/examples/CMakeFiles/npdsch_ue.dir/npdsch_ue.c.o"
+	cd /home/atm/Divya/cmake-build-debug/lib/examples && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/npdsch_ue.dir/npdsch_ue.c.o   -c /home/atm/Divya/lib/examples/npdsch_ue.c
 
 lib/examples/CMakeFiles/npdsch_ue.dir/npdsch_ue.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/npdsch_ue.dir/npdsch_ue.c.i"
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/examples && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/atm/Ayman/srsLTE_Slicing/lib/examples/npdsch_ue.c > CMakeFiles/npdsch_ue.dir/npdsch_ue.c.i
+	cd /home/atm/Divya/cmake-build-debug/lib/examples && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/atm/Divya/lib/examples/npdsch_ue.c > CMakeFiles/npdsch_ue.dir/npdsch_ue.c.i
 
 lib/examples/CMakeFiles/npdsch_ue.dir/npdsch_ue.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/npdsch_ue.dir/npdsch_ue.c.s"
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/examples && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/atm/Ayman/srsLTE_Slicing/lib/examples/npdsch_ue.c -o CMakeFiles/npdsch_ue.dir/npdsch_ue.c.s
+	cd /home/atm/Divya/cmake-build-debug/lib/examples && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/atm/Divya/lib/examples/npdsch_ue.c -o CMakeFiles/npdsch_ue.dir/npdsch_ue.c.s
 
 lib/examples/CMakeFiles/npdsch_ue.dir/npdsch_ue_helper.cc.o: lib/examples/CMakeFiles/npdsch_ue.dir/flags.make
 lib/examples/CMakeFiles/npdsch_ue.dir/npdsch_ue_helper.cc.o: ../lib/examples/npdsch_ue_helper.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object lib/examples/CMakeFiles/npdsch_ue.dir/npdsch_ue_helper.cc.o"
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/examples && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/npdsch_ue.dir/npdsch_ue_helper.cc.o -c /home/atm/Ayman/srsLTE_Slicing/lib/examples/npdsch_ue_helper.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/atm/Divya/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object lib/examples/CMakeFiles/npdsch_ue.dir/npdsch_ue_helper.cc.o"
+	cd /home/atm/Divya/cmake-build-debug/lib/examples && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/npdsch_ue.dir/npdsch_ue_helper.cc.o -c /home/atm/Divya/lib/examples/npdsch_ue_helper.cc
 
 lib/examples/CMakeFiles/npdsch_ue.dir/npdsch_ue_helper.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/npdsch_ue.dir/npdsch_ue_helper.cc.i"
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/examples && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/atm/Ayman/srsLTE_Slicing/lib/examples/npdsch_ue_helper.cc > CMakeFiles/npdsch_ue.dir/npdsch_ue_helper.cc.i
+	cd /home/atm/Divya/cmake-build-debug/lib/examples && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/atm/Divya/lib/examples/npdsch_ue_helper.cc > CMakeFiles/npdsch_ue.dir/npdsch_ue_helper.cc.i
 
 lib/examples/CMakeFiles/npdsch_ue.dir/npdsch_ue_helper.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/npdsch_ue.dir/npdsch_ue_helper.cc.s"
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/examples && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/atm/Ayman/srsLTE_Slicing/lib/examples/npdsch_ue_helper.cc -o CMakeFiles/npdsch_ue.dir/npdsch_ue_helper.cc.s
+	cd /home/atm/Divya/cmake-build-debug/lib/examples && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/atm/Divya/lib/examples/npdsch_ue_helper.cc -o CMakeFiles/npdsch_ue.dir/npdsch_ue_helper.cc.s
 
 # Object files for target npdsch_ue
 npdsch_ue_OBJECTS = \
@@ -106,8 +106,8 @@ lib/examples/npdsch_ue: lib/src/phy/libsrslte_phy.a
 lib/examples/npdsch_ue: /usr/lib/x86_64-linux-gnu/libfftw3f.so
 lib/examples/npdsch_ue: /usr/lib/x86_64-linux-gnu/libmbedcrypto.so
 lib/examples/npdsch_ue: lib/examples/CMakeFiles/npdsch_ue.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable npdsch_ue"
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/examples && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/npdsch_ue.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/atm/Divya/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable npdsch_ue"
+	cd /home/atm/Divya/cmake-build-debug/lib/examples && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/npdsch_ue.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 lib/examples/CMakeFiles/npdsch_ue.dir/build: lib/examples/npdsch_ue
@@ -115,10 +115,10 @@ lib/examples/CMakeFiles/npdsch_ue.dir/build: lib/examples/npdsch_ue
 .PHONY : lib/examples/CMakeFiles/npdsch_ue.dir/build
 
 lib/examples/CMakeFiles/npdsch_ue.dir/clean:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/examples && $(CMAKE_COMMAND) -P CMakeFiles/npdsch_ue.dir/cmake_clean.cmake
+	cd /home/atm/Divya/cmake-build-debug/lib/examples && $(CMAKE_COMMAND) -P CMakeFiles/npdsch_ue.dir/cmake_clean.cmake
 .PHONY : lib/examples/CMakeFiles/npdsch_ue.dir/clean
 
 lib/examples/CMakeFiles/npdsch_ue.dir/depend:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/atm/Ayman/srsLTE_Slicing /home/atm/Ayman/srsLTE_Slicing/lib/examples /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/examples /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/examples/CMakeFiles/npdsch_ue.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/atm/Divya/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/atm/Divya /home/atm/Divya/lib/examples /home/atm/Divya/cmake-build-debug /home/atm/Divya/cmake-build-debug/lib/examples /home/atm/Divya/cmake-build-debug/lib/examples/CMakeFiles/npdsch_ue.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : lib/examples/CMakeFiles/npdsch_ue.dir/depend
 

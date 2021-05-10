@@ -43,10 +43,10 @@ RM = /opt/clion-2020.1.2/bin/cmake/linux/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/atm/Ayman/srsLTE_Slicing
+CMAKE_SOURCE_DIR = /home/atm/Divya
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug
+CMAKE_BINARY_DIR = /home/atm/Divya/cmake-build-debug
 
 # Utility rule file for gen_build_info.
 
@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug
 include lib/src/common/CMakeFiles/gen_build_info.dir/progress.make
 
 lib/src/common/CMakeFiles/gen_build_info:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/common && cmake -P /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/SRSLTEbuildinfo.cmake
+	cd /home/atm/Divya/cmake-build-debug/lib/src/common && cmake -P /home/atm/Divya/cmake-build-debug/SRSLTEbuildinfo.cmake
 
 gen_build_info: lib/src/common/CMakeFiles/gen_build_info
 gen_build_info: lib/src/common/CMakeFiles/gen_build_info.dir/build.make
@@ -67,10 +67,10 @@ lib/src/common/CMakeFiles/gen_build_info.dir/build: gen_build_info
 .PHONY : lib/src/common/CMakeFiles/gen_build_info.dir/build
 
 lib/src/common/CMakeFiles/gen_build_info.dir/clean:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/common && $(CMAKE_COMMAND) -P CMakeFiles/gen_build_info.dir/cmake_clean.cmake
+	cd /home/atm/Divya/cmake-build-debug/lib/src/common && $(CMAKE_COMMAND) -P CMakeFiles/gen_build_info.dir/cmake_clean.cmake
 .PHONY : lib/src/common/CMakeFiles/gen_build_info.dir/clean
 
 lib/src/common/CMakeFiles/gen_build_info.dir/depend:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/atm/Ayman/srsLTE_Slicing /home/atm/Ayman/srsLTE_Slicing/lib/src/common /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/common /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/common/CMakeFiles/gen_build_info.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/atm/Divya/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/atm/Divya /home/atm/Divya/lib/src/common /home/atm/Divya/cmake-build-debug /home/atm/Divya/cmake-build-debug/lib/src/common /home/atm/Divya/cmake-build-debug/lib/src/common/CMakeFiles/gen_build_info.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : lib/src/common/CMakeFiles/gen_build_info.dir/depend
 

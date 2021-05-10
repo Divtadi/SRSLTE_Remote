@@ -43,10 +43,10 @@ RM = /opt/clion-2020.1.2/bin/cmake/linux/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/atm/Ayman/srsLTE_Slicing
+CMAKE_SOURCE_DIR = /home/atm/Divya
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug
+CMAKE_BINARY_DIR = /home/atm/Divya/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include lib/src/phy/modem/CMakeFiles/srslte_modem.dir/depend.make
@@ -59,81 +59,81 @@ include lib/src/phy/modem/CMakeFiles/srslte_modem.dir/flags.make
 
 lib/src/phy/modem/CMakeFiles/srslte_modem.dir/demod_hard.c.o: lib/src/phy/modem/CMakeFiles/srslte_modem.dir/flags.make
 lib/src/phy/modem/CMakeFiles/srslte_modem.dir/demod_hard.c.o: ../lib/src/phy/modem/demod_hard.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object lib/src/phy/modem/CMakeFiles/srslte_modem.dir/demod_hard.c.o"
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/phy/modem && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/srslte_modem.dir/demod_hard.c.o   -c /home/atm/Ayman/srsLTE_Slicing/lib/src/phy/modem/demod_hard.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/atm/Divya/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object lib/src/phy/modem/CMakeFiles/srslte_modem.dir/demod_hard.c.o"
+	cd /home/atm/Divya/cmake-build-debug/lib/src/phy/modem && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/srslte_modem.dir/demod_hard.c.o   -c /home/atm/Divya/lib/src/phy/modem/demod_hard.c
 
 lib/src/phy/modem/CMakeFiles/srslte_modem.dir/demod_hard.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/srslte_modem.dir/demod_hard.c.i"
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/phy/modem && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/atm/Ayman/srsLTE_Slicing/lib/src/phy/modem/demod_hard.c > CMakeFiles/srslte_modem.dir/demod_hard.c.i
+	cd /home/atm/Divya/cmake-build-debug/lib/src/phy/modem && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/atm/Divya/lib/src/phy/modem/demod_hard.c > CMakeFiles/srslte_modem.dir/demod_hard.c.i
 
 lib/src/phy/modem/CMakeFiles/srslte_modem.dir/demod_hard.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/srslte_modem.dir/demod_hard.c.s"
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/phy/modem && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/atm/Ayman/srsLTE_Slicing/lib/src/phy/modem/demod_hard.c -o CMakeFiles/srslte_modem.dir/demod_hard.c.s
+	cd /home/atm/Divya/cmake-build-debug/lib/src/phy/modem && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/atm/Divya/lib/src/phy/modem/demod_hard.c -o CMakeFiles/srslte_modem.dir/demod_hard.c.s
 
 lib/src/phy/modem/CMakeFiles/srslte_modem.dir/demod_soft.c.o: lib/src/phy/modem/CMakeFiles/srslte_modem.dir/flags.make
 lib/src/phy/modem/CMakeFiles/srslte_modem.dir/demod_soft.c.o: ../lib/src/phy/modem/demod_soft.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object lib/src/phy/modem/CMakeFiles/srslte_modem.dir/demod_soft.c.o"
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/phy/modem && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/srslte_modem.dir/demod_soft.c.o   -c /home/atm/Ayman/srsLTE_Slicing/lib/src/phy/modem/demod_soft.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/atm/Divya/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object lib/src/phy/modem/CMakeFiles/srslte_modem.dir/demod_soft.c.o"
+	cd /home/atm/Divya/cmake-build-debug/lib/src/phy/modem && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/srslte_modem.dir/demod_soft.c.o   -c /home/atm/Divya/lib/src/phy/modem/demod_soft.c
 
 lib/src/phy/modem/CMakeFiles/srslte_modem.dir/demod_soft.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/srslte_modem.dir/demod_soft.c.i"
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/phy/modem && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/atm/Ayman/srsLTE_Slicing/lib/src/phy/modem/demod_soft.c > CMakeFiles/srslte_modem.dir/demod_soft.c.i
+	cd /home/atm/Divya/cmake-build-debug/lib/src/phy/modem && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/atm/Divya/lib/src/phy/modem/demod_soft.c > CMakeFiles/srslte_modem.dir/demod_soft.c.i
 
 lib/src/phy/modem/CMakeFiles/srslte_modem.dir/demod_soft.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/srslte_modem.dir/demod_soft.c.s"
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/phy/modem && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/atm/Ayman/srsLTE_Slicing/lib/src/phy/modem/demod_soft.c -o CMakeFiles/srslte_modem.dir/demod_soft.c.s
+	cd /home/atm/Divya/cmake-build-debug/lib/src/phy/modem && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/atm/Divya/lib/src/phy/modem/demod_soft.c -o CMakeFiles/srslte_modem.dir/demod_soft.c.s
 
 lib/src/phy/modem/CMakeFiles/srslte_modem.dir/hard_demod_lte.c.o: lib/src/phy/modem/CMakeFiles/srslte_modem.dir/flags.make
 lib/src/phy/modem/CMakeFiles/srslte_modem.dir/hard_demod_lte.c.o: ../lib/src/phy/modem/hard_demod_lte.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object lib/src/phy/modem/CMakeFiles/srslte_modem.dir/hard_demod_lte.c.o"
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/phy/modem && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/srslte_modem.dir/hard_demod_lte.c.o   -c /home/atm/Ayman/srsLTE_Slicing/lib/src/phy/modem/hard_demod_lte.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/atm/Divya/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object lib/src/phy/modem/CMakeFiles/srslte_modem.dir/hard_demod_lte.c.o"
+	cd /home/atm/Divya/cmake-build-debug/lib/src/phy/modem && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/srslte_modem.dir/hard_demod_lte.c.o   -c /home/atm/Divya/lib/src/phy/modem/hard_demod_lte.c
 
 lib/src/phy/modem/CMakeFiles/srslte_modem.dir/hard_demod_lte.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/srslte_modem.dir/hard_demod_lte.c.i"
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/phy/modem && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/atm/Ayman/srsLTE_Slicing/lib/src/phy/modem/hard_demod_lte.c > CMakeFiles/srslte_modem.dir/hard_demod_lte.c.i
+	cd /home/atm/Divya/cmake-build-debug/lib/src/phy/modem && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/atm/Divya/lib/src/phy/modem/hard_demod_lte.c > CMakeFiles/srslte_modem.dir/hard_demod_lte.c.i
 
 lib/src/phy/modem/CMakeFiles/srslte_modem.dir/hard_demod_lte.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/srslte_modem.dir/hard_demod_lte.c.s"
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/phy/modem && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/atm/Ayman/srsLTE_Slicing/lib/src/phy/modem/hard_demod_lte.c -o CMakeFiles/srslte_modem.dir/hard_demod_lte.c.s
+	cd /home/atm/Divya/cmake-build-debug/lib/src/phy/modem && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/atm/Divya/lib/src/phy/modem/hard_demod_lte.c -o CMakeFiles/srslte_modem.dir/hard_demod_lte.c.s
 
 lib/src/phy/modem/CMakeFiles/srslte_modem.dir/lte_tables.c.o: lib/src/phy/modem/CMakeFiles/srslte_modem.dir/flags.make
 lib/src/phy/modem/CMakeFiles/srslte_modem.dir/lte_tables.c.o: ../lib/src/phy/modem/lte_tables.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object lib/src/phy/modem/CMakeFiles/srslte_modem.dir/lte_tables.c.o"
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/phy/modem && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/srslte_modem.dir/lte_tables.c.o   -c /home/atm/Ayman/srsLTE_Slicing/lib/src/phy/modem/lte_tables.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/atm/Divya/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object lib/src/phy/modem/CMakeFiles/srslte_modem.dir/lte_tables.c.o"
+	cd /home/atm/Divya/cmake-build-debug/lib/src/phy/modem && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/srslte_modem.dir/lte_tables.c.o   -c /home/atm/Divya/lib/src/phy/modem/lte_tables.c
 
 lib/src/phy/modem/CMakeFiles/srslte_modem.dir/lte_tables.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/srslte_modem.dir/lte_tables.c.i"
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/phy/modem && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/atm/Ayman/srsLTE_Slicing/lib/src/phy/modem/lte_tables.c > CMakeFiles/srslte_modem.dir/lte_tables.c.i
+	cd /home/atm/Divya/cmake-build-debug/lib/src/phy/modem && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/atm/Divya/lib/src/phy/modem/lte_tables.c > CMakeFiles/srslte_modem.dir/lte_tables.c.i
 
 lib/src/phy/modem/CMakeFiles/srslte_modem.dir/lte_tables.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/srslte_modem.dir/lte_tables.c.s"
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/phy/modem && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/atm/Ayman/srsLTE_Slicing/lib/src/phy/modem/lte_tables.c -o CMakeFiles/srslte_modem.dir/lte_tables.c.s
+	cd /home/atm/Divya/cmake-build-debug/lib/src/phy/modem && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/atm/Divya/lib/src/phy/modem/lte_tables.c -o CMakeFiles/srslte_modem.dir/lte_tables.c.s
 
 lib/src/phy/modem/CMakeFiles/srslte_modem.dir/mod.c.o: lib/src/phy/modem/CMakeFiles/srslte_modem.dir/flags.make
 lib/src/phy/modem/CMakeFiles/srslte_modem.dir/mod.c.o: ../lib/src/phy/modem/mod.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object lib/src/phy/modem/CMakeFiles/srslte_modem.dir/mod.c.o"
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/phy/modem && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/srslte_modem.dir/mod.c.o   -c /home/atm/Ayman/srsLTE_Slicing/lib/src/phy/modem/mod.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/atm/Divya/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object lib/src/phy/modem/CMakeFiles/srslte_modem.dir/mod.c.o"
+	cd /home/atm/Divya/cmake-build-debug/lib/src/phy/modem && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/srslte_modem.dir/mod.c.o   -c /home/atm/Divya/lib/src/phy/modem/mod.c
 
 lib/src/phy/modem/CMakeFiles/srslte_modem.dir/mod.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/srslte_modem.dir/mod.c.i"
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/phy/modem && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/atm/Ayman/srsLTE_Slicing/lib/src/phy/modem/mod.c > CMakeFiles/srslte_modem.dir/mod.c.i
+	cd /home/atm/Divya/cmake-build-debug/lib/src/phy/modem && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/atm/Divya/lib/src/phy/modem/mod.c > CMakeFiles/srslte_modem.dir/mod.c.i
 
 lib/src/phy/modem/CMakeFiles/srslte_modem.dir/mod.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/srslte_modem.dir/mod.c.s"
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/phy/modem && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/atm/Ayman/srsLTE_Slicing/lib/src/phy/modem/mod.c -o CMakeFiles/srslte_modem.dir/mod.c.s
+	cd /home/atm/Divya/cmake-build-debug/lib/src/phy/modem && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/atm/Divya/lib/src/phy/modem/mod.c -o CMakeFiles/srslte_modem.dir/mod.c.s
 
 lib/src/phy/modem/CMakeFiles/srslte_modem.dir/modem_table.c.o: lib/src/phy/modem/CMakeFiles/srslte_modem.dir/flags.make
 lib/src/phy/modem/CMakeFiles/srslte_modem.dir/modem_table.c.o: ../lib/src/phy/modem/modem_table.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object lib/src/phy/modem/CMakeFiles/srslte_modem.dir/modem_table.c.o"
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/phy/modem && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/srslte_modem.dir/modem_table.c.o   -c /home/atm/Ayman/srsLTE_Slicing/lib/src/phy/modem/modem_table.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/atm/Divya/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object lib/src/phy/modem/CMakeFiles/srslte_modem.dir/modem_table.c.o"
+	cd /home/atm/Divya/cmake-build-debug/lib/src/phy/modem && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/srslte_modem.dir/modem_table.c.o   -c /home/atm/Divya/lib/src/phy/modem/modem_table.c
 
 lib/src/phy/modem/CMakeFiles/srslte_modem.dir/modem_table.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/srslte_modem.dir/modem_table.c.i"
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/phy/modem && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/atm/Ayman/srsLTE_Slicing/lib/src/phy/modem/modem_table.c > CMakeFiles/srslte_modem.dir/modem_table.c.i
+	cd /home/atm/Divya/cmake-build-debug/lib/src/phy/modem && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/atm/Divya/lib/src/phy/modem/modem_table.c > CMakeFiles/srslte_modem.dir/modem_table.c.i
 
 lib/src/phy/modem/CMakeFiles/srslte_modem.dir/modem_table.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/srslte_modem.dir/modem_table.c.s"
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/phy/modem && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/atm/Ayman/srsLTE_Slicing/lib/src/phy/modem/modem_table.c -o CMakeFiles/srslte_modem.dir/modem_table.c.s
+	cd /home/atm/Divya/cmake-build-debug/lib/src/phy/modem && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/atm/Divya/lib/src/phy/modem/modem_table.c -o CMakeFiles/srslte_modem.dir/modem_table.c.s
 
 srslte_modem: lib/src/phy/modem/CMakeFiles/srslte_modem.dir/demod_hard.c.o
 srslte_modem: lib/src/phy/modem/CMakeFiles/srslte_modem.dir/demod_soft.c.o
@@ -151,10 +151,10 @@ lib/src/phy/modem/CMakeFiles/srslte_modem.dir/build: srslte_modem
 .PHONY : lib/src/phy/modem/CMakeFiles/srslte_modem.dir/build
 
 lib/src/phy/modem/CMakeFiles/srslte_modem.dir/clean:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/phy/modem && $(CMAKE_COMMAND) -P CMakeFiles/srslte_modem.dir/cmake_clean.cmake
+	cd /home/atm/Divya/cmake-build-debug/lib/src/phy/modem && $(CMAKE_COMMAND) -P CMakeFiles/srslte_modem.dir/cmake_clean.cmake
 .PHONY : lib/src/phy/modem/CMakeFiles/srslte_modem.dir/clean
 
 lib/src/phy/modem/CMakeFiles/srslte_modem.dir/depend:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/atm/Ayman/srsLTE_Slicing /home/atm/Ayman/srsLTE_Slicing/lib/src/phy/modem /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/phy/modem /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/phy/modem/CMakeFiles/srslte_modem.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/atm/Divya/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/atm/Divya /home/atm/Divya/lib/src/phy/modem /home/atm/Divya/cmake-build-debug /home/atm/Divya/cmake-build-debug/lib/src/phy/modem /home/atm/Divya/cmake-build-debug/lib/src/phy/modem/CMakeFiles/srslte_modem.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : lib/src/phy/modem/CMakeFiles/srslte_modem.dir/depend
 

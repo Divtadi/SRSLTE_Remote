@@ -4,12 +4,12 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/home/atm/Ayman/srsLTE_Slicing/lib/src/phy/modem/demod_hard.c" "/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/phy/modem/CMakeFiles/srslte_modem.dir/demod_hard.c.o"
-  "/home/atm/Ayman/srsLTE_Slicing/lib/src/phy/modem/demod_soft.c" "/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/phy/modem/CMakeFiles/srslte_modem.dir/demod_soft.c.o"
-  "/home/atm/Ayman/srsLTE_Slicing/lib/src/phy/modem/hard_demod_lte.c" "/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/phy/modem/CMakeFiles/srslte_modem.dir/hard_demod_lte.c.o"
-  "/home/atm/Ayman/srsLTE_Slicing/lib/src/phy/modem/lte_tables.c" "/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/phy/modem/CMakeFiles/srslte_modem.dir/lte_tables.c.o"
-  "/home/atm/Ayman/srsLTE_Slicing/lib/src/phy/modem/mod.c" "/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/phy/modem/CMakeFiles/srslte_modem.dir/mod.c.o"
-  "/home/atm/Ayman/srsLTE_Slicing/lib/src/phy/modem/modem_table.c" "/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/phy/modem/CMakeFiles/srslte_modem.dir/modem_table.c.o"
+  "/home/atm/Divya/lib/src/phy/modem/demod_hard.c" "/home/atm/Divya/cmake-build-debug/lib/src/phy/modem/CMakeFiles/srslte_modem.dir/demod_hard.c.o"
+  "/home/atm/Divya/lib/src/phy/modem/demod_soft.c" "/home/atm/Divya/cmake-build-debug/lib/src/phy/modem/CMakeFiles/srslte_modem.dir/demod_soft.c.o"
+  "/home/atm/Divya/lib/src/phy/modem/hard_demod_lte.c" "/home/atm/Divya/cmake-build-debug/lib/src/phy/modem/CMakeFiles/srslte_modem.dir/hard_demod_lte.c.o"
+  "/home/atm/Divya/lib/src/phy/modem/lte_tables.c" "/home/atm/Divya/cmake-build-debug/lib/src/phy/modem/CMakeFiles/srslte_modem.dir/lte_tables.c.o"
+  "/home/atm/Divya/lib/src/phy/modem/mod.c" "/home/atm/Divya/cmake-build-debug/lib/src/phy/modem/CMakeFiles/srslte_modem.dir/mod.c.o"
+  "/home/atm/Divya/lib/src/phy/modem/modem_table.c" "/home/atm/Divya/cmake-build-debug/lib/src/phy/modem/CMakeFiles/srslte_modem.dir/modem_table.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 
@@ -17,10 +17,12 @@ set(CMAKE_C_COMPILER_ID "GNU")
 set(CMAKE_TARGET_DEFINITIONS_C
   "ENABLE_TIMEPROF"
   "HAVE_MBEDTLS"
+  "HAVE_PCSC"
   )
 
 # The include file search paths:
 set(CMAKE_C_TARGET_INCLUDE_PATH
+  "/usr/include/PCSC"
   "lib/include"
   "../lib/include"
   )

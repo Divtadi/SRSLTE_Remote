@@ -43,10 +43,10 @@ RM = /opt/clion-2020.1.2/bin/cmake/linux/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/atm/Ayman/srsLTE_Slicing
+CMAKE_SOURCE_DIR = /home/atm/Divya
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug
+CMAKE_BINARY_DIR = /home/atm/Divya/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include srsue/src/CMakeFiles/srsue.dir/depend.make
@@ -59,55 +59,55 @@ include srsue/src/CMakeFiles/srsue.dir/flags.make
 
 srsue/src/CMakeFiles/srsue.dir/main.cc.o: srsue/src/CMakeFiles/srsue.dir/flags.make
 srsue/src/CMakeFiles/srsue.dir/main.cc.o: ../srsue/src/main.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object srsue/src/CMakeFiles/srsue.dir/main.cc.o"
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/srsue/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/srsue.dir/main.cc.o -c /home/atm/Ayman/srsLTE_Slicing/srsue/src/main.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/atm/Divya/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object srsue/src/CMakeFiles/srsue.dir/main.cc.o"
+	cd /home/atm/Divya/cmake-build-debug/srsue/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/srsue.dir/main.cc.o -c /home/atm/Divya/srsue/src/main.cc
 
 srsue/src/CMakeFiles/srsue.dir/main.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/srsue.dir/main.cc.i"
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/srsue/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/atm/Ayman/srsLTE_Slicing/srsue/src/main.cc > CMakeFiles/srsue.dir/main.cc.i
+	cd /home/atm/Divya/cmake-build-debug/srsue/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/atm/Divya/srsue/src/main.cc > CMakeFiles/srsue.dir/main.cc.i
 
 srsue/src/CMakeFiles/srsue.dir/main.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/srsue.dir/main.cc.s"
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/srsue/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/atm/Ayman/srsLTE_Slicing/srsue/src/main.cc -o CMakeFiles/srsue.dir/main.cc.s
+	cd /home/atm/Divya/cmake-build-debug/srsue/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/atm/Divya/srsue/src/main.cc -o CMakeFiles/srsue.dir/main.cc.s
 
 srsue/src/CMakeFiles/srsue.dir/ue.cc.o: srsue/src/CMakeFiles/srsue.dir/flags.make
 srsue/src/CMakeFiles/srsue.dir/ue.cc.o: ../srsue/src/ue.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object srsue/src/CMakeFiles/srsue.dir/ue.cc.o"
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/srsue/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/srsue.dir/ue.cc.o -c /home/atm/Ayman/srsLTE_Slicing/srsue/src/ue.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/atm/Divya/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object srsue/src/CMakeFiles/srsue.dir/ue.cc.o"
+	cd /home/atm/Divya/cmake-build-debug/srsue/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/srsue.dir/ue.cc.o -c /home/atm/Divya/srsue/src/ue.cc
 
 srsue/src/CMakeFiles/srsue.dir/ue.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/srsue.dir/ue.cc.i"
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/srsue/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/atm/Ayman/srsLTE_Slicing/srsue/src/ue.cc > CMakeFiles/srsue.dir/ue.cc.i
+	cd /home/atm/Divya/cmake-build-debug/srsue/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/atm/Divya/srsue/src/ue.cc > CMakeFiles/srsue.dir/ue.cc.i
 
 srsue/src/CMakeFiles/srsue.dir/ue.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/srsue.dir/ue.cc.s"
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/srsue/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/atm/Ayman/srsLTE_Slicing/srsue/src/ue.cc -o CMakeFiles/srsue.dir/ue.cc.s
+	cd /home/atm/Divya/cmake-build-debug/srsue/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/atm/Divya/srsue/src/ue.cc -o CMakeFiles/srsue.dir/ue.cc.s
 
 srsue/src/CMakeFiles/srsue.dir/metrics_stdout.cc.o: srsue/src/CMakeFiles/srsue.dir/flags.make
 srsue/src/CMakeFiles/srsue.dir/metrics_stdout.cc.o: ../srsue/src/metrics_stdout.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object srsue/src/CMakeFiles/srsue.dir/metrics_stdout.cc.o"
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/srsue/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/srsue.dir/metrics_stdout.cc.o -c /home/atm/Ayman/srsLTE_Slicing/srsue/src/metrics_stdout.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/atm/Divya/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object srsue/src/CMakeFiles/srsue.dir/metrics_stdout.cc.o"
+	cd /home/atm/Divya/cmake-build-debug/srsue/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/srsue.dir/metrics_stdout.cc.o -c /home/atm/Divya/srsue/src/metrics_stdout.cc
 
 srsue/src/CMakeFiles/srsue.dir/metrics_stdout.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/srsue.dir/metrics_stdout.cc.i"
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/srsue/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/atm/Ayman/srsLTE_Slicing/srsue/src/metrics_stdout.cc > CMakeFiles/srsue.dir/metrics_stdout.cc.i
+	cd /home/atm/Divya/cmake-build-debug/srsue/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/atm/Divya/srsue/src/metrics_stdout.cc > CMakeFiles/srsue.dir/metrics_stdout.cc.i
 
 srsue/src/CMakeFiles/srsue.dir/metrics_stdout.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/srsue.dir/metrics_stdout.cc.s"
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/srsue/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/atm/Ayman/srsLTE_Slicing/srsue/src/metrics_stdout.cc -o CMakeFiles/srsue.dir/metrics_stdout.cc.s
+	cd /home/atm/Divya/cmake-build-debug/srsue/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/atm/Divya/srsue/src/metrics_stdout.cc -o CMakeFiles/srsue.dir/metrics_stdout.cc.s
 
 srsue/src/CMakeFiles/srsue.dir/metrics_csv.cc.o: srsue/src/CMakeFiles/srsue.dir/flags.make
 srsue/src/CMakeFiles/srsue.dir/metrics_csv.cc.o: ../srsue/src/metrics_csv.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object srsue/src/CMakeFiles/srsue.dir/metrics_csv.cc.o"
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/srsue/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/srsue.dir/metrics_csv.cc.o -c /home/atm/Ayman/srsLTE_Slicing/srsue/src/metrics_csv.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/atm/Divya/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object srsue/src/CMakeFiles/srsue.dir/metrics_csv.cc.o"
+	cd /home/atm/Divya/cmake-build-debug/srsue/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/srsue.dir/metrics_csv.cc.o -c /home/atm/Divya/srsue/src/metrics_csv.cc
 
 srsue/src/CMakeFiles/srsue.dir/metrics_csv.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/srsue.dir/metrics_csv.cc.i"
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/srsue/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/atm/Ayman/srsLTE_Slicing/srsue/src/metrics_csv.cc > CMakeFiles/srsue.dir/metrics_csv.cc.i
+	cd /home/atm/Divya/cmake-build-debug/srsue/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/atm/Divya/srsue/src/metrics_csv.cc > CMakeFiles/srsue.dir/metrics_csv.cc.i
 
 srsue/src/CMakeFiles/srsue.dir/metrics_csv.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/srsue.dir/metrics_csv.cc.s"
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/srsue/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/atm/Ayman/srsLTE_Slicing/srsue/src/metrics_csv.cc -o CMakeFiles/srsue.dir/metrics_csv.cc.s
+	cd /home/atm/Divya/cmake-build-debug/srsue/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/atm/Divya/srsue/src/metrics_csv.cc -o CMakeFiles/srsue.dir/metrics_csv.cc.s
 
 # Object files for target srsue
 srsue_OBJECTS = \
@@ -136,6 +136,7 @@ srsue/src/srsue: lib/src/radio/libsrslte_radio.a
 srsue/src/srsue: lib/src/upper/libsrslte_upper.a
 srsue/src/srsue: lib/src/asn1/librrc_asn1.a
 srsue/src/srsue: /usr/lib/x86_64-linux-gnu/libboost_program_options.so
+srsue/src/srsue: /usr/lib/x86_64-linux-gnu/libpcsclite.so
 srsue/src/srsue: lib/src/phy/rf/libsrslte_rf.so
 srsue/src/srsue: lib/src/phy/rf/libsrslte_rf_utils.a
 srsue/src/srsue: /usr/local/lib/libuhd.so
@@ -146,8 +147,8 @@ srsue/src/srsue: lib/src/phy/libsrslte_phy.a
 srsue/src/srsue: /usr/lib/x86_64-linux-gnu/libfftw3f.so
 srsue/src/srsue: /usr/lib/x86_64-linux-gnu/libmbedcrypto.so
 srsue/src/srsue: srsue/src/CMakeFiles/srsue.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable srsue"
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/srsue/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/srsue.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/atm/Divya/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable srsue"
+	cd /home/atm/Divya/cmake-build-debug/srsue/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/srsue.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 srsue/src/CMakeFiles/srsue.dir/build: srsue/src/srsue
@@ -155,10 +156,10 @@ srsue/src/CMakeFiles/srsue.dir/build: srsue/src/srsue
 .PHONY : srsue/src/CMakeFiles/srsue.dir/build
 
 srsue/src/CMakeFiles/srsue.dir/clean:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/srsue/src && $(CMAKE_COMMAND) -P CMakeFiles/srsue.dir/cmake_clean.cmake
+	cd /home/atm/Divya/cmake-build-debug/srsue/src && $(CMAKE_COMMAND) -P CMakeFiles/srsue.dir/cmake_clean.cmake
 .PHONY : srsue/src/CMakeFiles/srsue.dir/clean
 
 srsue/src/CMakeFiles/srsue.dir/depend:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/atm/Ayman/srsLTE_Slicing /home/atm/Ayman/srsLTE_Slicing/srsue/src /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/srsue/src /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/srsue/src/CMakeFiles/srsue.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/atm/Divya/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/atm/Divya /home/atm/Divya/srsue/src /home/atm/Divya/cmake-build-debug /home/atm/Divya/cmake-build-debug/srsue/src /home/atm/Divya/cmake-build-debug/srsue/src/CMakeFiles/srsue.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : srsue/src/CMakeFiles/srsue.dir/depend
 

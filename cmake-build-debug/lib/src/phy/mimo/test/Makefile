@@ -48,10 +48,10 @@ RM = /opt/clion-2020.1.2/bin/cmake/linux/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/atm/Ayman/srsLTE_Slicing
+CMAKE_SOURCE_DIR = /home/atm/Divya
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug
+CMAKE_BINARY_DIR = /home/atm/Divya/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -71,7 +71,7 @@ install/local/fast: preinstall/fast
 # Special rule for the target package
 package: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool..."
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && /opt/clion-2020.1.2/bin/cmake/linux/bin/cpack --config ./CPackConfig.cmake
+	cd /home/atm/Divya/cmake-build-debug && /opt/clion-2020.1.2/bin/cmake/linux/bin/cpack --config ./CPackConfig.cmake
 .PHONY : package
 
 # Special rule for the target package
@@ -127,7 +127,7 @@ install/fast: preinstall/fast
 # Special rule for the target package_source
 package_source:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool for source..."
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && /opt/clion-2020.1.2/bin/cmake/linux/bin/cpack --config ./CPackSourceConfig.cmake /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/CPackSourceConfig.cmake
+	cd /home/atm/Divya/cmake-build-debug && /opt/clion-2020.1.2/bin/cmake/linux/bin/cpack --config ./CPackSourceConfig.cmake /home/atm/Divya/cmake-build-debug/CPackSourceConfig.cmake
 .PHONY : package_source
 
 # Special rule for the target package_source
@@ -159,14 +159,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_progress_start /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/CMakeFiles /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/phy/mimo/test/CMakeFiles/progress.marks
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 lib/src/phy/mimo/test/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/CMakeFiles 0
+	cd /home/atm/Divya/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_progress_start /home/atm/Divya/cmake-build-debug/CMakeFiles /home/atm/Divya/cmake-build-debug/lib/src/phy/mimo/test/CMakeFiles/progress.marks
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 lib/src/phy/mimo/test/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/atm/Divya/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 lib/src/phy/mimo/test/clean
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 lib/src/phy/mimo/test/clean
 .PHONY : clean
 
 # The main clean target
@@ -176,22 +176,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: cmake_check_build_system
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 lib/src/phy/mimo/test/preinstall
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 lib/src/phy/mimo/test/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 lib/src/phy/mimo/test/preinstall
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 lib/src/phy/mimo/test/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/atm/Divya/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 lib/src/phy/mimo/test/CMakeFiles/layermap_test.dir/rule:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 lib/src/phy/mimo/test/CMakeFiles/layermap_test.dir/rule
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 lib/src/phy/mimo/test/CMakeFiles/layermap_test.dir/rule
 .PHONY : lib/src/phy/mimo/test/CMakeFiles/layermap_test.dir/rule
 
 # Convenience name for target.
@@ -201,12 +201,12 @@ layermap_test: lib/src/phy/mimo/test/CMakeFiles/layermap_test.dir/rule
 
 # fast build rule for target.
 layermap_test/fast:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/mimo/test/CMakeFiles/layermap_test.dir/build.make lib/src/phy/mimo/test/CMakeFiles/layermap_test.dir/build
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/mimo/test/CMakeFiles/layermap_test.dir/build.make lib/src/phy/mimo/test/CMakeFiles/layermap_test.dir/build
 .PHONY : layermap_test/fast
 
 # Convenience name for target.
 lib/src/phy/mimo/test/CMakeFiles/pmi_select_test.dir/rule:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 lib/src/phy/mimo/test/CMakeFiles/pmi_select_test.dir/rule
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 lib/src/phy/mimo/test/CMakeFiles/pmi_select_test.dir/rule
 .PHONY : lib/src/phy/mimo/test/CMakeFiles/pmi_select_test.dir/rule
 
 # Convenience name for target.
@@ -216,12 +216,12 @@ pmi_select_test: lib/src/phy/mimo/test/CMakeFiles/pmi_select_test.dir/rule
 
 # fast build rule for target.
 pmi_select_test/fast:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/mimo/test/CMakeFiles/pmi_select_test.dir/build.make lib/src/phy/mimo/test/CMakeFiles/pmi_select_test.dir/build
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/mimo/test/CMakeFiles/pmi_select_test.dir/build.make lib/src/phy/mimo/test/CMakeFiles/pmi_select_test.dir/build
 .PHONY : pmi_select_test/fast
 
 # Convenience name for target.
 lib/src/phy/mimo/test/CMakeFiles/precoding_test.dir/rule:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 lib/src/phy/mimo/test/CMakeFiles/precoding_test.dir/rule
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 lib/src/phy/mimo/test/CMakeFiles/precoding_test.dir/rule
 .PHONY : lib/src/phy/mimo/test/CMakeFiles/precoding_test.dir/rule
 
 # Convenience name for target.
@@ -231,7 +231,7 @@ precoding_test: lib/src/phy/mimo/test/CMakeFiles/precoding_test.dir/rule
 
 # fast build rule for target.
 precoding_test/fast:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/mimo/test/CMakeFiles/precoding_test.dir/build.make lib/src/phy/mimo/test/CMakeFiles/precoding_test.dir/build
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/mimo/test/CMakeFiles/precoding_test.dir/build.make lib/src/phy/mimo/test/CMakeFiles/precoding_test.dir/build
 .PHONY : precoding_test/fast
 
 layermap_test.o: layermap_test.c.o
@@ -240,7 +240,7 @@ layermap_test.o: layermap_test.c.o
 
 # target to build an object file
 layermap_test.c.o:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/mimo/test/CMakeFiles/layermap_test.dir/build.make lib/src/phy/mimo/test/CMakeFiles/layermap_test.dir/layermap_test.c.o
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/mimo/test/CMakeFiles/layermap_test.dir/build.make lib/src/phy/mimo/test/CMakeFiles/layermap_test.dir/layermap_test.c.o
 .PHONY : layermap_test.c.o
 
 layermap_test.i: layermap_test.c.i
@@ -249,7 +249,7 @@ layermap_test.i: layermap_test.c.i
 
 # target to preprocess a source file
 layermap_test.c.i:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/mimo/test/CMakeFiles/layermap_test.dir/build.make lib/src/phy/mimo/test/CMakeFiles/layermap_test.dir/layermap_test.c.i
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/mimo/test/CMakeFiles/layermap_test.dir/build.make lib/src/phy/mimo/test/CMakeFiles/layermap_test.dir/layermap_test.c.i
 .PHONY : layermap_test.c.i
 
 layermap_test.s: layermap_test.c.s
@@ -258,7 +258,7 @@ layermap_test.s: layermap_test.c.s
 
 # target to generate assembly for a file
 layermap_test.c.s:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/mimo/test/CMakeFiles/layermap_test.dir/build.make lib/src/phy/mimo/test/CMakeFiles/layermap_test.dir/layermap_test.c.s
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/mimo/test/CMakeFiles/layermap_test.dir/build.make lib/src/phy/mimo/test/CMakeFiles/layermap_test.dir/layermap_test.c.s
 .PHONY : layermap_test.c.s
 
 pmi_select_test.o: pmi_select_test.c.o
@@ -267,7 +267,7 @@ pmi_select_test.o: pmi_select_test.c.o
 
 # target to build an object file
 pmi_select_test.c.o:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/mimo/test/CMakeFiles/pmi_select_test.dir/build.make lib/src/phy/mimo/test/CMakeFiles/pmi_select_test.dir/pmi_select_test.c.o
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/mimo/test/CMakeFiles/pmi_select_test.dir/build.make lib/src/phy/mimo/test/CMakeFiles/pmi_select_test.dir/pmi_select_test.c.o
 .PHONY : pmi_select_test.c.o
 
 pmi_select_test.i: pmi_select_test.c.i
@@ -276,7 +276,7 @@ pmi_select_test.i: pmi_select_test.c.i
 
 # target to preprocess a source file
 pmi_select_test.c.i:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/mimo/test/CMakeFiles/pmi_select_test.dir/build.make lib/src/phy/mimo/test/CMakeFiles/pmi_select_test.dir/pmi_select_test.c.i
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/mimo/test/CMakeFiles/pmi_select_test.dir/build.make lib/src/phy/mimo/test/CMakeFiles/pmi_select_test.dir/pmi_select_test.c.i
 .PHONY : pmi_select_test.c.i
 
 pmi_select_test.s: pmi_select_test.c.s
@@ -285,7 +285,7 @@ pmi_select_test.s: pmi_select_test.c.s
 
 # target to generate assembly for a file
 pmi_select_test.c.s:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/mimo/test/CMakeFiles/pmi_select_test.dir/build.make lib/src/phy/mimo/test/CMakeFiles/pmi_select_test.dir/pmi_select_test.c.s
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/mimo/test/CMakeFiles/pmi_select_test.dir/build.make lib/src/phy/mimo/test/CMakeFiles/pmi_select_test.dir/pmi_select_test.c.s
 .PHONY : pmi_select_test.c.s
 
 precoder_test.o: precoder_test.c.o
@@ -294,7 +294,7 @@ precoder_test.o: precoder_test.c.o
 
 # target to build an object file
 precoder_test.c.o:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/mimo/test/CMakeFiles/precoding_test.dir/build.make lib/src/phy/mimo/test/CMakeFiles/precoding_test.dir/precoder_test.c.o
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/mimo/test/CMakeFiles/precoding_test.dir/build.make lib/src/phy/mimo/test/CMakeFiles/precoding_test.dir/precoder_test.c.o
 .PHONY : precoder_test.c.o
 
 precoder_test.i: precoder_test.c.i
@@ -303,7 +303,7 @@ precoder_test.i: precoder_test.c.i
 
 # target to preprocess a source file
 precoder_test.c.i:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/mimo/test/CMakeFiles/precoding_test.dir/build.make lib/src/phy/mimo/test/CMakeFiles/precoding_test.dir/precoder_test.c.i
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/mimo/test/CMakeFiles/precoding_test.dir/build.make lib/src/phy/mimo/test/CMakeFiles/precoding_test.dir/precoder_test.c.i
 .PHONY : precoder_test.c.i
 
 precoder_test.s: precoder_test.c.s
@@ -312,7 +312,7 @@ precoder_test.s: precoder_test.c.s
 
 # target to generate assembly for a file
 precoder_test.c.s:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/mimo/test/CMakeFiles/precoding_test.dir/build.make lib/src/phy/mimo/test/CMakeFiles/precoding_test.dir/precoder_test.c.s
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/mimo/test/CMakeFiles/precoding_test.dir/build.make lib/src/phy/mimo/test/CMakeFiles/precoding_test.dir/precoder_test.c.s
 .PHONY : precoder_test.c.s
 
 # Help Target
@@ -353,6 +353,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/atm/Divya/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

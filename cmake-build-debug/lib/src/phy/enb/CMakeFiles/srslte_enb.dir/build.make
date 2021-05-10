@@ -43,10 +43,10 @@ RM = /opt/clion-2020.1.2/bin/cmake/linux/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/atm/Ayman/srsLTE_Slicing
+CMAKE_SOURCE_DIR = /home/atm/Divya
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug
+CMAKE_BINARY_DIR = /home/atm/Divya/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include lib/src/phy/enb/CMakeFiles/srslte_enb.dir/depend.make
@@ -59,29 +59,29 @@ include lib/src/phy/enb/CMakeFiles/srslte_enb.dir/flags.make
 
 lib/src/phy/enb/CMakeFiles/srslte_enb.dir/enb_dl.c.o: lib/src/phy/enb/CMakeFiles/srslte_enb.dir/flags.make
 lib/src/phy/enb/CMakeFiles/srslte_enb.dir/enb_dl.c.o: ../lib/src/phy/enb/enb_dl.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object lib/src/phy/enb/CMakeFiles/srslte_enb.dir/enb_dl.c.o"
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/phy/enb && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/srslte_enb.dir/enb_dl.c.o   -c /home/atm/Ayman/srsLTE_Slicing/lib/src/phy/enb/enb_dl.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/atm/Divya/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object lib/src/phy/enb/CMakeFiles/srslte_enb.dir/enb_dl.c.o"
+	cd /home/atm/Divya/cmake-build-debug/lib/src/phy/enb && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/srslte_enb.dir/enb_dl.c.o   -c /home/atm/Divya/lib/src/phy/enb/enb_dl.c
 
 lib/src/phy/enb/CMakeFiles/srslte_enb.dir/enb_dl.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/srslte_enb.dir/enb_dl.c.i"
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/phy/enb && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/atm/Ayman/srsLTE_Slicing/lib/src/phy/enb/enb_dl.c > CMakeFiles/srslte_enb.dir/enb_dl.c.i
+	cd /home/atm/Divya/cmake-build-debug/lib/src/phy/enb && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/atm/Divya/lib/src/phy/enb/enb_dl.c > CMakeFiles/srslte_enb.dir/enb_dl.c.i
 
 lib/src/phy/enb/CMakeFiles/srslte_enb.dir/enb_dl.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/srslte_enb.dir/enb_dl.c.s"
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/phy/enb && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/atm/Ayman/srsLTE_Slicing/lib/src/phy/enb/enb_dl.c -o CMakeFiles/srslte_enb.dir/enb_dl.c.s
+	cd /home/atm/Divya/cmake-build-debug/lib/src/phy/enb && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/atm/Divya/lib/src/phy/enb/enb_dl.c -o CMakeFiles/srslte_enb.dir/enb_dl.c.s
 
 lib/src/phy/enb/CMakeFiles/srslte_enb.dir/enb_ul.c.o: lib/src/phy/enb/CMakeFiles/srslte_enb.dir/flags.make
 lib/src/phy/enb/CMakeFiles/srslte_enb.dir/enb_ul.c.o: ../lib/src/phy/enb/enb_ul.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object lib/src/phy/enb/CMakeFiles/srslte_enb.dir/enb_ul.c.o"
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/phy/enb && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/srslte_enb.dir/enb_ul.c.o   -c /home/atm/Ayman/srsLTE_Slicing/lib/src/phy/enb/enb_ul.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/atm/Divya/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object lib/src/phy/enb/CMakeFiles/srslte_enb.dir/enb_ul.c.o"
+	cd /home/atm/Divya/cmake-build-debug/lib/src/phy/enb && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/srslte_enb.dir/enb_ul.c.o   -c /home/atm/Divya/lib/src/phy/enb/enb_ul.c
 
 lib/src/phy/enb/CMakeFiles/srslte_enb.dir/enb_ul.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/srslte_enb.dir/enb_ul.c.i"
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/phy/enb && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/atm/Ayman/srsLTE_Slicing/lib/src/phy/enb/enb_ul.c > CMakeFiles/srslte_enb.dir/enb_ul.c.i
+	cd /home/atm/Divya/cmake-build-debug/lib/src/phy/enb && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/atm/Divya/lib/src/phy/enb/enb_ul.c > CMakeFiles/srslte_enb.dir/enb_ul.c.i
 
 lib/src/phy/enb/CMakeFiles/srslte_enb.dir/enb_ul.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/srslte_enb.dir/enb_ul.c.s"
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/phy/enb && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/atm/Ayman/srsLTE_Slicing/lib/src/phy/enb/enb_ul.c -o CMakeFiles/srslte_enb.dir/enb_ul.c.s
+	cd /home/atm/Divya/cmake-build-debug/lib/src/phy/enb && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/atm/Divya/lib/src/phy/enb/enb_ul.c -o CMakeFiles/srslte_enb.dir/enb_ul.c.s
 
 srslte_enb: lib/src/phy/enb/CMakeFiles/srslte_enb.dir/enb_dl.c.o
 srslte_enb: lib/src/phy/enb/CMakeFiles/srslte_enb.dir/enb_ul.c.o
@@ -95,10 +95,10 @@ lib/src/phy/enb/CMakeFiles/srslte_enb.dir/build: srslte_enb
 .PHONY : lib/src/phy/enb/CMakeFiles/srslte_enb.dir/build
 
 lib/src/phy/enb/CMakeFiles/srslte_enb.dir/clean:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/phy/enb && $(CMAKE_COMMAND) -P CMakeFiles/srslte_enb.dir/cmake_clean.cmake
+	cd /home/atm/Divya/cmake-build-debug/lib/src/phy/enb && $(CMAKE_COMMAND) -P CMakeFiles/srslte_enb.dir/cmake_clean.cmake
 .PHONY : lib/src/phy/enb/CMakeFiles/srslte_enb.dir/clean
 
 lib/src/phy/enb/CMakeFiles/srslte_enb.dir/depend:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/atm/Ayman/srsLTE_Slicing /home/atm/Ayman/srsLTE_Slicing/lib/src/phy/enb /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/phy/enb /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/phy/enb/CMakeFiles/srslte_enb.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/atm/Divya/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/atm/Divya /home/atm/Divya/lib/src/phy/enb /home/atm/Divya/cmake-build-debug /home/atm/Divya/cmake-build-debug/lib/src/phy/enb /home/atm/Divya/cmake-build-debug/lib/src/phy/enb/CMakeFiles/srslte_enb.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : lib/src/phy/enb/CMakeFiles/srslte_enb.dir/depend
 

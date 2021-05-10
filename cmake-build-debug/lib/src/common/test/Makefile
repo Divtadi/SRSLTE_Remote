@@ -48,10 +48,10 @@ RM = /opt/clion-2020.1.2/bin/cmake/linux/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/atm/Ayman/srsLTE_Slicing
+CMAKE_SOURCE_DIR = /home/atm/Divya
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug
+CMAKE_BINARY_DIR = /home/atm/Divya/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -59,7 +59,7 @@ CMAKE_BINARY_DIR = /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug
 # Special rule for the target package_source
 package_source:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool for source..."
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && /opt/clion-2020.1.2/bin/cmake/linux/bin/cpack --config ./CPackSourceConfig.cmake /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/CPackSourceConfig.cmake
+	cd /home/atm/Divya/cmake-build-debug && /opt/clion-2020.1.2/bin/cmake/linux/bin/cpack --config ./CPackSourceConfig.cmake /home/atm/Divya/cmake-build-debug/CPackSourceConfig.cmake
 .PHONY : package_source
 
 # Special rule for the target package_source
@@ -70,7 +70,7 @@ package_source/fast: package_source
 # Special rule for the target package
 package: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool..."
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && /opt/clion-2020.1.2/bin/cmake/linux/bin/cpack --config ./CPackConfig.cmake
+	cd /home/atm/Divya/cmake-build-debug && /opt/clion-2020.1.2/bin/cmake/linux/bin/cpack --config ./CPackConfig.cmake
 .PHONY : package
 
 # Special rule for the target package
@@ -159,14 +159,14 @@ install/local/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_progress_start /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/CMakeFiles /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/common/test/CMakeFiles/progress.marks
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 lib/src/common/test/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/CMakeFiles 0
+	cd /home/atm/Divya/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_progress_start /home/atm/Divya/cmake-build-debug/CMakeFiles /home/atm/Divya/cmake-build-debug/lib/src/common/test/CMakeFiles/progress.marks
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 lib/src/common/test/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/atm/Divya/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 lib/src/common/test/clean
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 lib/src/common/test/clean
 .PHONY : clean
 
 # The main clean target
@@ -176,22 +176,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: cmake_check_build_system
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 lib/src/common/test/preinstall
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 lib/src/common/test/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 lib/src/common/test/preinstall
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 lib/src/common/test/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/atm/Divya/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 lib/src/common/test/CMakeFiles/thread_test.dir/rule:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 lib/src/common/test/CMakeFiles/thread_test.dir/rule
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 lib/src/common/test/CMakeFiles/thread_test.dir/rule
 .PHONY : lib/src/common/test/CMakeFiles/thread_test.dir/rule
 
 # Convenience name for target.
@@ -201,12 +201,12 @@ thread_test: lib/src/common/test/CMakeFiles/thread_test.dir/rule
 
 # fast build rule for target.
 thread_test/fast:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/common/test/CMakeFiles/thread_test.dir/build.make lib/src/common/test/CMakeFiles/thread_test.dir/build
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/common/test/CMakeFiles/thread_test.dir/build.make lib/src/common/test/CMakeFiles/thread_test.dir/build
 .PHONY : thread_test/fast
 
 # Convenience name for target.
 lib/src/common/test/CMakeFiles/thread_pool_test.dir/rule:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 lib/src/common/test/CMakeFiles/thread_pool_test.dir/rule
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 lib/src/common/test/CMakeFiles/thread_pool_test.dir/rule
 .PHONY : lib/src/common/test/CMakeFiles/thread_pool_test.dir/rule
 
 # Convenience name for target.
@@ -216,7 +216,7 @@ thread_pool_test: lib/src/common/test/CMakeFiles/thread_pool_test.dir/rule
 
 # fast build rule for target.
 thread_pool_test/fast:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/common/test/CMakeFiles/thread_pool_test.dir/build.make lib/src/common/test/CMakeFiles/thread_pool_test.dir/build
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/common/test/CMakeFiles/thread_pool_test.dir/build.make lib/src/common/test/CMakeFiles/thread_pool_test.dir/build
 .PHONY : thread_pool_test/fast
 
 thread_pool_test.o: thread_pool_test.cc.o
@@ -225,7 +225,7 @@ thread_pool_test.o: thread_pool_test.cc.o
 
 # target to build an object file
 thread_pool_test.cc.o:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/common/test/CMakeFiles/thread_pool_test.dir/build.make lib/src/common/test/CMakeFiles/thread_pool_test.dir/thread_pool_test.cc.o
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/common/test/CMakeFiles/thread_pool_test.dir/build.make lib/src/common/test/CMakeFiles/thread_pool_test.dir/thread_pool_test.cc.o
 .PHONY : thread_pool_test.cc.o
 
 thread_pool_test.i: thread_pool_test.cc.i
@@ -234,7 +234,7 @@ thread_pool_test.i: thread_pool_test.cc.i
 
 # target to preprocess a source file
 thread_pool_test.cc.i:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/common/test/CMakeFiles/thread_pool_test.dir/build.make lib/src/common/test/CMakeFiles/thread_pool_test.dir/thread_pool_test.cc.i
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/common/test/CMakeFiles/thread_pool_test.dir/build.make lib/src/common/test/CMakeFiles/thread_pool_test.dir/thread_pool_test.cc.i
 .PHONY : thread_pool_test.cc.i
 
 thread_pool_test.s: thread_pool_test.cc.s
@@ -243,7 +243,7 @@ thread_pool_test.s: thread_pool_test.cc.s
 
 # target to generate assembly for a file
 thread_pool_test.cc.s:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/common/test/CMakeFiles/thread_pool_test.dir/build.make lib/src/common/test/CMakeFiles/thread_pool_test.dir/thread_pool_test.cc.s
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/common/test/CMakeFiles/thread_pool_test.dir/build.make lib/src/common/test/CMakeFiles/thread_pool_test.dir/thread_pool_test.cc.s
 .PHONY : thread_pool_test.cc.s
 
 thread_test.o: thread_test.cc.o
@@ -252,7 +252,7 @@ thread_test.o: thread_test.cc.o
 
 # target to build an object file
 thread_test.cc.o:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/common/test/CMakeFiles/thread_test.dir/build.make lib/src/common/test/CMakeFiles/thread_test.dir/thread_test.cc.o
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/common/test/CMakeFiles/thread_test.dir/build.make lib/src/common/test/CMakeFiles/thread_test.dir/thread_test.cc.o
 .PHONY : thread_test.cc.o
 
 thread_test.i: thread_test.cc.i
@@ -261,7 +261,7 @@ thread_test.i: thread_test.cc.i
 
 # target to preprocess a source file
 thread_test.cc.i:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/common/test/CMakeFiles/thread_test.dir/build.make lib/src/common/test/CMakeFiles/thread_test.dir/thread_test.cc.i
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/common/test/CMakeFiles/thread_test.dir/build.make lib/src/common/test/CMakeFiles/thread_test.dir/thread_test.cc.i
 .PHONY : thread_test.cc.i
 
 thread_test.s: thread_test.cc.s
@@ -270,7 +270,7 @@ thread_test.s: thread_test.cc.s
 
 # target to generate assembly for a file
 thread_test.cc.s:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/common/test/CMakeFiles/thread_test.dir/build.make lib/src/common/test/CMakeFiles/thread_test.dir/thread_test.cc.s
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/common/test/CMakeFiles/thread_test.dir/build.make lib/src/common/test/CMakeFiles/thread_test.dir/thread_test.cc.s
 .PHONY : thread_test.cc.s
 
 # Help Target
@@ -307,6 +307,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/atm/Divya/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

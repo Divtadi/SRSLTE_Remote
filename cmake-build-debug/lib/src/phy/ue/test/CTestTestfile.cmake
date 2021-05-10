@@ -1,12 +1,12 @@
 # CMake generated Testfile for 
-# Source directory: /home/atm/Ayman/srsLTE_Slicing/lib/src/phy/ue/test
-# Build directory: /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/phy/ue/test
+# Source directory: /home/atm/Divya/lib/src/phy/ue/test
+# Build directory: /home/atm/Divya/cmake-build-debug/lib/src/phy/ue/test
 # 
 # This file includes the relevant testing commands required for 
 # testing this directory and lists subdirectories to be tested as well.
 add_test(gen_ack_test "gen_ack_test")
-set_tests_properties(gen_ack_test PROPERTIES  _BACKTRACE_TRIPLES "/home/atm/Ayman/srsLTE_Slicing/lib/src/phy/ue/test/CMakeLists.txt;27;add_test;/home/atm/Ayman/srsLTE_Slicing/lib/src/phy/ue/test/CMakeLists.txt;0;")
+set_tests_properties(gen_ack_test PROPERTIES  _BACKTRACE_TRIPLES "/home/atm/Divya/lib/src/phy/ue/test/CMakeLists.txt;27;add_test;/home/atm/Divya/lib/src/phy/ue/test/CMakeLists.txt;0;")
 add_test(pucch_resource_test "pucch_resource_test")
-set_tests_properties(pucch_resource_test PROPERTIES  _BACKTRACE_TRIPLES "/home/atm/Ayman/srsLTE_Slicing/lib/src/phy/ue/test/CMakeLists.txt;31;add_test;/home/atm/Ayman/srsLTE_Slicing/lib/src/phy/ue/test/CMakeLists.txt;0;")
+set_tests_properties(pucch_resource_test PROPERTIES  _BACKTRACE_TRIPLES "/home/atm/Divya/lib/src/phy/ue/test/CMakeLists.txt;31;add_test;/home/atm/Divya/lib/src/phy/ue/test/CMakeLists.txt;0;")
 add_test(ue_dl_nbiot_test "ue_dl_nbiot_test")
-set_tests_properties(ue_dl_nbiot_test PROPERTIES  _BACKTRACE_TRIPLES "/home/atm/Ayman/srsLTE_Slicing/lib/src/phy/ue/test/CMakeLists.txt;35;add_test;/home/atm/Ayman/srsLTE_Slicing/lib/src/phy/ue/test/CMakeLists.txt;0;")
+set_tests_properties(ue_dl_nbiot_test PROPERTIES  _BACKTRACE_TRIPLES "/home/atm/Divya/lib/src/phy/ue/test/CMakeLists.txt;35;add_test;/home/atm/Divya/lib/src/phy/ue/test/CMakeLists.txt;0;")

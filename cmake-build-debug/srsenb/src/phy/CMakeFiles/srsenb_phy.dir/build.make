@@ -43,10 +43,10 @@ RM = /opt/clion-2020.1.2/bin/cmake/linux/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/atm/Ayman/srsLTE_Slicing
+CMAKE_SOURCE_DIR = /home/atm/Divya
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug
+CMAKE_BINARY_DIR = /home/atm/Divya/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include srsenb/src/phy/CMakeFiles/srsenb_phy.dir/depend.make
@@ -59,94 +59,94 @@ include srsenb/src/phy/CMakeFiles/srsenb_phy.dir/flags.make
 
 srsenb/src/phy/CMakeFiles/srsenb_phy.dir/cc_worker.cc.o: srsenb/src/phy/CMakeFiles/srsenb_phy.dir/flags.make
 srsenb/src/phy/CMakeFiles/srsenb_phy.dir/cc_worker.cc.o: ../srsenb/src/phy/cc_worker.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object srsenb/src/phy/CMakeFiles/srsenb_phy.dir/cc_worker.cc.o"
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/srsenb/src/phy && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/srsenb_phy.dir/cc_worker.cc.o -c /home/atm/Ayman/srsLTE_Slicing/srsenb/src/phy/cc_worker.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/atm/Divya/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object srsenb/src/phy/CMakeFiles/srsenb_phy.dir/cc_worker.cc.o"
+	cd /home/atm/Divya/cmake-build-debug/srsenb/src/phy && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/srsenb_phy.dir/cc_worker.cc.o -c /home/atm/Divya/srsenb/src/phy/cc_worker.cc
 
 srsenb/src/phy/CMakeFiles/srsenb_phy.dir/cc_worker.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/srsenb_phy.dir/cc_worker.cc.i"
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/srsenb/src/phy && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/atm/Ayman/srsLTE_Slicing/srsenb/src/phy/cc_worker.cc > CMakeFiles/srsenb_phy.dir/cc_worker.cc.i
+	cd /home/atm/Divya/cmake-build-debug/srsenb/src/phy && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/atm/Divya/srsenb/src/phy/cc_worker.cc > CMakeFiles/srsenb_phy.dir/cc_worker.cc.i
 
 srsenb/src/phy/CMakeFiles/srsenb_phy.dir/cc_worker.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/srsenb_phy.dir/cc_worker.cc.s"
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/srsenb/src/phy && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/atm/Ayman/srsLTE_Slicing/srsenb/src/phy/cc_worker.cc -o CMakeFiles/srsenb_phy.dir/cc_worker.cc.s
+	cd /home/atm/Divya/cmake-build-debug/srsenb/src/phy && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/atm/Divya/srsenb/src/phy/cc_worker.cc -o CMakeFiles/srsenb_phy.dir/cc_worker.cc.s
 
 srsenb/src/phy/CMakeFiles/srsenb_phy.dir/phy.cc.o: srsenb/src/phy/CMakeFiles/srsenb_phy.dir/flags.make
 srsenb/src/phy/CMakeFiles/srsenb_phy.dir/phy.cc.o: ../srsenb/src/phy/phy.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object srsenb/src/phy/CMakeFiles/srsenb_phy.dir/phy.cc.o"
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/srsenb/src/phy && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/srsenb_phy.dir/phy.cc.o -c /home/atm/Ayman/srsLTE_Slicing/srsenb/src/phy/phy.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/atm/Divya/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object srsenb/src/phy/CMakeFiles/srsenb_phy.dir/phy.cc.o"
+	cd /home/atm/Divya/cmake-build-debug/srsenb/src/phy && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/srsenb_phy.dir/phy.cc.o -c /home/atm/Divya/srsenb/src/phy/phy.cc
 
 srsenb/src/phy/CMakeFiles/srsenb_phy.dir/phy.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/srsenb_phy.dir/phy.cc.i"
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/srsenb/src/phy && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/atm/Ayman/srsLTE_Slicing/srsenb/src/phy/phy.cc > CMakeFiles/srsenb_phy.dir/phy.cc.i
+	cd /home/atm/Divya/cmake-build-debug/srsenb/src/phy && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/atm/Divya/srsenb/src/phy/phy.cc > CMakeFiles/srsenb_phy.dir/phy.cc.i
 
 srsenb/src/phy/CMakeFiles/srsenb_phy.dir/phy.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/srsenb_phy.dir/phy.cc.s"
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/srsenb/src/phy && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/atm/Ayman/srsLTE_Slicing/srsenb/src/phy/phy.cc -o CMakeFiles/srsenb_phy.dir/phy.cc.s
+	cd /home/atm/Divya/cmake-build-debug/srsenb/src/phy && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/atm/Divya/srsenb/src/phy/phy.cc -o CMakeFiles/srsenb_phy.dir/phy.cc.s
 
 srsenb/src/phy/CMakeFiles/srsenb_phy.dir/phy_common.cc.o: srsenb/src/phy/CMakeFiles/srsenb_phy.dir/flags.make
 srsenb/src/phy/CMakeFiles/srsenb_phy.dir/phy_common.cc.o: ../srsenb/src/phy/phy_common.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object srsenb/src/phy/CMakeFiles/srsenb_phy.dir/phy_common.cc.o"
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/srsenb/src/phy && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/srsenb_phy.dir/phy_common.cc.o -c /home/atm/Ayman/srsLTE_Slicing/srsenb/src/phy/phy_common.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/atm/Divya/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object srsenb/src/phy/CMakeFiles/srsenb_phy.dir/phy_common.cc.o"
+	cd /home/atm/Divya/cmake-build-debug/srsenb/src/phy && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/srsenb_phy.dir/phy_common.cc.o -c /home/atm/Divya/srsenb/src/phy/phy_common.cc
 
 srsenb/src/phy/CMakeFiles/srsenb_phy.dir/phy_common.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/srsenb_phy.dir/phy_common.cc.i"
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/srsenb/src/phy && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/atm/Ayman/srsLTE_Slicing/srsenb/src/phy/phy_common.cc > CMakeFiles/srsenb_phy.dir/phy_common.cc.i
+	cd /home/atm/Divya/cmake-build-debug/srsenb/src/phy && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/atm/Divya/srsenb/src/phy/phy_common.cc > CMakeFiles/srsenb_phy.dir/phy_common.cc.i
 
 srsenb/src/phy/CMakeFiles/srsenb_phy.dir/phy_common.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/srsenb_phy.dir/phy_common.cc.s"
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/srsenb/src/phy && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/atm/Ayman/srsLTE_Slicing/srsenb/src/phy/phy_common.cc -o CMakeFiles/srsenb_phy.dir/phy_common.cc.s
+	cd /home/atm/Divya/cmake-build-debug/srsenb/src/phy && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/atm/Divya/srsenb/src/phy/phy_common.cc -o CMakeFiles/srsenb_phy.dir/phy_common.cc.s
 
 srsenb/src/phy/CMakeFiles/srsenb_phy.dir/phy_ue_db.cc.o: srsenb/src/phy/CMakeFiles/srsenb_phy.dir/flags.make
 srsenb/src/phy/CMakeFiles/srsenb_phy.dir/phy_ue_db.cc.o: ../srsenb/src/phy/phy_ue_db.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object srsenb/src/phy/CMakeFiles/srsenb_phy.dir/phy_ue_db.cc.o"
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/srsenb/src/phy && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/srsenb_phy.dir/phy_ue_db.cc.o -c /home/atm/Ayman/srsLTE_Slicing/srsenb/src/phy/phy_ue_db.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/atm/Divya/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object srsenb/src/phy/CMakeFiles/srsenb_phy.dir/phy_ue_db.cc.o"
+	cd /home/atm/Divya/cmake-build-debug/srsenb/src/phy && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/srsenb_phy.dir/phy_ue_db.cc.o -c /home/atm/Divya/srsenb/src/phy/phy_ue_db.cc
 
 srsenb/src/phy/CMakeFiles/srsenb_phy.dir/phy_ue_db.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/srsenb_phy.dir/phy_ue_db.cc.i"
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/srsenb/src/phy && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/atm/Ayman/srsLTE_Slicing/srsenb/src/phy/phy_ue_db.cc > CMakeFiles/srsenb_phy.dir/phy_ue_db.cc.i
+	cd /home/atm/Divya/cmake-build-debug/srsenb/src/phy && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/atm/Divya/srsenb/src/phy/phy_ue_db.cc > CMakeFiles/srsenb_phy.dir/phy_ue_db.cc.i
 
 srsenb/src/phy/CMakeFiles/srsenb_phy.dir/phy_ue_db.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/srsenb_phy.dir/phy_ue_db.cc.s"
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/srsenb/src/phy && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/atm/Ayman/srsLTE_Slicing/srsenb/src/phy/phy_ue_db.cc -o CMakeFiles/srsenb_phy.dir/phy_ue_db.cc.s
+	cd /home/atm/Divya/cmake-build-debug/srsenb/src/phy && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/atm/Divya/srsenb/src/phy/phy_ue_db.cc -o CMakeFiles/srsenb_phy.dir/phy_ue_db.cc.s
 
 srsenb/src/phy/CMakeFiles/srsenb_phy.dir/prach_worker.cc.o: srsenb/src/phy/CMakeFiles/srsenb_phy.dir/flags.make
 srsenb/src/phy/CMakeFiles/srsenb_phy.dir/prach_worker.cc.o: ../srsenb/src/phy/prach_worker.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object srsenb/src/phy/CMakeFiles/srsenb_phy.dir/prach_worker.cc.o"
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/srsenb/src/phy && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/srsenb_phy.dir/prach_worker.cc.o -c /home/atm/Ayman/srsLTE_Slicing/srsenb/src/phy/prach_worker.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/atm/Divya/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object srsenb/src/phy/CMakeFiles/srsenb_phy.dir/prach_worker.cc.o"
+	cd /home/atm/Divya/cmake-build-debug/srsenb/src/phy && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/srsenb_phy.dir/prach_worker.cc.o -c /home/atm/Divya/srsenb/src/phy/prach_worker.cc
 
 srsenb/src/phy/CMakeFiles/srsenb_phy.dir/prach_worker.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/srsenb_phy.dir/prach_worker.cc.i"
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/srsenb/src/phy && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/atm/Ayman/srsLTE_Slicing/srsenb/src/phy/prach_worker.cc > CMakeFiles/srsenb_phy.dir/prach_worker.cc.i
+	cd /home/atm/Divya/cmake-build-debug/srsenb/src/phy && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/atm/Divya/srsenb/src/phy/prach_worker.cc > CMakeFiles/srsenb_phy.dir/prach_worker.cc.i
 
 srsenb/src/phy/CMakeFiles/srsenb_phy.dir/prach_worker.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/srsenb_phy.dir/prach_worker.cc.s"
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/srsenb/src/phy && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/atm/Ayman/srsLTE_Slicing/srsenb/src/phy/prach_worker.cc -o CMakeFiles/srsenb_phy.dir/prach_worker.cc.s
+	cd /home/atm/Divya/cmake-build-debug/srsenb/src/phy && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/atm/Divya/srsenb/src/phy/prach_worker.cc -o CMakeFiles/srsenb_phy.dir/prach_worker.cc.s
 
 srsenb/src/phy/CMakeFiles/srsenb_phy.dir/sf_worker.cc.o: srsenb/src/phy/CMakeFiles/srsenb_phy.dir/flags.make
 srsenb/src/phy/CMakeFiles/srsenb_phy.dir/sf_worker.cc.o: ../srsenb/src/phy/sf_worker.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object srsenb/src/phy/CMakeFiles/srsenb_phy.dir/sf_worker.cc.o"
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/srsenb/src/phy && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/srsenb_phy.dir/sf_worker.cc.o -c /home/atm/Ayman/srsLTE_Slicing/srsenb/src/phy/sf_worker.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/atm/Divya/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object srsenb/src/phy/CMakeFiles/srsenb_phy.dir/sf_worker.cc.o"
+	cd /home/atm/Divya/cmake-build-debug/srsenb/src/phy && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/srsenb_phy.dir/sf_worker.cc.o -c /home/atm/Divya/srsenb/src/phy/sf_worker.cc
 
 srsenb/src/phy/CMakeFiles/srsenb_phy.dir/sf_worker.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/srsenb_phy.dir/sf_worker.cc.i"
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/srsenb/src/phy && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/atm/Ayman/srsLTE_Slicing/srsenb/src/phy/sf_worker.cc > CMakeFiles/srsenb_phy.dir/sf_worker.cc.i
+	cd /home/atm/Divya/cmake-build-debug/srsenb/src/phy && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/atm/Divya/srsenb/src/phy/sf_worker.cc > CMakeFiles/srsenb_phy.dir/sf_worker.cc.i
 
 srsenb/src/phy/CMakeFiles/srsenb_phy.dir/sf_worker.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/srsenb_phy.dir/sf_worker.cc.s"
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/srsenb/src/phy && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/atm/Ayman/srsLTE_Slicing/srsenb/src/phy/sf_worker.cc -o CMakeFiles/srsenb_phy.dir/sf_worker.cc.s
+	cd /home/atm/Divya/cmake-build-debug/srsenb/src/phy && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/atm/Divya/srsenb/src/phy/sf_worker.cc -o CMakeFiles/srsenb_phy.dir/sf_worker.cc.s
 
 srsenb/src/phy/CMakeFiles/srsenb_phy.dir/txrx.cc.o: srsenb/src/phy/CMakeFiles/srsenb_phy.dir/flags.make
 srsenb/src/phy/CMakeFiles/srsenb_phy.dir/txrx.cc.o: ../srsenb/src/phy/txrx.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object srsenb/src/phy/CMakeFiles/srsenb_phy.dir/txrx.cc.o"
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/srsenb/src/phy && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/srsenb_phy.dir/txrx.cc.o -c /home/atm/Ayman/srsLTE_Slicing/srsenb/src/phy/txrx.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/atm/Divya/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object srsenb/src/phy/CMakeFiles/srsenb_phy.dir/txrx.cc.o"
+	cd /home/atm/Divya/cmake-build-debug/srsenb/src/phy && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/srsenb_phy.dir/txrx.cc.o -c /home/atm/Divya/srsenb/src/phy/txrx.cc
 
 srsenb/src/phy/CMakeFiles/srsenb_phy.dir/txrx.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/srsenb_phy.dir/txrx.cc.i"
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/srsenb/src/phy && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/atm/Ayman/srsLTE_Slicing/srsenb/src/phy/txrx.cc > CMakeFiles/srsenb_phy.dir/txrx.cc.i
+	cd /home/atm/Divya/cmake-build-debug/srsenb/src/phy && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/atm/Divya/srsenb/src/phy/txrx.cc > CMakeFiles/srsenb_phy.dir/txrx.cc.i
 
 srsenb/src/phy/CMakeFiles/srsenb_phy.dir/txrx.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/srsenb_phy.dir/txrx.cc.s"
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/srsenb/src/phy && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/atm/Ayman/srsLTE_Slicing/srsenb/src/phy/txrx.cc -o CMakeFiles/srsenb_phy.dir/txrx.cc.s
+	cd /home/atm/Divya/cmake-build-debug/srsenb/src/phy && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/atm/Divya/srsenb/src/phy/txrx.cc -o CMakeFiles/srsenb_phy.dir/txrx.cc.s
 
 # Object files for target srsenb_phy
 srsenb_phy_OBJECTS = \
@@ -170,9 +170,9 @@ srsenb/src/phy/libsrsenb_phy.a: srsenb/src/phy/CMakeFiles/srsenb_phy.dir/sf_work
 srsenb/src/phy/libsrsenb_phy.a: srsenb/src/phy/CMakeFiles/srsenb_phy.dir/txrx.cc.o
 srsenb/src/phy/libsrsenb_phy.a: srsenb/src/phy/CMakeFiles/srsenb_phy.dir/build.make
 srsenb/src/phy/libsrsenb_phy.a: srsenb/src/phy/CMakeFiles/srsenb_phy.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX static library libsrsenb_phy.a"
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/srsenb/src/phy && $(CMAKE_COMMAND) -P CMakeFiles/srsenb_phy.dir/cmake_clean_target.cmake
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/srsenb/src/phy && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/srsenb_phy.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/atm/Divya/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX static library libsrsenb_phy.a"
+	cd /home/atm/Divya/cmake-build-debug/srsenb/src/phy && $(CMAKE_COMMAND) -P CMakeFiles/srsenb_phy.dir/cmake_clean_target.cmake
+	cd /home/atm/Divya/cmake-build-debug/srsenb/src/phy && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/srsenb_phy.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 srsenb/src/phy/CMakeFiles/srsenb_phy.dir/build: srsenb/src/phy/libsrsenb_phy.a
@@ -180,10 +180,10 @@ srsenb/src/phy/CMakeFiles/srsenb_phy.dir/build: srsenb/src/phy/libsrsenb_phy.a
 .PHONY : srsenb/src/phy/CMakeFiles/srsenb_phy.dir/build
 
 srsenb/src/phy/CMakeFiles/srsenb_phy.dir/clean:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/srsenb/src/phy && $(CMAKE_COMMAND) -P CMakeFiles/srsenb_phy.dir/cmake_clean.cmake
+	cd /home/atm/Divya/cmake-build-debug/srsenb/src/phy && $(CMAKE_COMMAND) -P CMakeFiles/srsenb_phy.dir/cmake_clean.cmake
 .PHONY : srsenb/src/phy/CMakeFiles/srsenb_phy.dir/clean
 
 srsenb/src/phy/CMakeFiles/srsenb_phy.dir/depend:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/atm/Ayman/srsLTE_Slicing /home/atm/Ayman/srsLTE_Slicing/srsenb/src/phy /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/srsenb/src/phy /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/srsenb/src/phy/CMakeFiles/srsenb_phy.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/atm/Divya/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/atm/Divya /home/atm/Divya/srsenb/src/phy /home/atm/Divya/cmake-build-debug /home/atm/Divya/cmake-build-debug/srsenb/src/phy /home/atm/Divya/cmake-build-debug/srsenb/src/phy/CMakeFiles/srsenb_phy.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : srsenb/src/phy/CMakeFiles/srsenb_phy.dir/depend
 

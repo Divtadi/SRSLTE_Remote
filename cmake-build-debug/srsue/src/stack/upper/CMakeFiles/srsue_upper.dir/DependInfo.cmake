@@ -4,11 +4,12 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/atm/Ayman/srsLTE_Slicing/srsue/src/stack/upper/gw.cc" "/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/srsue/src/stack/upper/CMakeFiles/srsue_upper.dir/gw.cc.o"
-  "/home/atm/Ayman/srsLTE_Slicing/srsue/src/stack/upper/nas.cc" "/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/srsue/src/stack/upper/CMakeFiles/srsue_upper.dir/nas.cc.o"
-  "/home/atm/Ayman/srsLTE_Slicing/srsue/src/stack/upper/tft_packet_filter.cc" "/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/srsue/src/stack/upper/CMakeFiles/srsue_upper.dir/tft_packet_filter.cc.o"
-  "/home/atm/Ayman/srsLTE_Slicing/srsue/src/stack/upper/usim.cc" "/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/srsue/src/stack/upper/CMakeFiles/srsue_upper.dir/usim.cc.o"
-  "/home/atm/Ayman/srsLTE_Slicing/srsue/src/stack/upper/usim_base.cc" "/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/srsue/src/stack/upper/CMakeFiles/srsue_upper.dir/usim_base.cc.o"
+  "/home/atm/Divya/srsue/src/stack/upper/gw.cc" "/home/atm/Divya/cmake-build-debug/srsue/src/stack/upper/CMakeFiles/srsue_upper.dir/gw.cc.o"
+  "/home/atm/Divya/srsue/src/stack/upper/nas.cc" "/home/atm/Divya/cmake-build-debug/srsue/src/stack/upper/CMakeFiles/srsue_upper.dir/nas.cc.o"
+  "/home/atm/Divya/srsue/src/stack/upper/pcsc_usim.cc" "/home/atm/Divya/cmake-build-debug/srsue/src/stack/upper/CMakeFiles/srsue_upper.dir/pcsc_usim.cc.o"
+  "/home/atm/Divya/srsue/src/stack/upper/tft_packet_filter.cc" "/home/atm/Divya/cmake-build-debug/srsue/src/stack/upper/CMakeFiles/srsue_upper.dir/tft_packet_filter.cc.o"
+  "/home/atm/Divya/srsue/src/stack/upper/usim.cc" "/home/atm/Divya/cmake-build-debug/srsue/src/stack/upper/CMakeFiles/srsue_upper.dir/usim.cc.o"
+  "/home/atm/Divya/srsue/src/stack/upper/usim_base.cc" "/home/atm/Divya/cmake-build-debug/srsue/src/stack/upper/CMakeFiles/srsue_upper.dir/usim_base.cc.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -16,10 +17,12 @@ set(CMAKE_CXX_COMPILER_ID "GNU")
 set(CMAKE_TARGET_DEFINITIONS_CXX
   "ENABLE_TIMEPROF"
   "HAVE_MBEDTLS"
+  "HAVE_PCSC"
   )
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
+  "/usr/include/PCSC"
   "lib/include"
   "../lib/include"
   "../"

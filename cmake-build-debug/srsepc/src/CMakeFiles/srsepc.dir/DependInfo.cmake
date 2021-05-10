@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/atm/Ayman/srsLTE_Slicing/srsepc/src/main.cc" "/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/srsepc/src/CMakeFiles/srsepc.dir/main.cc.o"
+  "/home/atm/Divya/srsepc/src/main.cc" "/home/atm/Divya/cmake-build-debug/srsepc/src/CMakeFiles/srsepc.dir/main.cc.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -12,10 +12,12 @@ set(CMAKE_CXX_COMPILER_ID "GNU")
 set(CMAKE_TARGET_DEFINITIONS_CXX
   "ENABLE_TIMEPROF"
   "HAVE_MBEDTLS"
+  "HAVE_PCSC"
   )
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
+  "/usr/include/PCSC"
   "lib/include"
   "../lib/include"
   "../"
@@ -23,15 +25,15 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/srsepc/src/mme/CMakeFiles/srsepc_mme.dir/DependInfo.cmake"
-  "/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/srsepc/src/hss/CMakeFiles/srsepc_hss.dir/DependInfo.cmake"
-  "/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/srsepc/src/spgw/CMakeFiles/srsepc_sgw.dir/DependInfo.cmake"
-  "/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/asn1/CMakeFiles/s1ap_asn1.dir/DependInfo.cmake"
-  "/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/upper/CMakeFiles/srslte_upper.dir/DependInfo.cmake"
-  "/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/common/CMakeFiles/srslte_common.dir/DependInfo.cmake"
-  "/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/asn1/CMakeFiles/asn1_utils.dir/DependInfo.cmake"
-  "/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/phy/CMakeFiles/srslte_phy.dir/DependInfo.cmake"
-  "/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/asn1/CMakeFiles/srslte_asn1.dir/DependInfo.cmake"
+  "/home/atm/Divya/cmake-build-debug/srsepc/src/mme/CMakeFiles/srsepc_mme.dir/DependInfo.cmake"
+  "/home/atm/Divya/cmake-build-debug/srsepc/src/hss/CMakeFiles/srsepc_hss.dir/DependInfo.cmake"
+  "/home/atm/Divya/cmake-build-debug/srsepc/src/spgw/CMakeFiles/srsepc_sgw.dir/DependInfo.cmake"
+  "/home/atm/Divya/cmake-build-debug/lib/src/asn1/CMakeFiles/s1ap_asn1.dir/DependInfo.cmake"
+  "/home/atm/Divya/cmake-build-debug/lib/src/upper/CMakeFiles/srslte_upper.dir/DependInfo.cmake"
+  "/home/atm/Divya/cmake-build-debug/lib/src/common/CMakeFiles/srslte_common.dir/DependInfo.cmake"
+  "/home/atm/Divya/cmake-build-debug/lib/src/asn1/CMakeFiles/asn1_utils.dir/DependInfo.cmake"
+  "/home/atm/Divya/cmake-build-debug/lib/src/phy/CMakeFiles/srslte_phy.dir/DependInfo.cmake"
+  "/home/atm/Divya/cmake-build-debug/lib/src/asn1/CMakeFiles/srslte_asn1.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

@@ -4,11 +4,11 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/home/atm/Ayman/srsLTE_Slicing/lib/src/phy/io/binsource.c" "/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/phy/io/CMakeFiles/srslte_io.dir/binsource.c.o"
-  "/home/atm/Ayman/srsLTE_Slicing/lib/src/phy/io/filesink.c" "/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/phy/io/CMakeFiles/srslte_io.dir/filesink.c.o"
-  "/home/atm/Ayman/srsLTE_Slicing/lib/src/phy/io/filesource.c" "/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/phy/io/CMakeFiles/srslte_io.dir/filesource.c.o"
-  "/home/atm/Ayman/srsLTE_Slicing/lib/src/phy/io/netsink.c" "/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/phy/io/CMakeFiles/srslte_io.dir/netsink.c.o"
-  "/home/atm/Ayman/srsLTE_Slicing/lib/src/phy/io/netsource.c" "/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/phy/io/CMakeFiles/srslte_io.dir/netsource.c.o"
+  "/home/atm/Divya/lib/src/phy/io/binsource.c" "/home/atm/Divya/cmake-build-debug/lib/src/phy/io/CMakeFiles/srslte_io.dir/binsource.c.o"
+  "/home/atm/Divya/lib/src/phy/io/filesink.c" "/home/atm/Divya/cmake-build-debug/lib/src/phy/io/CMakeFiles/srslte_io.dir/filesink.c.o"
+  "/home/atm/Divya/lib/src/phy/io/filesource.c" "/home/atm/Divya/cmake-build-debug/lib/src/phy/io/CMakeFiles/srslte_io.dir/filesource.c.o"
+  "/home/atm/Divya/lib/src/phy/io/netsink.c" "/home/atm/Divya/cmake-build-debug/lib/src/phy/io/CMakeFiles/srslte_io.dir/netsink.c.o"
+  "/home/atm/Divya/lib/src/phy/io/netsource.c" "/home/atm/Divya/cmake-build-debug/lib/src/phy/io/CMakeFiles/srslte_io.dir/netsource.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 
@@ -16,10 +16,12 @@ set(CMAKE_C_COMPILER_ID "GNU")
 set(CMAKE_TARGET_DEFINITIONS_C
   "ENABLE_TIMEPROF"
   "HAVE_MBEDTLS"
+  "HAVE_PCSC"
   )
 
 # The include file search paths:
 set(CMAKE_C_TARGET_INCLUDE_PATH
+  "/usr/include/PCSC"
   "lib/include"
   "../lib/include"
   )

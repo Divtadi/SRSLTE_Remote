@@ -1,4 +1,4 @@
-# Install script for directory: /home/atm/Ayman/srsLTE_Slicing/lib/include/srslte
+# Install script for directory: /home/atm/Divya/lib/include/srslte
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -38,6 +38,6 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/srslte" TYPE FILE FILES "/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/include/srslte/version.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/srslte" TYPE FILE FILES "/home/atm/Divya/cmake-build-debug/lib/include/srslte/version.h")
 endif()
 

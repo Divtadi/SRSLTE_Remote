@@ -4,20 +4,20 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/home/atm/Ayman/srsLTE_Slicing/lib/src/phy/sync/cfo.c" "/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/phy/sync/CMakeFiles/srslte_sync.dir/cfo.c.o"
-  "/home/atm/Ayman/srsLTE_Slicing/lib/src/phy/sync/cp.c" "/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/phy/sync/CMakeFiles/srslte_sync.dir/cp.c.o"
-  "/home/atm/Ayman/srsLTE_Slicing/lib/src/phy/sync/find_sss.c" "/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/phy/sync/CMakeFiles/srslte_sync.dir/find_sss.c.o"
-  "/home/atm/Ayman/srsLTE_Slicing/lib/src/phy/sync/gen_sss.c" "/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/phy/sync/CMakeFiles/srslte_sync.dir/gen_sss.c.o"
-  "/home/atm/Ayman/srsLTE_Slicing/lib/src/phy/sync/npss.c" "/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/phy/sync/CMakeFiles/srslte_sync.dir/npss.c.o"
-  "/home/atm/Ayman/srsLTE_Slicing/lib/src/phy/sync/nsss.c" "/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/phy/sync/CMakeFiles/srslte_sync.dir/nsss.c.o"
-  "/home/atm/Ayman/srsLTE_Slicing/lib/src/phy/sync/pss.c" "/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/phy/sync/CMakeFiles/srslte_sync.dir/pss.c.o"
-  "/home/atm/Ayman/srsLTE_Slicing/lib/src/phy/sync/psss.c" "/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/phy/sync/CMakeFiles/srslte_sync.dir/psss.c.o"
-  "/home/atm/Ayman/srsLTE_Slicing/lib/src/phy/sync/refsignal_dl_sync.c" "/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/phy/sync/CMakeFiles/srslte_sync.dir/refsignal_dl_sync.c.o"
-  "/home/atm/Ayman/srsLTE_Slicing/lib/src/phy/sync/sfo.c" "/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/phy/sync/CMakeFiles/srslte_sync.dir/sfo.c.o"
-  "/home/atm/Ayman/srsLTE_Slicing/lib/src/phy/sync/sss.c" "/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/phy/sync/CMakeFiles/srslte_sync.dir/sss.c.o"
-  "/home/atm/Ayman/srsLTE_Slicing/lib/src/phy/sync/ssss.c" "/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/phy/sync/CMakeFiles/srslte_sync.dir/ssss.c.o"
-  "/home/atm/Ayman/srsLTE_Slicing/lib/src/phy/sync/sync.c" "/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/phy/sync/CMakeFiles/srslte_sync.dir/sync.c.o"
-  "/home/atm/Ayman/srsLTE_Slicing/lib/src/phy/sync/sync_nbiot.c" "/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/phy/sync/CMakeFiles/srslte_sync.dir/sync_nbiot.c.o"
+  "/home/atm/Divya/lib/src/phy/sync/cfo.c" "/home/atm/Divya/cmake-build-debug/lib/src/phy/sync/CMakeFiles/srslte_sync.dir/cfo.c.o"
+  "/home/atm/Divya/lib/src/phy/sync/cp.c" "/home/atm/Divya/cmake-build-debug/lib/src/phy/sync/CMakeFiles/srslte_sync.dir/cp.c.o"
+  "/home/atm/Divya/lib/src/phy/sync/find_sss.c" "/home/atm/Divya/cmake-build-debug/lib/src/phy/sync/CMakeFiles/srslte_sync.dir/find_sss.c.o"
+  "/home/atm/Divya/lib/src/phy/sync/gen_sss.c" "/home/atm/Divya/cmake-build-debug/lib/src/phy/sync/CMakeFiles/srslte_sync.dir/gen_sss.c.o"
+  "/home/atm/Divya/lib/src/phy/sync/npss.c" "/home/atm/Divya/cmake-build-debug/lib/src/phy/sync/CMakeFiles/srslte_sync.dir/npss.c.o"
+  "/home/atm/Divya/lib/src/phy/sync/nsss.c" "/home/atm/Divya/cmake-build-debug/lib/src/phy/sync/CMakeFiles/srslte_sync.dir/nsss.c.o"
+  "/home/atm/Divya/lib/src/phy/sync/pss.c" "/home/atm/Divya/cmake-build-debug/lib/src/phy/sync/CMakeFiles/srslte_sync.dir/pss.c.o"
+  "/home/atm/Divya/lib/src/phy/sync/psss.c" "/home/atm/Divya/cmake-build-debug/lib/src/phy/sync/CMakeFiles/srslte_sync.dir/psss.c.o"
+  "/home/atm/Divya/lib/src/phy/sync/refsignal_dl_sync.c" "/home/atm/Divya/cmake-build-debug/lib/src/phy/sync/CMakeFiles/srslte_sync.dir/refsignal_dl_sync.c.o"
+  "/home/atm/Divya/lib/src/phy/sync/sfo.c" "/home/atm/Divya/cmake-build-debug/lib/src/phy/sync/CMakeFiles/srslte_sync.dir/sfo.c.o"
+  "/home/atm/Divya/lib/src/phy/sync/sss.c" "/home/atm/Divya/cmake-build-debug/lib/src/phy/sync/CMakeFiles/srslte_sync.dir/sss.c.o"
+  "/home/atm/Divya/lib/src/phy/sync/ssss.c" "/home/atm/Divya/cmake-build-debug/lib/src/phy/sync/CMakeFiles/srslte_sync.dir/ssss.c.o"
+  "/home/atm/Divya/lib/src/phy/sync/sync.c" "/home/atm/Divya/cmake-build-debug/lib/src/phy/sync/CMakeFiles/srslte_sync.dir/sync.c.o"
+  "/home/atm/Divya/lib/src/phy/sync/sync_nbiot.c" "/home/atm/Divya/cmake-build-debug/lib/src/phy/sync/CMakeFiles/srslte_sync.dir/sync_nbiot.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 
@@ -25,10 +25,12 @@ set(CMAKE_C_COMPILER_ID "GNU")
 set(CMAKE_TARGET_DEFINITIONS_C
   "ENABLE_TIMEPROF"
   "HAVE_MBEDTLS"
+  "HAVE_PCSC"
   )
 
 # The include file search paths:
 set(CMAKE_C_TARGET_INCLUDE_PATH
+  "/usr/include/PCSC"
   "lib/include"
   "../lib/include"
   )

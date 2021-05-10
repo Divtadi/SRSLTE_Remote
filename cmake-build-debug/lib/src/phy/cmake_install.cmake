@@ -1,4 +1,4 @@
-# Install script for directory: /home/atm/Ayman/srsLTE_Slicing/lib/src/phy
+# Install script for directory: /home/atm/Divya/lib/src/phy
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,23 +39,23 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/phy/agc/cmake_install.cmake")
-  include("/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/phy/ch_estimation/cmake_install.cmake")
-  include("/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/phy/common/cmake_install.cmake")
-  include("/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/phy/fec/cmake_install.cmake")
-  include("/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/phy/mimo/cmake_install.cmake")
-  include("/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/phy/phch/cmake_install.cmake")
-  include("/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/phy/rf/cmake_install.cmake")
-  include("/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/phy/sync/cmake_install.cmake")
-  include("/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/phy/utils/cmake_install.cmake")
-  include("/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/phy/channel/cmake_install.cmake")
-  include("/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/phy/dft/cmake_install.cmake")
-  include("/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/phy/io/cmake_install.cmake")
-  include("/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/phy/modem/cmake_install.cmake")
-  include("/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/phy/resampling/cmake_install.cmake")
-  include("/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/phy/scrambling/cmake_install.cmake")
-  include("/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/phy/ue/cmake_install.cmake")
-  include("/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/phy/enb/cmake_install.cmake")
+  include("/home/atm/Divya/cmake-build-debug/lib/src/phy/agc/cmake_install.cmake")
+  include("/home/atm/Divya/cmake-build-debug/lib/src/phy/ch_estimation/cmake_install.cmake")
+  include("/home/atm/Divya/cmake-build-debug/lib/src/phy/common/cmake_install.cmake")
+  include("/home/atm/Divya/cmake-build-debug/lib/src/phy/fec/cmake_install.cmake")
+  include("/home/atm/Divya/cmake-build-debug/lib/src/phy/mimo/cmake_install.cmake")
+  include("/home/atm/Divya/cmake-build-debug/lib/src/phy/phch/cmake_install.cmake")
+  include("/home/atm/Divya/cmake-build-debug/lib/src/phy/rf/cmake_install.cmake")
+  include("/home/atm/Divya/cmake-build-debug/lib/src/phy/sync/cmake_install.cmake")
+  include("/home/atm/Divya/cmake-build-debug/lib/src/phy/utils/cmake_install.cmake")
+  include("/home/atm/Divya/cmake-build-debug/lib/src/phy/channel/cmake_install.cmake")
+  include("/home/atm/Divya/cmake-build-debug/lib/src/phy/dft/cmake_install.cmake")
+  include("/home/atm/Divya/cmake-build-debug/lib/src/phy/io/cmake_install.cmake")
+  include("/home/atm/Divya/cmake-build-debug/lib/src/phy/modem/cmake_install.cmake")
+  include("/home/atm/Divya/cmake-build-debug/lib/src/phy/resampling/cmake_install.cmake")
+  include("/home/atm/Divya/cmake-build-debug/lib/src/phy/scrambling/cmake_install.cmake")
+  include("/home/atm/Divya/cmake-build-debug/lib/src/phy/ue/cmake_install.cmake")
+  include("/home/atm/Divya/cmake-build-debug/lib/src/phy/enb/cmake_install.cmake")
 
 endif()
 

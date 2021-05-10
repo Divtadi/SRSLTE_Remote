@@ -4,9 +4,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/atm/Ayman/srsLTE_Slicing/srsepc/src/spgw/gtpc.cc" "/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/srsepc/src/spgw/CMakeFiles/srsepc_sgw.dir/gtpc.cc.o"
-  "/home/atm/Ayman/srsLTE_Slicing/srsepc/src/spgw/gtpu.cc" "/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/srsepc/src/spgw/CMakeFiles/srsepc_sgw.dir/gtpu.cc.o"
-  "/home/atm/Ayman/srsLTE_Slicing/srsepc/src/spgw/spgw.cc" "/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/srsepc/src/spgw/CMakeFiles/srsepc_sgw.dir/spgw.cc.o"
+  "/home/atm/Divya/srsepc/src/spgw/gtpc.cc" "/home/atm/Divya/cmake-build-debug/srsepc/src/spgw/CMakeFiles/srsepc_sgw.dir/gtpc.cc.o"
+  "/home/atm/Divya/srsepc/src/spgw/gtpu.cc" "/home/atm/Divya/cmake-build-debug/srsepc/src/spgw/CMakeFiles/srsepc_sgw.dir/gtpu.cc.o"
+  "/home/atm/Divya/srsepc/src/spgw/spgw.cc" "/home/atm/Divya/cmake-build-debug/srsepc/src/spgw/CMakeFiles/srsepc_sgw.dir/spgw.cc.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -14,10 +14,12 @@ set(CMAKE_CXX_COMPILER_ID "GNU")
 set(CMAKE_TARGET_DEFINITIONS_CXX
   "ENABLE_TIMEPROF"
   "HAVE_MBEDTLS"
+  "HAVE_PCSC"
   )
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
+  "/usr/include/PCSC"
   "lib/include"
   "../lib/include"
   "../"

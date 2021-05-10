@@ -5,12 +5,12 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/home/atm/Ayman/srsLTE_Slicing/lib/src/phy/channel/ch_awgn.c" "/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/phy/channel/CMakeFiles/srslte_channel.dir/ch_awgn.c.o"
-  "/home/atm/Ayman/srsLTE_Slicing/lib/src/phy/channel/delay.c" "/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/phy/channel/CMakeFiles/srslte_channel.dir/delay.c.o"
-  "/home/atm/Ayman/srsLTE_Slicing/lib/src/phy/channel/fading.c" "/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/phy/channel/CMakeFiles/srslte_channel.dir/fading.c.o"
-  "/home/atm/Ayman/srsLTE_Slicing/lib/src/phy/channel/gauss.c" "/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/phy/channel/CMakeFiles/srslte_channel.dir/gauss.c.o"
-  "/home/atm/Ayman/srsLTE_Slicing/lib/src/phy/channel/hst.c" "/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/phy/channel/CMakeFiles/srslte_channel.dir/hst.c.o"
-  "/home/atm/Ayman/srsLTE_Slicing/lib/src/phy/channel/rlf.c" "/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/phy/channel/CMakeFiles/srslte_channel.dir/rlf.c.o"
+  "/home/atm/Divya/lib/src/phy/channel/ch_awgn.c" "/home/atm/Divya/cmake-build-debug/lib/src/phy/channel/CMakeFiles/srslte_channel.dir/ch_awgn.c.o"
+  "/home/atm/Divya/lib/src/phy/channel/delay.c" "/home/atm/Divya/cmake-build-debug/lib/src/phy/channel/CMakeFiles/srslte_channel.dir/delay.c.o"
+  "/home/atm/Divya/lib/src/phy/channel/fading.c" "/home/atm/Divya/cmake-build-debug/lib/src/phy/channel/CMakeFiles/srslte_channel.dir/fading.c.o"
+  "/home/atm/Divya/lib/src/phy/channel/gauss.c" "/home/atm/Divya/cmake-build-debug/lib/src/phy/channel/CMakeFiles/srslte_channel.dir/gauss.c.o"
+  "/home/atm/Divya/lib/src/phy/channel/hst.c" "/home/atm/Divya/cmake-build-debug/lib/src/phy/channel/CMakeFiles/srslte_channel.dir/hst.c.o"
+  "/home/atm/Divya/lib/src/phy/channel/rlf.c" "/home/atm/Divya/cmake-build-debug/lib/src/phy/channel/CMakeFiles/srslte_channel.dir/rlf.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 
@@ -18,15 +18,17 @@ set(CMAKE_C_COMPILER_ID "GNU")
 set(CMAKE_TARGET_DEFINITIONS_C
   "ENABLE_TIMEPROF"
   "HAVE_MBEDTLS"
+  "HAVE_PCSC"
   )
 
 # The include file search paths:
 set(CMAKE_C_TARGET_INCLUDE_PATH
+  "/usr/include/PCSC"
   "lib/include"
   "../lib/include"
   )
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/atm/Ayman/srsLTE_Slicing/lib/src/phy/channel/channel.cc" "/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/phy/channel/CMakeFiles/srslte_channel.dir/channel.cc.o"
+  "/home/atm/Divya/lib/src/phy/channel/channel.cc" "/home/atm/Divya/cmake-build-debug/lib/src/phy/channel/CMakeFiles/srslte_channel.dir/channel.cc.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -34,10 +36,12 @@ set(CMAKE_CXX_COMPILER_ID "GNU")
 set(CMAKE_TARGET_DEFINITIONS_CXX
   "ENABLE_TIMEPROF"
   "HAVE_MBEDTLS"
+  "HAVE_PCSC"
   )
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
+  "/usr/include/PCSC"
   "lib/include"
   "../lib/include"
   )

@@ -48,10 +48,10 @@ RM = /opt/clion-2020.1.2/bin/cmake/linux/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/atm/Ayman/srsLTE_Slicing
+CMAKE_SOURCE_DIR = /home/atm/Divya
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug
+CMAKE_BINARY_DIR = /home/atm/Divya/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -127,7 +127,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target package_source
 package_source:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool for source..."
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && /opt/clion-2020.1.2/bin/cmake/linux/bin/cpack --config ./CPackSourceConfig.cmake /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/CPackSourceConfig.cmake
+	cd /home/atm/Divya/cmake-build-debug && /opt/clion-2020.1.2/bin/cmake/linux/bin/cpack --config ./CPackSourceConfig.cmake /home/atm/Divya/cmake-build-debug/CPackSourceConfig.cmake
 .PHONY : package_source
 
 # Special rule for the target package_source
@@ -138,7 +138,7 @@ package_source/fast: package_source
 # Special rule for the target package
 package: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool..."
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && /opt/clion-2020.1.2/bin/cmake/linux/bin/cpack --config ./CPackConfig.cmake
+	cd /home/atm/Divya/cmake-build-debug && /opt/clion-2020.1.2/bin/cmake/linux/bin/cpack --config ./CPackConfig.cmake
 .PHONY : package
 
 # Special rule for the target package
@@ -159,14 +159,14 @@ test/fast: test
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_progress_start /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/CMakeFiles /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/phy/phch/CMakeFiles/progress.marks
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 lib/src/phy/phch/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/CMakeFiles 0
+	cd /home/atm/Divya/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_progress_start /home/atm/Divya/cmake-build-debug/CMakeFiles /home/atm/Divya/cmake-build-debug/lib/src/phy/phch/CMakeFiles/progress.marks
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 lib/src/phy/phch/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/atm/Divya/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 lib/src/phy/phch/clean
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 lib/src/phy/phch/clean
 .PHONY : clean
 
 # The main clean target
@@ -176,22 +176,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: cmake_check_build_system
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 lib/src/phy/phch/preinstall
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 lib/src/phy/phch/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 lib/src/phy/phch/preinstall
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 lib/src/phy/phch/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/atm/Divya/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 lib/src/phy/phch/CMakeFiles/srslte_phch.dir/rule:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 lib/src/phy/phch/CMakeFiles/srslte_phch.dir/rule
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 lib/src/phy/phch/CMakeFiles/srslte_phch.dir/rule
 .PHONY : lib/src/phy/phch/CMakeFiles/srslte_phch.dir/rule
 
 # Convenience name for target.
@@ -201,7 +201,7 @@ srslte_phch: lib/src/phy/phch/CMakeFiles/srslte_phch.dir/rule
 
 # fast build rule for target.
 srslte_phch/fast:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build
 .PHONY : srslte_phch/fast
 
 cqi.o: cqi.c.o
@@ -210,7 +210,7 @@ cqi.o: cqi.c.o
 
 # target to build an object file
 cqi.c.o:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/cqi.c.o
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/cqi.c.o
 .PHONY : cqi.c.o
 
 cqi.i: cqi.c.i
@@ -219,7 +219,7 @@ cqi.i: cqi.c.i
 
 # target to preprocess a source file
 cqi.c.i:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/cqi.c.i
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/cqi.c.i
 .PHONY : cqi.c.i
 
 cqi.s: cqi.c.s
@@ -228,7 +228,7 @@ cqi.s: cqi.c.s
 
 # target to generate assembly for a file
 cqi.c.s:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/cqi.c.s
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/cqi.c.s
 .PHONY : cqi.c.s
 
 dci.o: dci.c.o
@@ -237,7 +237,7 @@ dci.o: dci.c.o
 
 # target to build an object file
 dci.c.o:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/dci.c.o
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/dci.c.o
 .PHONY : dci.c.o
 
 dci.i: dci.c.i
@@ -246,7 +246,7 @@ dci.i: dci.c.i
 
 # target to preprocess a source file
 dci.c.i:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/dci.c.i
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/dci.c.i
 .PHONY : dci.c.i
 
 dci.s: dci.c.s
@@ -255,7 +255,7 @@ dci.s: dci.c.s
 
 # target to generate assembly for a file
 dci.c.s:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/dci.c.s
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/dci.c.s
 .PHONY : dci.c.s
 
 dci_nbiot.o: dci_nbiot.c.o
@@ -264,7 +264,7 @@ dci_nbiot.o: dci_nbiot.c.o
 
 # target to build an object file
 dci_nbiot.c.o:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/dci_nbiot.c.o
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/dci_nbiot.c.o
 .PHONY : dci_nbiot.c.o
 
 dci_nbiot.i: dci_nbiot.c.i
@@ -273,7 +273,7 @@ dci_nbiot.i: dci_nbiot.c.i
 
 # target to preprocess a source file
 dci_nbiot.c.i:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/dci_nbiot.c.i
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/dci_nbiot.c.i
 .PHONY : dci_nbiot.c.i
 
 dci_nbiot.s: dci_nbiot.c.s
@@ -282,7 +282,7 @@ dci_nbiot.s: dci_nbiot.c.s
 
 # target to generate assembly for a file
 dci_nbiot.c.s:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/dci_nbiot.c.s
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/dci_nbiot.c.s
 .PHONY : dci_nbiot.c.s
 
 mib_sl.o: mib_sl.c.o
@@ -291,7 +291,7 @@ mib_sl.o: mib_sl.c.o
 
 # target to build an object file
 mib_sl.c.o:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/mib_sl.c.o
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/mib_sl.c.o
 .PHONY : mib_sl.c.o
 
 mib_sl.i: mib_sl.c.i
@@ -300,7 +300,7 @@ mib_sl.i: mib_sl.c.i
 
 # target to preprocess a source file
 mib_sl.c.i:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/mib_sl.c.i
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/mib_sl.c.i
 .PHONY : mib_sl.c.i
 
 mib_sl.s: mib_sl.c.s
@@ -309,7 +309,7 @@ mib_sl.s: mib_sl.c.s
 
 # target to generate assembly for a file
 mib_sl.c.s:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/mib_sl.c.s
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/mib_sl.c.s
 .PHONY : mib_sl.c.s
 
 npbch.o: npbch.c.o
@@ -318,7 +318,7 @@ npbch.o: npbch.c.o
 
 # target to build an object file
 npbch.c.o:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/npbch.c.o
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/npbch.c.o
 .PHONY : npbch.c.o
 
 npbch.i: npbch.c.i
@@ -327,7 +327,7 @@ npbch.i: npbch.c.i
 
 # target to preprocess a source file
 npbch.c.i:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/npbch.c.i
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/npbch.c.i
 .PHONY : npbch.c.i
 
 npbch.s: npbch.c.s
@@ -336,7 +336,7 @@ npbch.s: npbch.c.s
 
 # target to generate assembly for a file
 npbch.c.s:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/npbch.c.s
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/npbch.c.s
 .PHONY : npbch.c.s
 
 npdcch.o: npdcch.c.o
@@ -345,7 +345,7 @@ npdcch.o: npdcch.c.o
 
 # target to build an object file
 npdcch.c.o:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/npdcch.c.o
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/npdcch.c.o
 .PHONY : npdcch.c.o
 
 npdcch.i: npdcch.c.i
@@ -354,7 +354,7 @@ npdcch.i: npdcch.c.i
 
 # target to preprocess a source file
 npdcch.c.i:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/npdcch.c.i
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/npdcch.c.i
 .PHONY : npdcch.c.i
 
 npdcch.s: npdcch.c.s
@@ -363,7 +363,7 @@ npdcch.s: npdcch.c.s
 
 # target to generate assembly for a file
 npdcch.c.s:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/npdcch.c.s
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/npdcch.c.s
 .PHONY : npdcch.c.s
 
 npdsch.o: npdsch.c.o
@@ -372,7 +372,7 @@ npdsch.o: npdsch.c.o
 
 # target to build an object file
 npdsch.c.o:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/npdsch.c.o
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/npdsch.c.o
 .PHONY : npdsch.c.o
 
 npdsch.i: npdsch.c.i
@@ -381,7 +381,7 @@ npdsch.i: npdsch.c.i
 
 # target to preprocess a source file
 npdsch.c.i:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/npdsch.c.i
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/npdsch.c.i
 .PHONY : npdsch.c.i
 
 npdsch.s: npdsch.c.s
@@ -390,7 +390,7 @@ npdsch.s: npdsch.c.s
 
 # target to generate assembly for a file
 npdsch.c.s:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/npdsch.c.s
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/npdsch.c.s
 .PHONY : npdsch.c.s
 
 pbch.o: pbch.c.o
@@ -399,7 +399,7 @@ pbch.o: pbch.c.o
 
 # target to build an object file
 pbch.c.o:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/pbch.c.o
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/pbch.c.o
 .PHONY : pbch.c.o
 
 pbch.i: pbch.c.i
@@ -408,7 +408,7 @@ pbch.i: pbch.c.i
 
 # target to preprocess a source file
 pbch.c.i:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/pbch.c.i
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/pbch.c.i
 .PHONY : pbch.c.i
 
 pbch.s: pbch.c.s
@@ -417,7 +417,7 @@ pbch.s: pbch.c.s
 
 # target to generate assembly for a file
 pbch.c.s:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/pbch.c.s
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/pbch.c.s
 .PHONY : pbch.c.s
 
 pcfich.o: pcfich.c.o
@@ -426,7 +426,7 @@ pcfich.o: pcfich.c.o
 
 # target to build an object file
 pcfich.c.o:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/pcfich.c.o
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/pcfich.c.o
 .PHONY : pcfich.c.o
 
 pcfich.i: pcfich.c.i
@@ -435,7 +435,7 @@ pcfich.i: pcfich.c.i
 
 # target to preprocess a source file
 pcfich.c.i:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/pcfich.c.i
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/pcfich.c.i
 .PHONY : pcfich.c.i
 
 pcfich.s: pcfich.c.s
@@ -444,7 +444,7 @@ pcfich.s: pcfich.c.s
 
 # target to generate assembly for a file
 pcfich.c.s:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/pcfich.c.s
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/pcfich.c.s
 .PHONY : pcfich.c.s
 
 pdcch.o: pdcch.c.o
@@ -453,7 +453,7 @@ pdcch.o: pdcch.c.o
 
 # target to build an object file
 pdcch.c.o:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/pdcch.c.o
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/pdcch.c.o
 .PHONY : pdcch.c.o
 
 pdcch.i: pdcch.c.i
@@ -462,7 +462,7 @@ pdcch.i: pdcch.c.i
 
 # target to preprocess a source file
 pdcch.c.i:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/pdcch.c.i
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/pdcch.c.i
 .PHONY : pdcch.c.i
 
 pdcch.s: pdcch.c.s
@@ -471,7 +471,7 @@ pdcch.s: pdcch.c.s
 
 # target to generate assembly for a file
 pdcch.c.s:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/pdcch.c.s
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/pdcch.c.s
 .PHONY : pdcch.c.s
 
 pdsch.o: pdsch.c.o
@@ -480,7 +480,7 @@ pdsch.o: pdsch.c.o
 
 # target to build an object file
 pdsch.c.o:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/pdsch.c.o
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/pdsch.c.o
 .PHONY : pdsch.c.o
 
 pdsch.i: pdsch.c.i
@@ -489,7 +489,7 @@ pdsch.i: pdsch.c.i
 
 # target to preprocess a source file
 pdsch.c.i:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/pdsch.c.i
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/pdsch.c.i
 .PHONY : pdsch.c.i
 
 pdsch.s: pdsch.c.s
@@ -498,7 +498,7 @@ pdsch.s: pdsch.c.s
 
 # target to generate assembly for a file
 pdsch.c.s:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/pdsch.c.s
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/pdsch.c.s
 .PHONY : pdsch.c.s
 
 phich.o: phich.c.o
@@ -507,7 +507,7 @@ phich.o: phich.c.o
 
 # target to build an object file
 phich.c.o:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/phich.c.o
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/phich.c.o
 .PHONY : phich.c.o
 
 phich.i: phich.c.i
@@ -516,7 +516,7 @@ phich.i: phich.c.i
 
 # target to preprocess a source file
 phich.c.i:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/phich.c.i
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/phich.c.i
 .PHONY : phich.c.i
 
 phich.s: phich.c.s
@@ -525,7 +525,7 @@ phich.s: phich.c.s
 
 # target to generate assembly for a file
 phich.c.s:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/phich.c.s
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/phich.c.s
 .PHONY : phich.c.s
 
 pmch.o: pmch.c.o
@@ -534,7 +534,7 @@ pmch.o: pmch.c.o
 
 # target to build an object file
 pmch.c.o:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/pmch.c.o
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/pmch.c.o
 .PHONY : pmch.c.o
 
 pmch.i: pmch.c.i
@@ -543,7 +543,7 @@ pmch.i: pmch.c.i
 
 # target to preprocess a source file
 pmch.c.i:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/pmch.c.i
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/pmch.c.i
 .PHONY : pmch.c.i
 
 pmch.s: pmch.c.s
@@ -552,7 +552,7 @@ pmch.s: pmch.c.s
 
 # target to generate assembly for a file
 pmch.c.s:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/pmch.c.s
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/pmch.c.s
 .PHONY : pmch.c.s
 
 prach.o: prach.c.o
@@ -561,7 +561,7 @@ prach.o: prach.c.o
 
 # target to build an object file
 prach.c.o:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/prach.c.o
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/prach.c.o
 .PHONY : prach.c.o
 
 prach.i: prach.c.i
@@ -570,7 +570,7 @@ prach.i: prach.c.i
 
 # target to preprocess a source file
 prach.c.i:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/prach.c.i
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/prach.c.i
 .PHONY : prach.c.i
 
 prach.s: prach.c.s
@@ -579,7 +579,7 @@ prach.s: prach.c.s
 
 # target to generate assembly for a file
 prach.c.s:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/prach.c.s
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/prach.c.s
 .PHONY : prach.c.s
 
 prb_dl.o: prb_dl.c.o
@@ -588,7 +588,7 @@ prb_dl.o: prb_dl.c.o
 
 # target to build an object file
 prb_dl.c.o:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/prb_dl.c.o
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/prb_dl.c.o
 .PHONY : prb_dl.c.o
 
 prb_dl.i: prb_dl.c.i
@@ -597,7 +597,7 @@ prb_dl.i: prb_dl.c.i
 
 # target to preprocess a source file
 prb_dl.c.i:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/prb_dl.c.i
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/prb_dl.c.i
 .PHONY : prb_dl.c.i
 
 prb_dl.s: prb_dl.c.s
@@ -606,7 +606,7 @@ prb_dl.s: prb_dl.c.s
 
 # target to generate assembly for a file
 prb_dl.c.s:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/prb_dl.c.s
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/prb_dl.c.s
 .PHONY : prb_dl.c.s
 
 psbch.o: psbch.c.o
@@ -615,7 +615,7 @@ psbch.o: psbch.c.o
 
 # target to build an object file
 psbch.c.o:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/psbch.c.o
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/psbch.c.o
 .PHONY : psbch.c.o
 
 psbch.i: psbch.c.i
@@ -624,7 +624,7 @@ psbch.i: psbch.c.i
 
 # target to preprocess a source file
 psbch.c.i:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/psbch.c.i
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/psbch.c.i
 .PHONY : psbch.c.i
 
 psbch.s: psbch.c.s
@@ -633,7 +633,7 @@ psbch.s: psbch.c.s
 
 # target to generate assembly for a file
 psbch.c.s:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/psbch.c.s
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/psbch.c.s
 .PHONY : psbch.c.s
 
 pscch.o: pscch.c.o
@@ -642,7 +642,7 @@ pscch.o: pscch.c.o
 
 # target to build an object file
 pscch.c.o:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/pscch.c.o
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/pscch.c.o
 .PHONY : pscch.c.o
 
 pscch.i: pscch.c.i
@@ -651,7 +651,7 @@ pscch.i: pscch.c.i
 
 # target to preprocess a source file
 pscch.c.i:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/pscch.c.i
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/pscch.c.i
 .PHONY : pscch.c.i
 
 pscch.s: pscch.c.s
@@ -660,7 +660,7 @@ pscch.s: pscch.c.s
 
 # target to generate assembly for a file
 pscch.c.s:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/pscch.c.s
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/pscch.c.s
 .PHONY : pscch.c.s
 
 pssch.o: pssch.c.o
@@ -669,7 +669,7 @@ pssch.o: pssch.c.o
 
 # target to build an object file
 pssch.c.o:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/pssch.c.o
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/pssch.c.o
 .PHONY : pssch.c.o
 
 pssch.i: pssch.c.i
@@ -678,7 +678,7 @@ pssch.i: pssch.c.i
 
 # target to preprocess a source file
 pssch.c.i:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/pssch.c.i
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/pssch.c.i
 .PHONY : pssch.c.i
 
 pssch.s: pssch.c.s
@@ -687,7 +687,7 @@ pssch.s: pssch.c.s
 
 # target to generate assembly for a file
 pssch.c.s:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/pssch.c.s
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/pssch.c.s
 .PHONY : pssch.c.s
 
 pucch.o: pucch.c.o
@@ -696,7 +696,7 @@ pucch.o: pucch.c.o
 
 # target to build an object file
 pucch.c.o:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/pucch.c.o
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/pucch.c.o
 .PHONY : pucch.c.o
 
 pucch.i: pucch.c.i
@@ -705,7 +705,7 @@ pucch.i: pucch.c.i
 
 # target to preprocess a source file
 pucch.c.i:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/pucch.c.i
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/pucch.c.i
 .PHONY : pucch.c.i
 
 pucch.s: pucch.c.s
@@ -714,7 +714,7 @@ pucch.s: pucch.c.s
 
 # target to generate assembly for a file
 pucch.c.s:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/pucch.c.s
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/pucch.c.s
 .PHONY : pucch.c.s
 
 pucch_proc.o: pucch_proc.c.o
@@ -723,7 +723,7 @@ pucch_proc.o: pucch_proc.c.o
 
 # target to build an object file
 pucch_proc.c.o:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/pucch_proc.c.o
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/pucch_proc.c.o
 .PHONY : pucch_proc.c.o
 
 pucch_proc.i: pucch_proc.c.i
@@ -732,7 +732,7 @@ pucch_proc.i: pucch_proc.c.i
 
 # target to preprocess a source file
 pucch_proc.c.i:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/pucch_proc.c.i
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/pucch_proc.c.i
 .PHONY : pucch_proc.c.i
 
 pucch_proc.s: pucch_proc.c.s
@@ -741,7 +741,7 @@ pucch_proc.s: pucch_proc.c.s
 
 # target to generate assembly for a file
 pucch_proc.c.s:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/pucch_proc.c.s
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/pucch_proc.c.s
 .PHONY : pucch_proc.c.s
 
 pusch.o: pusch.c.o
@@ -750,7 +750,7 @@ pusch.o: pusch.c.o
 
 # target to build an object file
 pusch.c.o:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/pusch.c.o
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/pusch.c.o
 .PHONY : pusch.c.o
 
 pusch.i: pusch.c.i
@@ -759,7 +759,7 @@ pusch.i: pusch.c.i
 
 # target to preprocess a source file
 pusch.c.i:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/pusch.c.i
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/pusch.c.i
 .PHONY : pusch.c.i
 
 pusch.s: pusch.c.s
@@ -768,7 +768,7 @@ pusch.s: pusch.c.s
 
 # target to generate assembly for a file
 pusch.c.s:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/pusch.c.s
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/pusch.c.s
 .PHONY : pusch.c.s
 
 ra.o: ra.c.o
@@ -777,7 +777,7 @@ ra.o: ra.c.o
 
 # target to build an object file
 ra.c.o:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/ra.c.o
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/ra.c.o
 .PHONY : ra.c.o
 
 ra.i: ra.c.i
@@ -786,7 +786,7 @@ ra.i: ra.c.i
 
 # target to preprocess a source file
 ra.c.i:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/ra.c.i
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/ra.c.i
 .PHONY : ra.c.i
 
 ra.s: ra.c.s
@@ -795,7 +795,7 @@ ra.s: ra.c.s
 
 # target to generate assembly for a file
 ra.c.s:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/ra.c.s
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/ra.c.s
 .PHONY : ra.c.s
 
 ra_dl.o: ra_dl.c.o
@@ -804,7 +804,7 @@ ra_dl.o: ra_dl.c.o
 
 # target to build an object file
 ra_dl.c.o:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/ra_dl.c.o
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/ra_dl.c.o
 .PHONY : ra_dl.c.o
 
 ra_dl.i: ra_dl.c.i
@@ -813,7 +813,7 @@ ra_dl.i: ra_dl.c.i
 
 # target to preprocess a source file
 ra_dl.c.i:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/ra_dl.c.i
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/ra_dl.c.i
 .PHONY : ra_dl.c.i
 
 ra_dl.s: ra_dl.c.s
@@ -822,7 +822,7 @@ ra_dl.s: ra_dl.c.s
 
 # target to generate assembly for a file
 ra_dl.c.s:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/ra_dl.c.s
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/ra_dl.c.s
 .PHONY : ra_dl.c.s
 
 ra_nbiot.o: ra_nbiot.c.o
@@ -831,7 +831,7 @@ ra_nbiot.o: ra_nbiot.c.o
 
 # target to build an object file
 ra_nbiot.c.o:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/ra_nbiot.c.o
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/ra_nbiot.c.o
 .PHONY : ra_nbiot.c.o
 
 ra_nbiot.i: ra_nbiot.c.i
@@ -840,7 +840,7 @@ ra_nbiot.i: ra_nbiot.c.i
 
 # target to preprocess a source file
 ra_nbiot.c.i:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/ra_nbiot.c.i
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/ra_nbiot.c.i
 .PHONY : ra_nbiot.c.i
 
 ra_nbiot.s: ra_nbiot.c.s
@@ -849,7 +849,7 @@ ra_nbiot.s: ra_nbiot.c.s
 
 # target to generate assembly for a file
 ra_nbiot.c.s:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/ra_nbiot.c.s
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/ra_nbiot.c.s
 .PHONY : ra_nbiot.c.s
 
 ra_sl.o: ra_sl.c.o
@@ -858,7 +858,7 @@ ra_sl.o: ra_sl.c.o
 
 # target to build an object file
 ra_sl.c.o:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/ra_sl.c.o
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/ra_sl.c.o
 .PHONY : ra_sl.c.o
 
 ra_sl.i: ra_sl.c.i
@@ -867,7 +867,7 @@ ra_sl.i: ra_sl.c.i
 
 # target to preprocess a source file
 ra_sl.c.i:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/ra_sl.c.i
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/ra_sl.c.i
 .PHONY : ra_sl.c.i
 
 ra_sl.s: ra_sl.c.s
@@ -876,7 +876,7 @@ ra_sl.s: ra_sl.c.s
 
 # target to generate assembly for a file
 ra_sl.c.s:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/ra_sl.c.s
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/ra_sl.c.s
 .PHONY : ra_sl.c.s
 
 ra_ul.o: ra_ul.c.o
@@ -885,7 +885,7 @@ ra_ul.o: ra_ul.c.o
 
 # target to build an object file
 ra_ul.c.o:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/ra_ul.c.o
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/ra_ul.c.o
 .PHONY : ra_ul.c.o
 
 ra_ul.i: ra_ul.c.i
@@ -894,7 +894,7 @@ ra_ul.i: ra_ul.c.i
 
 # target to preprocess a source file
 ra_ul.c.i:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/ra_ul.c.i
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/ra_ul.c.i
 .PHONY : ra_ul.c.i
 
 ra_ul.s: ra_ul.c.s
@@ -903,7 +903,7 @@ ra_ul.s: ra_ul.c.s
 
 # target to generate assembly for a file
 ra_ul.c.s:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/ra_ul.c.s
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/ra_ul.c.s
 .PHONY : ra_ul.c.s
 
 regs.o: regs.c.o
@@ -912,7 +912,7 @@ regs.o: regs.c.o
 
 # target to build an object file
 regs.c.o:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/regs.c.o
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/regs.c.o
 .PHONY : regs.c.o
 
 regs.i: regs.c.i
@@ -921,7 +921,7 @@ regs.i: regs.c.i
 
 # target to preprocess a source file
 regs.c.i:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/regs.c.i
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/regs.c.i
 .PHONY : regs.c.i
 
 regs.s: regs.c.s
@@ -930,7 +930,7 @@ regs.s: regs.c.s
 
 # target to generate assembly for a file
 regs.c.s:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/regs.c.s
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/regs.c.s
 .PHONY : regs.c.s
 
 sch.o: sch.c.o
@@ -939,7 +939,7 @@ sch.o: sch.c.o
 
 # target to build an object file
 sch.c.o:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/sch.c.o
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/sch.c.o
 .PHONY : sch.c.o
 
 sch.i: sch.c.i
@@ -948,7 +948,7 @@ sch.i: sch.c.i
 
 # target to preprocess a source file
 sch.c.i:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/sch.c.i
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/sch.c.i
 .PHONY : sch.c.i
 
 sch.s: sch.c.s
@@ -957,7 +957,7 @@ sch.s: sch.c.s
 
 # target to generate assembly for a file
 sch.c.s:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/sch.c.s
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/sch.c.s
 .PHONY : sch.c.s
 
 sci.o: sci.c.o
@@ -966,7 +966,7 @@ sci.o: sci.c.o
 
 # target to build an object file
 sci.c.o:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/sci.c.o
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/sci.c.o
 .PHONY : sci.c.o
 
 sci.i: sci.c.i
@@ -975,7 +975,7 @@ sci.i: sci.c.i
 
 # target to preprocess a source file
 sci.c.i:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/sci.c.i
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/sci.c.i
 .PHONY : sci.c.i
 
 sci.s: sci.c.s
@@ -984,7 +984,7 @@ sci.s: sci.c.s
 
 # target to generate assembly for a file
 sci.c.s:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/sci.c.s
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/sci.c.s
 .PHONY : sci.c.s
 
 sequences.o: sequences.c.o
@@ -993,7 +993,7 @@ sequences.o: sequences.c.o
 
 # target to build an object file
 sequences.c.o:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/sequences.c.o
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/sequences.c.o
 .PHONY : sequences.c.o
 
 sequences.i: sequences.c.i
@@ -1002,7 +1002,7 @@ sequences.i: sequences.c.i
 
 # target to preprocess a source file
 sequences.c.i:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/sequences.c.i
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/sequences.c.i
 .PHONY : sequences.c.i
 
 sequences.s: sequences.c.s
@@ -1011,7 +1011,7 @@ sequences.s: sequences.c.s
 
 # target to generate assembly for a file
 sequences.c.s:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/sequences.c.s
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/sequences.c.s
 .PHONY : sequences.c.s
 
 uci.o: uci.c.o
@@ -1020,7 +1020,7 @@ uci.o: uci.c.o
 
 # target to build an object file
 uci.c.o:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/uci.c.o
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/uci.c.o
 .PHONY : uci.c.o
 
 uci.i: uci.c.i
@@ -1029,7 +1029,7 @@ uci.i: uci.c.i
 
 # target to preprocess a source file
 uci.c.i:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/uci.c.i
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/uci.c.i
 .PHONY : uci.c.i
 
 uci.s: uci.c.s
@@ -1038,7 +1038,7 @@ uci.s: uci.c.s
 
 # target to generate assembly for a file
 uci.c.s:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/uci.c.s
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/phch/CMakeFiles/srslte_phch.dir/build.make lib/src/phy/phch/CMakeFiles/srslte_phch.dir/uci.c.s
 .PHONY : uci.c.s
 
 # Help Target
@@ -1161,6 +1161,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/atm/Divya/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

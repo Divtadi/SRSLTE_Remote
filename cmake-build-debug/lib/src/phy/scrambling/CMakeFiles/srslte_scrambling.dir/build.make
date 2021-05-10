@@ -43,10 +43,10 @@ RM = /opt/clion-2020.1.2/bin/cmake/linux/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/atm/Ayman/srsLTE_Slicing
+CMAKE_SOURCE_DIR = /home/atm/Divya
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug
+CMAKE_BINARY_DIR = /home/atm/Divya/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include lib/src/phy/scrambling/CMakeFiles/srslte_scrambling.dir/depend.make
@@ -59,16 +59,16 @@ include lib/src/phy/scrambling/CMakeFiles/srslte_scrambling.dir/flags.make
 
 lib/src/phy/scrambling/CMakeFiles/srslte_scrambling.dir/scrambling.c.o: lib/src/phy/scrambling/CMakeFiles/srslte_scrambling.dir/flags.make
 lib/src/phy/scrambling/CMakeFiles/srslte_scrambling.dir/scrambling.c.o: ../lib/src/phy/scrambling/scrambling.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object lib/src/phy/scrambling/CMakeFiles/srslte_scrambling.dir/scrambling.c.o"
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/phy/scrambling && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/srslte_scrambling.dir/scrambling.c.o   -c /home/atm/Ayman/srsLTE_Slicing/lib/src/phy/scrambling/scrambling.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/atm/Divya/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object lib/src/phy/scrambling/CMakeFiles/srslte_scrambling.dir/scrambling.c.o"
+	cd /home/atm/Divya/cmake-build-debug/lib/src/phy/scrambling && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/srslte_scrambling.dir/scrambling.c.o   -c /home/atm/Divya/lib/src/phy/scrambling/scrambling.c
 
 lib/src/phy/scrambling/CMakeFiles/srslte_scrambling.dir/scrambling.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/srslte_scrambling.dir/scrambling.c.i"
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/phy/scrambling && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/atm/Ayman/srsLTE_Slicing/lib/src/phy/scrambling/scrambling.c > CMakeFiles/srslte_scrambling.dir/scrambling.c.i
+	cd /home/atm/Divya/cmake-build-debug/lib/src/phy/scrambling && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/atm/Divya/lib/src/phy/scrambling/scrambling.c > CMakeFiles/srslte_scrambling.dir/scrambling.c.i
 
 lib/src/phy/scrambling/CMakeFiles/srslte_scrambling.dir/scrambling.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/srslte_scrambling.dir/scrambling.c.s"
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/phy/scrambling && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/atm/Ayman/srsLTE_Slicing/lib/src/phy/scrambling/scrambling.c -o CMakeFiles/srslte_scrambling.dir/scrambling.c.s
+	cd /home/atm/Divya/cmake-build-debug/lib/src/phy/scrambling && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/atm/Divya/lib/src/phy/scrambling/scrambling.c -o CMakeFiles/srslte_scrambling.dir/scrambling.c.s
 
 srslte_scrambling: lib/src/phy/scrambling/CMakeFiles/srslte_scrambling.dir/scrambling.c.o
 srslte_scrambling: lib/src/phy/scrambling/CMakeFiles/srslte_scrambling.dir/build.make
@@ -81,10 +81,10 @@ lib/src/phy/scrambling/CMakeFiles/srslte_scrambling.dir/build: srslte_scrambling
 .PHONY : lib/src/phy/scrambling/CMakeFiles/srslte_scrambling.dir/build
 
 lib/src/phy/scrambling/CMakeFiles/srslte_scrambling.dir/clean:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/phy/scrambling && $(CMAKE_COMMAND) -P CMakeFiles/srslte_scrambling.dir/cmake_clean.cmake
+	cd /home/atm/Divya/cmake-build-debug/lib/src/phy/scrambling && $(CMAKE_COMMAND) -P CMakeFiles/srslte_scrambling.dir/cmake_clean.cmake
 .PHONY : lib/src/phy/scrambling/CMakeFiles/srslte_scrambling.dir/clean
 
 lib/src/phy/scrambling/CMakeFiles/srslte_scrambling.dir/depend:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/atm/Ayman/srsLTE_Slicing /home/atm/Ayman/srsLTE_Slicing/lib/src/phy/scrambling /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/phy/scrambling /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/phy/scrambling/CMakeFiles/srslte_scrambling.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/atm/Divya/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/atm/Divya /home/atm/Divya/lib/src/phy/scrambling /home/atm/Divya/cmake-build-debug /home/atm/Divya/cmake-build-debug/lib/src/phy/scrambling /home/atm/Divya/cmake-build-debug/lib/src/phy/scrambling/CMakeFiles/srslte_scrambling.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : lib/src/phy/scrambling/CMakeFiles/srslte_scrambling.dir/depend
 

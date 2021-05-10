@@ -43,10 +43,10 @@ RM = /opt/clion-2020.1.2/bin/cmake/linux/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/atm/Ayman/srsLTE_Slicing
+CMAKE_SOURCE_DIR = /home/atm/Divya
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug
+CMAKE_BINARY_DIR = /home/atm/Divya/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include srsepc/src/mbms-gw/CMakeFiles/srsepc_mbms_gw.dir/depend.make
@@ -59,29 +59,29 @@ include srsepc/src/mbms-gw/CMakeFiles/srsepc_mbms_gw.dir/flags.make
 
 srsepc/src/mbms-gw/CMakeFiles/srsepc_mbms_gw.dir/main.cc.o: srsepc/src/mbms-gw/CMakeFiles/srsepc_mbms_gw.dir/flags.make
 srsepc/src/mbms-gw/CMakeFiles/srsepc_mbms_gw.dir/main.cc.o: ../srsepc/src/mbms-gw/main.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object srsepc/src/mbms-gw/CMakeFiles/srsepc_mbms_gw.dir/main.cc.o"
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/srsepc/src/mbms-gw && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/srsepc_mbms_gw.dir/main.cc.o -c /home/atm/Ayman/srsLTE_Slicing/srsepc/src/mbms-gw/main.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/atm/Divya/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object srsepc/src/mbms-gw/CMakeFiles/srsepc_mbms_gw.dir/main.cc.o"
+	cd /home/atm/Divya/cmake-build-debug/srsepc/src/mbms-gw && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/srsepc_mbms_gw.dir/main.cc.o -c /home/atm/Divya/srsepc/src/mbms-gw/main.cc
 
 srsepc/src/mbms-gw/CMakeFiles/srsepc_mbms_gw.dir/main.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/srsepc_mbms_gw.dir/main.cc.i"
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/srsepc/src/mbms-gw && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/atm/Ayman/srsLTE_Slicing/srsepc/src/mbms-gw/main.cc > CMakeFiles/srsepc_mbms_gw.dir/main.cc.i
+	cd /home/atm/Divya/cmake-build-debug/srsepc/src/mbms-gw && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/atm/Divya/srsepc/src/mbms-gw/main.cc > CMakeFiles/srsepc_mbms_gw.dir/main.cc.i
 
 srsepc/src/mbms-gw/CMakeFiles/srsepc_mbms_gw.dir/main.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/srsepc_mbms_gw.dir/main.cc.s"
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/srsepc/src/mbms-gw && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/atm/Ayman/srsLTE_Slicing/srsepc/src/mbms-gw/main.cc -o CMakeFiles/srsepc_mbms_gw.dir/main.cc.s
+	cd /home/atm/Divya/cmake-build-debug/srsepc/src/mbms-gw && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/atm/Divya/srsepc/src/mbms-gw/main.cc -o CMakeFiles/srsepc_mbms_gw.dir/main.cc.s
 
 srsepc/src/mbms-gw/CMakeFiles/srsepc_mbms_gw.dir/mbms-gw.cc.o: srsepc/src/mbms-gw/CMakeFiles/srsepc_mbms_gw.dir/flags.make
 srsepc/src/mbms-gw/CMakeFiles/srsepc_mbms_gw.dir/mbms-gw.cc.o: ../srsepc/src/mbms-gw/mbms-gw.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object srsepc/src/mbms-gw/CMakeFiles/srsepc_mbms_gw.dir/mbms-gw.cc.o"
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/srsepc/src/mbms-gw && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/srsepc_mbms_gw.dir/mbms-gw.cc.o -c /home/atm/Ayman/srsLTE_Slicing/srsepc/src/mbms-gw/mbms-gw.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/atm/Divya/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object srsepc/src/mbms-gw/CMakeFiles/srsepc_mbms_gw.dir/mbms-gw.cc.o"
+	cd /home/atm/Divya/cmake-build-debug/srsepc/src/mbms-gw && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/srsepc_mbms_gw.dir/mbms-gw.cc.o -c /home/atm/Divya/srsepc/src/mbms-gw/mbms-gw.cc
 
 srsepc/src/mbms-gw/CMakeFiles/srsepc_mbms_gw.dir/mbms-gw.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/srsepc_mbms_gw.dir/mbms-gw.cc.i"
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/srsepc/src/mbms-gw && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/atm/Ayman/srsLTE_Slicing/srsepc/src/mbms-gw/mbms-gw.cc > CMakeFiles/srsepc_mbms_gw.dir/mbms-gw.cc.i
+	cd /home/atm/Divya/cmake-build-debug/srsepc/src/mbms-gw && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/atm/Divya/srsepc/src/mbms-gw/mbms-gw.cc > CMakeFiles/srsepc_mbms_gw.dir/mbms-gw.cc.i
 
 srsepc/src/mbms-gw/CMakeFiles/srsepc_mbms_gw.dir/mbms-gw.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/srsepc_mbms_gw.dir/mbms-gw.cc.s"
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/srsepc/src/mbms-gw && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/atm/Ayman/srsLTE_Slicing/srsepc/src/mbms-gw/mbms-gw.cc -o CMakeFiles/srsepc_mbms_gw.dir/mbms-gw.cc.s
+	cd /home/atm/Divya/cmake-build-debug/srsepc/src/mbms-gw && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/atm/Divya/srsepc/src/mbms-gw/mbms-gw.cc -o CMakeFiles/srsepc_mbms_gw.dir/mbms-gw.cc.s
 
 # Object files for target srsepc_mbms_gw
 srsepc_mbms_gw_OBJECTS = \
@@ -95,9 +95,9 @@ srsepc/src/mbms-gw/libsrsepc_mbms_gw.a: srsepc/src/mbms-gw/CMakeFiles/srsepc_mbm
 srsepc/src/mbms-gw/libsrsepc_mbms_gw.a: srsepc/src/mbms-gw/CMakeFiles/srsepc_mbms_gw.dir/mbms-gw.cc.o
 srsepc/src/mbms-gw/libsrsepc_mbms_gw.a: srsepc/src/mbms-gw/CMakeFiles/srsepc_mbms_gw.dir/build.make
 srsepc/src/mbms-gw/libsrsepc_mbms_gw.a: srsepc/src/mbms-gw/CMakeFiles/srsepc_mbms_gw.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX static library libsrsepc_mbms_gw.a"
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/srsepc/src/mbms-gw && $(CMAKE_COMMAND) -P CMakeFiles/srsepc_mbms_gw.dir/cmake_clean_target.cmake
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/srsepc/src/mbms-gw && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/srsepc_mbms_gw.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/atm/Divya/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX static library libsrsepc_mbms_gw.a"
+	cd /home/atm/Divya/cmake-build-debug/srsepc/src/mbms-gw && $(CMAKE_COMMAND) -P CMakeFiles/srsepc_mbms_gw.dir/cmake_clean_target.cmake
+	cd /home/atm/Divya/cmake-build-debug/srsepc/src/mbms-gw && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/srsepc_mbms_gw.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 srsepc/src/mbms-gw/CMakeFiles/srsepc_mbms_gw.dir/build: srsepc/src/mbms-gw/libsrsepc_mbms_gw.a
@@ -105,10 +105,10 @@ srsepc/src/mbms-gw/CMakeFiles/srsepc_mbms_gw.dir/build: srsepc/src/mbms-gw/libsr
 .PHONY : srsepc/src/mbms-gw/CMakeFiles/srsepc_mbms_gw.dir/build
 
 srsepc/src/mbms-gw/CMakeFiles/srsepc_mbms_gw.dir/clean:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/srsepc/src/mbms-gw && $(CMAKE_COMMAND) -P CMakeFiles/srsepc_mbms_gw.dir/cmake_clean.cmake
+	cd /home/atm/Divya/cmake-build-debug/srsepc/src/mbms-gw && $(CMAKE_COMMAND) -P CMakeFiles/srsepc_mbms_gw.dir/cmake_clean.cmake
 .PHONY : srsepc/src/mbms-gw/CMakeFiles/srsepc_mbms_gw.dir/clean
 
 srsepc/src/mbms-gw/CMakeFiles/srsepc_mbms_gw.dir/depend:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/atm/Ayman/srsLTE_Slicing /home/atm/Ayman/srsLTE_Slicing/srsepc/src/mbms-gw /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/srsepc/src/mbms-gw /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/srsepc/src/mbms-gw/CMakeFiles/srsepc_mbms_gw.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/atm/Divya/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/atm/Divya /home/atm/Divya/srsepc/src/mbms-gw /home/atm/Divya/cmake-build-debug /home/atm/Divya/cmake-build-debug/srsepc/src/mbms-gw /home/atm/Divya/cmake-build-debug/srsepc/src/mbms-gw/CMakeFiles/srsepc_mbms_gw.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : srsepc/src/mbms-gw/CMakeFiles/srsepc_mbms_gw.dir/depend
 

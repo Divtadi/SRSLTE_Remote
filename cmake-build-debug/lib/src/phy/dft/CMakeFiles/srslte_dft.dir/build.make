@@ -43,10 +43,10 @@ RM = /opt/clion-2020.1.2/bin/cmake/linux/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/atm/Ayman/srsLTE_Slicing
+CMAKE_SOURCE_DIR = /home/atm/Divya
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug
+CMAKE_BINARY_DIR = /home/atm/Divya/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include lib/src/phy/dft/CMakeFiles/srslte_dft.dir/depend.make
@@ -59,42 +59,42 @@ include lib/src/phy/dft/CMakeFiles/srslte_dft.dir/flags.make
 
 lib/src/phy/dft/CMakeFiles/srslte_dft.dir/dft_fftw.c.o: lib/src/phy/dft/CMakeFiles/srslte_dft.dir/flags.make
 lib/src/phy/dft/CMakeFiles/srslte_dft.dir/dft_fftw.c.o: ../lib/src/phy/dft/dft_fftw.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object lib/src/phy/dft/CMakeFiles/srslte_dft.dir/dft_fftw.c.o"
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/phy/dft && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/srslte_dft.dir/dft_fftw.c.o   -c /home/atm/Ayman/srsLTE_Slicing/lib/src/phy/dft/dft_fftw.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/atm/Divya/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object lib/src/phy/dft/CMakeFiles/srslte_dft.dir/dft_fftw.c.o"
+	cd /home/atm/Divya/cmake-build-debug/lib/src/phy/dft && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/srslte_dft.dir/dft_fftw.c.o   -c /home/atm/Divya/lib/src/phy/dft/dft_fftw.c
 
 lib/src/phy/dft/CMakeFiles/srslte_dft.dir/dft_fftw.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/srslte_dft.dir/dft_fftw.c.i"
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/phy/dft && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/atm/Ayman/srsLTE_Slicing/lib/src/phy/dft/dft_fftw.c > CMakeFiles/srslte_dft.dir/dft_fftw.c.i
+	cd /home/atm/Divya/cmake-build-debug/lib/src/phy/dft && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/atm/Divya/lib/src/phy/dft/dft_fftw.c > CMakeFiles/srslte_dft.dir/dft_fftw.c.i
 
 lib/src/phy/dft/CMakeFiles/srslte_dft.dir/dft_fftw.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/srslte_dft.dir/dft_fftw.c.s"
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/phy/dft && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/atm/Ayman/srsLTE_Slicing/lib/src/phy/dft/dft_fftw.c -o CMakeFiles/srslte_dft.dir/dft_fftw.c.s
+	cd /home/atm/Divya/cmake-build-debug/lib/src/phy/dft && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/atm/Divya/lib/src/phy/dft/dft_fftw.c -o CMakeFiles/srslte_dft.dir/dft_fftw.c.s
 
 lib/src/phy/dft/CMakeFiles/srslte_dft.dir/dft_precoding.c.o: lib/src/phy/dft/CMakeFiles/srslte_dft.dir/flags.make
 lib/src/phy/dft/CMakeFiles/srslte_dft.dir/dft_precoding.c.o: ../lib/src/phy/dft/dft_precoding.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object lib/src/phy/dft/CMakeFiles/srslte_dft.dir/dft_precoding.c.o"
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/phy/dft && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/srslte_dft.dir/dft_precoding.c.o   -c /home/atm/Ayman/srsLTE_Slicing/lib/src/phy/dft/dft_precoding.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/atm/Divya/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object lib/src/phy/dft/CMakeFiles/srslte_dft.dir/dft_precoding.c.o"
+	cd /home/atm/Divya/cmake-build-debug/lib/src/phy/dft && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/srslte_dft.dir/dft_precoding.c.o   -c /home/atm/Divya/lib/src/phy/dft/dft_precoding.c
 
 lib/src/phy/dft/CMakeFiles/srslte_dft.dir/dft_precoding.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/srslte_dft.dir/dft_precoding.c.i"
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/phy/dft && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/atm/Ayman/srsLTE_Slicing/lib/src/phy/dft/dft_precoding.c > CMakeFiles/srslte_dft.dir/dft_precoding.c.i
+	cd /home/atm/Divya/cmake-build-debug/lib/src/phy/dft && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/atm/Divya/lib/src/phy/dft/dft_precoding.c > CMakeFiles/srslte_dft.dir/dft_precoding.c.i
 
 lib/src/phy/dft/CMakeFiles/srslte_dft.dir/dft_precoding.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/srslte_dft.dir/dft_precoding.c.s"
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/phy/dft && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/atm/Ayman/srsLTE_Slicing/lib/src/phy/dft/dft_precoding.c -o CMakeFiles/srslte_dft.dir/dft_precoding.c.s
+	cd /home/atm/Divya/cmake-build-debug/lib/src/phy/dft && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/atm/Divya/lib/src/phy/dft/dft_precoding.c -o CMakeFiles/srslte_dft.dir/dft_precoding.c.s
 
 lib/src/phy/dft/CMakeFiles/srslte_dft.dir/ofdm.c.o: lib/src/phy/dft/CMakeFiles/srslte_dft.dir/flags.make
 lib/src/phy/dft/CMakeFiles/srslte_dft.dir/ofdm.c.o: ../lib/src/phy/dft/ofdm.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object lib/src/phy/dft/CMakeFiles/srslte_dft.dir/ofdm.c.o"
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/phy/dft && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/srslte_dft.dir/ofdm.c.o   -c /home/atm/Ayman/srsLTE_Slicing/lib/src/phy/dft/ofdm.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/atm/Divya/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object lib/src/phy/dft/CMakeFiles/srslte_dft.dir/ofdm.c.o"
+	cd /home/atm/Divya/cmake-build-debug/lib/src/phy/dft && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/srslte_dft.dir/ofdm.c.o   -c /home/atm/Divya/lib/src/phy/dft/ofdm.c
 
 lib/src/phy/dft/CMakeFiles/srslte_dft.dir/ofdm.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/srslte_dft.dir/ofdm.c.i"
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/phy/dft && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/atm/Ayman/srsLTE_Slicing/lib/src/phy/dft/ofdm.c > CMakeFiles/srslte_dft.dir/ofdm.c.i
+	cd /home/atm/Divya/cmake-build-debug/lib/src/phy/dft && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/atm/Divya/lib/src/phy/dft/ofdm.c > CMakeFiles/srslte_dft.dir/ofdm.c.i
 
 lib/src/phy/dft/CMakeFiles/srslte_dft.dir/ofdm.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/srslte_dft.dir/ofdm.c.s"
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/phy/dft && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/atm/Ayman/srsLTE_Slicing/lib/src/phy/dft/ofdm.c -o CMakeFiles/srslte_dft.dir/ofdm.c.s
+	cd /home/atm/Divya/cmake-build-debug/lib/src/phy/dft && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/atm/Divya/lib/src/phy/dft/ofdm.c -o CMakeFiles/srslte_dft.dir/ofdm.c.s
 
 srslte_dft: lib/src/phy/dft/CMakeFiles/srslte_dft.dir/dft_fftw.c.o
 srslte_dft: lib/src/phy/dft/CMakeFiles/srslte_dft.dir/dft_precoding.c.o
@@ -109,10 +109,10 @@ lib/src/phy/dft/CMakeFiles/srslte_dft.dir/build: srslte_dft
 .PHONY : lib/src/phy/dft/CMakeFiles/srslte_dft.dir/build
 
 lib/src/phy/dft/CMakeFiles/srslte_dft.dir/clean:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/phy/dft && $(CMAKE_COMMAND) -P CMakeFiles/srslte_dft.dir/cmake_clean.cmake
+	cd /home/atm/Divya/cmake-build-debug/lib/src/phy/dft && $(CMAKE_COMMAND) -P CMakeFiles/srslte_dft.dir/cmake_clean.cmake
 .PHONY : lib/src/phy/dft/CMakeFiles/srslte_dft.dir/clean
 
 lib/src/phy/dft/CMakeFiles/srslte_dft.dir/depend:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/atm/Ayman/srsLTE_Slicing /home/atm/Ayman/srsLTE_Slicing/lib/src/phy/dft /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/phy/dft /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/phy/dft/CMakeFiles/srslte_dft.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/atm/Divya/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/atm/Divya /home/atm/Divya/lib/src/phy/dft /home/atm/Divya/cmake-build-debug /home/atm/Divya/cmake-build-debug/lib/src/phy/dft /home/atm/Divya/cmake-build-debug/lib/src/phy/dft/CMakeFiles/srslte_dft.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : lib/src/phy/dft/CMakeFiles/srslte_dft.dir/depend
 

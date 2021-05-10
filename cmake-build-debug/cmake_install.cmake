@@ -1,4 +1,4 @@
-# Install script for directory: /home/atm/Ayman/srsLTE_Slicing
+# Install script for directory: /home/atm/Divya
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -38,16 +38,16 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE PROGRAM FILES "/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/srslte_install_configs.sh")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE PROGRAM FILES "/home/atm/Divya/cmake-build-debug/srslte_install_configs.sh")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/cmake_install.cmake")
-  include("/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/srsue/cmake_install.cmake")
-  include("/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/srsenb/cmake_install.cmake")
-  include("/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/srsepc/cmake_install.cmake")
-  include("/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/test/cmake_install.cmake")
+  include("/home/atm/Divya/cmake-build-debug/lib/cmake_install.cmake")
+  include("/home/atm/Divya/cmake-build-debug/srsue/cmake_install.cmake")
+  include("/home/atm/Divya/cmake-build-debug/srsenb/cmake_install.cmake")
+  include("/home/atm/Divya/cmake-build-debug/srsepc/cmake_install.cmake")
+  include("/home/atm/Divya/cmake-build-debug/test/cmake_install.cmake")
 
 endif()
 
@@ -59,5 +59,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/atm/Divya/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

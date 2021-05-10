@@ -48,10 +48,10 @@ RM = /opt/clion-2020.1.2/bin/cmake/linux/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/atm/Ayman/srsLTE_Slicing
+CMAKE_SOURCE_DIR = /home/atm/Divya
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug
+CMAKE_BINARY_DIR = /home/atm/Divya/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -127,7 +127,7 @@ edit_cache/fast: edit_cache
 # Special rule for the target package_source
 package_source:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool for source..."
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && /opt/clion-2020.1.2/bin/cmake/linux/bin/cpack --config ./CPackSourceConfig.cmake /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/CPackSourceConfig.cmake
+	cd /home/atm/Divya/cmake-build-debug && /opt/clion-2020.1.2/bin/cmake/linux/bin/cpack --config ./CPackSourceConfig.cmake /home/atm/Divya/cmake-build-debug/CPackSourceConfig.cmake
 .PHONY : package_source
 
 # Special rule for the target package_source
@@ -138,7 +138,7 @@ package_source/fast: package_source
 # Special rule for the target package
 package: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool..."
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && /opt/clion-2020.1.2/bin/cmake/linux/bin/cpack --config ./CPackConfig.cmake
+	cd /home/atm/Divya/cmake-build-debug && /opt/clion-2020.1.2/bin/cmake/linux/bin/cpack --config ./CPackConfig.cmake
 .PHONY : package
 
 # Special rule for the target package
@@ -159,14 +159,14 @@ test/fast: test
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_progress_start /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/CMakeFiles /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/srsenb/src/stack/upper/CMakeFiles/progress.marks
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 srsenb/src/stack/upper/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/CMakeFiles 0
+	cd /home/atm/Divya/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_progress_start /home/atm/Divya/cmake-build-debug/CMakeFiles /home/atm/Divya/cmake-build-debug/srsenb/src/stack/upper/CMakeFiles/progress.marks
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 srsenb/src/stack/upper/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/atm/Divya/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 srsenb/src/stack/upper/clean
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 srsenb/src/stack/upper/clean
 .PHONY : clean
 
 # The main clean target
@@ -176,22 +176,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: cmake_check_build_system
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 srsenb/src/stack/upper/preinstall
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 srsenb/src/stack/upper/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 srsenb/src/stack/upper/preinstall
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 srsenb/src/stack/upper/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/atm/Divya/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 srsenb/src/stack/upper/CMakeFiles/srsenb_upper.dir/rule:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 srsenb/src/stack/upper/CMakeFiles/srsenb_upper.dir/rule
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 srsenb/src/stack/upper/CMakeFiles/srsenb_upper.dir/rule
 .PHONY : srsenb/src/stack/upper/CMakeFiles/srsenb_upper.dir/rule
 
 # Convenience name for target.
@@ -201,7 +201,7 @@ srsenb_upper: srsenb/src/stack/upper/CMakeFiles/srsenb_upper.dir/rule
 
 # fast build rule for target.
 srsenb_upper/fast:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f srsenb/src/stack/upper/CMakeFiles/srsenb_upper.dir/build.make srsenb/src/stack/upper/CMakeFiles/srsenb_upper.dir/build
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f srsenb/src/stack/upper/CMakeFiles/srsenb_upper.dir/build.make srsenb/src/stack/upper/CMakeFiles/srsenb_upper.dir/build
 .PHONY : srsenb_upper/fast
 
 gtpu.o: gtpu.cc.o
@@ -210,7 +210,7 @@ gtpu.o: gtpu.cc.o
 
 # target to build an object file
 gtpu.cc.o:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f srsenb/src/stack/upper/CMakeFiles/srsenb_upper.dir/build.make srsenb/src/stack/upper/CMakeFiles/srsenb_upper.dir/gtpu.cc.o
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f srsenb/src/stack/upper/CMakeFiles/srsenb_upper.dir/build.make srsenb/src/stack/upper/CMakeFiles/srsenb_upper.dir/gtpu.cc.o
 .PHONY : gtpu.cc.o
 
 gtpu.i: gtpu.cc.i
@@ -219,7 +219,7 @@ gtpu.i: gtpu.cc.i
 
 # target to preprocess a source file
 gtpu.cc.i:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f srsenb/src/stack/upper/CMakeFiles/srsenb_upper.dir/build.make srsenb/src/stack/upper/CMakeFiles/srsenb_upper.dir/gtpu.cc.i
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f srsenb/src/stack/upper/CMakeFiles/srsenb_upper.dir/build.make srsenb/src/stack/upper/CMakeFiles/srsenb_upper.dir/gtpu.cc.i
 .PHONY : gtpu.cc.i
 
 gtpu.s: gtpu.cc.s
@@ -228,7 +228,7 @@ gtpu.s: gtpu.cc.s
 
 # target to generate assembly for a file
 gtpu.cc.s:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f srsenb/src/stack/upper/CMakeFiles/srsenb_upper.dir/build.make srsenb/src/stack/upper/CMakeFiles/srsenb_upper.dir/gtpu.cc.s
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f srsenb/src/stack/upper/CMakeFiles/srsenb_upper.dir/build.make srsenb/src/stack/upper/CMakeFiles/srsenb_upper.dir/gtpu.cc.s
 .PHONY : gtpu.cc.s
 
 pdcp.o: pdcp.cc.o
@@ -237,7 +237,7 @@ pdcp.o: pdcp.cc.o
 
 # target to build an object file
 pdcp.cc.o:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f srsenb/src/stack/upper/CMakeFiles/srsenb_upper.dir/build.make srsenb/src/stack/upper/CMakeFiles/srsenb_upper.dir/pdcp.cc.o
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f srsenb/src/stack/upper/CMakeFiles/srsenb_upper.dir/build.make srsenb/src/stack/upper/CMakeFiles/srsenb_upper.dir/pdcp.cc.o
 .PHONY : pdcp.cc.o
 
 pdcp.i: pdcp.cc.i
@@ -246,7 +246,7 @@ pdcp.i: pdcp.cc.i
 
 # target to preprocess a source file
 pdcp.cc.i:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f srsenb/src/stack/upper/CMakeFiles/srsenb_upper.dir/build.make srsenb/src/stack/upper/CMakeFiles/srsenb_upper.dir/pdcp.cc.i
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f srsenb/src/stack/upper/CMakeFiles/srsenb_upper.dir/build.make srsenb/src/stack/upper/CMakeFiles/srsenb_upper.dir/pdcp.cc.i
 .PHONY : pdcp.cc.i
 
 pdcp.s: pdcp.cc.s
@@ -255,7 +255,7 @@ pdcp.s: pdcp.cc.s
 
 # target to generate assembly for a file
 pdcp.cc.s:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f srsenb/src/stack/upper/CMakeFiles/srsenb_upper.dir/build.make srsenb/src/stack/upper/CMakeFiles/srsenb_upper.dir/pdcp.cc.s
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f srsenb/src/stack/upper/CMakeFiles/srsenb_upper.dir/build.make srsenb/src/stack/upper/CMakeFiles/srsenb_upper.dir/pdcp.cc.s
 .PHONY : pdcp.cc.s
 
 rlc.o: rlc.cc.o
@@ -264,7 +264,7 @@ rlc.o: rlc.cc.o
 
 # target to build an object file
 rlc.cc.o:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f srsenb/src/stack/upper/CMakeFiles/srsenb_upper.dir/build.make srsenb/src/stack/upper/CMakeFiles/srsenb_upper.dir/rlc.cc.o
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f srsenb/src/stack/upper/CMakeFiles/srsenb_upper.dir/build.make srsenb/src/stack/upper/CMakeFiles/srsenb_upper.dir/rlc.cc.o
 .PHONY : rlc.cc.o
 
 rlc.i: rlc.cc.i
@@ -273,7 +273,7 @@ rlc.i: rlc.cc.i
 
 # target to preprocess a source file
 rlc.cc.i:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f srsenb/src/stack/upper/CMakeFiles/srsenb_upper.dir/build.make srsenb/src/stack/upper/CMakeFiles/srsenb_upper.dir/rlc.cc.i
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f srsenb/src/stack/upper/CMakeFiles/srsenb_upper.dir/build.make srsenb/src/stack/upper/CMakeFiles/srsenb_upper.dir/rlc.cc.i
 .PHONY : rlc.cc.i
 
 rlc.s: rlc.cc.s
@@ -282,7 +282,7 @@ rlc.s: rlc.cc.s
 
 # target to generate assembly for a file
 rlc.cc.s:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f srsenb/src/stack/upper/CMakeFiles/srsenb_upper.dir/build.make srsenb/src/stack/upper/CMakeFiles/srsenb_upper.dir/rlc.cc.s
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f srsenb/src/stack/upper/CMakeFiles/srsenb_upper.dir/build.make srsenb/src/stack/upper/CMakeFiles/srsenb_upper.dir/rlc.cc.s
 .PHONY : rlc.cc.s
 
 s1ap.o: s1ap.cc.o
@@ -291,7 +291,7 @@ s1ap.o: s1ap.cc.o
 
 # target to build an object file
 s1ap.cc.o:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f srsenb/src/stack/upper/CMakeFiles/srsenb_upper.dir/build.make srsenb/src/stack/upper/CMakeFiles/srsenb_upper.dir/s1ap.cc.o
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f srsenb/src/stack/upper/CMakeFiles/srsenb_upper.dir/build.make srsenb/src/stack/upper/CMakeFiles/srsenb_upper.dir/s1ap.cc.o
 .PHONY : s1ap.cc.o
 
 s1ap.i: s1ap.cc.i
@@ -300,7 +300,7 @@ s1ap.i: s1ap.cc.i
 
 # target to preprocess a source file
 s1ap.cc.i:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f srsenb/src/stack/upper/CMakeFiles/srsenb_upper.dir/build.make srsenb/src/stack/upper/CMakeFiles/srsenb_upper.dir/s1ap.cc.i
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f srsenb/src/stack/upper/CMakeFiles/srsenb_upper.dir/build.make srsenb/src/stack/upper/CMakeFiles/srsenb_upper.dir/s1ap.cc.i
 .PHONY : s1ap.cc.i
 
 s1ap.s: s1ap.cc.s
@@ -309,7 +309,7 @@ s1ap.s: s1ap.cc.s
 
 # target to generate assembly for a file
 s1ap.cc.s:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f srsenb/src/stack/upper/CMakeFiles/srsenb_upper.dir/build.make srsenb/src/stack/upper/CMakeFiles/srsenb_upper.dir/s1ap.cc.s
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f srsenb/src/stack/upper/CMakeFiles/srsenb_upper.dir/build.make srsenb/src/stack/upper/CMakeFiles/srsenb_upper.dir/s1ap.cc.s
 .PHONY : s1ap.cc.s
 
 # Help Target
@@ -351,6 +351,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/atm/Divya/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

@@ -1,4 +1,4 @@
-# Install script for directory: /home/atm/Ayman/srsLTE_Slicing/srsue/test
+# Install script for directory: /home/atm/Divya/srsue/test
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,8 +39,8 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/srsue/test/phy/cmake_install.cmake")
-  include("/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/srsue/test/upper/cmake_install.cmake")
+  include("/home/atm/Divya/cmake-build-debug/srsue/test/phy/cmake_install.cmake")
+  include("/home/atm/Divya/cmake-build-debug/srsue/test/upper/cmake_install.cmake")
 
 endif()
 

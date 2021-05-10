@@ -48,10 +48,10 @@ RM = /opt/clion-2020.1.2/bin/cmake/linux/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/atm/Ayman/srsLTE_Slicing
+CMAKE_SOURCE_DIR = /home/atm/Divya
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug
+CMAKE_BINARY_DIR = /home/atm/Divya/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -138,7 +138,7 @@ test/fast: test
 # Special rule for the target package
 package: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool..."
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && /opt/clion-2020.1.2/bin/cmake/linux/bin/cpack --config ./CPackConfig.cmake
+	cd /home/atm/Divya/cmake-build-debug && /opt/clion-2020.1.2/bin/cmake/linux/bin/cpack --config ./CPackConfig.cmake
 .PHONY : package
 
 # Special rule for the target package
@@ -149,7 +149,7 @@ package/fast: package
 # Special rule for the target package_source
 package_source:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool for source..."
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && /opt/clion-2020.1.2/bin/cmake/linux/bin/cpack --config ./CPackSourceConfig.cmake /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/CPackSourceConfig.cmake
+	cd /home/atm/Divya/cmake-build-debug && /opt/clion-2020.1.2/bin/cmake/linux/bin/cpack --config ./CPackSourceConfig.cmake /home/atm/Divya/cmake-build-debug/CPackSourceConfig.cmake
 .PHONY : package_source
 
 # Special rule for the target package_source
@@ -159,14 +159,14 @@ package_source/fast: package_source
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_progress_start /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/CMakeFiles /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/phy/modem/CMakeFiles/progress.marks
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 lib/src/phy/modem/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/CMakeFiles 0
+	cd /home/atm/Divya/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_progress_start /home/atm/Divya/cmake-build-debug/CMakeFiles /home/atm/Divya/cmake-build-debug/lib/src/phy/modem/CMakeFiles/progress.marks
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 lib/src/phy/modem/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/atm/Divya/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 lib/src/phy/modem/clean
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 lib/src/phy/modem/clean
 .PHONY : clean
 
 # The main clean target
@@ -176,22 +176,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: cmake_check_build_system
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 lib/src/phy/modem/preinstall
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 lib/src/phy/modem/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 lib/src/phy/modem/preinstall
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 lib/src/phy/modem/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/atm/Divya/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 lib/src/phy/modem/CMakeFiles/srslte_modem.dir/rule:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 lib/src/phy/modem/CMakeFiles/srslte_modem.dir/rule
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 lib/src/phy/modem/CMakeFiles/srslte_modem.dir/rule
 .PHONY : lib/src/phy/modem/CMakeFiles/srslte_modem.dir/rule
 
 # Convenience name for target.
@@ -201,7 +201,7 @@ srslte_modem: lib/src/phy/modem/CMakeFiles/srslte_modem.dir/rule
 
 # fast build rule for target.
 srslte_modem/fast:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/modem/CMakeFiles/srslte_modem.dir/build.make lib/src/phy/modem/CMakeFiles/srslte_modem.dir/build
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/modem/CMakeFiles/srslte_modem.dir/build.make lib/src/phy/modem/CMakeFiles/srslte_modem.dir/build
 .PHONY : srslte_modem/fast
 
 demod_hard.o: demod_hard.c.o
@@ -210,7 +210,7 @@ demod_hard.o: demod_hard.c.o
 
 # target to build an object file
 demod_hard.c.o:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/modem/CMakeFiles/srslte_modem.dir/build.make lib/src/phy/modem/CMakeFiles/srslte_modem.dir/demod_hard.c.o
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/modem/CMakeFiles/srslte_modem.dir/build.make lib/src/phy/modem/CMakeFiles/srslte_modem.dir/demod_hard.c.o
 .PHONY : demod_hard.c.o
 
 demod_hard.i: demod_hard.c.i
@@ -219,7 +219,7 @@ demod_hard.i: demod_hard.c.i
 
 # target to preprocess a source file
 demod_hard.c.i:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/modem/CMakeFiles/srslte_modem.dir/build.make lib/src/phy/modem/CMakeFiles/srslte_modem.dir/demod_hard.c.i
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/modem/CMakeFiles/srslte_modem.dir/build.make lib/src/phy/modem/CMakeFiles/srslte_modem.dir/demod_hard.c.i
 .PHONY : demod_hard.c.i
 
 demod_hard.s: demod_hard.c.s
@@ -228,7 +228,7 @@ demod_hard.s: demod_hard.c.s
 
 # target to generate assembly for a file
 demod_hard.c.s:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/modem/CMakeFiles/srslte_modem.dir/build.make lib/src/phy/modem/CMakeFiles/srslte_modem.dir/demod_hard.c.s
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/modem/CMakeFiles/srslte_modem.dir/build.make lib/src/phy/modem/CMakeFiles/srslte_modem.dir/demod_hard.c.s
 .PHONY : demod_hard.c.s
 
 demod_soft.o: demod_soft.c.o
@@ -237,7 +237,7 @@ demod_soft.o: demod_soft.c.o
 
 # target to build an object file
 demod_soft.c.o:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/modem/CMakeFiles/srslte_modem.dir/build.make lib/src/phy/modem/CMakeFiles/srslte_modem.dir/demod_soft.c.o
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/modem/CMakeFiles/srslte_modem.dir/build.make lib/src/phy/modem/CMakeFiles/srslte_modem.dir/demod_soft.c.o
 .PHONY : demod_soft.c.o
 
 demod_soft.i: demod_soft.c.i
@@ -246,7 +246,7 @@ demod_soft.i: demod_soft.c.i
 
 # target to preprocess a source file
 demod_soft.c.i:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/modem/CMakeFiles/srslte_modem.dir/build.make lib/src/phy/modem/CMakeFiles/srslte_modem.dir/demod_soft.c.i
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/modem/CMakeFiles/srslte_modem.dir/build.make lib/src/phy/modem/CMakeFiles/srslte_modem.dir/demod_soft.c.i
 .PHONY : demod_soft.c.i
 
 demod_soft.s: demod_soft.c.s
@@ -255,7 +255,7 @@ demod_soft.s: demod_soft.c.s
 
 # target to generate assembly for a file
 demod_soft.c.s:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/modem/CMakeFiles/srslte_modem.dir/build.make lib/src/phy/modem/CMakeFiles/srslte_modem.dir/demod_soft.c.s
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/modem/CMakeFiles/srslte_modem.dir/build.make lib/src/phy/modem/CMakeFiles/srslte_modem.dir/demod_soft.c.s
 .PHONY : demod_soft.c.s
 
 hard_demod_lte.o: hard_demod_lte.c.o
@@ -264,7 +264,7 @@ hard_demod_lte.o: hard_demod_lte.c.o
 
 # target to build an object file
 hard_demod_lte.c.o:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/modem/CMakeFiles/srslte_modem.dir/build.make lib/src/phy/modem/CMakeFiles/srslte_modem.dir/hard_demod_lte.c.o
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/modem/CMakeFiles/srslte_modem.dir/build.make lib/src/phy/modem/CMakeFiles/srslte_modem.dir/hard_demod_lte.c.o
 .PHONY : hard_demod_lte.c.o
 
 hard_demod_lte.i: hard_demod_lte.c.i
@@ -273,7 +273,7 @@ hard_demod_lte.i: hard_demod_lte.c.i
 
 # target to preprocess a source file
 hard_demod_lte.c.i:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/modem/CMakeFiles/srslte_modem.dir/build.make lib/src/phy/modem/CMakeFiles/srslte_modem.dir/hard_demod_lte.c.i
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/modem/CMakeFiles/srslte_modem.dir/build.make lib/src/phy/modem/CMakeFiles/srslte_modem.dir/hard_demod_lte.c.i
 .PHONY : hard_demod_lte.c.i
 
 hard_demod_lte.s: hard_demod_lte.c.s
@@ -282,7 +282,7 @@ hard_demod_lte.s: hard_demod_lte.c.s
 
 # target to generate assembly for a file
 hard_demod_lte.c.s:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/modem/CMakeFiles/srslte_modem.dir/build.make lib/src/phy/modem/CMakeFiles/srslte_modem.dir/hard_demod_lte.c.s
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/modem/CMakeFiles/srslte_modem.dir/build.make lib/src/phy/modem/CMakeFiles/srslte_modem.dir/hard_demod_lte.c.s
 .PHONY : hard_demod_lte.c.s
 
 lte_tables.o: lte_tables.c.o
@@ -291,7 +291,7 @@ lte_tables.o: lte_tables.c.o
 
 # target to build an object file
 lte_tables.c.o:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/modem/CMakeFiles/srslte_modem.dir/build.make lib/src/phy/modem/CMakeFiles/srslte_modem.dir/lte_tables.c.o
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/modem/CMakeFiles/srslte_modem.dir/build.make lib/src/phy/modem/CMakeFiles/srslte_modem.dir/lte_tables.c.o
 .PHONY : lte_tables.c.o
 
 lte_tables.i: lte_tables.c.i
@@ -300,7 +300,7 @@ lte_tables.i: lte_tables.c.i
 
 # target to preprocess a source file
 lte_tables.c.i:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/modem/CMakeFiles/srslte_modem.dir/build.make lib/src/phy/modem/CMakeFiles/srslte_modem.dir/lte_tables.c.i
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/modem/CMakeFiles/srslte_modem.dir/build.make lib/src/phy/modem/CMakeFiles/srslte_modem.dir/lte_tables.c.i
 .PHONY : lte_tables.c.i
 
 lte_tables.s: lte_tables.c.s
@@ -309,7 +309,7 @@ lte_tables.s: lte_tables.c.s
 
 # target to generate assembly for a file
 lte_tables.c.s:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/modem/CMakeFiles/srslte_modem.dir/build.make lib/src/phy/modem/CMakeFiles/srslte_modem.dir/lte_tables.c.s
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/modem/CMakeFiles/srslte_modem.dir/build.make lib/src/phy/modem/CMakeFiles/srslte_modem.dir/lte_tables.c.s
 .PHONY : lte_tables.c.s
 
 mod.o: mod.c.o
@@ -318,7 +318,7 @@ mod.o: mod.c.o
 
 # target to build an object file
 mod.c.o:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/modem/CMakeFiles/srslte_modem.dir/build.make lib/src/phy/modem/CMakeFiles/srslte_modem.dir/mod.c.o
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/modem/CMakeFiles/srslte_modem.dir/build.make lib/src/phy/modem/CMakeFiles/srslte_modem.dir/mod.c.o
 .PHONY : mod.c.o
 
 mod.i: mod.c.i
@@ -327,7 +327,7 @@ mod.i: mod.c.i
 
 # target to preprocess a source file
 mod.c.i:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/modem/CMakeFiles/srslte_modem.dir/build.make lib/src/phy/modem/CMakeFiles/srslte_modem.dir/mod.c.i
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/modem/CMakeFiles/srslte_modem.dir/build.make lib/src/phy/modem/CMakeFiles/srslte_modem.dir/mod.c.i
 .PHONY : mod.c.i
 
 mod.s: mod.c.s
@@ -336,7 +336,7 @@ mod.s: mod.c.s
 
 # target to generate assembly for a file
 mod.c.s:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/modem/CMakeFiles/srslte_modem.dir/build.make lib/src/phy/modem/CMakeFiles/srslte_modem.dir/mod.c.s
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/modem/CMakeFiles/srslte_modem.dir/build.make lib/src/phy/modem/CMakeFiles/srslte_modem.dir/mod.c.s
 .PHONY : mod.c.s
 
 modem_table.o: modem_table.c.o
@@ -345,7 +345,7 @@ modem_table.o: modem_table.c.o
 
 # target to build an object file
 modem_table.c.o:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/modem/CMakeFiles/srslte_modem.dir/build.make lib/src/phy/modem/CMakeFiles/srslte_modem.dir/modem_table.c.o
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/modem/CMakeFiles/srslte_modem.dir/build.make lib/src/phy/modem/CMakeFiles/srslte_modem.dir/modem_table.c.o
 .PHONY : modem_table.c.o
 
 modem_table.i: modem_table.c.i
@@ -354,7 +354,7 @@ modem_table.i: modem_table.c.i
 
 # target to preprocess a source file
 modem_table.c.i:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/modem/CMakeFiles/srslte_modem.dir/build.make lib/src/phy/modem/CMakeFiles/srslte_modem.dir/modem_table.c.i
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/modem/CMakeFiles/srslte_modem.dir/build.make lib/src/phy/modem/CMakeFiles/srslte_modem.dir/modem_table.c.i
 .PHONY : modem_table.c.i
 
 modem_table.s: modem_table.c.s
@@ -363,7 +363,7 @@ modem_table.s: modem_table.c.s
 
 # target to generate assembly for a file
 modem_table.c.s:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/modem/CMakeFiles/srslte_modem.dir/build.make lib/src/phy/modem/CMakeFiles/srslte_modem.dir/modem_table.c.s
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/modem/CMakeFiles/srslte_modem.dir/build.make lib/src/phy/modem/CMakeFiles/srslte_modem.dir/modem_table.c.s
 .PHONY : modem_table.c.s
 
 # Help Target
@@ -411,6 +411,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/atm/Divya/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

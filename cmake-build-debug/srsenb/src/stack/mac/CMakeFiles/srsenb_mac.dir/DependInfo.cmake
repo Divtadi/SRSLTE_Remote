@@ -4,14 +4,14 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/atm/Ayman/srsLTE_Slicing/srsenb/src/stack/mac/mac.cc" "/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/srsenb/src/stack/mac/CMakeFiles/srsenb_mac.dir/mac.cc.o"
-  "/home/atm/Ayman/srsLTE_Slicing/srsenb/src/stack/mac/scheduler.cc" "/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/srsenb/src/stack/mac/CMakeFiles/srsenb_mac.dir/scheduler.cc.o"
-  "/home/atm/Ayman/srsLTE_Slicing/srsenb/src/stack/mac/scheduler_carrier.cc" "/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/srsenb/src/stack/mac/CMakeFiles/srsenb_mac.dir/scheduler_carrier.cc.o"
-  "/home/atm/Ayman/srsLTE_Slicing/srsenb/src/stack/mac/scheduler_grid.cc" "/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/srsenb/src/stack/mac/CMakeFiles/srsenb_mac.dir/scheduler_grid.cc.o"
-  "/home/atm/Ayman/srsLTE_Slicing/srsenb/src/stack/mac/scheduler_harq.cc" "/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/srsenb/src/stack/mac/CMakeFiles/srsenb_mac.dir/scheduler_harq.cc.o"
-  "/home/atm/Ayman/srsLTE_Slicing/srsenb/src/stack/mac/scheduler_metric.cc" "/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/srsenb/src/stack/mac/CMakeFiles/srsenb_mac.dir/scheduler_metric.cc.o"
-  "/home/atm/Ayman/srsLTE_Slicing/srsenb/src/stack/mac/scheduler_ue.cc" "/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/srsenb/src/stack/mac/CMakeFiles/srsenb_mac.dir/scheduler_ue.cc.o"
-  "/home/atm/Ayman/srsLTE_Slicing/srsenb/src/stack/mac/ue.cc" "/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/srsenb/src/stack/mac/CMakeFiles/srsenb_mac.dir/ue.cc.o"
+  "/home/atm/Divya/srsenb/src/stack/mac/mac.cc" "/home/atm/Divya/cmake-build-debug/srsenb/src/stack/mac/CMakeFiles/srsenb_mac.dir/mac.cc.o"
+  "/home/atm/Divya/srsenb/src/stack/mac/scheduler.cc" "/home/atm/Divya/cmake-build-debug/srsenb/src/stack/mac/CMakeFiles/srsenb_mac.dir/scheduler.cc.o"
+  "/home/atm/Divya/srsenb/src/stack/mac/scheduler_carrier.cc" "/home/atm/Divya/cmake-build-debug/srsenb/src/stack/mac/CMakeFiles/srsenb_mac.dir/scheduler_carrier.cc.o"
+  "/home/atm/Divya/srsenb/src/stack/mac/scheduler_grid.cc" "/home/atm/Divya/cmake-build-debug/srsenb/src/stack/mac/CMakeFiles/srsenb_mac.dir/scheduler_grid.cc.o"
+  "/home/atm/Divya/srsenb/src/stack/mac/scheduler_harq.cc" "/home/atm/Divya/cmake-build-debug/srsenb/src/stack/mac/CMakeFiles/srsenb_mac.dir/scheduler_harq.cc.o"
+  "/home/atm/Divya/srsenb/src/stack/mac/scheduler_metric.cc" "/home/atm/Divya/cmake-build-debug/srsenb/src/stack/mac/CMakeFiles/srsenb_mac.dir/scheduler_metric.cc.o"
+  "/home/atm/Divya/srsenb/src/stack/mac/scheduler_ue.cc" "/home/atm/Divya/cmake-build-debug/srsenb/src/stack/mac/CMakeFiles/srsenb_mac.dir/scheduler_ue.cc.o"
+  "/home/atm/Divya/srsenb/src/stack/mac/ue.cc" "/home/atm/Divya/cmake-build-debug/srsenb/src/stack/mac/CMakeFiles/srsenb_mac.dir/ue.cc.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -19,10 +19,12 @@ set(CMAKE_CXX_COMPILER_ID "GNU")
 set(CMAKE_TARGET_DEFINITIONS_CXX
   "ENABLE_TIMEPROF"
   "HAVE_MBEDTLS"
+  "HAVE_PCSC"
   )
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
+  "/usr/include/PCSC"
   "lib/include"
   "../lib/include"
   "../"

@@ -43,10 +43,10 @@ RM = /opt/clion-2020.1.2/bin/cmake/linux/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/atm/Ayman/srsLTE_Slicing
+CMAKE_SOURCE_DIR = /home/atm/Divya
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug
+CMAKE_BINARY_DIR = /home/atm/Divya/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include lib/src/phy/ch_estimation/test/CMakeFiles/refsignal_ul_test_all.dir/depend.make
@@ -59,16 +59,16 @@ include lib/src/phy/ch_estimation/test/CMakeFiles/refsignal_ul_test_all.dir/flag
 
 lib/src/phy/ch_estimation/test/CMakeFiles/refsignal_ul_test_all.dir/refsignal_ul_test.c.o: lib/src/phy/ch_estimation/test/CMakeFiles/refsignal_ul_test_all.dir/flags.make
 lib/src/phy/ch_estimation/test/CMakeFiles/refsignal_ul_test_all.dir/refsignal_ul_test.c.o: ../lib/src/phy/ch_estimation/test/refsignal_ul_test.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object lib/src/phy/ch_estimation/test/CMakeFiles/refsignal_ul_test_all.dir/refsignal_ul_test.c.o"
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/phy/ch_estimation/test && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/refsignal_ul_test_all.dir/refsignal_ul_test.c.o   -c /home/atm/Ayman/srsLTE_Slicing/lib/src/phy/ch_estimation/test/refsignal_ul_test.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/atm/Divya/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object lib/src/phy/ch_estimation/test/CMakeFiles/refsignal_ul_test_all.dir/refsignal_ul_test.c.o"
+	cd /home/atm/Divya/cmake-build-debug/lib/src/phy/ch_estimation/test && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/refsignal_ul_test_all.dir/refsignal_ul_test.c.o   -c /home/atm/Divya/lib/src/phy/ch_estimation/test/refsignal_ul_test.c
 
 lib/src/phy/ch_estimation/test/CMakeFiles/refsignal_ul_test_all.dir/refsignal_ul_test.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/refsignal_ul_test_all.dir/refsignal_ul_test.c.i"
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/phy/ch_estimation/test && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/atm/Ayman/srsLTE_Slicing/lib/src/phy/ch_estimation/test/refsignal_ul_test.c > CMakeFiles/refsignal_ul_test_all.dir/refsignal_ul_test.c.i
+	cd /home/atm/Divya/cmake-build-debug/lib/src/phy/ch_estimation/test && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/atm/Divya/lib/src/phy/ch_estimation/test/refsignal_ul_test.c > CMakeFiles/refsignal_ul_test_all.dir/refsignal_ul_test.c.i
 
 lib/src/phy/ch_estimation/test/CMakeFiles/refsignal_ul_test_all.dir/refsignal_ul_test.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/refsignal_ul_test_all.dir/refsignal_ul_test.c.s"
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/phy/ch_estimation/test && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/atm/Ayman/srsLTE_Slicing/lib/src/phy/ch_estimation/test/refsignal_ul_test.c -o CMakeFiles/refsignal_ul_test_all.dir/refsignal_ul_test.c.s
+	cd /home/atm/Divya/cmake-build-debug/lib/src/phy/ch_estimation/test && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/atm/Divya/lib/src/phy/ch_estimation/test/refsignal_ul_test.c -o CMakeFiles/refsignal_ul_test_all.dir/refsignal_ul_test.c.s
 
 # Object files for target refsignal_ul_test_all
 refsignal_ul_test_all_OBJECTS = \
@@ -85,8 +85,8 @@ lib/src/phy/ch_estimation/test/refsignal_ul_test_all: lib/src/phy/libsrslte_phy.
 lib/src/phy/ch_estimation/test/refsignal_ul_test_all: /usr/lib/x86_64-linux-gnu/libfftw3f.so
 lib/src/phy/ch_estimation/test/refsignal_ul_test_all: /usr/lib/x86_64-linux-gnu/libmbedcrypto.so
 lib/src/phy/ch_estimation/test/refsignal_ul_test_all: lib/src/phy/ch_estimation/test/CMakeFiles/refsignal_ul_test_all.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable refsignal_ul_test_all"
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/phy/ch_estimation/test && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/refsignal_ul_test_all.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/atm/Divya/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable refsignal_ul_test_all"
+	cd /home/atm/Divya/cmake-build-debug/lib/src/phy/ch_estimation/test && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/refsignal_ul_test_all.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 lib/src/phy/ch_estimation/test/CMakeFiles/refsignal_ul_test_all.dir/build: lib/src/phy/ch_estimation/test/refsignal_ul_test_all
@@ -94,10 +94,10 @@ lib/src/phy/ch_estimation/test/CMakeFiles/refsignal_ul_test_all.dir/build: lib/s
 .PHONY : lib/src/phy/ch_estimation/test/CMakeFiles/refsignal_ul_test_all.dir/build
 
 lib/src/phy/ch_estimation/test/CMakeFiles/refsignal_ul_test_all.dir/clean:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/phy/ch_estimation/test && $(CMAKE_COMMAND) -P CMakeFiles/refsignal_ul_test_all.dir/cmake_clean.cmake
+	cd /home/atm/Divya/cmake-build-debug/lib/src/phy/ch_estimation/test && $(CMAKE_COMMAND) -P CMakeFiles/refsignal_ul_test_all.dir/cmake_clean.cmake
 .PHONY : lib/src/phy/ch_estimation/test/CMakeFiles/refsignal_ul_test_all.dir/clean
 
 lib/src/phy/ch_estimation/test/CMakeFiles/refsignal_ul_test_all.dir/depend:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/atm/Ayman/srsLTE_Slicing /home/atm/Ayman/srsLTE_Slicing/lib/src/phy/ch_estimation/test /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/phy/ch_estimation/test /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/phy/ch_estimation/test/CMakeFiles/refsignal_ul_test_all.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/atm/Divya/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/atm/Divya /home/atm/Divya/lib/src/phy/ch_estimation/test /home/atm/Divya/cmake-build-debug /home/atm/Divya/cmake-build-debug/lib/src/phy/ch_estimation/test /home/atm/Divya/cmake-build-debug/lib/src/phy/ch_estimation/test/CMakeFiles/refsignal_ul_test_all.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : lib/src/phy/ch_estimation/test/CMakeFiles/refsignal_ul_test_all.dir/depend
 

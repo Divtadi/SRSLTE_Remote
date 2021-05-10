@@ -4,9 +4,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/atm/Ayman/srsLTE_Slicing/srsue/src/stack/rrc/rrc.cc" "/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/srsue/src/stack/rrc/CMakeFiles/srsue_rrc.dir/rrc.cc.o"
-  "/home/atm/Ayman/srsLTE_Slicing/srsue/src/stack/rrc/rrc_meas.cc" "/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/srsue/src/stack/rrc/CMakeFiles/srsue_rrc.dir/rrc_meas.cc.o"
-  "/home/atm/Ayman/srsLTE_Slicing/srsue/src/stack/rrc/rrc_procedures.cc" "/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/srsue/src/stack/rrc/CMakeFiles/srsue_rrc.dir/rrc_procedures.cc.o"
+  "/home/atm/Divya/srsue/src/stack/rrc/rrc.cc" "/home/atm/Divya/cmake-build-debug/srsue/src/stack/rrc/CMakeFiles/srsue_rrc.dir/rrc.cc.o"
+  "/home/atm/Divya/srsue/src/stack/rrc/rrc_meas.cc" "/home/atm/Divya/cmake-build-debug/srsue/src/stack/rrc/CMakeFiles/srsue_rrc.dir/rrc_meas.cc.o"
+  "/home/atm/Divya/srsue/src/stack/rrc/rrc_procedures.cc" "/home/atm/Divya/cmake-build-debug/srsue/src/stack/rrc/CMakeFiles/srsue_rrc.dir/rrc_procedures.cc.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -14,10 +14,12 @@ set(CMAKE_CXX_COMPILER_ID "GNU")
 set(CMAKE_TARGET_DEFINITIONS_CXX
   "ENABLE_TIMEPROF"
   "HAVE_MBEDTLS"
+  "HAVE_PCSC"
   )
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
+  "/usr/include/PCSC"
   "lib/include"
   "../lib/include"
   "../"

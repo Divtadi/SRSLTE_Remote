@@ -1,4 +1,4 @@
-# Install script for directory: /home/atm/Ayman/srsLTE_Slicing/lib/src/phy/modem
+# Install script for directory: /home/atm/Divya/lib/src/phy/modem
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,7 +39,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/phy/modem/test/cmake_install.cmake")
+  include("/home/atm/Divya/cmake-build-debug/lib/src/phy/modem/test/cmake_install.cmake")
 
 endif()
 

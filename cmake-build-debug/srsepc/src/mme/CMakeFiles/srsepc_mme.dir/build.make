@@ -43,10 +43,10 @@ RM = /opt/clion-2020.1.2/bin/cmake/linux/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/atm/Ayman/srsLTE_Slicing
+CMAKE_SOURCE_DIR = /home/atm/Divya
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug
+CMAKE_BINARY_DIR = /home/atm/Divya/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include srsepc/src/mme/CMakeFiles/srsepc_mme.dir/depend.make
@@ -59,107 +59,107 @@ include srsepc/src/mme/CMakeFiles/srsepc_mme.dir/flags.make
 
 srsepc/src/mme/CMakeFiles/srsepc_mme.dir/mme.cc.o: srsepc/src/mme/CMakeFiles/srsepc_mme.dir/flags.make
 srsepc/src/mme/CMakeFiles/srsepc_mme.dir/mme.cc.o: ../srsepc/src/mme/mme.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object srsepc/src/mme/CMakeFiles/srsepc_mme.dir/mme.cc.o"
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/srsepc/src/mme && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/srsepc_mme.dir/mme.cc.o -c /home/atm/Ayman/srsLTE_Slicing/srsepc/src/mme/mme.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/atm/Divya/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object srsepc/src/mme/CMakeFiles/srsepc_mme.dir/mme.cc.o"
+	cd /home/atm/Divya/cmake-build-debug/srsepc/src/mme && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/srsepc_mme.dir/mme.cc.o -c /home/atm/Divya/srsepc/src/mme/mme.cc
 
 srsepc/src/mme/CMakeFiles/srsepc_mme.dir/mme.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/srsepc_mme.dir/mme.cc.i"
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/srsepc/src/mme && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/atm/Ayman/srsLTE_Slicing/srsepc/src/mme/mme.cc > CMakeFiles/srsepc_mme.dir/mme.cc.i
+	cd /home/atm/Divya/cmake-build-debug/srsepc/src/mme && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/atm/Divya/srsepc/src/mme/mme.cc > CMakeFiles/srsepc_mme.dir/mme.cc.i
 
 srsepc/src/mme/CMakeFiles/srsepc_mme.dir/mme.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/srsepc_mme.dir/mme.cc.s"
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/srsepc/src/mme && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/atm/Ayman/srsLTE_Slicing/srsepc/src/mme/mme.cc -o CMakeFiles/srsepc_mme.dir/mme.cc.s
+	cd /home/atm/Divya/cmake-build-debug/srsepc/src/mme && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/atm/Divya/srsepc/src/mme/mme.cc -o CMakeFiles/srsepc_mme.dir/mme.cc.s
 
 srsepc/src/mme/CMakeFiles/srsepc_mme.dir/mme_gtpc.cc.o: srsepc/src/mme/CMakeFiles/srsepc_mme.dir/flags.make
 srsepc/src/mme/CMakeFiles/srsepc_mme.dir/mme_gtpc.cc.o: ../srsepc/src/mme/mme_gtpc.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object srsepc/src/mme/CMakeFiles/srsepc_mme.dir/mme_gtpc.cc.o"
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/srsepc/src/mme && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/srsepc_mme.dir/mme_gtpc.cc.o -c /home/atm/Ayman/srsLTE_Slicing/srsepc/src/mme/mme_gtpc.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/atm/Divya/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object srsepc/src/mme/CMakeFiles/srsepc_mme.dir/mme_gtpc.cc.o"
+	cd /home/atm/Divya/cmake-build-debug/srsepc/src/mme && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/srsepc_mme.dir/mme_gtpc.cc.o -c /home/atm/Divya/srsepc/src/mme/mme_gtpc.cc
 
 srsepc/src/mme/CMakeFiles/srsepc_mme.dir/mme_gtpc.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/srsepc_mme.dir/mme_gtpc.cc.i"
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/srsepc/src/mme && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/atm/Ayman/srsLTE_Slicing/srsepc/src/mme/mme_gtpc.cc > CMakeFiles/srsepc_mme.dir/mme_gtpc.cc.i
+	cd /home/atm/Divya/cmake-build-debug/srsepc/src/mme && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/atm/Divya/srsepc/src/mme/mme_gtpc.cc > CMakeFiles/srsepc_mme.dir/mme_gtpc.cc.i
 
 srsepc/src/mme/CMakeFiles/srsepc_mme.dir/mme_gtpc.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/srsepc_mme.dir/mme_gtpc.cc.s"
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/srsepc/src/mme && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/atm/Ayman/srsLTE_Slicing/srsepc/src/mme/mme_gtpc.cc -o CMakeFiles/srsepc_mme.dir/mme_gtpc.cc.s
+	cd /home/atm/Divya/cmake-build-debug/srsepc/src/mme && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/atm/Divya/srsepc/src/mme/mme_gtpc.cc -o CMakeFiles/srsepc_mme.dir/mme_gtpc.cc.s
 
 srsepc/src/mme/CMakeFiles/srsepc_mme.dir/nas.cc.o: srsepc/src/mme/CMakeFiles/srsepc_mme.dir/flags.make
 srsepc/src/mme/CMakeFiles/srsepc_mme.dir/nas.cc.o: ../srsepc/src/mme/nas.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object srsepc/src/mme/CMakeFiles/srsepc_mme.dir/nas.cc.o"
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/srsepc/src/mme && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/srsepc_mme.dir/nas.cc.o -c /home/atm/Ayman/srsLTE_Slicing/srsepc/src/mme/nas.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/atm/Divya/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object srsepc/src/mme/CMakeFiles/srsepc_mme.dir/nas.cc.o"
+	cd /home/atm/Divya/cmake-build-debug/srsepc/src/mme && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/srsepc_mme.dir/nas.cc.o -c /home/atm/Divya/srsepc/src/mme/nas.cc
 
 srsepc/src/mme/CMakeFiles/srsepc_mme.dir/nas.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/srsepc_mme.dir/nas.cc.i"
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/srsepc/src/mme && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/atm/Ayman/srsLTE_Slicing/srsepc/src/mme/nas.cc > CMakeFiles/srsepc_mme.dir/nas.cc.i
+	cd /home/atm/Divya/cmake-build-debug/srsepc/src/mme && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/atm/Divya/srsepc/src/mme/nas.cc > CMakeFiles/srsepc_mme.dir/nas.cc.i
 
 srsepc/src/mme/CMakeFiles/srsepc_mme.dir/nas.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/srsepc_mme.dir/nas.cc.s"
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/srsepc/src/mme && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/atm/Ayman/srsLTE_Slicing/srsepc/src/mme/nas.cc -o CMakeFiles/srsepc_mme.dir/nas.cc.s
+	cd /home/atm/Divya/cmake-build-debug/srsepc/src/mme && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/atm/Divya/srsepc/src/mme/nas.cc -o CMakeFiles/srsepc_mme.dir/nas.cc.s
 
 srsepc/src/mme/CMakeFiles/srsepc_mme.dir/s1ap.cc.o: srsepc/src/mme/CMakeFiles/srsepc_mme.dir/flags.make
 srsepc/src/mme/CMakeFiles/srsepc_mme.dir/s1ap.cc.o: ../srsepc/src/mme/s1ap.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object srsepc/src/mme/CMakeFiles/srsepc_mme.dir/s1ap.cc.o"
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/srsepc/src/mme && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/srsepc_mme.dir/s1ap.cc.o -c /home/atm/Ayman/srsLTE_Slicing/srsepc/src/mme/s1ap.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/atm/Divya/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object srsepc/src/mme/CMakeFiles/srsepc_mme.dir/s1ap.cc.o"
+	cd /home/atm/Divya/cmake-build-debug/srsepc/src/mme && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/srsepc_mme.dir/s1ap.cc.o -c /home/atm/Divya/srsepc/src/mme/s1ap.cc
 
 srsepc/src/mme/CMakeFiles/srsepc_mme.dir/s1ap.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/srsepc_mme.dir/s1ap.cc.i"
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/srsepc/src/mme && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/atm/Ayman/srsLTE_Slicing/srsepc/src/mme/s1ap.cc > CMakeFiles/srsepc_mme.dir/s1ap.cc.i
+	cd /home/atm/Divya/cmake-build-debug/srsepc/src/mme && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/atm/Divya/srsepc/src/mme/s1ap.cc > CMakeFiles/srsepc_mme.dir/s1ap.cc.i
 
 srsepc/src/mme/CMakeFiles/srsepc_mme.dir/s1ap.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/srsepc_mme.dir/s1ap.cc.s"
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/srsepc/src/mme && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/atm/Ayman/srsLTE_Slicing/srsepc/src/mme/s1ap.cc -o CMakeFiles/srsepc_mme.dir/s1ap.cc.s
+	cd /home/atm/Divya/cmake-build-debug/srsepc/src/mme && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/atm/Divya/srsepc/src/mme/s1ap.cc -o CMakeFiles/srsepc_mme.dir/s1ap.cc.s
 
 srsepc/src/mme/CMakeFiles/srsepc_mme.dir/s1ap_ctx_mngmt_proc.cc.o: srsepc/src/mme/CMakeFiles/srsepc_mme.dir/flags.make
 srsepc/src/mme/CMakeFiles/srsepc_mme.dir/s1ap_ctx_mngmt_proc.cc.o: ../srsepc/src/mme/s1ap_ctx_mngmt_proc.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object srsepc/src/mme/CMakeFiles/srsepc_mme.dir/s1ap_ctx_mngmt_proc.cc.o"
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/srsepc/src/mme && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/srsepc_mme.dir/s1ap_ctx_mngmt_proc.cc.o -c /home/atm/Ayman/srsLTE_Slicing/srsepc/src/mme/s1ap_ctx_mngmt_proc.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/atm/Divya/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object srsepc/src/mme/CMakeFiles/srsepc_mme.dir/s1ap_ctx_mngmt_proc.cc.o"
+	cd /home/atm/Divya/cmake-build-debug/srsepc/src/mme && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/srsepc_mme.dir/s1ap_ctx_mngmt_proc.cc.o -c /home/atm/Divya/srsepc/src/mme/s1ap_ctx_mngmt_proc.cc
 
 srsepc/src/mme/CMakeFiles/srsepc_mme.dir/s1ap_ctx_mngmt_proc.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/srsepc_mme.dir/s1ap_ctx_mngmt_proc.cc.i"
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/srsepc/src/mme && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/atm/Ayman/srsLTE_Slicing/srsepc/src/mme/s1ap_ctx_mngmt_proc.cc > CMakeFiles/srsepc_mme.dir/s1ap_ctx_mngmt_proc.cc.i
+	cd /home/atm/Divya/cmake-build-debug/srsepc/src/mme && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/atm/Divya/srsepc/src/mme/s1ap_ctx_mngmt_proc.cc > CMakeFiles/srsepc_mme.dir/s1ap_ctx_mngmt_proc.cc.i
 
 srsepc/src/mme/CMakeFiles/srsepc_mme.dir/s1ap_ctx_mngmt_proc.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/srsepc_mme.dir/s1ap_ctx_mngmt_proc.cc.s"
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/srsepc/src/mme && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/atm/Ayman/srsLTE_Slicing/srsepc/src/mme/s1ap_ctx_mngmt_proc.cc -o CMakeFiles/srsepc_mme.dir/s1ap_ctx_mngmt_proc.cc.s
+	cd /home/atm/Divya/cmake-build-debug/srsepc/src/mme && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/atm/Divya/srsepc/src/mme/s1ap_ctx_mngmt_proc.cc -o CMakeFiles/srsepc_mme.dir/s1ap_ctx_mngmt_proc.cc.s
 
 srsepc/src/mme/CMakeFiles/srsepc_mme.dir/s1ap_mngmt_proc.cc.o: srsepc/src/mme/CMakeFiles/srsepc_mme.dir/flags.make
 srsepc/src/mme/CMakeFiles/srsepc_mme.dir/s1ap_mngmt_proc.cc.o: ../srsepc/src/mme/s1ap_mngmt_proc.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object srsepc/src/mme/CMakeFiles/srsepc_mme.dir/s1ap_mngmt_proc.cc.o"
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/srsepc/src/mme && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/srsepc_mme.dir/s1ap_mngmt_proc.cc.o -c /home/atm/Ayman/srsLTE_Slicing/srsepc/src/mme/s1ap_mngmt_proc.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/atm/Divya/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object srsepc/src/mme/CMakeFiles/srsepc_mme.dir/s1ap_mngmt_proc.cc.o"
+	cd /home/atm/Divya/cmake-build-debug/srsepc/src/mme && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/srsepc_mme.dir/s1ap_mngmt_proc.cc.o -c /home/atm/Divya/srsepc/src/mme/s1ap_mngmt_proc.cc
 
 srsepc/src/mme/CMakeFiles/srsepc_mme.dir/s1ap_mngmt_proc.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/srsepc_mme.dir/s1ap_mngmt_proc.cc.i"
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/srsepc/src/mme && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/atm/Ayman/srsLTE_Slicing/srsepc/src/mme/s1ap_mngmt_proc.cc > CMakeFiles/srsepc_mme.dir/s1ap_mngmt_proc.cc.i
+	cd /home/atm/Divya/cmake-build-debug/srsepc/src/mme && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/atm/Divya/srsepc/src/mme/s1ap_mngmt_proc.cc > CMakeFiles/srsepc_mme.dir/s1ap_mngmt_proc.cc.i
 
 srsepc/src/mme/CMakeFiles/srsepc_mme.dir/s1ap_mngmt_proc.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/srsepc_mme.dir/s1ap_mngmt_proc.cc.s"
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/srsepc/src/mme && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/atm/Ayman/srsLTE_Slicing/srsepc/src/mme/s1ap_mngmt_proc.cc -o CMakeFiles/srsepc_mme.dir/s1ap_mngmt_proc.cc.s
+	cd /home/atm/Divya/cmake-build-debug/srsepc/src/mme && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/atm/Divya/srsepc/src/mme/s1ap_mngmt_proc.cc -o CMakeFiles/srsepc_mme.dir/s1ap_mngmt_proc.cc.s
 
 srsepc/src/mme/CMakeFiles/srsepc_mme.dir/s1ap_nas_transport.cc.o: srsepc/src/mme/CMakeFiles/srsepc_mme.dir/flags.make
 srsepc/src/mme/CMakeFiles/srsepc_mme.dir/s1ap_nas_transport.cc.o: ../srsepc/src/mme/s1ap_nas_transport.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object srsepc/src/mme/CMakeFiles/srsepc_mme.dir/s1ap_nas_transport.cc.o"
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/srsepc/src/mme && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/srsepc_mme.dir/s1ap_nas_transport.cc.o -c /home/atm/Ayman/srsLTE_Slicing/srsepc/src/mme/s1ap_nas_transport.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/atm/Divya/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object srsepc/src/mme/CMakeFiles/srsepc_mme.dir/s1ap_nas_transport.cc.o"
+	cd /home/atm/Divya/cmake-build-debug/srsepc/src/mme && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/srsepc_mme.dir/s1ap_nas_transport.cc.o -c /home/atm/Divya/srsepc/src/mme/s1ap_nas_transport.cc
 
 srsepc/src/mme/CMakeFiles/srsepc_mme.dir/s1ap_nas_transport.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/srsepc_mme.dir/s1ap_nas_transport.cc.i"
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/srsepc/src/mme && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/atm/Ayman/srsLTE_Slicing/srsepc/src/mme/s1ap_nas_transport.cc > CMakeFiles/srsepc_mme.dir/s1ap_nas_transport.cc.i
+	cd /home/atm/Divya/cmake-build-debug/srsepc/src/mme && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/atm/Divya/srsepc/src/mme/s1ap_nas_transport.cc > CMakeFiles/srsepc_mme.dir/s1ap_nas_transport.cc.i
 
 srsepc/src/mme/CMakeFiles/srsepc_mme.dir/s1ap_nas_transport.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/srsepc_mme.dir/s1ap_nas_transport.cc.s"
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/srsepc/src/mme && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/atm/Ayman/srsLTE_Slicing/srsepc/src/mme/s1ap_nas_transport.cc -o CMakeFiles/srsepc_mme.dir/s1ap_nas_transport.cc.s
+	cd /home/atm/Divya/cmake-build-debug/srsepc/src/mme && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/atm/Divya/srsepc/src/mme/s1ap_nas_transport.cc -o CMakeFiles/srsepc_mme.dir/s1ap_nas_transport.cc.s
 
 srsepc/src/mme/CMakeFiles/srsepc_mme.dir/s1ap_paging.cc.o: srsepc/src/mme/CMakeFiles/srsepc_mme.dir/flags.make
 srsepc/src/mme/CMakeFiles/srsepc_mme.dir/s1ap_paging.cc.o: ../srsepc/src/mme/s1ap_paging.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object srsepc/src/mme/CMakeFiles/srsepc_mme.dir/s1ap_paging.cc.o"
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/srsepc/src/mme && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/srsepc_mme.dir/s1ap_paging.cc.o -c /home/atm/Ayman/srsLTE_Slicing/srsepc/src/mme/s1ap_paging.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/atm/Divya/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object srsepc/src/mme/CMakeFiles/srsepc_mme.dir/s1ap_paging.cc.o"
+	cd /home/atm/Divya/cmake-build-debug/srsepc/src/mme && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/srsepc_mme.dir/s1ap_paging.cc.o -c /home/atm/Divya/srsepc/src/mme/s1ap_paging.cc
 
 srsepc/src/mme/CMakeFiles/srsepc_mme.dir/s1ap_paging.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/srsepc_mme.dir/s1ap_paging.cc.i"
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/srsepc/src/mme && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/atm/Ayman/srsLTE_Slicing/srsepc/src/mme/s1ap_paging.cc > CMakeFiles/srsepc_mme.dir/s1ap_paging.cc.i
+	cd /home/atm/Divya/cmake-build-debug/srsepc/src/mme && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/atm/Divya/srsepc/src/mme/s1ap_paging.cc > CMakeFiles/srsepc_mme.dir/s1ap_paging.cc.i
 
 srsepc/src/mme/CMakeFiles/srsepc_mme.dir/s1ap_paging.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/srsepc_mme.dir/s1ap_paging.cc.s"
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/srsepc/src/mme && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/atm/Ayman/srsLTE_Slicing/srsepc/src/mme/s1ap_paging.cc -o CMakeFiles/srsepc_mme.dir/s1ap_paging.cc.s
+	cd /home/atm/Divya/cmake-build-debug/srsepc/src/mme && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/atm/Divya/srsepc/src/mme/s1ap_paging.cc -o CMakeFiles/srsepc_mme.dir/s1ap_paging.cc.s
 
 # Object files for target srsepc_mme
 srsepc_mme_OBJECTS = \
@@ -185,9 +185,9 @@ srsepc/src/mme/libsrsepc_mme.a: srsepc/src/mme/CMakeFiles/srsepc_mme.dir/s1ap_na
 srsepc/src/mme/libsrsepc_mme.a: srsepc/src/mme/CMakeFiles/srsepc_mme.dir/s1ap_paging.cc.o
 srsepc/src/mme/libsrsepc_mme.a: srsepc/src/mme/CMakeFiles/srsepc_mme.dir/build.make
 srsepc/src/mme/libsrsepc_mme.a: srsepc/src/mme/CMakeFiles/srsepc_mme.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX static library libsrsepc_mme.a"
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/srsepc/src/mme && $(CMAKE_COMMAND) -P CMakeFiles/srsepc_mme.dir/cmake_clean_target.cmake
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/srsepc/src/mme && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/srsepc_mme.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/atm/Divya/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX static library libsrsepc_mme.a"
+	cd /home/atm/Divya/cmake-build-debug/srsepc/src/mme && $(CMAKE_COMMAND) -P CMakeFiles/srsepc_mme.dir/cmake_clean_target.cmake
+	cd /home/atm/Divya/cmake-build-debug/srsepc/src/mme && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/srsepc_mme.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 srsepc/src/mme/CMakeFiles/srsepc_mme.dir/build: srsepc/src/mme/libsrsepc_mme.a
@@ -195,10 +195,10 @@ srsepc/src/mme/CMakeFiles/srsepc_mme.dir/build: srsepc/src/mme/libsrsepc_mme.a
 .PHONY : srsepc/src/mme/CMakeFiles/srsepc_mme.dir/build
 
 srsepc/src/mme/CMakeFiles/srsepc_mme.dir/clean:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/srsepc/src/mme && $(CMAKE_COMMAND) -P CMakeFiles/srsepc_mme.dir/cmake_clean.cmake
+	cd /home/atm/Divya/cmake-build-debug/srsepc/src/mme && $(CMAKE_COMMAND) -P CMakeFiles/srsepc_mme.dir/cmake_clean.cmake
 .PHONY : srsepc/src/mme/CMakeFiles/srsepc_mme.dir/clean
 
 srsepc/src/mme/CMakeFiles/srsepc_mme.dir/depend:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/atm/Ayman/srsLTE_Slicing /home/atm/Ayman/srsLTE_Slicing/srsepc/src/mme /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/srsepc/src/mme /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/srsepc/src/mme/CMakeFiles/srsepc_mme.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/atm/Divya/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/atm/Divya /home/atm/Divya/srsepc/src/mme /home/atm/Divya/cmake-build-debug /home/atm/Divya/cmake-build-debug/srsepc/src/mme /home/atm/Divya/cmake-build-debug/srsepc/src/mme/CMakeFiles/srsepc_mme.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : srsepc/src/mme/CMakeFiles/srsepc_mme.dir/depend
 

@@ -48,10 +48,10 @@ RM = /opt/clion-2020.1.2/bin/cmake/linux/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/atm/Ayman/srsLTE_Slicing
+CMAKE_SOURCE_DIR = /home/atm/Divya
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug
+CMAKE_BINARY_DIR = /home/atm/Divya/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -127,7 +127,7 @@ edit_cache/fast: edit_cache
 # Special rule for the target package_source
 package_source:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool for source..."
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && /opt/clion-2020.1.2/bin/cmake/linux/bin/cpack --config ./CPackSourceConfig.cmake /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/CPackSourceConfig.cmake
+	cd /home/atm/Divya/cmake-build-debug && /opt/clion-2020.1.2/bin/cmake/linux/bin/cpack --config ./CPackSourceConfig.cmake /home/atm/Divya/cmake-build-debug/CPackSourceConfig.cmake
 .PHONY : package_source
 
 # Special rule for the target package_source
@@ -138,7 +138,7 @@ package_source/fast: package_source
 # Special rule for the target package
 package: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool..."
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && /opt/clion-2020.1.2/bin/cmake/linux/bin/cpack --config ./CPackConfig.cmake
+	cd /home/atm/Divya/cmake-build-debug && /opt/clion-2020.1.2/bin/cmake/linux/bin/cpack --config ./CPackConfig.cmake
 .PHONY : package
 
 # Special rule for the target package
@@ -159,14 +159,14 @@ test/fast: test
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_progress_start /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/CMakeFiles /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/phy/utils/CMakeFiles/progress.marks
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 lib/src/phy/utils/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/CMakeFiles 0
+	cd /home/atm/Divya/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_progress_start /home/atm/Divya/cmake-build-debug/CMakeFiles /home/atm/Divya/cmake-build-debug/lib/src/phy/utils/CMakeFiles/progress.marks
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 lib/src/phy/utils/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/atm/Divya/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 lib/src/phy/utils/clean
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 lib/src/phy/utils/clean
 .PHONY : clean
 
 # The main clean target
@@ -176,22 +176,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: cmake_check_build_system
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 lib/src/phy/utils/preinstall
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 lib/src/phy/utils/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 lib/src/phy/utils/preinstall
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 lib/src/phy/utils/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/atm/Divya/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 lib/src/phy/utils/CMakeFiles/srslte_utils.dir/rule:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 lib/src/phy/utils/CMakeFiles/srslte_utils.dir/rule
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 lib/src/phy/utils/CMakeFiles/srslte_utils.dir/rule
 .PHONY : lib/src/phy/utils/CMakeFiles/srslte_utils.dir/rule
 
 # Convenience name for target.
@@ -201,7 +201,7 @@ srslte_utils: lib/src/phy/utils/CMakeFiles/srslte_utils.dir/rule
 
 # fast build rule for target.
 srslte_utils/fast:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/utils/CMakeFiles/srslte_utils.dir/build.make lib/src/phy/utils/CMakeFiles/srslte_utils.dir/build
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/utils/CMakeFiles/srslte_utils.dir/build.make lib/src/phy/utils/CMakeFiles/srslte_utils.dir/build
 .PHONY : srslte_utils/fast
 
 bit.o: bit.c.o
@@ -210,7 +210,7 @@ bit.o: bit.c.o
 
 # target to build an object file
 bit.c.o:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/utils/CMakeFiles/srslte_utils.dir/build.make lib/src/phy/utils/CMakeFiles/srslte_utils.dir/bit.c.o
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/utils/CMakeFiles/srslte_utils.dir/build.make lib/src/phy/utils/CMakeFiles/srslte_utils.dir/bit.c.o
 .PHONY : bit.c.o
 
 bit.i: bit.c.i
@@ -219,7 +219,7 @@ bit.i: bit.c.i
 
 # target to preprocess a source file
 bit.c.i:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/utils/CMakeFiles/srslte_utils.dir/build.make lib/src/phy/utils/CMakeFiles/srslte_utils.dir/bit.c.i
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/utils/CMakeFiles/srslte_utils.dir/build.make lib/src/phy/utils/CMakeFiles/srslte_utils.dir/bit.c.i
 .PHONY : bit.c.i
 
 bit.s: bit.c.s
@@ -228,7 +228,7 @@ bit.s: bit.c.s
 
 # target to generate assembly for a file
 bit.c.s:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/utils/CMakeFiles/srslte_utils.dir/build.make lib/src/phy/utils/CMakeFiles/srslte_utils.dir/bit.c.s
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/utils/CMakeFiles/srslte_utils.dir/build.make lib/src/phy/utils/CMakeFiles/srslte_utils.dir/bit.c.s
 .PHONY : bit.c.s
 
 cexptab.o: cexptab.c.o
@@ -237,7 +237,7 @@ cexptab.o: cexptab.c.o
 
 # target to build an object file
 cexptab.c.o:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/utils/CMakeFiles/srslte_utils.dir/build.make lib/src/phy/utils/CMakeFiles/srslte_utils.dir/cexptab.c.o
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/utils/CMakeFiles/srslte_utils.dir/build.make lib/src/phy/utils/CMakeFiles/srslte_utils.dir/cexptab.c.o
 .PHONY : cexptab.c.o
 
 cexptab.i: cexptab.c.i
@@ -246,7 +246,7 @@ cexptab.i: cexptab.c.i
 
 # target to preprocess a source file
 cexptab.c.i:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/utils/CMakeFiles/srslte_utils.dir/build.make lib/src/phy/utils/CMakeFiles/srslte_utils.dir/cexptab.c.i
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/utils/CMakeFiles/srslte_utils.dir/build.make lib/src/phy/utils/CMakeFiles/srslte_utils.dir/cexptab.c.i
 .PHONY : cexptab.c.i
 
 cexptab.s: cexptab.c.s
@@ -255,7 +255,7 @@ cexptab.s: cexptab.c.s
 
 # target to generate assembly for a file
 cexptab.c.s:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/utils/CMakeFiles/srslte_utils.dir/build.make lib/src/phy/utils/CMakeFiles/srslte_utils.dir/cexptab.c.s
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/utils/CMakeFiles/srslte_utils.dir/build.make lib/src/phy/utils/CMakeFiles/srslte_utils.dir/cexptab.c.s
 .PHONY : cexptab.c.s
 
 convolution.o: convolution.c.o
@@ -264,7 +264,7 @@ convolution.o: convolution.c.o
 
 # target to build an object file
 convolution.c.o:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/utils/CMakeFiles/srslte_utils.dir/build.make lib/src/phy/utils/CMakeFiles/srslte_utils.dir/convolution.c.o
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/utils/CMakeFiles/srslte_utils.dir/build.make lib/src/phy/utils/CMakeFiles/srslte_utils.dir/convolution.c.o
 .PHONY : convolution.c.o
 
 convolution.i: convolution.c.i
@@ -273,7 +273,7 @@ convolution.i: convolution.c.i
 
 # target to preprocess a source file
 convolution.c.i:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/utils/CMakeFiles/srslte_utils.dir/build.make lib/src/phy/utils/CMakeFiles/srslte_utils.dir/convolution.c.i
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/utils/CMakeFiles/srslte_utils.dir/build.make lib/src/phy/utils/CMakeFiles/srslte_utils.dir/convolution.c.i
 .PHONY : convolution.c.i
 
 convolution.s: convolution.c.s
@@ -282,7 +282,7 @@ convolution.s: convolution.c.s
 
 # target to generate assembly for a file
 convolution.c.s:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/utils/CMakeFiles/srslte_utils.dir/build.make lib/src/phy/utils/CMakeFiles/srslte_utils.dir/convolution.c.s
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/utils/CMakeFiles/srslte_utils.dir/build.make lib/src/phy/utils/CMakeFiles/srslte_utils.dir/convolution.c.s
 .PHONY : convolution.c.s
 
 debug.o: debug.c.o
@@ -291,7 +291,7 @@ debug.o: debug.c.o
 
 # target to build an object file
 debug.c.o:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/utils/CMakeFiles/srslte_utils.dir/build.make lib/src/phy/utils/CMakeFiles/srslte_utils.dir/debug.c.o
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/utils/CMakeFiles/srslte_utils.dir/build.make lib/src/phy/utils/CMakeFiles/srslte_utils.dir/debug.c.o
 .PHONY : debug.c.o
 
 debug.i: debug.c.i
@@ -300,7 +300,7 @@ debug.i: debug.c.i
 
 # target to preprocess a source file
 debug.c.i:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/utils/CMakeFiles/srslte_utils.dir/build.make lib/src/phy/utils/CMakeFiles/srslte_utils.dir/debug.c.i
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/utils/CMakeFiles/srslte_utils.dir/build.make lib/src/phy/utils/CMakeFiles/srslte_utils.dir/debug.c.i
 .PHONY : debug.c.i
 
 debug.s: debug.c.s
@@ -309,7 +309,7 @@ debug.s: debug.c.s
 
 # target to generate assembly for a file
 debug.c.s:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/utils/CMakeFiles/srslte_utils.dir/build.make lib/src/phy/utils/CMakeFiles/srslte_utils.dir/debug.c.s
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/utils/CMakeFiles/srslte_utils.dir/build.make lib/src/phy/utils/CMakeFiles/srslte_utils.dir/debug.c.s
 .PHONY : debug.c.s
 
 filter.o: filter.c.o
@@ -318,7 +318,7 @@ filter.o: filter.c.o
 
 # target to build an object file
 filter.c.o:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/utils/CMakeFiles/srslte_utils.dir/build.make lib/src/phy/utils/CMakeFiles/srslte_utils.dir/filter.c.o
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/utils/CMakeFiles/srslte_utils.dir/build.make lib/src/phy/utils/CMakeFiles/srslte_utils.dir/filter.c.o
 .PHONY : filter.c.o
 
 filter.i: filter.c.i
@@ -327,7 +327,7 @@ filter.i: filter.c.i
 
 # target to preprocess a source file
 filter.c.i:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/utils/CMakeFiles/srslte_utils.dir/build.make lib/src/phy/utils/CMakeFiles/srslte_utils.dir/filter.c.i
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/utils/CMakeFiles/srslte_utils.dir/build.make lib/src/phy/utils/CMakeFiles/srslte_utils.dir/filter.c.i
 .PHONY : filter.c.i
 
 filter.s: filter.c.s
@@ -336,7 +336,7 @@ filter.s: filter.c.s
 
 # target to generate assembly for a file
 filter.c.s:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/utils/CMakeFiles/srslte_utils.dir/build.make lib/src/phy/utils/CMakeFiles/srslte_utils.dir/filter.c.s
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/utils/CMakeFiles/srslte_utils.dir/build.make lib/src/phy/utils/CMakeFiles/srslte_utils.dir/filter.c.s
 .PHONY : filter.c.s
 
 mat.o: mat.c.o
@@ -345,7 +345,7 @@ mat.o: mat.c.o
 
 # target to build an object file
 mat.c.o:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/utils/CMakeFiles/srslte_utils.dir/build.make lib/src/phy/utils/CMakeFiles/srslte_utils.dir/mat.c.o
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/utils/CMakeFiles/srslte_utils.dir/build.make lib/src/phy/utils/CMakeFiles/srslte_utils.dir/mat.c.o
 .PHONY : mat.c.o
 
 mat.i: mat.c.i
@@ -354,7 +354,7 @@ mat.i: mat.c.i
 
 # target to preprocess a source file
 mat.c.i:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/utils/CMakeFiles/srslte_utils.dir/build.make lib/src/phy/utils/CMakeFiles/srslte_utils.dir/mat.c.i
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/utils/CMakeFiles/srslte_utils.dir/build.make lib/src/phy/utils/CMakeFiles/srslte_utils.dir/mat.c.i
 .PHONY : mat.c.i
 
 mat.s: mat.c.s
@@ -363,7 +363,7 @@ mat.s: mat.c.s
 
 # target to generate assembly for a file
 mat.c.s:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/utils/CMakeFiles/srslte_utils.dir/build.make lib/src/phy/utils/CMakeFiles/srslte_utils.dir/mat.c.s
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/utils/CMakeFiles/srslte_utils.dir/build.make lib/src/phy/utils/CMakeFiles/srslte_utils.dir/mat.c.s
 .PHONY : mat.c.s
 
 phy_logger.o: phy_logger.c.o
@@ -372,7 +372,7 @@ phy_logger.o: phy_logger.c.o
 
 # target to build an object file
 phy_logger.c.o:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/utils/CMakeFiles/srslte_utils.dir/build.make lib/src/phy/utils/CMakeFiles/srslte_utils.dir/phy_logger.c.o
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/utils/CMakeFiles/srslte_utils.dir/build.make lib/src/phy/utils/CMakeFiles/srslte_utils.dir/phy_logger.c.o
 .PHONY : phy_logger.c.o
 
 phy_logger.i: phy_logger.c.i
@@ -381,7 +381,7 @@ phy_logger.i: phy_logger.c.i
 
 # target to preprocess a source file
 phy_logger.c.i:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/utils/CMakeFiles/srslte_utils.dir/build.make lib/src/phy/utils/CMakeFiles/srslte_utils.dir/phy_logger.c.i
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/utils/CMakeFiles/srslte_utils.dir/build.make lib/src/phy/utils/CMakeFiles/srslte_utils.dir/phy_logger.c.i
 .PHONY : phy_logger.c.i
 
 phy_logger.s: phy_logger.c.s
@@ -390,7 +390,7 @@ phy_logger.s: phy_logger.c.s
 
 # target to generate assembly for a file
 phy_logger.c.s:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/utils/CMakeFiles/srslte_utils.dir/build.make lib/src/phy/utils/CMakeFiles/srslte_utils.dir/phy_logger.c.s
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/utils/CMakeFiles/srslte_utils.dir/build.make lib/src/phy/utils/CMakeFiles/srslte_utils.dir/phy_logger.c.s
 .PHONY : phy_logger.c.s
 
 random.o: random.cpp.o
@@ -399,7 +399,7 @@ random.o: random.cpp.o
 
 # target to build an object file
 random.cpp.o:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/utils/CMakeFiles/srslte_utils.dir/build.make lib/src/phy/utils/CMakeFiles/srslte_utils.dir/random.cpp.o
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/utils/CMakeFiles/srslte_utils.dir/build.make lib/src/phy/utils/CMakeFiles/srslte_utils.dir/random.cpp.o
 .PHONY : random.cpp.o
 
 random.i: random.cpp.i
@@ -408,7 +408,7 @@ random.i: random.cpp.i
 
 # target to preprocess a source file
 random.cpp.i:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/utils/CMakeFiles/srslte_utils.dir/build.make lib/src/phy/utils/CMakeFiles/srslte_utils.dir/random.cpp.i
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/utils/CMakeFiles/srslte_utils.dir/build.make lib/src/phy/utils/CMakeFiles/srslte_utils.dir/random.cpp.i
 .PHONY : random.cpp.i
 
 random.s: random.cpp.s
@@ -417,7 +417,7 @@ random.s: random.cpp.s
 
 # target to generate assembly for a file
 random.cpp.s:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/utils/CMakeFiles/srslte_utils.dir/build.make lib/src/phy/utils/CMakeFiles/srslte_utils.dir/random.cpp.s
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/utils/CMakeFiles/srslte_utils.dir/build.make lib/src/phy/utils/CMakeFiles/srslte_utils.dir/random.cpp.s
 .PHONY : random.cpp.s
 
 ringbuffer.o: ringbuffer.c.o
@@ -426,7 +426,7 @@ ringbuffer.o: ringbuffer.c.o
 
 # target to build an object file
 ringbuffer.c.o:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/utils/CMakeFiles/srslte_utils.dir/build.make lib/src/phy/utils/CMakeFiles/srslte_utils.dir/ringbuffer.c.o
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/utils/CMakeFiles/srslte_utils.dir/build.make lib/src/phy/utils/CMakeFiles/srslte_utils.dir/ringbuffer.c.o
 .PHONY : ringbuffer.c.o
 
 ringbuffer.i: ringbuffer.c.i
@@ -435,7 +435,7 @@ ringbuffer.i: ringbuffer.c.i
 
 # target to preprocess a source file
 ringbuffer.c.i:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/utils/CMakeFiles/srslte_utils.dir/build.make lib/src/phy/utils/CMakeFiles/srslte_utils.dir/ringbuffer.c.i
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/utils/CMakeFiles/srslte_utils.dir/build.make lib/src/phy/utils/CMakeFiles/srslte_utils.dir/ringbuffer.c.i
 .PHONY : ringbuffer.c.i
 
 ringbuffer.s: ringbuffer.c.s
@@ -444,7 +444,7 @@ ringbuffer.s: ringbuffer.c.s
 
 # target to generate assembly for a file
 ringbuffer.c.s:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/utils/CMakeFiles/srslte_utils.dir/build.make lib/src/phy/utils/CMakeFiles/srslte_utils.dir/ringbuffer.c.s
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/utils/CMakeFiles/srslte_utils.dir/build.make lib/src/phy/utils/CMakeFiles/srslte_utils.dir/ringbuffer.c.s
 .PHONY : ringbuffer.c.s
 
 vector.o: vector.c.o
@@ -453,7 +453,7 @@ vector.o: vector.c.o
 
 # target to build an object file
 vector.c.o:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/utils/CMakeFiles/srslte_utils.dir/build.make lib/src/phy/utils/CMakeFiles/srslte_utils.dir/vector.c.o
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/utils/CMakeFiles/srslte_utils.dir/build.make lib/src/phy/utils/CMakeFiles/srslte_utils.dir/vector.c.o
 .PHONY : vector.c.o
 
 vector.i: vector.c.i
@@ -462,7 +462,7 @@ vector.i: vector.c.i
 
 # target to preprocess a source file
 vector.c.i:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/utils/CMakeFiles/srslte_utils.dir/build.make lib/src/phy/utils/CMakeFiles/srslte_utils.dir/vector.c.i
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/utils/CMakeFiles/srslte_utils.dir/build.make lib/src/phy/utils/CMakeFiles/srslte_utils.dir/vector.c.i
 .PHONY : vector.c.i
 
 vector.s: vector.c.s
@@ -471,7 +471,7 @@ vector.s: vector.c.s
 
 # target to generate assembly for a file
 vector.c.s:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/utils/CMakeFiles/srslte_utils.dir/build.make lib/src/phy/utils/CMakeFiles/srslte_utils.dir/vector.c.s
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/utils/CMakeFiles/srslte_utils.dir/build.make lib/src/phy/utils/CMakeFiles/srslte_utils.dir/vector.c.s
 .PHONY : vector.c.s
 
 vector_simd.o: vector_simd.c.o
@@ -480,7 +480,7 @@ vector_simd.o: vector_simd.c.o
 
 # target to build an object file
 vector_simd.c.o:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/utils/CMakeFiles/srslte_utils.dir/build.make lib/src/phy/utils/CMakeFiles/srslte_utils.dir/vector_simd.c.o
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/utils/CMakeFiles/srslte_utils.dir/build.make lib/src/phy/utils/CMakeFiles/srslte_utils.dir/vector_simd.c.o
 .PHONY : vector_simd.c.o
 
 vector_simd.i: vector_simd.c.i
@@ -489,7 +489,7 @@ vector_simd.i: vector_simd.c.i
 
 # target to preprocess a source file
 vector_simd.c.i:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/utils/CMakeFiles/srslte_utils.dir/build.make lib/src/phy/utils/CMakeFiles/srslte_utils.dir/vector_simd.c.i
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/utils/CMakeFiles/srslte_utils.dir/build.make lib/src/phy/utils/CMakeFiles/srslte_utils.dir/vector_simd.c.i
 .PHONY : vector_simd.c.i
 
 vector_simd.s: vector_simd.c.s
@@ -498,7 +498,7 @@ vector_simd.s: vector_simd.c.s
 
 # target to generate assembly for a file
 vector_simd.c.s:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/utils/CMakeFiles/srslte_utils.dir/build.make lib/src/phy/utils/CMakeFiles/srslte_utils.dir/vector_simd.c.s
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/utils/CMakeFiles/srslte_utils.dir/build.make lib/src/phy/utils/CMakeFiles/srslte_utils.dir/vector_simd.c.s
 .PHONY : vector_simd.c.s
 
 # Help Target
@@ -561,6 +561,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/atm/Divya/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

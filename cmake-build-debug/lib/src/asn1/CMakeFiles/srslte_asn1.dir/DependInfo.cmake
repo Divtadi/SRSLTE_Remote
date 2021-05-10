@@ -4,10 +4,10 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/atm/Ayman/srsLTE_Slicing/lib/src/asn1/gtpc.cc" "/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/asn1/CMakeFiles/srslte_asn1.dir/gtpc.cc.o"
-  "/home/atm/Ayman/srsLTE_Slicing/lib/src/asn1/liblte_common.cc" "/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/asn1/CMakeFiles/srslte_asn1.dir/liblte_common.cc.o"
-  "/home/atm/Ayman/srsLTE_Slicing/lib/src/asn1/liblte_m2ap.cc" "/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/asn1/CMakeFiles/srslte_asn1.dir/liblte_m2ap.cc.o"
-  "/home/atm/Ayman/srsLTE_Slicing/lib/src/asn1/liblte_mme.cc" "/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/asn1/CMakeFiles/srslte_asn1.dir/liblte_mme.cc.o"
+  "/home/atm/Divya/lib/src/asn1/gtpc.cc" "/home/atm/Divya/cmake-build-debug/lib/src/asn1/CMakeFiles/srslte_asn1.dir/gtpc.cc.o"
+  "/home/atm/Divya/lib/src/asn1/liblte_common.cc" "/home/atm/Divya/cmake-build-debug/lib/src/asn1/CMakeFiles/srslte_asn1.dir/liblte_common.cc.o"
+  "/home/atm/Divya/lib/src/asn1/liblte_m2ap.cc" "/home/atm/Divya/cmake-build-debug/lib/src/asn1/CMakeFiles/srslte_asn1.dir/liblte_m2ap.cc.o"
+  "/home/atm/Divya/lib/src/asn1/liblte_mme.cc" "/home/atm/Divya/cmake-build-debug/lib/src/asn1/CMakeFiles/srslte_asn1.dir/liblte_mme.cc.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -15,10 +15,12 @@ set(CMAKE_CXX_COMPILER_ID "GNU")
 set(CMAKE_TARGET_DEFINITIONS_CXX
   "ENABLE_TIMEPROF"
   "HAVE_MBEDTLS"
+  "HAVE_PCSC"
   )
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
+  "/usr/include/PCSC"
   "lib/include"
   "../lib/include"
   )

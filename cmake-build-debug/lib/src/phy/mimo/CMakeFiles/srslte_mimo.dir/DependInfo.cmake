@@ -4,8 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/home/atm/Ayman/srsLTE_Slicing/lib/src/phy/mimo/layermap.c" "/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/phy/mimo/CMakeFiles/srslte_mimo.dir/layermap.c.o"
-  "/home/atm/Ayman/srsLTE_Slicing/lib/src/phy/mimo/precoding.c" "/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/phy/mimo/CMakeFiles/srslte_mimo.dir/precoding.c.o"
+  "/home/atm/Divya/lib/src/phy/mimo/layermap.c" "/home/atm/Divya/cmake-build-debug/lib/src/phy/mimo/CMakeFiles/srslte_mimo.dir/layermap.c.o"
+  "/home/atm/Divya/lib/src/phy/mimo/precoding.c" "/home/atm/Divya/cmake-build-debug/lib/src/phy/mimo/CMakeFiles/srslte_mimo.dir/precoding.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 
@@ -13,10 +13,12 @@ set(CMAKE_C_COMPILER_ID "GNU")
 set(CMAKE_TARGET_DEFINITIONS_C
   "ENABLE_TIMEPROF"
   "HAVE_MBEDTLS"
+  "HAVE_PCSC"
   )
 
 # The include file search paths:
 set(CMAKE_C_TARGET_INCLUDE_PATH
+  "/usr/include/PCSC"
   "lib/include"
   "../lib/include"
   )

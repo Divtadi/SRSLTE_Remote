@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/atm/Ayman/srsLTE_Slicing/srsenb/test/mac/scheduler_test_common.cc" "/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/srsenb/test/mac/CMakeFiles/scheduler_test_common.dir/scheduler_test_common.cc.o"
+  "/home/atm/Divya/srsenb/test/mac/scheduler_test_common.cc" "/home/atm/Divya/cmake-build-debug/srsenb/test/mac/CMakeFiles/scheduler_test_common.dir/scheduler_test_common.cc.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -12,10 +12,12 @@ set(CMAKE_CXX_COMPILER_ID "GNU")
 set(CMAKE_TARGET_DEFINITIONS_CXX
   "ENABLE_TIMEPROF"
   "HAVE_MBEDTLS"
+  "HAVE_PCSC"
   )
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
+  "/usr/include/PCSC"
   "lib/include"
   "../lib/include"
   "../"

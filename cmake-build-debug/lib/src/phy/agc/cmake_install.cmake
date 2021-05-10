@@ -1,4 +1,4 @@
-# Install script for directory: /home/atm/Ayman/srsLTE_Slicing/lib/src/phy/agc
+# Install script for directory: /home/atm/Divya/lib/src/phy/agc
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

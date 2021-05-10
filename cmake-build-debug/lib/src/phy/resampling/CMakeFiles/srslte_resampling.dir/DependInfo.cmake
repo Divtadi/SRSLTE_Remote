@@ -4,9 +4,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/home/atm/Ayman/srsLTE_Slicing/lib/src/phy/resampling/decim.c" "/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/phy/resampling/CMakeFiles/srslte_resampling.dir/decim.c.o"
-  "/home/atm/Ayman/srsLTE_Slicing/lib/src/phy/resampling/interp.c" "/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/phy/resampling/CMakeFiles/srslte_resampling.dir/interp.c.o"
-  "/home/atm/Ayman/srsLTE_Slicing/lib/src/phy/resampling/resample_arb.c" "/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/phy/resampling/CMakeFiles/srslte_resampling.dir/resample_arb.c.o"
+  "/home/atm/Divya/lib/src/phy/resampling/decim.c" "/home/atm/Divya/cmake-build-debug/lib/src/phy/resampling/CMakeFiles/srslte_resampling.dir/decim.c.o"
+  "/home/atm/Divya/lib/src/phy/resampling/interp.c" "/home/atm/Divya/cmake-build-debug/lib/src/phy/resampling/CMakeFiles/srslte_resampling.dir/interp.c.o"
+  "/home/atm/Divya/lib/src/phy/resampling/resample_arb.c" "/home/atm/Divya/cmake-build-debug/lib/src/phy/resampling/CMakeFiles/srslte_resampling.dir/resample_arb.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 
@@ -14,10 +14,12 @@ set(CMAKE_C_COMPILER_ID "GNU")
 set(CMAKE_TARGET_DEFINITIONS_C
   "ENABLE_TIMEPROF"
   "HAVE_MBEDTLS"
+  "HAVE_PCSC"
   )
 
 # The include file search paths:
 set(CMAKE_C_TARGET_INCLUDE_PATH
+  "/usr/include/PCSC"
   "lib/include"
   "../lib/include"
   )

@@ -43,10 +43,10 @@ RM = /opt/clion-2020.1.2/bin/cmake/linux/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/atm/Ayman/srsLTE_Slicing
+CMAKE_SOURCE_DIR = /home/atm/Divya
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug
+CMAKE_BINARY_DIR = /home/atm/Divya/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include lib/src/phy/agc/CMakeFiles/srslte_agc.dir/depend.make
@@ -59,16 +59,16 @@ include lib/src/phy/agc/CMakeFiles/srslte_agc.dir/flags.make
 
 lib/src/phy/agc/CMakeFiles/srslte_agc.dir/agc.c.o: lib/src/phy/agc/CMakeFiles/srslte_agc.dir/flags.make
 lib/src/phy/agc/CMakeFiles/srslte_agc.dir/agc.c.o: ../lib/src/phy/agc/agc.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object lib/src/phy/agc/CMakeFiles/srslte_agc.dir/agc.c.o"
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/phy/agc && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/srslte_agc.dir/agc.c.o   -c /home/atm/Ayman/srsLTE_Slicing/lib/src/phy/agc/agc.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/atm/Divya/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object lib/src/phy/agc/CMakeFiles/srslte_agc.dir/agc.c.o"
+	cd /home/atm/Divya/cmake-build-debug/lib/src/phy/agc && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/srslte_agc.dir/agc.c.o   -c /home/atm/Divya/lib/src/phy/agc/agc.c
 
 lib/src/phy/agc/CMakeFiles/srslte_agc.dir/agc.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/srslte_agc.dir/agc.c.i"
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/phy/agc && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/atm/Ayman/srsLTE_Slicing/lib/src/phy/agc/agc.c > CMakeFiles/srslte_agc.dir/agc.c.i
+	cd /home/atm/Divya/cmake-build-debug/lib/src/phy/agc && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/atm/Divya/lib/src/phy/agc/agc.c > CMakeFiles/srslte_agc.dir/agc.c.i
 
 lib/src/phy/agc/CMakeFiles/srslte_agc.dir/agc.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/srslte_agc.dir/agc.c.s"
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/phy/agc && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/atm/Ayman/srsLTE_Slicing/lib/src/phy/agc/agc.c -o CMakeFiles/srslte_agc.dir/agc.c.s
+	cd /home/atm/Divya/cmake-build-debug/lib/src/phy/agc && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/atm/Divya/lib/src/phy/agc/agc.c -o CMakeFiles/srslte_agc.dir/agc.c.s
 
 srslte_agc: lib/src/phy/agc/CMakeFiles/srslte_agc.dir/agc.c.o
 srslte_agc: lib/src/phy/agc/CMakeFiles/srslte_agc.dir/build.make
@@ -81,10 +81,10 @@ lib/src/phy/agc/CMakeFiles/srslte_agc.dir/build: srslte_agc
 .PHONY : lib/src/phy/agc/CMakeFiles/srslte_agc.dir/build
 
 lib/src/phy/agc/CMakeFiles/srslte_agc.dir/clean:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/phy/agc && $(CMAKE_COMMAND) -P CMakeFiles/srslte_agc.dir/cmake_clean.cmake
+	cd /home/atm/Divya/cmake-build-debug/lib/src/phy/agc && $(CMAKE_COMMAND) -P CMakeFiles/srslte_agc.dir/cmake_clean.cmake
 .PHONY : lib/src/phy/agc/CMakeFiles/srslte_agc.dir/clean
 
 lib/src/phy/agc/CMakeFiles/srslte_agc.dir/depend:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/atm/Ayman/srsLTE_Slicing /home/atm/Ayman/srsLTE_Slicing/lib/src/phy/agc /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/phy/agc /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/phy/agc/CMakeFiles/srslte_agc.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/atm/Divya/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/atm/Divya /home/atm/Divya/lib/src/phy/agc /home/atm/Divya/cmake-build-debug /home/atm/Divya/cmake-build-debug/lib/src/phy/agc /home/atm/Divya/cmake-build-debug/lib/src/phy/agc/CMakeFiles/srslte_agc.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : lib/src/phy/agc/CMakeFiles/srslte_agc.dir/depend
 

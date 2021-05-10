@@ -5,16 +5,16 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/home/atm/Ayman/srsLTE_Slicing/lib/src/phy/utils/bit.c" "/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/phy/utils/CMakeFiles/srslte_utils.dir/bit.c.o"
-  "/home/atm/Ayman/srsLTE_Slicing/lib/src/phy/utils/cexptab.c" "/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/phy/utils/CMakeFiles/srslte_utils.dir/cexptab.c.o"
-  "/home/atm/Ayman/srsLTE_Slicing/lib/src/phy/utils/convolution.c" "/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/phy/utils/CMakeFiles/srslte_utils.dir/convolution.c.o"
-  "/home/atm/Ayman/srsLTE_Slicing/lib/src/phy/utils/debug.c" "/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/phy/utils/CMakeFiles/srslte_utils.dir/debug.c.o"
-  "/home/atm/Ayman/srsLTE_Slicing/lib/src/phy/utils/filter.c" "/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/phy/utils/CMakeFiles/srslte_utils.dir/filter.c.o"
-  "/home/atm/Ayman/srsLTE_Slicing/lib/src/phy/utils/mat.c" "/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/phy/utils/CMakeFiles/srslte_utils.dir/mat.c.o"
-  "/home/atm/Ayman/srsLTE_Slicing/lib/src/phy/utils/phy_logger.c" "/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/phy/utils/CMakeFiles/srslte_utils.dir/phy_logger.c.o"
-  "/home/atm/Ayman/srsLTE_Slicing/lib/src/phy/utils/ringbuffer.c" "/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/phy/utils/CMakeFiles/srslte_utils.dir/ringbuffer.c.o"
-  "/home/atm/Ayman/srsLTE_Slicing/lib/src/phy/utils/vector.c" "/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/phy/utils/CMakeFiles/srslte_utils.dir/vector.c.o"
-  "/home/atm/Ayman/srsLTE_Slicing/lib/src/phy/utils/vector_simd.c" "/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/phy/utils/CMakeFiles/srslte_utils.dir/vector_simd.c.o"
+  "/home/atm/Divya/lib/src/phy/utils/bit.c" "/home/atm/Divya/cmake-build-debug/lib/src/phy/utils/CMakeFiles/srslte_utils.dir/bit.c.o"
+  "/home/atm/Divya/lib/src/phy/utils/cexptab.c" "/home/atm/Divya/cmake-build-debug/lib/src/phy/utils/CMakeFiles/srslte_utils.dir/cexptab.c.o"
+  "/home/atm/Divya/lib/src/phy/utils/convolution.c" "/home/atm/Divya/cmake-build-debug/lib/src/phy/utils/CMakeFiles/srslte_utils.dir/convolution.c.o"
+  "/home/atm/Divya/lib/src/phy/utils/debug.c" "/home/atm/Divya/cmake-build-debug/lib/src/phy/utils/CMakeFiles/srslte_utils.dir/debug.c.o"
+  "/home/atm/Divya/lib/src/phy/utils/filter.c" "/home/atm/Divya/cmake-build-debug/lib/src/phy/utils/CMakeFiles/srslte_utils.dir/filter.c.o"
+  "/home/atm/Divya/lib/src/phy/utils/mat.c" "/home/atm/Divya/cmake-build-debug/lib/src/phy/utils/CMakeFiles/srslte_utils.dir/mat.c.o"
+  "/home/atm/Divya/lib/src/phy/utils/phy_logger.c" "/home/atm/Divya/cmake-build-debug/lib/src/phy/utils/CMakeFiles/srslte_utils.dir/phy_logger.c.o"
+  "/home/atm/Divya/lib/src/phy/utils/ringbuffer.c" "/home/atm/Divya/cmake-build-debug/lib/src/phy/utils/CMakeFiles/srslte_utils.dir/ringbuffer.c.o"
+  "/home/atm/Divya/lib/src/phy/utils/vector.c" "/home/atm/Divya/cmake-build-debug/lib/src/phy/utils/CMakeFiles/srslte_utils.dir/vector.c.o"
+  "/home/atm/Divya/lib/src/phy/utils/vector_simd.c" "/home/atm/Divya/cmake-build-debug/lib/src/phy/utils/CMakeFiles/srslte_utils.dir/vector_simd.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 
@@ -22,15 +22,17 @@ set(CMAKE_C_COMPILER_ID "GNU")
 set(CMAKE_TARGET_DEFINITIONS_C
   "ENABLE_TIMEPROF"
   "HAVE_MBEDTLS"
+  "HAVE_PCSC"
   )
 
 # The include file search paths:
 set(CMAKE_C_TARGET_INCLUDE_PATH
+  "/usr/include/PCSC"
   "lib/include"
   "../lib/include"
   )
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/atm/Ayman/srsLTE_Slicing/lib/src/phy/utils/random.cpp" "/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/phy/utils/CMakeFiles/srslte_utils.dir/random.cpp.o"
+  "/home/atm/Divya/lib/src/phy/utils/random.cpp" "/home/atm/Divya/cmake-build-debug/lib/src/phy/utils/CMakeFiles/srslte_utils.dir/random.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -38,10 +40,12 @@ set(CMAKE_CXX_COMPILER_ID "GNU")
 set(CMAKE_TARGET_DEFINITIONS_CXX
   "ENABLE_TIMEPROF"
   "HAVE_MBEDTLS"
+  "HAVE_PCSC"
   )
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
+  "/usr/include/PCSC"
   "lib/include"
   "../lib/include"
   )

@@ -1,4 +1,4 @@
-# Install script for directory: /home/atm/Ayman/srsLTE_Slicing/srsepc/src/mbms-gw
+# Install script for directory: /home/atm/Divya/srsepc/src/mbms-gw
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

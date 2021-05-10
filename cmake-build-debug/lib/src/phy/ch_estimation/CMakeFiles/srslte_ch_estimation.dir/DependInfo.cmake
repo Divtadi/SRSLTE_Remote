@@ -4,15 +4,15 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/home/atm/Ayman/srsLTE_Slicing/lib/src/phy/ch_estimation/chest_common.c" "/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/phy/ch_estimation/CMakeFiles/srslte_ch_estimation.dir/chest_common.c.o"
-  "/home/atm/Ayman/srsLTE_Slicing/lib/src/phy/ch_estimation/chest_dl.c" "/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/phy/ch_estimation/CMakeFiles/srslte_ch_estimation.dir/chest_dl.c.o"
-  "/home/atm/Ayman/srsLTE_Slicing/lib/src/phy/ch_estimation/chest_dl_nbiot.c" "/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/phy/ch_estimation/CMakeFiles/srslte_ch_estimation.dir/chest_dl_nbiot.c.o"
-  "/home/atm/Ayman/srsLTE_Slicing/lib/src/phy/ch_estimation/chest_sl.c" "/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/phy/ch_estimation/CMakeFiles/srslte_ch_estimation.dir/chest_sl.c.o"
-  "/home/atm/Ayman/srsLTE_Slicing/lib/src/phy/ch_estimation/chest_ul.c" "/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/phy/ch_estimation/CMakeFiles/srslte_ch_estimation.dir/chest_ul.c.o"
-  "/home/atm/Ayman/srsLTE_Slicing/lib/src/phy/ch_estimation/refsignal_dl.c" "/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/phy/ch_estimation/CMakeFiles/srslte_ch_estimation.dir/refsignal_dl.c.o"
-  "/home/atm/Ayman/srsLTE_Slicing/lib/src/phy/ch_estimation/refsignal_dl_nbiot.c" "/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/phy/ch_estimation/CMakeFiles/srslte_ch_estimation.dir/refsignal_dl_nbiot.c.o"
-  "/home/atm/Ayman/srsLTE_Slicing/lib/src/phy/ch_estimation/refsignal_ul.c" "/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/phy/ch_estimation/CMakeFiles/srslte_ch_estimation.dir/refsignal_ul.c.o"
-  "/home/atm/Ayman/srsLTE_Slicing/lib/src/phy/ch_estimation/wiener_dl.c" "/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/phy/ch_estimation/CMakeFiles/srslte_ch_estimation.dir/wiener_dl.c.o"
+  "/home/atm/Divya/lib/src/phy/ch_estimation/chest_common.c" "/home/atm/Divya/cmake-build-debug/lib/src/phy/ch_estimation/CMakeFiles/srslte_ch_estimation.dir/chest_common.c.o"
+  "/home/atm/Divya/lib/src/phy/ch_estimation/chest_dl.c" "/home/atm/Divya/cmake-build-debug/lib/src/phy/ch_estimation/CMakeFiles/srslte_ch_estimation.dir/chest_dl.c.o"
+  "/home/atm/Divya/lib/src/phy/ch_estimation/chest_dl_nbiot.c" "/home/atm/Divya/cmake-build-debug/lib/src/phy/ch_estimation/CMakeFiles/srslte_ch_estimation.dir/chest_dl_nbiot.c.o"
+  "/home/atm/Divya/lib/src/phy/ch_estimation/chest_sl.c" "/home/atm/Divya/cmake-build-debug/lib/src/phy/ch_estimation/CMakeFiles/srslte_ch_estimation.dir/chest_sl.c.o"
+  "/home/atm/Divya/lib/src/phy/ch_estimation/chest_ul.c" "/home/atm/Divya/cmake-build-debug/lib/src/phy/ch_estimation/CMakeFiles/srslte_ch_estimation.dir/chest_ul.c.o"
+  "/home/atm/Divya/lib/src/phy/ch_estimation/refsignal_dl.c" "/home/atm/Divya/cmake-build-debug/lib/src/phy/ch_estimation/CMakeFiles/srslte_ch_estimation.dir/refsignal_dl.c.o"
+  "/home/atm/Divya/lib/src/phy/ch_estimation/refsignal_dl_nbiot.c" "/home/atm/Divya/cmake-build-debug/lib/src/phy/ch_estimation/CMakeFiles/srslte_ch_estimation.dir/refsignal_dl_nbiot.c.o"
+  "/home/atm/Divya/lib/src/phy/ch_estimation/refsignal_ul.c" "/home/atm/Divya/cmake-build-debug/lib/src/phy/ch_estimation/CMakeFiles/srslte_ch_estimation.dir/refsignal_ul.c.o"
+  "/home/atm/Divya/lib/src/phy/ch_estimation/wiener_dl.c" "/home/atm/Divya/cmake-build-debug/lib/src/phy/ch_estimation/CMakeFiles/srslte_ch_estimation.dir/wiener_dl.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 
@@ -20,10 +20,12 @@ set(CMAKE_C_COMPILER_ID "GNU")
 set(CMAKE_TARGET_DEFINITIONS_C
   "ENABLE_TIMEPROF"
   "HAVE_MBEDTLS"
+  "HAVE_PCSC"
   )
 
 # The include file search paths:
 set(CMAKE_C_TARGET_INCLUDE_PATH
+  "/usr/include/PCSC"
   "lib/include"
   "../lib/include"
   )

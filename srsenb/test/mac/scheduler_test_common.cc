@@ -70,8 +70,8 @@ int output_sched_tester::test_pusch_collisions(const tti_params_t&              
               alloc.RB_start + alloc.L);
     CONDERROR(alloc.L == 0, "Allocations must have at least one PRB\n");
     if (strict and ul_allocs.any(alloc.RB_start, alloc.RB_start + alloc.L)) {
-      TESTERROR("Collision Detected of %s alloc=(%d,%d) and cumulative_mask=0x%s\n",
-                ch_str,
+      //TESTERROR("Collision Detected of %s alloc=(%d,%d) and cumulative_mask=0x%s\n",
+               printf(ch_str,
                 alloc.RB_start,
                 alloc.RB_start + alloc.L,
                 ul_allocs.to_hex().c_str());

@@ -48,10 +48,10 @@ RM = /opt/clion-2020.1.2/bin/cmake/linux/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/atm/Ayman/srsLTE_Slicing
+CMAKE_SOURCE_DIR = /home/atm/Divya
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug
+CMAKE_BINARY_DIR = /home/atm/Divya/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -138,7 +138,7 @@ test/fast: test
 # Special rule for the target package
 package: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool..."
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && /opt/clion-2020.1.2/bin/cmake/linux/bin/cpack --config ./CPackConfig.cmake
+	cd /home/atm/Divya/cmake-build-debug && /opt/clion-2020.1.2/bin/cmake/linux/bin/cpack --config ./CPackConfig.cmake
 .PHONY : package
 
 # Special rule for the target package
@@ -149,7 +149,7 @@ package/fast: package
 # Special rule for the target package_source
 package_source:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool for source..."
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && /opt/clion-2020.1.2/bin/cmake/linux/bin/cpack --config ./CPackSourceConfig.cmake /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/CPackSourceConfig.cmake
+	cd /home/atm/Divya/cmake-build-debug && /opt/clion-2020.1.2/bin/cmake/linux/bin/cpack --config ./CPackSourceConfig.cmake /home/atm/Divya/cmake-build-debug/CPackSourceConfig.cmake
 .PHONY : package_source
 
 # Special rule for the target package_source
@@ -159,14 +159,14 @@ package_source/fast: package_source
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_progress_start /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/CMakeFiles /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/srsenb/test/CMakeFiles/progress.marks
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 srsenb/test/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/CMakeFiles 0
+	cd /home/atm/Divya/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_progress_start /home/atm/Divya/cmake-build-debug/CMakeFiles /home/atm/Divya/cmake-build-debug/srsenb/test/CMakeFiles/progress.marks
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 srsenb/test/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/atm/Divya/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 srsenb/test/clean
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 srsenb/test/clean
 .PHONY : clean
 
 # The main clean target
@@ -176,22 +176,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: cmake_check_build_system
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 srsenb/test/preinstall
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 srsenb/test/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 srsenb/test/preinstall
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 srsenb/test/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/atm/Divya/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 srsenb/test/CMakeFiles/enb_metrics_test.dir/rule:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 srsenb/test/CMakeFiles/enb_metrics_test.dir/rule
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 srsenb/test/CMakeFiles/enb_metrics_test.dir/rule
 .PHONY : srsenb/test/CMakeFiles/enb_metrics_test.dir/rule
 
 # Convenience name for target.
@@ -201,7 +201,7 @@ enb_metrics_test: srsenb/test/CMakeFiles/enb_metrics_test.dir/rule
 
 # fast build rule for target.
 enb_metrics_test/fast:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f srsenb/test/CMakeFiles/enb_metrics_test.dir/build.make srsenb/test/CMakeFiles/enb_metrics_test.dir/build
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f srsenb/test/CMakeFiles/enb_metrics_test.dir/build.make srsenb/test/CMakeFiles/enb_metrics_test.dir/build
 .PHONY : enb_metrics_test/fast
 
 __/src/metrics_csv.o: __/src/metrics_csv.cc.o
@@ -210,7 +210,7 @@ __/src/metrics_csv.o: __/src/metrics_csv.cc.o
 
 # target to build an object file
 __/src/metrics_csv.cc.o:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f srsenb/test/CMakeFiles/enb_metrics_test.dir/build.make srsenb/test/CMakeFiles/enb_metrics_test.dir/__/src/metrics_csv.cc.o
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f srsenb/test/CMakeFiles/enb_metrics_test.dir/build.make srsenb/test/CMakeFiles/enb_metrics_test.dir/__/src/metrics_csv.cc.o
 .PHONY : __/src/metrics_csv.cc.o
 
 __/src/metrics_csv.i: __/src/metrics_csv.cc.i
@@ -219,7 +219,7 @@ __/src/metrics_csv.i: __/src/metrics_csv.cc.i
 
 # target to preprocess a source file
 __/src/metrics_csv.cc.i:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f srsenb/test/CMakeFiles/enb_metrics_test.dir/build.make srsenb/test/CMakeFiles/enb_metrics_test.dir/__/src/metrics_csv.cc.i
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f srsenb/test/CMakeFiles/enb_metrics_test.dir/build.make srsenb/test/CMakeFiles/enb_metrics_test.dir/__/src/metrics_csv.cc.i
 .PHONY : __/src/metrics_csv.cc.i
 
 __/src/metrics_csv.s: __/src/metrics_csv.cc.s
@@ -228,7 +228,7 @@ __/src/metrics_csv.s: __/src/metrics_csv.cc.s
 
 # target to generate assembly for a file
 __/src/metrics_csv.cc.s:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f srsenb/test/CMakeFiles/enb_metrics_test.dir/build.make srsenb/test/CMakeFiles/enb_metrics_test.dir/__/src/metrics_csv.cc.s
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f srsenb/test/CMakeFiles/enb_metrics_test.dir/build.make srsenb/test/CMakeFiles/enb_metrics_test.dir/__/src/metrics_csv.cc.s
 .PHONY : __/src/metrics_csv.cc.s
 
 __/src/metrics_stdout.o: __/src/metrics_stdout.cc.o
@@ -237,7 +237,7 @@ __/src/metrics_stdout.o: __/src/metrics_stdout.cc.o
 
 # target to build an object file
 __/src/metrics_stdout.cc.o:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f srsenb/test/CMakeFiles/enb_metrics_test.dir/build.make srsenb/test/CMakeFiles/enb_metrics_test.dir/__/src/metrics_stdout.cc.o
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f srsenb/test/CMakeFiles/enb_metrics_test.dir/build.make srsenb/test/CMakeFiles/enb_metrics_test.dir/__/src/metrics_stdout.cc.o
 .PHONY : __/src/metrics_stdout.cc.o
 
 __/src/metrics_stdout.i: __/src/metrics_stdout.cc.i
@@ -246,7 +246,7 @@ __/src/metrics_stdout.i: __/src/metrics_stdout.cc.i
 
 # target to preprocess a source file
 __/src/metrics_stdout.cc.i:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f srsenb/test/CMakeFiles/enb_metrics_test.dir/build.make srsenb/test/CMakeFiles/enb_metrics_test.dir/__/src/metrics_stdout.cc.i
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f srsenb/test/CMakeFiles/enb_metrics_test.dir/build.make srsenb/test/CMakeFiles/enb_metrics_test.dir/__/src/metrics_stdout.cc.i
 .PHONY : __/src/metrics_stdout.cc.i
 
 __/src/metrics_stdout.s: __/src/metrics_stdout.cc.s
@@ -255,7 +255,7 @@ __/src/metrics_stdout.s: __/src/metrics_stdout.cc.s
 
 # target to generate assembly for a file
 __/src/metrics_stdout.cc.s:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f srsenb/test/CMakeFiles/enb_metrics_test.dir/build.make srsenb/test/CMakeFiles/enb_metrics_test.dir/__/src/metrics_stdout.cc.s
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f srsenb/test/CMakeFiles/enb_metrics_test.dir/build.make srsenb/test/CMakeFiles/enb_metrics_test.dir/__/src/metrics_stdout.cc.s
 .PHONY : __/src/metrics_stdout.cc.s
 
 enb_metrics_test.o: enb_metrics_test.cc.o
@@ -264,7 +264,7 @@ enb_metrics_test.o: enb_metrics_test.cc.o
 
 # target to build an object file
 enb_metrics_test.cc.o:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f srsenb/test/CMakeFiles/enb_metrics_test.dir/build.make srsenb/test/CMakeFiles/enb_metrics_test.dir/enb_metrics_test.cc.o
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f srsenb/test/CMakeFiles/enb_metrics_test.dir/build.make srsenb/test/CMakeFiles/enb_metrics_test.dir/enb_metrics_test.cc.o
 .PHONY : enb_metrics_test.cc.o
 
 enb_metrics_test.i: enb_metrics_test.cc.i
@@ -273,7 +273,7 @@ enb_metrics_test.i: enb_metrics_test.cc.i
 
 # target to preprocess a source file
 enb_metrics_test.cc.i:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f srsenb/test/CMakeFiles/enb_metrics_test.dir/build.make srsenb/test/CMakeFiles/enb_metrics_test.dir/enb_metrics_test.cc.i
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f srsenb/test/CMakeFiles/enb_metrics_test.dir/build.make srsenb/test/CMakeFiles/enb_metrics_test.dir/enb_metrics_test.cc.i
 .PHONY : enb_metrics_test.cc.i
 
 enb_metrics_test.s: enb_metrics_test.cc.s
@@ -282,7 +282,7 @@ enb_metrics_test.s: enb_metrics_test.cc.s
 
 # target to generate assembly for a file
 enb_metrics_test.cc.s:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f srsenb/test/CMakeFiles/enb_metrics_test.dir/build.make srsenb/test/CMakeFiles/enb_metrics_test.dir/enb_metrics_test.cc.s
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f srsenb/test/CMakeFiles/enb_metrics_test.dir/build.make srsenb/test/CMakeFiles/enb_metrics_test.dir/enb_metrics_test.cc.s
 .PHONY : enb_metrics_test.cc.s
 
 # Help Target
@@ -321,6 +321,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/atm/Divya/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

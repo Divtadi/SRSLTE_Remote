@@ -1,4 +1,4 @@
-# Install script for directory: /home/atm/Ayman/srsLTE_Slicing/lib/test
+# Install script for directory: /home/atm/Divya/lib/test
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,11 +39,11 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/test/asn1/cmake_install.cmake")
-  include("/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/test/common/cmake_install.cmake")
-  include("/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/test/mac/cmake_install.cmake")
-  include("/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/test/phy/cmake_install.cmake")
-  include("/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/test/upper/cmake_install.cmake")
+  include("/home/atm/Divya/cmake-build-debug/lib/test/asn1/cmake_install.cmake")
+  include("/home/atm/Divya/cmake-build-debug/lib/test/common/cmake_install.cmake")
+  include("/home/atm/Divya/cmake-build-debug/lib/test/mac/cmake_install.cmake")
+  include("/home/atm/Divya/cmake-build-debug/lib/test/phy/cmake_install.cmake")
+  include("/home/atm/Divya/cmake-build-debug/lib/test/upper/cmake_install.cmake")
 
 endif()
 

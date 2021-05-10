@@ -48,10 +48,10 @@ RM = /opt/clion-2020.1.2/bin/cmake/linux/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/atm/Ayman/srsLTE_Slicing
+CMAKE_SOURCE_DIR = /home/atm/Divya
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug
+CMAKE_BINARY_DIR = /home/atm/Divya/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -127,7 +127,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target package_source
 package_source:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool for source..."
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && /opt/clion-2020.1.2/bin/cmake/linux/bin/cpack --config ./CPackSourceConfig.cmake /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/CPackSourceConfig.cmake
+	cd /home/atm/Divya/cmake-build-debug && /opt/clion-2020.1.2/bin/cmake/linux/bin/cpack --config ./CPackSourceConfig.cmake /home/atm/Divya/cmake-build-debug/CPackSourceConfig.cmake
 .PHONY : package_source
 
 # Special rule for the target package_source
@@ -138,7 +138,7 @@ package_source/fast: package_source
 # Special rule for the target package
 package: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool..."
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && /opt/clion-2020.1.2/bin/cmake/linux/bin/cpack --config ./CPackConfig.cmake
+	cd /home/atm/Divya/cmake-build-debug && /opt/clion-2020.1.2/bin/cmake/linux/bin/cpack --config ./CPackConfig.cmake
 .PHONY : package
 
 # Special rule for the target package
@@ -159,14 +159,14 @@ test/fast: test
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_progress_start /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/CMakeFiles /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/srsepc/src/spgw/CMakeFiles/progress.marks
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 srsepc/src/spgw/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/CMakeFiles 0
+	cd /home/atm/Divya/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_progress_start /home/atm/Divya/cmake-build-debug/CMakeFiles /home/atm/Divya/cmake-build-debug/srsepc/src/spgw/CMakeFiles/progress.marks
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 srsepc/src/spgw/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/atm/Divya/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 srsepc/src/spgw/clean
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 srsepc/src/spgw/clean
 .PHONY : clean
 
 # The main clean target
@@ -176,22 +176,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: cmake_check_build_system
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 srsepc/src/spgw/preinstall
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 srsepc/src/spgw/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 srsepc/src/spgw/preinstall
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 srsepc/src/spgw/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/atm/Divya/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 srsepc/src/spgw/CMakeFiles/srsepc_sgw.dir/rule:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 srsepc/src/spgw/CMakeFiles/srsepc_sgw.dir/rule
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 srsepc/src/spgw/CMakeFiles/srsepc_sgw.dir/rule
 .PHONY : srsepc/src/spgw/CMakeFiles/srsepc_sgw.dir/rule
 
 # Convenience name for target.
@@ -201,7 +201,7 @@ srsepc_sgw: srsepc/src/spgw/CMakeFiles/srsepc_sgw.dir/rule
 
 # fast build rule for target.
 srsepc_sgw/fast:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f srsepc/src/spgw/CMakeFiles/srsepc_sgw.dir/build.make srsepc/src/spgw/CMakeFiles/srsepc_sgw.dir/build
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f srsepc/src/spgw/CMakeFiles/srsepc_sgw.dir/build.make srsepc/src/spgw/CMakeFiles/srsepc_sgw.dir/build
 .PHONY : srsepc_sgw/fast
 
 gtpc.o: gtpc.cc.o
@@ -210,7 +210,7 @@ gtpc.o: gtpc.cc.o
 
 # target to build an object file
 gtpc.cc.o:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f srsepc/src/spgw/CMakeFiles/srsepc_sgw.dir/build.make srsepc/src/spgw/CMakeFiles/srsepc_sgw.dir/gtpc.cc.o
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f srsepc/src/spgw/CMakeFiles/srsepc_sgw.dir/build.make srsepc/src/spgw/CMakeFiles/srsepc_sgw.dir/gtpc.cc.o
 .PHONY : gtpc.cc.o
 
 gtpc.i: gtpc.cc.i
@@ -219,7 +219,7 @@ gtpc.i: gtpc.cc.i
 
 # target to preprocess a source file
 gtpc.cc.i:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f srsepc/src/spgw/CMakeFiles/srsepc_sgw.dir/build.make srsepc/src/spgw/CMakeFiles/srsepc_sgw.dir/gtpc.cc.i
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f srsepc/src/spgw/CMakeFiles/srsepc_sgw.dir/build.make srsepc/src/spgw/CMakeFiles/srsepc_sgw.dir/gtpc.cc.i
 .PHONY : gtpc.cc.i
 
 gtpc.s: gtpc.cc.s
@@ -228,7 +228,7 @@ gtpc.s: gtpc.cc.s
 
 # target to generate assembly for a file
 gtpc.cc.s:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f srsepc/src/spgw/CMakeFiles/srsepc_sgw.dir/build.make srsepc/src/spgw/CMakeFiles/srsepc_sgw.dir/gtpc.cc.s
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f srsepc/src/spgw/CMakeFiles/srsepc_sgw.dir/build.make srsepc/src/spgw/CMakeFiles/srsepc_sgw.dir/gtpc.cc.s
 .PHONY : gtpc.cc.s
 
 gtpu.o: gtpu.cc.o
@@ -237,7 +237,7 @@ gtpu.o: gtpu.cc.o
 
 # target to build an object file
 gtpu.cc.o:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f srsepc/src/spgw/CMakeFiles/srsepc_sgw.dir/build.make srsepc/src/spgw/CMakeFiles/srsepc_sgw.dir/gtpu.cc.o
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f srsepc/src/spgw/CMakeFiles/srsepc_sgw.dir/build.make srsepc/src/spgw/CMakeFiles/srsepc_sgw.dir/gtpu.cc.o
 .PHONY : gtpu.cc.o
 
 gtpu.i: gtpu.cc.i
@@ -246,7 +246,7 @@ gtpu.i: gtpu.cc.i
 
 # target to preprocess a source file
 gtpu.cc.i:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f srsepc/src/spgw/CMakeFiles/srsepc_sgw.dir/build.make srsepc/src/spgw/CMakeFiles/srsepc_sgw.dir/gtpu.cc.i
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f srsepc/src/spgw/CMakeFiles/srsepc_sgw.dir/build.make srsepc/src/spgw/CMakeFiles/srsepc_sgw.dir/gtpu.cc.i
 .PHONY : gtpu.cc.i
 
 gtpu.s: gtpu.cc.s
@@ -255,7 +255,7 @@ gtpu.s: gtpu.cc.s
 
 # target to generate assembly for a file
 gtpu.cc.s:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f srsepc/src/spgw/CMakeFiles/srsepc_sgw.dir/build.make srsepc/src/spgw/CMakeFiles/srsepc_sgw.dir/gtpu.cc.s
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f srsepc/src/spgw/CMakeFiles/srsepc_sgw.dir/build.make srsepc/src/spgw/CMakeFiles/srsepc_sgw.dir/gtpu.cc.s
 .PHONY : gtpu.cc.s
 
 spgw.o: spgw.cc.o
@@ -264,7 +264,7 @@ spgw.o: spgw.cc.o
 
 # target to build an object file
 spgw.cc.o:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f srsepc/src/spgw/CMakeFiles/srsepc_sgw.dir/build.make srsepc/src/spgw/CMakeFiles/srsepc_sgw.dir/spgw.cc.o
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f srsepc/src/spgw/CMakeFiles/srsepc_sgw.dir/build.make srsepc/src/spgw/CMakeFiles/srsepc_sgw.dir/spgw.cc.o
 .PHONY : spgw.cc.o
 
 spgw.i: spgw.cc.i
@@ -273,7 +273,7 @@ spgw.i: spgw.cc.i
 
 # target to preprocess a source file
 spgw.cc.i:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f srsepc/src/spgw/CMakeFiles/srsepc_sgw.dir/build.make srsepc/src/spgw/CMakeFiles/srsepc_sgw.dir/spgw.cc.i
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f srsepc/src/spgw/CMakeFiles/srsepc_sgw.dir/build.make srsepc/src/spgw/CMakeFiles/srsepc_sgw.dir/spgw.cc.i
 .PHONY : spgw.cc.i
 
 spgw.s: spgw.cc.s
@@ -282,7 +282,7 @@ spgw.s: spgw.cc.s
 
 # target to generate assembly for a file
 spgw.cc.s:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f srsepc/src/spgw/CMakeFiles/srsepc_sgw.dir/build.make srsepc/src/spgw/CMakeFiles/srsepc_sgw.dir/spgw.cc.s
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f srsepc/src/spgw/CMakeFiles/srsepc_sgw.dir/build.make srsepc/src/spgw/CMakeFiles/srsepc_sgw.dir/spgw.cc.s
 .PHONY : spgw.cc.s
 
 # Help Target
@@ -321,6 +321,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/atm/Divya/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

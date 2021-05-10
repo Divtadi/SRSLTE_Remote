@@ -48,10 +48,10 @@ RM = /opt/clion-2020.1.2/bin/cmake/linux/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/atm/Ayman/srsLTE_Slicing
+CMAKE_SOURCE_DIR = /home/atm/Divya
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug
+CMAKE_BINARY_DIR = /home/atm/Divya/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -127,7 +127,7 @@ edit_cache/fast: edit_cache
 # Special rule for the target package_source
 package_source:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool for source..."
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && /opt/clion-2020.1.2/bin/cmake/linux/bin/cpack --config ./CPackSourceConfig.cmake /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/CPackSourceConfig.cmake
+	cd /home/atm/Divya/cmake-build-debug && /opt/clion-2020.1.2/bin/cmake/linux/bin/cpack --config ./CPackSourceConfig.cmake /home/atm/Divya/cmake-build-debug/CPackSourceConfig.cmake
 .PHONY : package_source
 
 # Special rule for the target package_source
@@ -138,7 +138,7 @@ package_source/fast: package_source
 # Special rule for the target package
 package: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool..."
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && /opt/clion-2020.1.2/bin/cmake/linux/bin/cpack --config ./CPackConfig.cmake
+	cd /home/atm/Divya/cmake-build-debug && /opt/clion-2020.1.2/bin/cmake/linux/bin/cpack --config ./CPackConfig.cmake
 .PHONY : package
 
 # Special rule for the target package
@@ -159,14 +159,14 @@ test/fast: test
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_progress_start /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/CMakeFiles /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/srsenb/src/phy/CMakeFiles/progress.marks
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 srsenb/src/phy/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/CMakeFiles 0
+	cd /home/atm/Divya/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_progress_start /home/atm/Divya/cmake-build-debug/CMakeFiles /home/atm/Divya/cmake-build-debug/srsenb/src/phy/CMakeFiles/progress.marks
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 srsenb/src/phy/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/atm/Divya/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 srsenb/src/phy/clean
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 srsenb/src/phy/clean
 .PHONY : clean
 
 # The main clean target
@@ -176,22 +176,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: cmake_check_build_system
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 srsenb/src/phy/preinstall
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 srsenb/src/phy/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 srsenb/src/phy/preinstall
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 srsenb/src/phy/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/atm/Divya/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 srsenb/src/phy/CMakeFiles/srsenb_phy.dir/rule:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 srsenb/src/phy/CMakeFiles/srsenb_phy.dir/rule
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 srsenb/src/phy/CMakeFiles/srsenb_phy.dir/rule
 .PHONY : srsenb/src/phy/CMakeFiles/srsenb_phy.dir/rule
 
 # Convenience name for target.
@@ -201,7 +201,7 @@ srsenb_phy: srsenb/src/phy/CMakeFiles/srsenb_phy.dir/rule
 
 # fast build rule for target.
 srsenb_phy/fast:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f srsenb/src/phy/CMakeFiles/srsenb_phy.dir/build.make srsenb/src/phy/CMakeFiles/srsenb_phy.dir/build
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f srsenb/src/phy/CMakeFiles/srsenb_phy.dir/build.make srsenb/src/phy/CMakeFiles/srsenb_phy.dir/build
 .PHONY : srsenb_phy/fast
 
 cc_worker.o: cc_worker.cc.o
@@ -210,7 +210,7 @@ cc_worker.o: cc_worker.cc.o
 
 # target to build an object file
 cc_worker.cc.o:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f srsenb/src/phy/CMakeFiles/srsenb_phy.dir/build.make srsenb/src/phy/CMakeFiles/srsenb_phy.dir/cc_worker.cc.o
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f srsenb/src/phy/CMakeFiles/srsenb_phy.dir/build.make srsenb/src/phy/CMakeFiles/srsenb_phy.dir/cc_worker.cc.o
 .PHONY : cc_worker.cc.o
 
 cc_worker.i: cc_worker.cc.i
@@ -219,7 +219,7 @@ cc_worker.i: cc_worker.cc.i
 
 # target to preprocess a source file
 cc_worker.cc.i:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f srsenb/src/phy/CMakeFiles/srsenb_phy.dir/build.make srsenb/src/phy/CMakeFiles/srsenb_phy.dir/cc_worker.cc.i
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f srsenb/src/phy/CMakeFiles/srsenb_phy.dir/build.make srsenb/src/phy/CMakeFiles/srsenb_phy.dir/cc_worker.cc.i
 .PHONY : cc_worker.cc.i
 
 cc_worker.s: cc_worker.cc.s
@@ -228,7 +228,7 @@ cc_worker.s: cc_worker.cc.s
 
 # target to generate assembly for a file
 cc_worker.cc.s:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f srsenb/src/phy/CMakeFiles/srsenb_phy.dir/build.make srsenb/src/phy/CMakeFiles/srsenb_phy.dir/cc_worker.cc.s
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f srsenb/src/phy/CMakeFiles/srsenb_phy.dir/build.make srsenb/src/phy/CMakeFiles/srsenb_phy.dir/cc_worker.cc.s
 .PHONY : cc_worker.cc.s
 
 phy.o: phy.cc.o
@@ -237,7 +237,7 @@ phy.o: phy.cc.o
 
 # target to build an object file
 phy.cc.o:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f srsenb/src/phy/CMakeFiles/srsenb_phy.dir/build.make srsenb/src/phy/CMakeFiles/srsenb_phy.dir/phy.cc.o
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f srsenb/src/phy/CMakeFiles/srsenb_phy.dir/build.make srsenb/src/phy/CMakeFiles/srsenb_phy.dir/phy.cc.o
 .PHONY : phy.cc.o
 
 phy.i: phy.cc.i
@@ -246,7 +246,7 @@ phy.i: phy.cc.i
 
 # target to preprocess a source file
 phy.cc.i:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f srsenb/src/phy/CMakeFiles/srsenb_phy.dir/build.make srsenb/src/phy/CMakeFiles/srsenb_phy.dir/phy.cc.i
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f srsenb/src/phy/CMakeFiles/srsenb_phy.dir/build.make srsenb/src/phy/CMakeFiles/srsenb_phy.dir/phy.cc.i
 .PHONY : phy.cc.i
 
 phy.s: phy.cc.s
@@ -255,7 +255,7 @@ phy.s: phy.cc.s
 
 # target to generate assembly for a file
 phy.cc.s:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f srsenb/src/phy/CMakeFiles/srsenb_phy.dir/build.make srsenb/src/phy/CMakeFiles/srsenb_phy.dir/phy.cc.s
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f srsenb/src/phy/CMakeFiles/srsenb_phy.dir/build.make srsenb/src/phy/CMakeFiles/srsenb_phy.dir/phy.cc.s
 .PHONY : phy.cc.s
 
 phy_common.o: phy_common.cc.o
@@ -264,7 +264,7 @@ phy_common.o: phy_common.cc.o
 
 # target to build an object file
 phy_common.cc.o:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f srsenb/src/phy/CMakeFiles/srsenb_phy.dir/build.make srsenb/src/phy/CMakeFiles/srsenb_phy.dir/phy_common.cc.o
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f srsenb/src/phy/CMakeFiles/srsenb_phy.dir/build.make srsenb/src/phy/CMakeFiles/srsenb_phy.dir/phy_common.cc.o
 .PHONY : phy_common.cc.o
 
 phy_common.i: phy_common.cc.i
@@ -273,7 +273,7 @@ phy_common.i: phy_common.cc.i
 
 # target to preprocess a source file
 phy_common.cc.i:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f srsenb/src/phy/CMakeFiles/srsenb_phy.dir/build.make srsenb/src/phy/CMakeFiles/srsenb_phy.dir/phy_common.cc.i
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f srsenb/src/phy/CMakeFiles/srsenb_phy.dir/build.make srsenb/src/phy/CMakeFiles/srsenb_phy.dir/phy_common.cc.i
 .PHONY : phy_common.cc.i
 
 phy_common.s: phy_common.cc.s
@@ -282,7 +282,7 @@ phy_common.s: phy_common.cc.s
 
 # target to generate assembly for a file
 phy_common.cc.s:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f srsenb/src/phy/CMakeFiles/srsenb_phy.dir/build.make srsenb/src/phy/CMakeFiles/srsenb_phy.dir/phy_common.cc.s
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f srsenb/src/phy/CMakeFiles/srsenb_phy.dir/build.make srsenb/src/phy/CMakeFiles/srsenb_phy.dir/phy_common.cc.s
 .PHONY : phy_common.cc.s
 
 phy_ue_db.o: phy_ue_db.cc.o
@@ -291,7 +291,7 @@ phy_ue_db.o: phy_ue_db.cc.o
 
 # target to build an object file
 phy_ue_db.cc.o:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f srsenb/src/phy/CMakeFiles/srsenb_phy.dir/build.make srsenb/src/phy/CMakeFiles/srsenb_phy.dir/phy_ue_db.cc.o
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f srsenb/src/phy/CMakeFiles/srsenb_phy.dir/build.make srsenb/src/phy/CMakeFiles/srsenb_phy.dir/phy_ue_db.cc.o
 .PHONY : phy_ue_db.cc.o
 
 phy_ue_db.i: phy_ue_db.cc.i
@@ -300,7 +300,7 @@ phy_ue_db.i: phy_ue_db.cc.i
 
 # target to preprocess a source file
 phy_ue_db.cc.i:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f srsenb/src/phy/CMakeFiles/srsenb_phy.dir/build.make srsenb/src/phy/CMakeFiles/srsenb_phy.dir/phy_ue_db.cc.i
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f srsenb/src/phy/CMakeFiles/srsenb_phy.dir/build.make srsenb/src/phy/CMakeFiles/srsenb_phy.dir/phy_ue_db.cc.i
 .PHONY : phy_ue_db.cc.i
 
 phy_ue_db.s: phy_ue_db.cc.s
@@ -309,7 +309,7 @@ phy_ue_db.s: phy_ue_db.cc.s
 
 # target to generate assembly for a file
 phy_ue_db.cc.s:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f srsenb/src/phy/CMakeFiles/srsenb_phy.dir/build.make srsenb/src/phy/CMakeFiles/srsenb_phy.dir/phy_ue_db.cc.s
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f srsenb/src/phy/CMakeFiles/srsenb_phy.dir/build.make srsenb/src/phy/CMakeFiles/srsenb_phy.dir/phy_ue_db.cc.s
 .PHONY : phy_ue_db.cc.s
 
 prach_worker.o: prach_worker.cc.o
@@ -318,7 +318,7 @@ prach_worker.o: prach_worker.cc.o
 
 # target to build an object file
 prach_worker.cc.o:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f srsenb/src/phy/CMakeFiles/srsenb_phy.dir/build.make srsenb/src/phy/CMakeFiles/srsenb_phy.dir/prach_worker.cc.o
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f srsenb/src/phy/CMakeFiles/srsenb_phy.dir/build.make srsenb/src/phy/CMakeFiles/srsenb_phy.dir/prach_worker.cc.o
 .PHONY : prach_worker.cc.o
 
 prach_worker.i: prach_worker.cc.i
@@ -327,7 +327,7 @@ prach_worker.i: prach_worker.cc.i
 
 # target to preprocess a source file
 prach_worker.cc.i:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f srsenb/src/phy/CMakeFiles/srsenb_phy.dir/build.make srsenb/src/phy/CMakeFiles/srsenb_phy.dir/prach_worker.cc.i
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f srsenb/src/phy/CMakeFiles/srsenb_phy.dir/build.make srsenb/src/phy/CMakeFiles/srsenb_phy.dir/prach_worker.cc.i
 .PHONY : prach_worker.cc.i
 
 prach_worker.s: prach_worker.cc.s
@@ -336,7 +336,7 @@ prach_worker.s: prach_worker.cc.s
 
 # target to generate assembly for a file
 prach_worker.cc.s:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f srsenb/src/phy/CMakeFiles/srsenb_phy.dir/build.make srsenb/src/phy/CMakeFiles/srsenb_phy.dir/prach_worker.cc.s
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f srsenb/src/phy/CMakeFiles/srsenb_phy.dir/build.make srsenb/src/phy/CMakeFiles/srsenb_phy.dir/prach_worker.cc.s
 .PHONY : prach_worker.cc.s
 
 sf_worker.o: sf_worker.cc.o
@@ -345,7 +345,7 @@ sf_worker.o: sf_worker.cc.o
 
 # target to build an object file
 sf_worker.cc.o:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f srsenb/src/phy/CMakeFiles/srsenb_phy.dir/build.make srsenb/src/phy/CMakeFiles/srsenb_phy.dir/sf_worker.cc.o
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f srsenb/src/phy/CMakeFiles/srsenb_phy.dir/build.make srsenb/src/phy/CMakeFiles/srsenb_phy.dir/sf_worker.cc.o
 .PHONY : sf_worker.cc.o
 
 sf_worker.i: sf_worker.cc.i
@@ -354,7 +354,7 @@ sf_worker.i: sf_worker.cc.i
 
 # target to preprocess a source file
 sf_worker.cc.i:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f srsenb/src/phy/CMakeFiles/srsenb_phy.dir/build.make srsenb/src/phy/CMakeFiles/srsenb_phy.dir/sf_worker.cc.i
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f srsenb/src/phy/CMakeFiles/srsenb_phy.dir/build.make srsenb/src/phy/CMakeFiles/srsenb_phy.dir/sf_worker.cc.i
 .PHONY : sf_worker.cc.i
 
 sf_worker.s: sf_worker.cc.s
@@ -363,7 +363,7 @@ sf_worker.s: sf_worker.cc.s
 
 # target to generate assembly for a file
 sf_worker.cc.s:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f srsenb/src/phy/CMakeFiles/srsenb_phy.dir/build.make srsenb/src/phy/CMakeFiles/srsenb_phy.dir/sf_worker.cc.s
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f srsenb/src/phy/CMakeFiles/srsenb_phy.dir/build.make srsenb/src/phy/CMakeFiles/srsenb_phy.dir/sf_worker.cc.s
 .PHONY : sf_worker.cc.s
 
 txrx.o: txrx.cc.o
@@ -372,7 +372,7 @@ txrx.o: txrx.cc.o
 
 # target to build an object file
 txrx.cc.o:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f srsenb/src/phy/CMakeFiles/srsenb_phy.dir/build.make srsenb/src/phy/CMakeFiles/srsenb_phy.dir/txrx.cc.o
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f srsenb/src/phy/CMakeFiles/srsenb_phy.dir/build.make srsenb/src/phy/CMakeFiles/srsenb_phy.dir/txrx.cc.o
 .PHONY : txrx.cc.o
 
 txrx.i: txrx.cc.i
@@ -381,7 +381,7 @@ txrx.i: txrx.cc.i
 
 # target to preprocess a source file
 txrx.cc.i:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f srsenb/src/phy/CMakeFiles/srsenb_phy.dir/build.make srsenb/src/phy/CMakeFiles/srsenb_phy.dir/txrx.cc.i
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f srsenb/src/phy/CMakeFiles/srsenb_phy.dir/build.make srsenb/src/phy/CMakeFiles/srsenb_phy.dir/txrx.cc.i
 .PHONY : txrx.cc.i
 
 txrx.s: txrx.cc.s
@@ -390,7 +390,7 @@ txrx.s: txrx.cc.s
 
 # target to generate assembly for a file
 txrx.cc.s:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f srsenb/src/phy/CMakeFiles/srsenb_phy.dir/build.make srsenb/src/phy/CMakeFiles/srsenb_phy.dir/txrx.cc.s
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f srsenb/src/phy/CMakeFiles/srsenb_phy.dir/build.make srsenb/src/phy/CMakeFiles/srsenb_phy.dir/txrx.cc.s
 .PHONY : txrx.cc.s
 
 # Help Target
@@ -441,6 +441,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/atm/Divya/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

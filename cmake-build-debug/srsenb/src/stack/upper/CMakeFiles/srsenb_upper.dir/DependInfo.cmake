@@ -4,10 +4,10 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/atm/Ayman/srsLTE_Slicing/srsenb/src/stack/upper/gtpu.cc" "/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/srsenb/src/stack/upper/CMakeFiles/srsenb_upper.dir/gtpu.cc.o"
-  "/home/atm/Ayman/srsLTE_Slicing/srsenb/src/stack/upper/pdcp.cc" "/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/srsenb/src/stack/upper/CMakeFiles/srsenb_upper.dir/pdcp.cc.o"
-  "/home/atm/Ayman/srsLTE_Slicing/srsenb/src/stack/upper/rlc.cc" "/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/srsenb/src/stack/upper/CMakeFiles/srsenb_upper.dir/rlc.cc.o"
-  "/home/atm/Ayman/srsLTE_Slicing/srsenb/src/stack/upper/s1ap.cc" "/home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/srsenb/src/stack/upper/CMakeFiles/srsenb_upper.dir/s1ap.cc.o"
+  "/home/atm/Divya/srsenb/src/stack/upper/gtpu.cc" "/home/atm/Divya/cmake-build-debug/srsenb/src/stack/upper/CMakeFiles/srsenb_upper.dir/gtpu.cc.o"
+  "/home/atm/Divya/srsenb/src/stack/upper/pdcp.cc" "/home/atm/Divya/cmake-build-debug/srsenb/src/stack/upper/CMakeFiles/srsenb_upper.dir/pdcp.cc.o"
+  "/home/atm/Divya/srsenb/src/stack/upper/rlc.cc" "/home/atm/Divya/cmake-build-debug/srsenb/src/stack/upper/CMakeFiles/srsenb_upper.dir/rlc.cc.o"
+  "/home/atm/Divya/srsenb/src/stack/upper/s1ap.cc" "/home/atm/Divya/cmake-build-debug/srsenb/src/stack/upper/CMakeFiles/srsenb_upper.dir/s1ap.cc.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -15,10 +15,12 @@ set(CMAKE_CXX_COMPILER_ID "GNU")
 set(CMAKE_TARGET_DEFINITIONS_CXX
   "ENABLE_TIMEPROF"
   "HAVE_MBEDTLS"
+  "HAVE_PCSC"
   )
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
+  "/usr/include/PCSC"
   "lib/include"
   "../lib/include"
   "../"

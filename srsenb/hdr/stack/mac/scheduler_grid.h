@@ -192,6 +192,9 @@ private:
   std::deque<double> slice_2_perf {};
   double s2_min_perf = 0.7;
 
+
+
+
   // tti const
   const tti_params_t* tti_params = nullptr;
   // derived
@@ -200,6 +203,7 @@ private:
   // internal state
   uint32_t  avail_rbg = 0;
   rbgmask_t dl_mask   = {};
+
 
   rbgmask_t dl_mask_1 = {};
   uint32_t avail_rbg_s1 = 0;

@@ -48,10 +48,10 @@ RM = /opt/clion-2020.1.2/bin/cmake/linux/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/atm/Ayman/srsLTE_Slicing
+CMAKE_SOURCE_DIR = /home/atm/Divya
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug
+CMAKE_BINARY_DIR = /home/atm/Divya/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -59,7 +59,7 @@ CMAKE_BINARY_DIR = /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug
 # Special rule for the target package
 package: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool..."
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && /opt/clion-2020.1.2/bin/cmake/linux/bin/cpack --config ./CPackConfig.cmake
+	cd /home/atm/Divya/cmake-build-debug && /opt/clion-2020.1.2/bin/cmake/linux/bin/cpack --config ./CPackConfig.cmake
 .PHONY : package
 
 # Special rule for the target package
@@ -115,7 +115,7 @@ install/fast: preinstall/fast
 # Special rule for the target package_source
 package_source:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool for source..."
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && /opt/clion-2020.1.2/bin/cmake/linux/bin/cpack --config ./CPackSourceConfig.cmake /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/CPackSourceConfig.cmake
+	cd /home/atm/Divya/cmake-build-debug && /opt/clion-2020.1.2/bin/cmake/linux/bin/cpack --config ./CPackSourceConfig.cmake /home/atm/Divya/cmake-build-debug/CPackSourceConfig.cmake
 .PHONY : package_source
 
 # Special rule for the target package_source
@@ -159,14 +159,14 @@ install/local/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_progress_start /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/CMakeFiles /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/srsue/test/phy/CMakeFiles/progress.marks
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 srsue/test/phy/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/CMakeFiles 0
+	cd /home/atm/Divya/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_progress_start /home/atm/Divya/cmake-build-debug/CMakeFiles /home/atm/Divya/cmake-build-debug/srsue/test/phy/CMakeFiles/progress.marks
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 srsue/test/phy/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/atm/Divya/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 srsue/test/phy/clean
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 srsue/test/phy/clean
 .PHONY : clean
 
 # The main clean target
@@ -176,22 +176,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: cmake_check_build_system
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 srsue/test/phy/preinstall
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 srsue/test/phy/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 srsue/test/phy/preinstall
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 srsue/test/phy/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/atm/Divya/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 srsue/test/phy/CMakeFiles/scell_search_test.dir/rule:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 srsue/test/phy/CMakeFiles/scell_search_test.dir/rule
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 srsue/test/phy/CMakeFiles/scell_search_test.dir/rule
 .PHONY : srsue/test/phy/CMakeFiles/scell_search_test.dir/rule
 
 # Convenience name for target.
@@ -201,12 +201,12 @@ scell_search_test: srsue/test/phy/CMakeFiles/scell_search_test.dir/rule
 
 # fast build rule for target.
 scell_search_test/fast:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f srsue/test/phy/CMakeFiles/scell_search_test.dir/build.make srsue/test/phy/CMakeFiles/scell_search_test.dir/build
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f srsue/test/phy/CMakeFiles/scell_search_test.dir/build.make srsue/test/phy/CMakeFiles/scell_search_test.dir/build
 .PHONY : scell_search_test/fast
 
 # Convenience name for target.
 srsue/test/phy/CMakeFiles/ue_phy_test.dir/rule:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 srsue/test/phy/CMakeFiles/ue_phy_test.dir/rule
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 srsue/test/phy/CMakeFiles/ue_phy_test.dir/rule
 .PHONY : srsue/test/phy/CMakeFiles/ue_phy_test.dir/rule
 
 # Convenience name for target.
@@ -216,7 +216,7 @@ ue_phy_test: srsue/test/phy/CMakeFiles/ue_phy_test.dir/rule
 
 # fast build rule for target.
 ue_phy_test/fast:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f srsue/test/phy/CMakeFiles/ue_phy_test.dir/build.make srsue/test/phy/CMakeFiles/ue_phy_test.dir/build
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f srsue/test/phy/CMakeFiles/ue_phy_test.dir/build.make srsue/test/phy/CMakeFiles/ue_phy_test.dir/build
 .PHONY : ue_phy_test/fast
 
 scell_search_test.o: scell_search_test.cc.o
@@ -225,7 +225,7 @@ scell_search_test.o: scell_search_test.cc.o
 
 # target to build an object file
 scell_search_test.cc.o:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f srsue/test/phy/CMakeFiles/scell_search_test.dir/build.make srsue/test/phy/CMakeFiles/scell_search_test.dir/scell_search_test.cc.o
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f srsue/test/phy/CMakeFiles/scell_search_test.dir/build.make srsue/test/phy/CMakeFiles/scell_search_test.dir/scell_search_test.cc.o
 .PHONY : scell_search_test.cc.o
 
 scell_search_test.i: scell_search_test.cc.i
@@ -234,7 +234,7 @@ scell_search_test.i: scell_search_test.cc.i
 
 # target to preprocess a source file
 scell_search_test.cc.i:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f srsue/test/phy/CMakeFiles/scell_search_test.dir/build.make srsue/test/phy/CMakeFiles/scell_search_test.dir/scell_search_test.cc.i
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f srsue/test/phy/CMakeFiles/scell_search_test.dir/build.make srsue/test/phy/CMakeFiles/scell_search_test.dir/scell_search_test.cc.i
 .PHONY : scell_search_test.cc.i
 
 scell_search_test.s: scell_search_test.cc.s
@@ -243,7 +243,7 @@ scell_search_test.s: scell_search_test.cc.s
 
 # target to generate assembly for a file
 scell_search_test.cc.s:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f srsue/test/phy/CMakeFiles/scell_search_test.dir/build.make srsue/test/phy/CMakeFiles/scell_search_test.dir/scell_search_test.cc.s
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f srsue/test/phy/CMakeFiles/scell_search_test.dir/build.make srsue/test/phy/CMakeFiles/scell_search_test.dir/scell_search_test.cc.s
 .PHONY : scell_search_test.cc.s
 
 ue_phy_test.o: ue_phy_test.cc.o
@@ -252,7 +252,7 @@ ue_phy_test.o: ue_phy_test.cc.o
 
 # target to build an object file
 ue_phy_test.cc.o:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f srsue/test/phy/CMakeFiles/ue_phy_test.dir/build.make srsue/test/phy/CMakeFiles/ue_phy_test.dir/ue_phy_test.cc.o
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f srsue/test/phy/CMakeFiles/ue_phy_test.dir/build.make srsue/test/phy/CMakeFiles/ue_phy_test.dir/ue_phy_test.cc.o
 .PHONY : ue_phy_test.cc.o
 
 ue_phy_test.i: ue_phy_test.cc.i
@@ -261,7 +261,7 @@ ue_phy_test.i: ue_phy_test.cc.i
 
 # target to preprocess a source file
 ue_phy_test.cc.i:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f srsue/test/phy/CMakeFiles/ue_phy_test.dir/build.make srsue/test/phy/CMakeFiles/ue_phy_test.dir/ue_phy_test.cc.i
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f srsue/test/phy/CMakeFiles/ue_phy_test.dir/build.make srsue/test/phy/CMakeFiles/ue_phy_test.dir/ue_phy_test.cc.i
 .PHONY : ue_phy_test.cc.i
 
 ue_phy_test.s: ue_phy_test.cc.s
@@ -270,7 +270,7 @@ ue_phy_test.s: ue_phy_test.cc.s
 
 # target to generate assembly for a file
 ue_phy_test.cc.s:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f srsue/test/phy/CMakeFiles/ue_phy_test.dir/build.make srsue/test/phy/CMakeFiles/ue_phy_test.dir/ue_phy_test.cc.s
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f srsue/test/phy/CMakeFiles/ue_phy_test.dir/build.make srsue/test/phy/CMakeFiles/ue_phy_test.dir/ue_phy_test.cc.s
 .PHONY : ue_phy_test.cc.s
 
 # Help Target
@@ -307,6 +307,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/atm/Divya/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

@@ -48,10 +48,10 @@ RM = /opt/clion-2020.1.2/bin/cmake/linux/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/atm/Ayman/srsLTE_Slicing
+CMAKE_SOURCE_DIR = /home/atm/Divya
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug
+CMAKE_BINARY_DIR = /home/atm/Divya/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -127,7 +127,7 @@ edit_cache/fast: edit_cache
 # Special rule for the target package_source
 package_source:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool for source..."
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && /opt/clion-2020.1.2/bin/cmake/linux/bin/cpack --config ./CPackSourceConfig.cmake /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/CPackSourceConfig.cmake
+	cd /home/atm/Divya/cmake-build-debug && /opt/clion-2020.1.2/bin/cmake/linux/bin/cpack --config ./CPackSourceConfig.cmake /home/atm/Divya/cmake-build-debug/CPackSourceConfig.cmake
 .PHONY : package_source
 
 # Special rule for the target package_source
@@ -138,7 +138,7 @@ package_source/fast: package_source
 # Special rule for the target package
 package: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool..."
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && /opt/clion-2020.1.2/bin/cmake/linux/bin/cpack --config ./CPackConfig.cmake
+	cd /home/atm/Divya/cmake-build-debug && /opt/clion-2020.1.2/bin/cmake/linux/bin/cpack --config ./CPackConfig.cmake
 .PHONY : package
 
 # Special rule for the target package
@@ -159,14 +159,14 @@ test/fast: test
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_progress_start /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/CMakeFiles /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/lib/src/phy/ch_estimation/CMakeFiles/progress.marks
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 lib/src/phy/ch_estimation/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug/CMakeFiles 0
+	cd /home/atm/Divya/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_progress_start /home/atm/Divya/cmake-build-debug/CMakeFiles /home/atm/Divya/cmake-build-debug/lib/src/phy/ch_estimation/CMakeFiles/progress.marks
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 lib/src/phy/ch_estimation/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/atm/Divya/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 lib/src/phy/ch_estimation/clean
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 lib/src/phy/ch_estimation/clean
 .PHONY : clean
 
 # The main clean target
@@ -176,22 +176,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: cmake_check_build_system
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 lib/src/phy/ch_estimation/preinstall
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 lib/src/phy/ch_estimation/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 lib/src/phy/ch_estimation/preinstall
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 lib/src/phy/ch_estimation/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/atm/Divya/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 lib/src/phy/ch_estimation/CMakeFiles/srslte_ch_estimation.dir/rule:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 lib/src/phy/ch_estimation/CMakeFiles/srslte_ch_estimation.dir/rule
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 lib/src/phy/ch_estimation/CMakeFiles/srslte_ch_estimation.dir/rule
 .PHONY : lib/src/phy/ch_estimation/CMakeFiles/srslte_ch_estimation.dir/rule
 
 # Convenience name for target.
@@ -201,7 +201,7 @@ srslte_ch_estimation: lib/src/phy/ch_estimation/CMakeFiles/srslte_ch_estimation.
 
 # fast build rule for target.
 srslte_ch_estimation/fast:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/ch_estimation/CMakeFiles/srslte_ch_estimation.dir/build.make lib/src/phy/ch_estimation/CMakeFiles/srslte_ch_estimation.dir/build
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/ch_estimation/CMakeFiles/srslte_ch_estimation.dir/build.make lib/src/phy/ch_estimation/CMakeFiles/srslte_ch_estimation.dir/build
 .PHONY : srslte_ch_estimation/fast
 
 chest_common.o: chest_common.c.o
@@ -210,7 +210,7 @@ chest_common.o: chest_common.c.o
 
 # target to build an object file
 chest_common.c.o:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/ch_estimation/CMakeFiles/srslte_ch_estimation.dir/build.make lib/src/phy/ch_estimation/CMakeFiles/srslte_ch_estimation.dir/chest_common.c.o
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/ch_estimation/CMakeFiles/srslte_ch_estimation.dir/build.make lib/src/phy/ch_estimation/CMakeFiles/srslte_ch_estimation.dir/chest_common.c.o
 .PHONY : chest_common.c.o
 
 chest_common.i: chest_common.c.i
@@ -219,7 +219,7 @@ chest_common.i: chest_common.c.i
 
 # target to preprocess a source file
 chest_common.c.i:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/ch_estimation/CMakeFiles/srslte_ch_estimation.dir/build.make lib/src/phy/ch_estimation/CMakeFiles/srslte_ch_estimation.dir/chest_common.c.i
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/ch_estimation/CMakeFiles/srslte_ch_estimation.dir/build.make lib/src/phy/ch_estimation/CMakeFiles/srslte_ch_estimation.dir/chest_common.c.i
 .PHONY : chest_common.c.i
 
 chest_common.s: chest_common.c.s
@@ -228,7 +228,7 @@ chest_common.s: chest_common.c.s
 
 # target to generate assembly for a file
 chest_common.c.s:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/ch_estimation/CMakeFiles/srslte_ch_estimation.dir/build.make lib/src/phy/ch_estimation/CMakeFiles/srslte_ch_estimation.dir/chest_common.c.s
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/ch_estimation/CMakeFiles/srslte_ch_estimation.dir/build.make lib/src/phy/ch_estimation/CMakeFiles/srslte_ch_estimation.dir/chest_common.c.s
 .PHONY : chest_common.c.s
 
 chest_dl.o: chest_dl.c.o
@@ -237,7 +237,7 @@ chest_dl.o: chest_dl.c.o
 
 # target to build an object file
 chest_dl.c.o:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/ch_estimation/CMakeFiles/srslte_ch_estimation.dir/build.make lib/src/phy/ch_estimation/CMakeFiles/srslte_ch_estimation.dir/chest_dl.c.o
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/ch_estimation/CMakeFiles/srslte_ch_estimation.dir/build.make lib/src/phy/ch_estimation/CMakeFiles/srslte_ch_estimation.dir/chest_dl.c.o
 .PHONY : chest_dl.c.o
 
 chest_dl.i: chest_dl.c.i
@@ -246,7 +246,7 @@ chest_dl.i: chest_dl.c.i
 
 # target to preprocess a source file
 chest_dl.c.i:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/ch_estimation/CMakeFiles/srslte_ch_estimation.dir/build.make lib/src/phy/ch_estimation/CMakeFiles/srslte_ch_estimation.dir/chest_dl.c.i
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/ch_estimation/CMakeFiles/srslte_ch_estimation.dir/build.make lib/src/phy/ch_estimation/CMakeFiles/srslte_ch_estimation.dir/chest_dl.c.i
 .PHONY : chest_dl.c.i
 
 chest_dl.s: chest_dl.c.s
@@ -255,7 +255,7 @@ chest_dl.s: chest_dl.c.s
 
 # target to generate assembly for a file
 chest_dl.c.s:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/ch_estimation/CMakeFiles/srslte_ch_estimation.dir/build.make lib/src/phy/ch_estimation/CMakeFiles/srslte_ch_estimation.dir/chest_dl.c.s
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/ch_estimation/CMakeFiles/srslte_ch_estimation.dir/build.make lib/src/phy/ch_estimation/CMakeFiles/srslte_ch_estimation.dir/chest_dl.c.s
 .PHONY : chest_dl.c.s
 
 chest_dl_nbiot.o: chest_dl_nbiot.c.o
@@ -264,7 +264,7 @@ chest_dl_nbiot.o: chest_dl_nbiot.c.o
 
 # target to build an object file
 chest_dl_nbiot.c.o:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/ch_estimation/CMakeFiles/srslte_ch_estimation.dir/build.make lib/src/phy/ch_estimation/CMakeFiles/srslte_ch_estimation.dir/chest_dl_nbiot.c.o
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/ch_estimation/CMakeFiles/srslte_ch_estimation.dir/build.make lib/src/phy/ch_estimation/CMakeFiles/srslte_ch_estimation.dir/chest_dl_nbiot.c.o
 .PHONY : chest_dl_nbiot.c.o
 
 chest_dl_nbiot.i: chest_dl_nbiot.c.i
@@ -273,7 +273,7 @@ chest_dl_nbiot.i: chest_dl_nbiot.c.i
 
 # target to preprocess a source file
 chest_dl_nbiot.c.i:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/ch_estimation/CMakeFiles/srslte_ch_estimation.dir/build.make lib/src/phy/ch_estimation/CMakeFiles/srslte_ch_estimation.dir/chest_dl_nbiot.c.i
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/ch_estimation/CMakeFiles/srslte_ch_estimation.dir/build.make lib/src/phy/ch_estimation/CMakeFiles/srslte_ch_estimation.dir/chest_dl_nbiot.c.i
 .PHONY : chest_dl_nbiot.c.i
 
 chest_dl_nbiot.s: chest_dl_nbiot.c.s
@@ -282,7 +282,7 @@ chest_dl_nbiot.s: chest_dl_nbiot.c.s
 
 # target to generate assembly for a file
 chest_dl_nbiot.c.s:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/ch_estimation/CMakeFiles/srslte_ch_estimation.dir/build.make lib/src/phy/ch_estimation/CMakeFiles/srslte_ch_estimation.dir/chest_dl_nbiot.c.s
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/ch_estimation/CMakeFiles/srslte_ch_estimation.dir/build.make lib/src/phy/ch_estimation/CMakeFiles/srslte_ch_estimation.dir/chest_dl_nbiot.c.s
 .PHONY : chest_dl_nbiot.c.s
 
 chest_sl.o: chest_sl.c.o
@@ -291,7 +291,7 @@ chest_sl.o: chest_sl.c.o
 
 # target to build an object file
 chest_sl.c.o:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/ch_estimation/CMakeFiles/srslte_ch_estimation.dir/build.make lib/src/phy/ch_estimation/CMakeFiles/srslte_ch_estimation.dir/chest_sl.c.o
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/ch_estimation/CMakeFiles/srslte_ch_estimation.dir/build.make lib/src/phy/ch_estimation/CMakeFiles/srslte_ch_estimation.dir/chest_sl.c.o
 .PHONY : chest_sl.c.o
 
 chest_sl.i: chest_sl.c.i
@@ -300,7 +300,7 @@ chest_sl.i: chest_sl.c.i
 
 # target to preprocess a source file
 chest_sl.c.i:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/ch_estimation/CMakeFiles/srslte_ch_estimation.dir/build.make lib/src/phy/ch_estimation/CMakeFiles/srslte_ch_estimation.dir/chest_sl.c.i
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/ch_estimation/CMakeFiles/srslte_ch_estimation.dir/build.make lib/src/phy/ch_estimation/CMakeFiles/srslte_ch_estimation.dir/chest_sl.c.i
 .PHONY : chest_sl.c.i
 
 chest_sl.s: chest_sl.c.s
@@ -309,7 +309,7 @@ chest_sl.s: chest_sl.c.s
 
 # target to generate assembly for a file
 chest_sl.c.s:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/ch_estimation/CMakeFiles/srslte_ch_estimation.dir/build.make lib/src/phy/ch_estimation/CMakeFiles/srslte_ch_estimation.dir/chest_sl.c.s
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/ch_estimation/CMakeFiles/srslte_ch_estimation.dir/build.make lib/src/phy/ch_estimation/CMakeFiles/srslte_ch_estimation.dir/chest_sl.c.s
 .PHONY : chest_sl.c.s
 
 chest_ul.o: chest_ul.c.o
@@ -318,7 +318,7 @@ chest_ul.o: chest_ul.c.o
 
 # target to build an object file
 chest_ul.c.o:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/ch_estimation/CMakeFiles/srslte_ch_estimation.dir/build.make lib/src/phy/ch_estimation/CMakeFiles/srslte_ch_estimation.dir/chest_ul.c.o
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/ch_estimation/CMakeFiles/srslte_ch_estimation.dir/build.make lib/src/phy/ch_estimation/CMakeFiles/srslte_ch_estimation.dir/chest_ul.c.o
 .PHONY : chest_ul.c.o
 
 chest_ul.i: chest_ul.c.i
@@ -327,7 +327,7 @@ chest_ul.i: chest_ul.c.i
 
 # target to preprocess a source file
 chest_ul.c.i:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/ch_estimation/CMakeFiles/srslte_ch_estimation.dir/build.make lib/src/phy/ch_estimation/CMakeFiles/srslte_ch_estimation.dir/chest_ul.c.i
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/ch_estimation/CMakeFiles/srslte_ch_estimation.dir/build.make lib/src/phy/ch_estimation/CMakeFiles/srslte_ch_estimation.dir/chest_ul.c.i
 .PHONY : chest_ul.c.i
 
 chest_ul.s: chest_ul.c.s
@@ -336,7 +336,7 @@ chest_ul.s: chest_ul.c.s
 
 # target to generate assembly for a file
 chest_ul.c.s:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/ch_estimation/CMakeFiles/srslte_ch_estimation.dir/build.make lib/src/phy/ch_estimation/CMakeFiles/srslte_ch_estimation.dir/chest_ul.c.s
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/ch_estimation/CMakeFiles/srslte_ch_estimation.dir/build.make lib/src/phy/ch_estimation/CMakeFiles/srslte_ch_estimation.dir/chest_ul.c.s
 .PHONY : chest_ul.c.s
 
 refsignal_dl.o: refsignal_dl.c.o
@@ -345,7 +345,7 @@ refsignal_dl.o: refsignal_dl.c.o
 
 # target to build an object file
 refsignal_dl.c.o:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/ch_estimation/CMakeFiles/srslte_ch_estimation.dir/build.make lib/src/phy/ch_estimation/CMakeFiles/srslte_ch_estimation.dir/refsignal_dl.c.o
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/ch_estimation/CMakeFiles/srslte_ch_estimation.dir/build.make lib/src/phy/ch_estimation/CMakeFiles/srslte_ch_estimation.dir/refsignal_dl.c.o
 .PHONY : refsignal_dl.c.o
 
 refsignal_dl.i: refsignal_dl.c.i
@@ -354,7 +354,7 @@ refsignal_dl.i: refsignal_dl.c.i
 
 # target to preprocess a source file
 refsignal_dl.c.i:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/ch_estimation/CMakeFiles/srslte_ch_estimation.dir/build.make lib/src/phy/ch_estimation/CMakeFiles/srslte_ch_estimation.dir/refsignal_dl.c.i
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/ch_estimation/CMakeFiles/srslte_ch_estimation.dir/build.make lib/src/phy/ch_estimation/CMakeFiles/srslte_ch_estimation.dir/refsignal_dl.c.i
 .PHONY : refsignal_dl.c.i
 
 refsignal_dl.s: refsignal_dl.c.s
@@ -363,7 +363,7 @@ refsignal_dl.s: refsignal_dl.c.s
 
 # target to generate assembly for a file
 refsignal_dl.c.s:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/ch_estimation/CMakeFiles/srslte_ch_estimation.dir/build.make lib/src/phy/ch_estimation/CMakeFiles/srslte_ch_estimation.dir/refsignal_dl.c.s
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/ch_estimation/CMakeFiles/srslte_ch_estimation.dir/build.make lib/src/phy/ch_estimation/CMakeFiles/srslte_ch_estimation.dir/refsignal_dl.c.s
 .PHONY : refsignal_dl.c.s
 
 refsignal_dl_nbiot.o: refsignal_dl_nbiot.c.o
@@ -372,7 +372,7 @@ refsignal_dl_nbiot.o: refsignal_dl_nbiot.c.o
 
 # target to build an object file
 refsignal_dl_nbiot.c.o:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/ch_estimation/CMakeFiles/srslte_ch_estimation.dir/build.make lib/src/phy/ch_estimation/CMakeFiles/srslte_ch_estimation.dir/refsignal_dl_nbiot.c.o
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/ch_estimation/CMakeFiles/srslte_ch_estimation.dir/build.make lib/src/phy/ch_estimation/CMakeFiles/srslte_ch_estimation.dir/refsignal_dl_nbiot.c.o
 .PHONY : refsignal_dl_nbiot.c.o
 
 refsignal_dl_nbiot.i: refsignal_dl_nbiot.c.i
@@ -381,7 +381,7 @@ refsignal_dl_nbiot.i: refsignal_dl_nbiot.c.i
 
 # target to preprocess a source file
 refsignal_dl_nbiot.c.i:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/ch_estimation/CMakeFiles/srslte_ch_estimation.dir/build.make lib/src/phy/ch_estimation/CMakeFiles/srslte_ch_estimation.dir/refsignal_dl_nbiot.c.i
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/ch_estimation/CMakeFiles/srslte_ch_estimation.dir/build.make lib/src/phy/ch_estimation/CMakeFiles/srslte_ch_estimation.dir/refsignal_dl_nbiot.c.i
 .PHONY : refsignal_dl_nbiot.c.i
 
 refsignal_dl_nbiot.s: refsignal_dl_nbiot.c.s
@@ -390,7 +390,7 @@ refsignal_dl_nbiot.s: refsignal_dl_nbiot.c.s
 
 # target to generate assembly for a file
 refsignal_dl_nbiot.c.s:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/ch_estimation/CMakeFiles/srslte_ch_estimation.dir/build.make lib/src/phy/ch_estimation/CMakeFiles/srslte_ch_estimation.dir/refsignal_dl_nbiot.c.s
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/ch_estimation/CMakeFiles/srslte_ch_estimation.dir/build.make lib/src/phy/ch_estimation/CMakeFiles/srslte_ch_estimation.dir/refsignal_dl_nbiot.c.s
 .PHONY : refsignal_dl_nbiot.c.s
 
 refsignal_ul.o: refsignal_ul.c.o
@@ -399,7 +399,7 @@ refsignal_ul.o: refsignal_ul.c.o
 
 # target to build an object file
 refsignal_ul.c.o:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/ch_estimation/CMakeFiles/srslte_ch_estimation.dir/build.make lib/src/phy/ch_estimation/CMakeFiles/srslte_ch_estimation.dir/refsignal_ul.c.o
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/ch_estimation/CMakeFiles/srslte_ch_estimation.dir/build.make lib/src/phy/ch_estimation/CMakeFiles/srslte_ch_estimation.dir/refsignal_ul.c.o
 .PHONY : refsignal_ul.c.o
 
 refsignal_ul.i: refsignal_ul.c.i
@@ -408,7 +408,7 @@ refsignal_ul.i: refsignal_ul.c.i
 
 # target to preprocess a source file
 refsignal_ul.c.i:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/ch_estimation/CMakeFiles/srslte_ch_estimation.dir/build.make lib/src/phy/ch_estimation/CMakeFiles/srslte_ch_estimation.dir/refsignal_ul.c.i
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/ch_estimation/CMakeFiles/srslte_ch_estimation.dir/build.make lib/src/phy/ch_estimation/CMakeFiles/srslte_ch_estimation.dir/refsignal_ul.c.i
 .PHONY : refsignal_ul.c.i
 
 refsignal_ul.s: refsignal_ul.c.s
@@ -417,7 +417,7 @@ refsignal_ul.s: refsignal_ul.c.s
 
 # target to generate assembly for a file
 refsignal_ul.c.s:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/ch_estimation/CMakeFiles/srslte_ch_estimation.dir/build.make lib/src/phy/ch_estimation/CMakeFiles/srslte_ch_estimation.dir/refsignal_ul.c.s
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/ch_estimation/CMakeFiles/srslte_ch_estimation.dir/build.make lib/src/phy/ch_estimation/CMakeFiles/srslte_ch_estimation.dir/refsignal_ul.c.s
 .PHONY : refsignal_ul.c.s
 
 wiener_dl.o: wiener_dl.c.o
@@ -426,7 +426,7 @@ wiener_dl.o: wiener_dl.c.o
 
 # target to build an object file
 wiener_dl.c.o:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/ch_estimation/CMakeFiles/srslte_ch_estimation.dir/build.make lib/src/phy/ch_estimation/CMakeFiles/srslte_ch_estimation.dir/wiener_dl.c.o
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/ch_estimation/CMakeFiles/srslte_ch_estimation.dir/build.make lib/src/phy/ch_estimation/CMakeFiles/srslte_ch_estimation.dir/wiener_dl.c.o
 .PHONY : wiener_dl.c.o
 
 wiener_dl.i: wiener_dl.c.i
@@ -435,7 +435,7 @@ wiener_dl.i: wiener_dl.c.i
 
 # target to preprocess a source file
 wiener_dl.c.i:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/ch_estimation/CMakeFiles/srslte_ch_estimation.dir/build.make lib/src/phy/ch_estimation/CMakeFiles/srslte_ch_estimation.dir/wiener_dl.c.i
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/ch_estimation/CMakeFiles/srslte_ch_estimation.dir/build.make lib/src/phy/ch_estimation/CMakeFiles/srslte_ch_estimation.dir/wiener_dl.c.i
 .PHONY : wiener_dl.c.i
 
 wiener_dl.s: wiener_dl.c.s
@@ -444,7 +444,7 @@ wiener_dl.s: wiener_dl.c.s
 
 # target to generate assembly for a file
 wiener_dl.c.s:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(MAKE) -f lib/src/phy/ch_estimation/CMakeFiles/srslte_ch_estimation.dir/build.make lib/src/phy/ch_estimation/CMakeFiles/srslte_ch_estimation.dir/wiener_dl.c.s
+	cd /home/atm/Divya/cmake-build-debug && $(MAKE) -f lib/src/phy/ch_estimation/CMakeFiles/srslte_ch_estimation.dir/build.make lib/src/phy/ch_estimation/CMakeFiles/srslte_ch_estimation.dir/wiener_dl.c.s
 .PHONY : wiener_dl.c.s
 
 # Help Target
@@ -501,6 +501,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/atm/Ayman/srsLTE_Slicing/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/atm/Divya/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

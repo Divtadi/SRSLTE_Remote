@@ -345,7 +345,15 @@ void sf_grid_t::init(const sched_cell_params_t& cell_params_)
   dl_mask_2 = ~(dl_mask_2);
 
   ul_mask.resize(cc_cfg->nof_prb());
+  //Divya
+  ul_mask_1.resize(nof_prb());
+  ul_mask_2.resize(nof_prb());
+  ul_mask_1.fill();
+  ul_mask_2.fill();
 
+  ul_mask_1=~(ul_mask_1);
+  ul_mask_1=~(ul_mask_2);
+  //Divya
   pdcch_alloc.init(*cc_cfg);
 }
 
@@ -369,7 +377,19 @@ void sf_grid_t::new_tti(const tti_params_t& tti_params_)
 
   dl_mask_1 = ~(dl_mask_1);
   dl_mask_2 = ~(dl_mask_2);
+//Divya
 
+    // Create UL Masks here
+
+    ul_mask_1.reset();
+    ul_mask_2.reset();
+
+    ul_mask_1.fill(std::floor(mask_1_start*nof_rbgs/100.0), std::floor(mask_1_end*nof_rbgs/100.0));
+    ul_mask_2.fill(std::floor(mask_2_start*nof_rbgs/100.0), std::floor(mask_2_end*nof_rbgs/100.0));
+
+    ul_mask_1 = ~(ul_mask_1);
+    ul_mask_2 = ~(ul_mask_2);
+    //Divya
   // internal state
   pdcch_alloc.new_tti(*tti_params);
 }
@@ -520,7 +540,70 @@ alloc_outcome_t sf_grid_t::alloc_dl_data(sched_ue* user, const rbgmask_t& user_m
 }
 
 alloc_outcome_t sf_grid_t::alloc_ul_data(sched_ue* user, ul_harq_proc::ul_alloc_t alloc, bool needs_pdcch)
-{
+{ //Divya
+    if (user != nullptr) {
+        // Check QCI here to make sure the appropriate dl_mask is updated
+        if (user->get_qci() == 7) { // Slice 1
+            // Check RBG collision
+            if (alloc.RB_start + alloc.L > ul_mask_1.size()) {
+                return alloc_outcome_t::ERROR;
+            }
+
+            prbmask_t newmask(ul_mask_1.size());
+            newmask.fill(alloc.RB_start, alloc.RB_start + alloc.L);
+            if ((ul_mask_1 & newmask).any()) {
+                return alloc_outcome_t::RB_COLLISION;
+            }
+
+    // Generate PDCCH except for RAR and non-adaptive retx
+            if (needs_pdcch) {
+                uint32_t nof_bits = srslte_dci_format_sizeof(&cc_cfg->cfg.cell, nullptr, nullptr, SRSLTE_DCI_FORMAT0);
+                uint32_t aggr_idx = user->get_ue_carrier(cc_cfg->enb_cc_idx)->get_aggr_level(nof_bits);
+                if (not pdcch_alloc.alloc_dci(alloc_type_t::UL_DATA, aggr_idx, user)) {
+                    if (log_h->get_level() == srslte::LOG_LEVEL_DEBUG) {
+                        log_h->debug("No space in PDCCH for rnti=0x%x UL tx. Current PDCCH allocation: %s\n",
+                                     user->get_rnti(),
+                                     pdcch_alloc.result_to_string(true).c_str());
+                    }
+
+                    return alloc_outcome_t::DCI_COLLISION;
+                }
+
+                    ul_mask_1 |= newmask;
+
+                    return alloc_outcome_t::SUCCESS;
+                    }else if (user->get_qci() == 9) // Slice 2
+            {
+                if (alloc.RB_start + alloc.L > ul_mask_2.size()) {
+                    return alloc_outcome_t::ERROR;
+                }
+
+                prbmask_t newmask(ul_mask_2.size());
+                newmask.fill(alloc.RB_start, alloc.RB_start + alloc.L);
+                if ((ul_mask_2 & newmask).any()) {
+                    return alloc_outcome_t::RB_COLLISION;
+                }
+
+                // Generate PDCCH except for RAR and non-adaptive retx
+                if (needs_pdcch) {
+                    uint32_t nof_bits = srslte_dci_format_sizeof(&cc_cfg->cfg.cell, nullptr, nullptr,
+                                                                 SRSLTE_DCI_FORMAT0);
+                    uint32_t aggr_idx = user->get_ue_carrier(cc_cfg->enb_cc_idx)->get_aggr_level(nof_bits);
+                    if (not pdcch_alloc.alloc_dci(alloc_type_t::UL_DATA, aggr_idx, user)) {
+                        if (log_h->get_level() == srslte::LOG_LEVEL_DEBUG) {
+                            log_h->debug("No space in PDCCH for rnti=0x%x UL tx. Current PDCCH allocation: %s\n",
+                                         user->get_rnti(),
+                                         pdcch_alloc.result_to_string(true).c_str());
+                        }
+
+                        return alloc_outcome_t::DCI_COLLISION;
+                    }
+
+                    ul_mask_2 |= newmask;
+
+                    return alloc_outcome_t::SUCCESS;
+                }
+            }   //Divya
   if (alloc.RB_start + alloc.L > ul_mask.size()) {
     return alloc_outcome_t::ERROR;
   }
@@ -1142,6 +1225,8 @@ void sf_sched::generate_sched_results(sf_sched_result* sf_result)
   sf_result->dl_mask_2 = tti_alloc.get_dl_mask_2();
 
   sf_result->ul_mask    = tti_alloc.get_ul_mask();
+  sf_result->ul_mask_1 = tti_alloc.get_ul_mask_1();
+  sf_result->ul_mask_2 = tti_alloc.get_ul_mask_2();
   sf_result->tti_params = tti_params;
 }
 
