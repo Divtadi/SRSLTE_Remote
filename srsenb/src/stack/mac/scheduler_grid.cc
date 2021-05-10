@@ -348,8 +348,8 @@ void sf_grid_t::init(const sched_cell_params_t& cell_params_)
   //Divya
   ul_mask_1.resize(nof_prb());
   ul_mask_2.resize(nof_prb());
-  ul_mask_1.fill();
-  ul_mask_2.fill();
+  ul_mask_1.fill(std::ceil(ul_mask_1_start*nof_rbgs/100.0), std::ceil(ul_mask_1_end*nof_rbgs/100.0));;
+  ul_mask_2.fill(std::ceil(ul_mask_2_start*nof_rbgs/100.0), std::ceil(ul_mask_2_end*nof_rbgs/100.0));
 
   ul_mask_1=~(ul_mask_1);
   ul_mask_1=~(ul_mask_2);
