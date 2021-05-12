@@ -420,7 +420,10 @@ int sched::carrier_sched::alloc_ul_users(sf_sched* tti_sched)
   tti_sched->reserve_ul_prbs(pucch_mask, cc_cfg->nof_prb() != 6);
 
   /* Call scheduler for UL data */
-  ul_metric->sched_users(*ue_db, tti_sched);
+  //ul_metric->sched_users(*ue_db, tti_sched);Divya
+
+  dl_metric->sched_users_s1(ue_db_slice_1, tti_result);
+  dl_metric->sched_users_s2(ue_db_slice_2, tti_result);
 
   return SRSLTE_SUCCESS;
 }

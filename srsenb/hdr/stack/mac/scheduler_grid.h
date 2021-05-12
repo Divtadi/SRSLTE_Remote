@@ -262,8 +262,11 @@ public:
   virtual const prbmask_t& get_ul_mask() const                                           = 0;
   virtual const prbmask_t& get_ul_mask_1() const                                         = 0;//Divya
   virtual const prbmask_t& get_ul_mask_2() const                                         = 0;//Divya
+  virtual const uint32_t         get_nof_prbs() const                                    = 0;//Divya
   virtual uint32_t         get_tti_tx_ul() const                                         = 0;
   virtual bool             is_ul_alloc(sched_ue* user) const                             = 0;
+  virtual std::pair<double, double> get_mask_ul_1() const                                = 0;//Divya
+  virtual std::pair<double, double> get_mask_ul_2() const                                = 0;//Divya
 };
 
 /** Description: Stores the RAR, broadcast, paging, DL data, UL data allocations for the given subframe
@@ -368,9 +371,9 @@ public:
   alloc_outcome_t  alloc_ul_user(sched_ue* user, ul_harq_proc::ul_alloc_t alloc) final;
   const prbmask_t& get_ul_mask() const final { return tti_alloc.get_ul_mask(); }
   const prbmask_t& get_ul_mask_1() const final { return tti_alloc.get_ul_mask_1(); }//Divya
-  const prbmask_t& get_ul_mask_2() const final { return tti_alloc.get_ul_mask_2(); }
-  const uint32_t   get_nof_rbgs() const final { return tti_alloc.get_nof_rbgs(); }
-  double get_midpoint() const final {return tti_alloc.get_midpoint();}
+  const prbmask_t& get_ul_mask_2() const final { return tti_alloc.get_ul_mask_2(); }//Divya
+  const uint32_t   get_nof_prbs() const final { return tti_alloc.get_nof_prbs(); }//Divya
+  //double get_midpoint() const final {return tti_alloc.get_midpoint();}
   std::pair<double, double> get_ul_mask_1() const final { return tti_alloc.get_ul_mask_1();}
   std::pair<double, double> get_ul_mask_2() const final { return tti_alloc.get_ul_mask_2();}//Divya
   uint32_t         get_tti_tx_ul() const final { return tti_params.tti_tx_ul; }
