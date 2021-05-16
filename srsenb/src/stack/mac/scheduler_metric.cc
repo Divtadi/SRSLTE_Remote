@@ -596,49 +596,125 @@ ul_harq_proc* ul_metric_rr::allocate_user_newtx_prbs(sched_ue* user)
   }
   return nullptr;
 }
-    bool ul_metric_rr::find_ul_allocation_slice(uint32_t L, ul_harq_proc::ul_alloc_t *alloc, uint16_t slice)
-    {
-        if (Slice == 1) {
-            const prbmask_t *used_rb = &tti_alloc->get_ul_mask();
-            bzero(alloc, sizeof(ul_harq_proc::ul_alloc_t));
-            for (uint32_t n = 0; n < used_rb->size()/2 && alloc->L < L; n++) {
-                if (not used_rb->test(n) && alloc->L == 0) {
-                    alloc->RB_start = n;
-                }
-                if (not used_rb->test(n)) {
-                    alloc->L++;
-                } else if (alloc->L > 0) {
-                    // avoid edges
-                    if (n < 3) {
-                        alloc->RB_start = 0;
-                        alloc->L = 0;
-                    } else {
-                        break;
-                    }
-                }
+bool ul_metric_rr::find_ul_allocation_slice(uint32_t L, ul_harq_proc::ul_alloc_t *alloc, uint16_t slice) {
+    if (Slice == 1) {
+        const prbmask_t *used_rb = &tti_alloc->get_ul_mask();
+        bzero(alloc, sizeof(ul_harq_proc::ul_alloc_t));
+        for (uint32_t n = 0; n < used_rb->size() / 2 && alloc->L < L; n++) {
+            if (not used_rb->test(n) && alloc->L == 0) {
+                alloc->RB_start = n;
             }
-            if (alloc->L == 0) {
-                return false;
-            }
-        }
-        if (Slice == 2) {
-            const prbmask_t *used_rb = &tti_alloc->get_ul_mask();
-            bzero(alloc, sizeof(ul_harq_proc::ul_alloc_t));
-            for (uint32_t n = used_rb->size() / 2; n < used_rb->size()  && alloc->L < L; n++) {
-                if (not used_rb->test(n) && alloc->L == 0) {
-                    alloc->RB_start = n;
-                }
-                if (not used_rb->test(n)) {
-                    alloc->L++;
-                } else if (alloc->L > 0) {
-                    // avoid edges
-                    if (n < 3) {
-                        alloc->RB_start = 0;
-                        alloc->L = 0;
-                    } else {
-                        break;
-                    }
+            if (not used_rb->test(n)) {
+                alloc->L++;
+            } else if (alloc->L > 0) {
+                // avoid edges
+                if (n < 3) {
+                    alloc->RB_start = 0;
+                    alloc->L = 0;
+                } else {
+                    break;
                 }
             }
         }
+        if (alloc->L == 0) {
+            return false;
+        }
+    }
+    if (Slice == 2) {
+        const prbmask_t *used_rb = &tti_alloc->get_ul_mask();
+        bzero(alloc, sizeof(ul_harq_proc::ul_alloc_t));
+        for (uint32_t n = used_rb->size() / 2; n < used_rb->size() && alloc->L < L; n++) {
+            if (not used_rb->test(n) && alloc->L == 0) {
+                alloc->RB_start = n;
+            }
+            if (not used_rb->test(n)) {
+                alloc->L++;
+            } else if (alloc->L > 0) {
+                // avoid edges
+                if (n < 3) {
+                    alloc->RB_start = 0;
+                    alloc->L = 0;
+                } else {
+                    break;
+                }
+            }
+        }
+    }
+}
+ul_harq_proc* allocate_user_newtx_prbs(sched_ue* user, uint16_t Slice);
+{
+    if (tti_alloc->is_ul_alloc(user)) {
+        return nullptr;
+    }
+    auto p = user->get_cell_index(cc_cfg->enb_cc_idx);
+    if (not p.first) {
+        // this cc is not activated for this user
+        return nullptr;
+    }
+    uint32_t cell_idx = p.second;
+
+    alloc_outcome_t ret;
+    ul_harq_proc*   h = user->get_ul_harq(current_tti, cell_idx);
+
+            // if there are procedures and we have space
+     if (h->has_pending_retx()) {
+     ul_harq_proc::ul_alloc_t alloc = h->get_alloc();
+
+      // If can schedule the same mask, do it
+     ret = tti_alloc->alloc_ul_user(user, alloc);
+     if (ret == alloc_outcome_t::SUCCESS) {
+         return h;
+     }
+     if (ret == alloc_outcome_t::DCI_COLLISION) {
+         log_h->warning("SCHED: Couldn't find space in PDCCH for UL retx of rnti=0x%x\n", user->get_rnti());
+         return nullptr;
+     }
+
+     if (find_ul_allocation_slice(alloc.L, &alloc)) {
+         ret = tti_alloc->alloc_ul_user(user, alloc);
+         if (ret == alloc_outcome_t::SUCCESS) {
+             return h;
+         }
+         if (ret == alloc_outcome_t::DCI_COLLISION) {
+             log_h->warning("SCHED: Couldn't find space in PDCCH for UL retx of rnti=0x%x\n", user->get_rnti());
+         }
+     }
+     }
+     return nullptr;
+}
+
+ul_harq_proc* allocate_user_retx_prbs(sched_ue* user, uint16_t Slice);
+{
+    if (tti_alloc->is_ul_alloc(user)) {
+        return nullptr;
+    }
+    auto p = user->get_cell_index(cc_cfg->enb_cc_idx);
+    if (not p.first) {
+        // this cc is not activated for this user
+        return nullptr;
+    }
+    uint32_t cell_idx = p.second;
+
+    uint32_t      pending_data = user->get_pending_ul_new_data(current_tti);
+    ul_harq_proc* h            = user->get_ul_harq(current_tti, cell_idx);
+
+            // find an empty PID
+    if (h->is_empty(0) and pending_data > 0) {
+        uint32_t                 pending_rb = user->get_required_prb_ul(cell_idx, pending_data);
+        ul_harq_proc::ul_alloc_t alloc{};
+
+        find_ul_allocation_slice(pending_rb, &alloc);
+        if (alloc.L > 0) { // at least one PRB was scheduled
+            alloc_outcome_t ret = tti_alloc->alloc_ul_user(user, alloc);
+            if (ret == alloc_outcome_t::SUCCESS) {
+                return h;
+            }
+            if (ret == alloc_outcome_t::DCI_COLLISION) {
+                log_h->warning("SCHED: Couldn't find space in PDCCH for UL tx of rnti=0x%x\n", user->get_rnti());
+            }
+        }
+    }
+    return nullptr;
+}
+
 } // namespace srsenb
