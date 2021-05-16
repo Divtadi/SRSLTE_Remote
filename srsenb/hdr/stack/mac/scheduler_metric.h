@@ -56,13 +56,14 @@ class ul_metric_rr : public sched::metric_ul
 public:
   void set_params(const sched_cell_params_t& cell_params_) final;
   void sched_users(std::map<uint16_t, sched_ue>& ue_db, ul_sf_sched_itf* tti_sched) final;
-  void sched_ul_users_s1(std::map<uint16_t, sched_ue*>& ue_db, dl_sf_sched_itf* tti_sched) final;
-  void sched_ul_users_s2(std::map<uint16_t, sched_ue*>& ue_db, dl_sf_sched_itf* tti_sched) final;
+  void sched_ul_users_s1(std::map<uint16_t, sched_ue*>& ue_db, ul_sf_sched_itf* tti_sched) final; //Divya
+  void sched_ul_users_s2(std::map<uint16_t, sched_ue*>& ue_db, ul_sf_sched_itf* tti_sched) final;//Divya
 
 private:
   bool          find_allocation(uint32_t L, ul_harq_proc::ul_alloc_t* alloc);
-  ul_harq_proc* allocate_user_newtx_prbs(sched_ue* user);
-  ul_harq_proc* allocate_user_retx_prbs(sched_ue* user);
+  bool          find_ul_allocation_slice(uint32_t L, ul_harq_proc::ul_alloc_t* alloc, uint16_t slice);
+  ul_harq_proc* allocate_user_newtx_prbs(sched_ue* user, uint16_t Slice);//Divya
+  ul_harq_proc* allocate_user_retx_prbs(sched_ue* user, uint16_t Slice);//Divya
 
   const sched_cell_params_t* cc_cfg = nullptr;
   srslte::log_ref            log_h;

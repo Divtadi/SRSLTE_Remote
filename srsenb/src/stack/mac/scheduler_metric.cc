@@ -596,5 +596,49 @@ ul_harq_proc* ul_metric_rr::allocate_user_newtx_prbs(sched_ue* user)
   }
   return nullptr;
 }
-
+    bool ul_metric_rr::find_ul_allocation_slice(uint32_t L, ul_harq_proc::ul_alloc_t *alloc, uint16_t slice)
+    {
+        if (Slice == 1) {
+            const prbmask_t *used_rb = &tti_alloc->get_ul_mask();
+            bzero(alloc, sizeof(ul_harq_proc::ul_alloc_t));
+            for (uint32_t n = 0; n < used_rb->size()/2 && alloc->L < L; n++) {
+                if (not used_rb->test(n) && alloc->L == 0) {
+                    alloc->RB_start = n;
+                }
+                if (not used_rb->test(n)) {
+                    alloc->L++;
+                } else if (alloc->L > 0) {
+                    // avoid edges
+                    if (n < 3) {
+                        alloc->RB_start = 0;
+                        alloc->L = 0;
+                    } else {
+                        break;
+                    }
+                }
+            }
+            if (alloc->L == 0) {
+                return false;
+            }
+        }
+        if (Slice == 2) {
+            const prbmask_t *used_rb = &tti_alloc->get_ul_mask();
+            bzero(alloc, sizeof(ul_harq_proc::ul_alloc_t));
+            for (uint32_t n = used_rb->size() / 2; n < used_rb->size()  && alloc->L < L; n++) {
+                if (not used_rb->test(n) && alloc->L == 0) {
+                    alloc->RB_start = n;
+                }
+                if (not used_rb->test(n)) {
+                    alloc->L++;
+                } else if (alloc->L > 0) {
+                    // avoid edges
+                    if (n < 3) {
+                        alloc->RB_start = 0;
+                        alloc->L = 0;
+                    } else {
+                        break;
+                    }
+                }
+            }
+        }
 } // namespace srsenb
