@@ -87,8 +87,10 @@ public:
     /* Virtual methods for user metric calculation */
     virtual void set_params(const sched_cell_params_t& cell_params_)                          = 0;
     virtual void sched_users(std::map<uint16_t, sched_ue>& ue_db, ul_sf_sched_itf* tti_sched) = 0;
-    virtual void sched_ul_users_s1(std::map<uint16_t, sched_ue>& ue_db, ul_sf_sched_itf* tti_sche) = 0;//Divya
-    virtual void sched_ul_users_s2(std::map<uint16_t, sched_ue>& ue_db, ul_sf_sched_itf* tti_sche) = 0;//Divya
+    virtual void sched_ul_users_s1(std::map<uint16_t, sched_ue>& ue_db, ul_sf_sched_itf* tti_sched) = 0;//Divya
+    virtual void sched_ul_users_s2(std::map<uint16_t, sched_ue>& ue_db, ul_sf_sched_itf* tti_sched) = 0;//Divya
+
+
   };
 
   /*************************************************************
