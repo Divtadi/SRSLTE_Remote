@@ -444,7 +444,7 @@ void ul_metric_rr::sched_ul_users_s1(std::map<uint16_t, sched_ue*>& ue_db, ul_sf
       if (iter == ue_db.end()) {
           iter = ue_db.begin(); // wrap around
       }
-      sched_ue **user = &iter->second;//UNSURE
+      sched_ue *user = &iter->second;//UNSURE
       allocate_ul_user_newtx_prbs(user,1);
       scheduled_ul_users += tti_alloc->is_ul_alloc(user);
   }
