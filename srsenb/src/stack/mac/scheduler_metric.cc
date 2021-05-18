@@ -412,41 +412,41 @@ void ul_metric_rr::sched_users(std::map<uint16_t, sched_ue>& ue_db, ul_sf_sched_
 }
 void ul_metric_rr::sched_ul_users_s1(std::map<uint16_t, sched_ue*>& ue_db, ul_sf_sched_itf* tti_sched)
 {
-    tti_alloc   = tti_sched;
-    current_tti = tti_alloc->get_tti_tx_ul();
+  tti_alloc   = tti_sched;
+  current_tti = tti_alloc->get_tti_tx_ul();
 
-    if (ue_db.empty()) {
-        return;
-    }
+  if (ue_db.empty()) {
+      return;
+  }
 
     // give priority in a time-domain RR basis
-    uint32_t priority_idx =
-            current_tti + (uint32_t)ue_db.size() / 2) % (uint32_t)ue_db.size(); // make DL and UL interleaved
+  uint32_t priority_idx =
+          current_tti + (uint32_t)ue_db.size() / 2) % (uint32_t)ue_db.size(); // make DL and UL interleaved
 
 // allocate reTxs first
-    auto iter = ue_db.begin();
-    std::advance(iter, priority_idx);
-    uint32_t scheduled_users {};
-    for (uint32_t ue_count = 0; ue_count < ue_db.size(); ++iter, ++ue_count) {
-        if (iter == ue_db.end()) {
-            iter = ue_db.begin(); // wrap around
-        }
-        sched_ue* user = &iter->second;
-        allocate_ul_user_retx_prbs(user,1);
-        scheduled_users += tti_alloc->is_ul_alloc(user);
-    }
+  auto iter = ue_db.begin();
+  std::advance(iter, priority_idx);
+  uint32_t scheduled_users {};
+  for (uint32_t ue_count = 0; ue_count < ue_db.size(); ++iter, ++ue_count) {
+      if (iter == ue_db.end()) {
+          iter = ue_db.begin(); // wrap around
+      }
+      sched_ue **user = &iter->second;//UNSURE
+      allocate_ul_user_retx_prbs(user,1);
+      scheduled_users += tti_alloc->is_ul_alloc(user);
+  }
 
     // give priority in a time-domain RR basis
-    iter = ue_db.begin();
-    std::advance(iter, priority_idx);
-    for (uint32_t ue_count = 0; ue_count < ue_db.size(); ++iter, ++ue_count) {
-        if (iter == ue_db.end()) {
-            iter = ue_db.begin(); // wrap around
-        }
-        sched_ue* user = &iter->second;
-        allocate_ul_user_newtx_prbs(user,1);
-        scheduled_users += tti_alloc->is_ul_alloc(user);
-    }
+  iter = ue_db.begin();
+  std::advance(iter, priority_idx);
+  for (uint32_t ue_count = 0; ue_count < ue_db.size(); ++iter, ++ue_count) {
+      if (iter == ue_db.end()) {
+          iter = ue_db.begin(); // wrap around
+      }
+      sched_ue **user = &iter->second;//UNSURE
+      allocate_ul_user_newtx_prbs(user,1);
+      scheduled_users += tti_alloc->is_ul_alloc(user);
+  }
 }
 void ul_metric_rr::sched_ul_users_s2(std::map<uint16_t, sched_ue*>& ue_db, ul_sf_sched_itf* tti_sched)
 {
@@ -641,7 +641,7 @@ bool ul_metric_rr::find_ul_allocation_slice(uint32_t L, ul_harq_proc::ul_alloc_t
         }
     }
 }
-ul_harq_proc* ul_metric_rr::allocate_ul_user_retx_prbs(sched_ue* user, uint16_t Slice)
+ul_harq_proc* ul_metric_rr::allocate_ul_user_retx_prbs(sched_ue **user, uint16_t Slice)
 {
     if (tti_alloc->is_ul_alloc(user)) {
         return nullptr;
@@ -683,7 +683,7 @@ ul_harq_proc* ul_metric_rr::allocate_ul_user_retx_prbs(sched_ue* user, uint16_t 
      return nullptr;
 }
 
-ul_harq_proc* ul_metric_rr::allocate_ul_user_newtx_prbs(sched_ue* user, uint16_t Slice)
+ul_harq_proc* ul_metric_rr::allocate_ul_user_newtx_prbs(sched_ue **user, uint16_t Slice)
 {
     if (tti_alloc->is_ul_alloc(user)) {
         return nullptr;

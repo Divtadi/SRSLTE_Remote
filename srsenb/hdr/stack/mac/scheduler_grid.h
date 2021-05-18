@@ -264,7 +264,7 @@ public:
   //virtual const prbmask_t& get_ul_mask_2() const                                         = 0;//Divya
   virtual const uint32_t         get_nof_prbs() const                                    = 0;//Divya
   virtual uint32_t         get_tti_tx_ul() const                                         = 0;
-  virtual bool             is_ul_alloc(sched_ue* user) const                             = 0;
+  virtual bool             is_ul_alloc(sched_ue **user) const                             = 0;
   virtual std::pair<double, double> get_mask_ul_1() const                                = 0;//Divya
   virtual std::pair<double, double> get_mask_ul_2() const                                = 0;//Divya
 };
