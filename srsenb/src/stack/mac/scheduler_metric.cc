@@ -410,6 +410,7 @@ void ul_metric_rr::sched_users(std::map<uint16_t, sched_ue>& ue_db, ul_sf_sched_
     allocate_user_newtx_prbs(user);
   }
 }
+
 void ul_metric_rr::sched_ul_users_s1(std::map<uint16_t, sched_ue*>& ue_db, ul_sf_sched_itf* tti_sched)
 {
   tti_alloc   = tti_sched;
@@ -436,7 +437,6 @@ void ul_metric_rr::sched_ul_users_s1(std::map<uint16_t, sched_ue*>& ue_db, ul_sf
       scheduled_ul_users += tti_alloc->is_ul_alloc(user);
 
   }
-
     // give priority in a time-domain RR basis
   iter = ue_db.begin();
   std::advance(iter, priority_idx);
