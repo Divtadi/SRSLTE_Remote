@@ -408,8 +408,8 @@ void sched::carrier_sched::alloc_dl_users(sf_sched* tti_result)
 
 int sched::carrier_sched::alloc_ul_users(sf_sched* tti_sched)
 {
-  std::map<uint16_t, sched_ue*> ue_db_slice_1 {};//Divya
-  std::map<uint16_t, sched_ue*> ue_db_slice_2 {};//Divya
+  std::map<uint16_t, sched_ue> ue_db_ul_slice_1 {};//Divy
+  std::map<uint16_t, sched_ue> ue_db_ul_slice_2 {};//Divya
   uint32_t tti_tx_ul = tti_sched->get_tti_tx_ul();//
 
     // Create a sliced map of ue_db to point to each UE in ue_db
@@ -417,9 +417,9 @@ int sched::carrier_sched::alloc_ul_users(sf_sched* tti_sched)
      std::map<uint16_t, sched_ue>::iterator iter = ue_db->begin();
      while (iter != ue_db->end()) {
       if(iter->second.get_qci() == 7){
-      ue_db_slice_1[iter->first] = &iter->second;
+      ue_db_ul_slice_1[iter->first] = &iter->second;
       } else{
-      ue_db_slice_2[iter->first] = &iter->second;
+      ue_db_ul_slice_2[iter->first] = &iter->second;
       }
       iter++;
      }
@@ -437,12 +437,12 @@ int sched::carrier_sched::alloc_ul_users(sf_sched* tti_sched)
   /* Call scheduler for UL data */
   //ul_metric->sched_users(*ue_db, tti_sched);Divya
 
-  ul_metric->sched_ul_users_s1(ue_db_slice_1, tti_sched);//Divya
-  ul_metric->sched_ul_users_s2(ue_db_slice_2, tti_sched);//Divya
+  ul_metric->sched_ul_users_s1(ue_db_ul_slice_1 , tti_sched);//Divya
+  ul_metric->sched_ul_users_s2(ue_db_ul_slice_2, tti_sched);//Divya
 
   tti_sched->block_tti();//Divya
-  ue_db_slice_1.clear();
-  ue_db_slice_2.clear();//Divya
+  ue_db_ul_slice_1.clear();
+  ue_db_ul_slice_2.clear();//Divya
 
   return SRSLTE_SUCCESS;
 }

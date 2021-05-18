@@ -55,8 +55,8 @@ struct sf_sched_result {
   rbgmask_t                       dl_mask_2         = {}; ///< Accumulation of all DL RBG allocations slice 2
   // consider creating array/vector of dl_masks for each separate slice
   prbmask_t                       ul_mask         = {}; ///< Accumulation of all UL PRB allocations
-  prbmask_t                       ul_mask_1       = {}; ///<Accumulation of ll UL PRB allocation Slice 1 //Divya
-  prbmask_t                       ul_mask_2       = {}; ///<Accumulation of ll UL PRB allocation Slice 2  //Divya
+  //prbmask_t                       ul_mask_1       = {}; ///<Accumulation of ll UL PRB allocation Slice 1 //Divya
+  //prbmask_t                       ul_mask_2       = {}; ///<Accumulation of ll UL PRB allocation Slice 2  //Divya
   pdcch_mask_t                    pdcch_mask      = {}; ///< Accumulation of all CCE allocations
 };
 
@@ -157,8 +157,8 @@ public:
   const rbgmask_t&    get_dl_mask_1() const { return dl_mask_1; }
   const rbgmask_t&    get_dl_mask_2() const { return dl_mask_2; }
   const prbmask_t&    get_ul_mask() const { return ul_mask; }
-  const prbmask_t&    get_ul_mask_1() const { return ul_mask_1; } //Divya
-  const prbmask_t&    get_ul_mask_2() const { return ul_mask_2; } //Divya
+  //const prbmask_t&    get_ul_mask_1() const { return ul_mask_1; } //Divya
+  //const prbmask_t&    get_ul_mask_2() const { return ul_mask_2; } //Divya
   uint32_t            get_cfi() const { return pdcch_alloc.get_cfi(); }
   const pdcch_grid_t& get_pdcch_grid() const { return pdcch_alloc; }
   const uint32_t get_nof_rbgs() const {return nof_rbgs; }
@@ -166,9 +166,9 @@ public:
   std::pair<double, double> get_mask_1() const { return std::pair<double, double> {mask_1_start,mask_1_end};}
   std::pair<double, double> get_mask_2() const { return std::pair<double, double> {mask_2_start,mask_2_end};}
   const uint32_t get_nof_rbgs() const {return nof_rbgs; } //Divya
-  double get_midpoint() const {return ul_mask_midpoint; } //Divya
-  std::pair<double, double> get_ul_mask_1() const { return std::pair<double, double> {ul_mask_1_start,ul_mask_1_end};}//Divya
-  std::pair<double, double> get_ul_mask_2() const { return std::pair<double, double> {ul_mask_2_start,ul_mask_2_end};}//Divya
+  //double get_midpoint() const {return ul_mask_midpoint; } //Divya
+  //std::pair<double, double> get_ul_mask_1() const { return std::pair<double, double> {ul_mask_1_start,ul_mask_1_end};}//Divya
+  //std::pair<double, double> get_ul_mask_2() const { return std::pair<double, double> {ul_mask_2_start,ul_mask_2_end};}//Divya
   double get_s1_perf() {return s1_min_perf;}
   double get_s2_perf() {return s2_min_perf;}
   size_t get_window() const {return TTI_Window;}
@@ -199,7 +199,7 @@ private:
   double mask_2_end = 100;
   std::deque<double> slice_2_perf {};
   double s2_min_perf = 0.7;
-//Divya
+/*//Divya
   //Slice 1 Parameters
   double ul_mask_midpoint = 25;
   double ul_mask_1_start = 0;
@@ -208,7 +208,7 @@ private:
   //Slice 2 Parameters
   double ul_mask_2_start = ul_mask_1_end;
   double ul_mask_2_end = 100;
-//Divya
+//Divya*/
   // tti const
   const tti_params_t* tti_params = nullptr;
   // derived
@@ -226,10 +226,10 @@ private:
 
   prbmask_t ul_mask   = {};
 
-  prbmask_t ul_mask_1 = {};//Divya
+  /*prbmask_t ul_mask_1 = {};//Divya
   uint32_t avail_rbg_s1 = 0;
   prbmask_t ul_mask_1 = {};
-  uint32_t avail_rbg_s2 = 0;//Divya
+  uint32_t avail_rbg_s2 = 0;//Divya*/
 
 };
 
@@ -260,8 +260,8 @@ class ul_sf_sched_itf
 public:
   virtual alloc_outcome_t  alloc_ul_user(sched_ue* user, ul_harq_proc::ul_alloc_t alloc) = 0;
   virtual const prbmask_t& get_ul_mask() const                                           = 0;
-  virtual const prbmask_t& get_ul_mask_1() const                                         = 0;//Divya
-  virtual const prbmask_t& get_ul_mask_2() const                                         = 0;//Divya
+  //virtual const prbmask_t& get_ul_mask_1() const                                         = 0;//Divya
+  //virtual const prbmask_t& get_ul_mask_2() const                                         = 0;//Divya
   virtual const uint32_t         get_nof_prbs() const                                    = 0;//Divya
   virtual uint32_t         get_tti_tx_ul() const                                         = 0;
   virtual bool             is_ul_alloc(sched_ue* user) const                             = 0;
@@ -370,12 +370,12 @@ public:
   // ul_tti_sched itf
   alloc_outcome_t  alloc_ul_user(sched_ue* user, ul_harq_proc::ul_alloc_t alloc) final;
   const prbmask_t& get_ul_mask() const final { return tti_alloc.get_ul_mask(); }
-  const prbmask_t& get_ul_mask_1() const final { return tti_alloc.get_ul_mask_1(); }//Divya
-  const prbmask_t& get_ul_mask_2() const final { return tti_alloc.get_ul_mask_2(); }//Divya
+  //const prbmask_t& get_ul_mask_1() const final { return tti_alloc.get_ul_mask_1(); }//Divya
+  //const prbmask_t& get_ul_mask_2() const final { return tti_alloc.get_ul_mask_2(); }//Divya
   const uint32_t   get_nof_prbs() const final { return tti_alloc.get_nof_prbs(); }//Divya
   //double get_midpoint() const final {return tti_alloc.get_midpoint();}
-  std::pair<double, double> get_ul_mask_1() const final { return tti_alloc.get_ul_mask_1();}
-  std::pair<double, double> get_ul_mask_2() const final { return tti_alloc.get_ul_mask_2();}//Divya
+  //std::pair<double, double> get_ul_mask_1() const final { return tti_alloc.get_ul_mask_1();}
+  //std::pair<double, double> get_ul_mask_2() const final { return tti_alloc.get_ul_mask_2();}//Divya
   uint32_t         get_tti_tx_ul() const final { return tti_params.tti_tx_ul; }
 
   // getters

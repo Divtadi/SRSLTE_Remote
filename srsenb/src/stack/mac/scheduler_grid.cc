@@ -345,7 +345,7 @@ void sf_grid_t::init(const sched_cell_params_t& cell_params_)
   dl_mask_2 = ~(dl_mask_2);
 
   ul_mask.resize(cc_cfg->nof_prb());
-  //Divya
+  /*//Divya
   ul_mask_1.resize(nof_prb());
   ul_mask_2.resize(nof_prb());
   ul_mask_1.fill(std::ceil(ul_mask_1_start*nof_rbgs/100.0), std::ceil(ul_mask_1_end*nof_rbgs/100.0));;
@@ -353,7 +353,7 @@ void sf_grid_t::init(const sched_cell_params_t& cell_params_)
 
   ul_mask_1=~(ul_mask_1);
   ul_mask_1=~(ul_mask_2);
-  //Divya
+  //Divya*/
   pdcch_alloc.init(*cc_cfg);
 }
 
@@ -377,7 +377,7 @@ void sf_grid_t::new_tti(const tti_params_t& tti_params_)
 
   dl_mask_1 = ~(dl_mask_1);
   dl_mask_2 = ~(dl_mask_2);
-//Divya
+/*//Divya
 
     // Create UL Masks here
 
@@ -389,7 +389,7 @@ void sf_grid_t::new_tti(const tti_params_t& tti_params_)
 
     ul_mask_1 = ~(ul_mask_1);
     ul_mask_2 = ~(ul_mask_2);
-    //Divya
+    //Divya*/
   // internal state
   pdcch_alloc.new_tti(*tti_params);
 }
@@ -545,13 +545,13 @@ alloc_outcome_t sf_grid_t::alloc_ul_data(sched_ue* user, ul_harq_proc::ul_alloc_
         // Check QCI here to make sure the appropriate dl_mask is updated
         if (user->get_qci() == 7) { // Slice 1
             // Check RBG collision
-            if (alloc.RB_start + alloc.L > ul_mask_1.size()) {
+            if (alloc.RB_start + alloc.L > ul_mask.size()) {
                 return alloc_outcome_t::ERROR;
             }
 
-            prbmask_t newmask(ul_mask_1.size());
+            prbmask_t newmask(ul_mask.size());
             newmask.fill(alloc.RB_start, alloc.RB_start + alloc.L);
-            if ((ul_mask_1 & newmask).any()) {
+            if ((ul_mask & newmask).any()) {
                 return alloc_outcome_t::RB_COLLISION;
             }
 
@@ -569,18 +569,18 @@ alloc_outcome_t sf_grid_t::alloc_ul_data(sched_ue* user, ul_harq_proc::ul_alloc_
                     return alloc_outcome_t::DCI_COLLISION;
                 }
 
-                    ul_mask_1 |= newmask;
+                    ul_mask |= newmask;
 
                     return alloc_outcome_t::SUCCESS;
                     }else if (user->get_qci() == 9) // Slice 2
             {
-                if (alloc.RB_start + alloc.L > ul_mask_2.size()) {
+                if (alloc.RB_start + alloc.L > ul_mask.size()) {
                     return alloc_outcome_t::ERROR;
                 }
 
-                prbmask_t newmask(ul_mask_2.size());
+                prbmask_t newmask(ul_mask.size());
                 newmask.fill(alloc.RB_start, alloc.RB_start + alloc.L);
-                if ((ul_mask_2 & newmask).any()) {
+                if ((ul_mask & newmask).any()) {
                     return alloc_outcome_t::RB_COLLISION;
                 }
 
@@ -599,7 +599,7 @@ alloc_outcome_t sf_grid_t::alloc_ul_data(sched_ue* user, ul_harq_proc::ul_alloc_
                         return alloc_outcome_t::DCI_COLLISION;
                     }
 
-                    ul_mask_2 |= newmask;
+                    ul_mask |= newmask;
 
                     return alloc_outcome_t::SUCCESS;
                 }
@@ -1225,8 +1225,8 @@ void sf_sched::generate_sched_results(sf_sched_result* sf_result)
   sf_result->dl_mask_2 = tti_alloc.get_dl_mask_2();
 
   sf_result->ul_mask    = tti_alloc.get_ul_mask();
-  sf_result->ul_mask_1 = tti_alloc.get_ul_mask_1();
-  sf_result->ul_mask_2 = tti_alloc.get_ul_mask_2();
+  //sf_result->ul_mask_1 = tti_alloc.get_ul_mask_1();
+  //sf_result->ul_mask_2 = tti_alloc.get_ul_mask_2();
   sf_result->tti_params = tti_params;
 }
 

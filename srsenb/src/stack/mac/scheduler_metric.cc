@@ -410,7 +410,7 @@ void ul_metric_rr::sched_users(std::map<uint16_t, sched_ue>& ue_db, ul_sf_sched_
     allocate_user_newtx_prbs(user);
   }
 }
-void ul_metric_rr::sched_ul_users_s1(std::map<uint16_t, sched_ue*>& ue_db, dl_sf_sched_itf* tti_sched)
+void ul_metric_rr::sched_ul_users_s1(std::map<uint16_t, sched_ue*>& ue_db, ul_sf_sched_itf* tti_sched)
 {
     tti_alloc   = tti_sched;
     current_tti = tti_alloc->get_tti_tx_ul();
@@ -432,7 +432,7 @@ void ul_metric_rr::sched_ul_users_s1(std::map<uint16_t, sched_ue*>& ue_db, dl_sf
             iter = ue_db.begin(); // wrap around
         }
         sched_ue* user = &iter->second;
-        allocate_user_retx_prbs(user,1);
+        allocate_ul_user_retx_prbs(user,1);
         scheduled_users += tti_alloc->is_ul_alloc(user);
     }
 
@@ -444,11 +444,11 @@ void ul_metric_rr::sched_ul_users_s1(std::map<uint16_t, sched_ue*>& ue_db, dl_sf
             iter = ue_db.begin(); // wrap around
         }
         sched_ue* user = &iter->second;
-        allocate_user_newtx_prbs(user,1);
+        allocate_ul_user_newtx_prbs(user,1);
         scheduled_users += tti_alloc->is_ul_alloc(user);
     }
 }
-void ul_metric_rr::sched_ul_users_s2(std::map<uint16_t, sched_ue*>& ue_db, dl_sf_sched_itf* tti_sched)
+void ul_metric_rr::sched_ul_users_s2(std::map<uint16_t, sched_ue*>& ue_db, ul_sf_sched_itf* tti_sched)
 {
     tti_alloc   = tti_sched;
     current_tti = tti_alloc->get_tti_tx_ul();
@@ -468,7 +468,7 @@ void ul_metric_rr::sched_ul_users_s2(std::map<uint16_t, sched_ue*>& ue_db, dl_sf
                 iter = ue_db.begin(); // wrap around
             }
         sched_ue* user = &iter->second;
-        allocate_user_retx_prbs(user,2);
+        allocate_ul_user_retx_prbs(user,2);
         scheduled_users += tti_alloc->is_ul_alloc(user);
     }
 
@@ -480,7 +480,7 @@ void ul_metric_rr::sched_ul_users_s2(std::map<uint16_t, sched_ue*>& ue_db, dl_sf
             iter = ue_db.begin(); // wrap around
         }
         sched_ue* user = &iter->second;
-        allocate_user_newtx_prbs(user,2);
+        allocate_ul_user_newtx_prbs(user,2);
         scheduled_users += tti_alloc->is_ul_alloc(user);
     }
 }
@@ -641,7 +641,7 @@ bool ul_metric_rr::find_ul_allocation_slice(uint32_t L, ul_harq_proc::ul_alloc_t
         }
     }
 }
-ul_harq_proc* allocate_user_newtx_prbs(sched_ue* user, uint16_t Slice)
+ul_harq_proc* ul_metric_rr::allocate_ul_user_retx_prbs(sched_ue* user, uint16_t Slice)
 {
     if (tti_alloc->is_ul_alloc(user)) {
         return nullptr;
@@ -683,7 +683,7 @@ ul_harq_proc* allocate_user_newtx_prbs(sched_ue* user, uint16_t Slice)
      return nullptr;
 }
 
-ul_harq_proc* allocate_user_retx_prbs(sched_ue* user, uint16_t Slice);
+ul_harq_proc* ul_metric_rr::allocate_ul_user_newtx_prbs(sched_ue* user, uint16_t Slice)
 {
     if (tti_alloc->is_ul_alloc(user)) {
         return nullptr;
