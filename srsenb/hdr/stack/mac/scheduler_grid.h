@@ -267,6 +267,7 @@ public:
   virtual bool             is_ul_alloc(sched_ue* user) const                             = 0;
   //virtual std::pair<double, double> get_mask_ul_1() const                                = 0;//Divya
   //virtual std::pair<double, double> get_mask_ul_2() const                                = 0;//Divya
+  virtual void block_tti()                                                               = 0;
 };
 
 /** Description: Stores the RAR, broadcast, paging, DL data, UL data allocations for the given subframe
@@ -341,8 +342,7 @@ public:
 
   // UL alloc methods
   alloc_outcome_t alloc_msg3(sched_ue* user, const sched_interface::dl_sched_rar_grant_t& rargrant);
-  alloc_outcome_t
-       alloc_ul(sched_ue* user, ul_harq_proc::ul_alloc_t alloc, sf_sched::ul_alloc_t::type_t alloc_type, uint32_t mcs = 0);
+  alloc_outcome_t alloc_ul(sched_ue* user, ul_harq_proc::ul_alloc_t alloc, sf_sched::ul_alloc_t::type_t alloc_type, uint32_t mcs = 0);
   bool reserve_ul_prbs(const prbmask_t& ulmask, bool strict) { return tti_alloc.reserve_ul_prbs(ulmask, strict); }
   bool alloc_phich(sched_ue* user, sched_interface::ul_sched_res_t* ul_sf_result);
 

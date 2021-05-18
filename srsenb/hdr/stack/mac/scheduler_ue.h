@@ -95,10 +95,7 @@ public:
    *
    ************************************************************/
   sched_ue();
-
-    sched_ue(sched_ue *pUe);
-
-    void reset();
+  void reset();
   void phy_config_enabled(uint32_t tti, bool enabled);
   void init(uint16_t rnti, const std::vector<sched_cell_params_t>& cell_list_params_);
   void set_cfg(const sched_interface::ue_cfg_t& cfg);

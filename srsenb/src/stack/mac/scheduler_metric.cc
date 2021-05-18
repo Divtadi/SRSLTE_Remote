@@ -421,7 +421,7 @@ void ul_metric_rr::sched_ul_users_s1(std::map<uint16_t, sched_ue*>& ue_db, ul_sf
 
     // give priority in a time-domain RR basis
   uint32_t priority_idx =
-          current_tti + (uint32_t)ue_db.size() / 2) % (uint32_t)ue_db.size(); // make DL and UL interleaved
+          (current_tti + (uint32_t)ue_db.size() / 2) % (uint32_t)ue_db.size(); // make DL and UL interleaved
 
 // allocate reTxs first
   auto iter = ue_db.begin();

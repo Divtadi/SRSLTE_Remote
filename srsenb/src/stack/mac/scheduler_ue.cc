@@ -1196,18 +1196,12 @@ int sched_ue::cqi_to_tbs(uint32_t  cqi,
     Qm           = SRSLTE_MIN(max_Qm, srslte_mod_bits_x_symbol(mod));
     eff_coderate = coderate / Qm;
   } while ((sel_mcs > 0 && coderate > max_coderate) || eff_coderate > 0.930);
-
   if (mcs != nullptr) {
     *mcs = (uint32_t)sel_mcs;
   }
 
   return tbs;
 }
-
-    sched_ue::sched_ue(sched_ue *pUe) {
-
-    }
-
 /************************************************************************************************
  *                                sched_ue::sched_ue_carrier
  ***********************************************************************************************/
