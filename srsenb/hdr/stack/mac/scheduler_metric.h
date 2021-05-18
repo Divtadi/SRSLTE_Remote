@@ -64,8 +64,8 @@ private:
   bool          find_ul_allocation_slice(uint32_t L, ul_harq_proc::ul_alloc_t* alloc, uint16_t slice);
   ul_harq_proc* allocate_user_newtx_prbs(sched_ue* user);
   ul_harq_proc* allocate_user_retx_prbs(sched_ue* user);
-  ul_harq_proc* allocate_ul_user_newtx_prbs(sched_ue **user, uint16_t Slice);//Divya
-  ul_harq_proc* allocate_ul_user_retx_prbs(sched_ue **user, uint16_t Slice);
+  ul_harq_proc* allocate_ul_user_newtx_prbs(sched_ue *user, uint16_t slice);//Divya
+  ul_harq_proc* allocate_ul_user_retx_prbs(sched_ue *user, uint16_t slice);
   //Divya
 
   const sched_cell_params_t* cc_cfg = nullptr;

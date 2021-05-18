@@ -426,14 +426,15 @@ void ul_metric_rr::sched_ul_users_s1(std::map<uint16_t, sched_ue*>& ue_db, ul_sf
 // allocate reTxs first
   auto iter = ue_db.begin();
   std::advance(iter, priority_idx);
-  uint32_t scheduled_users {};
+  uint32_t scheduled_ul_users {};
   for (uint32_t ue_count = 0; ue_count < ue_db.size(); ++iter, ++ue_count) {
       if (iter == ue_db.end()) {
           iter = ue_db.begin(); // wrap around
       }
-      sched_ue **user = &iter->second;//UNSURE
+      sched_ue *user = &iter->second;//UNSURE
       allocate_ul_user_retx_prbs(user,1);
-      scheduled_users += tti_alloc->is_ul_alloc(user);
+      scheduled_ul_users += tti_alloc->is_ul_alloc(user);
+
   }
 
     // give priority in a time-domain RR basis
@@ -445,7 +446,7 @@ void ul_metric_rr::sched_ul_users_s1(std::map<uint16_t, sched_ue*>& ue_db, ul_sf
       }
       sched_ue **user = &iter->second;//UNSURE
       allocate_ul_user_newtx_prbs(user,1);
-      scheduled_users += tti_alloc->is_ul_alloc(user);
+      scheduled_ul_users += tti_alloc->is_ul_alloc(user);
   }
 }
 void ul_metric_rr::sched_ul_users_s2(std::map<uint16_t, sched_ue*>& ue_db, ul_sf_sched_itf* tti_sched)
@@ -462,14 +463,14 @@ void ul_metric_rr::sched_ul_users_s2(std::map<uint16_t, sched_ue*>& ue_db, ul_sf
             // allocate reTxs first
         auto iter = ue_db.begin();
         std::advance(iter, priority_idx);
-        uint32_t scheduled_users {};
+        uint32_t scheduled_ul_users {};
         for (uint32_t ue_count = 0; ue_count < ue_db.size(); ++iter, ++ue_count) {
             if (iter == ue_db.end()) {
                 iter = ue_db.begin(); // wrap around
             }
         sched_ue* user = &iter->second;
         allocate_ul_user_retx_prbs(user,2);
-        scheduled_users += tti_alloc->is_ul_alloc(user);
+        scheduled_ul_users += tti_alloc->is_ul_alloc(user);
     }
 
         // give priority in a time-domain RR basis
@@ -481,7 +482,7 @@ void ul_metric_rr::sched_ul_users_s2(std::map<uint16_t, sched_ue*>& ue_db, ul_sf
         }
         sched_ue* user = &iter->second;
         allocate_ul_user_newtx_prbs(user,2);
-        scheduled_users += tti_alloc->is_ul_alloc(user);
+        scheduled_ul_users += tti_alloc->is_ul_alloc(user);
     }
 }
 /**

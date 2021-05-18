@@ -288,7 +288,7 @@ void sched::carrier_sched::carrier_cfg(const sched_cell_params_t& cell_params_)
   // Setup data scheduling algorithms
   dl_metric.reset(new srsenb::dl_metric_rr{});
   dl_metric->set_params(*cc_cfg);
-  ul_metric.reset(new srsenb::ul_metric_rr{});
+  ul_metric.reset(new srsenb::ul_metric_rr{})
   ul_metric->set_params(*cc_cfg);
 
   // Setup constant PUCCH/PRACH mask
