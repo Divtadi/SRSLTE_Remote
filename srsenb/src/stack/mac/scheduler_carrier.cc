@@ -437,8 +437,8 @@ int sched::carrier_sched::alloc_ul_users(sf_sched* tti_sched)
   /* Call scheduler for UL data */
   //ul_metric->sched_users(*ue_db, tti_sched);Divya
 
-  ul_metric->sched_ul_users_s1(ue_db_ul_slice_1 , tti_sched);//Divya
-  ul_metric->sched_ul_users_s2(ue_db_ul_slice_2, tti_sched);//Divya
+  //ul_metric->sched_ul_users_s1(ue_db_ul_slice_1 , tti_sched);//Divya
+  //ul_metric->sched_ul_users_s2(ue_db_ul_slice_2, tti_sched);//Divya
 
   tti_sched->block_tti();//Divya
   ue_db_ul_slice_1.clear();

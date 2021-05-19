@@ -56,8 +56,8 @@ class ul_metric_rr : public sched::metric_ul
 public:
   void set_params(const sched_cell_params_t& cell_params_) final;
   void sched_users(std::map<uint16_t, sched_ue>& ue_db, ul_sf_sched_itf* tti_sched) final;
-  void sched_ul_users_s1(std::map<uint16_t, sched_ue*>& ue_db, ul_sf_sched_itf* tti_sched) final; //Divya
-  void sched_ul_users_s2(std::map<uint16_t, sched_ue*>& ue_db, ul_sf_sched_itf* tti_sched) final;//Divya
+  //void sched_ul_users_s1(std::map<uint16_t, sched_ue*>& ue_db, ul_sf_sched_itf* tti_sched) final; //Divya
+  //void sched_ul_users_s2(std::map<uint16_t, sched_ue*>& ue_db, ul_sf_sched_itf* tti_sched) final;//Divya
 
 private:
   bool          find_allocation(uint32_t L, ul_harq_proc::ul_alloc_t* alloc);
