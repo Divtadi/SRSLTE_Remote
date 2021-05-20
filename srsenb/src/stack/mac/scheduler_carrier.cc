@@ -288,7 +288,7 @@ void sched::carrier_sched::carrier_cfg(const sched_cell_params_t& cell_params_)
   // Setup data scheduling algorithms
   dl_metric.reset(new srsenb::dl_metric_rr{});
   dl_metric->set_params(*cc_cfg);
-  ul_metric.reset(new srsenb::ul_metric_rr{})
+  ul_metric.reset(new srsenb::ul_metric_rr{});
   ul_metric->set_params(*cc_cfg);
 
   // Setup constant PUCCH/PRACH mask
@@ -437,8 +437,8 @@ int sched::carrier_sched::alloc_ul_users(sf_sched* tti_sched)
 
   /* Call scheduler for UL data */
   ul_metric->sched_users(*ue_db, tti_sched);
-  ul_metric->sched_ul_users(*ue_db, tti_sched);
-    ul_metric->sched_ul_users(*ue_db, tti_sched);
+  //ul_metric->sched_ul_users(*ue_db, tti_sched);
+    //ul_metric->sched_ul_users(*ue_db, tti_sched);
 
 
   //ul_metric->sched_ul_users_s1(ue_db_ul_slice_1 , tti_sched);//Divya

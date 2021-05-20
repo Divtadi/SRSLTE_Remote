@@ -556,15 +556,12 @@ bool ul_metric_rr::find_allocation(uint32_t L, ul_harq_proc::ul_alloc_t* alloc)
   }
   return alloc->L == L;
 }
-bool ul_metric_rr::find_ul_allocation_slice(uint32_t L, ul_harq_proc::ul_alloc_t *alloc, uint16_t slice, sched_ue* user) {
-    if (user->get_qci() == 7){
-        slice = 1;
-    } else{
-        slice = 2;
-    }
-    if (slice == 1) {
+bool ul_metric_rr::find_ul_allocation_slice(uint32_t L, ul_harq_proc::ul_alloc_t *alloc, sched_ue* user) {
+
+    if (user->get_qci() == 7) {
         const prbmask_t *used_rb = &tti_alloc->get_ul_mask();
         bzero(alloc, sizeof(ul_harq_proc::ul_alloc_t));
+        //std::cout << used_rb;
         for (uint32_t n = 0; n < used_rb->size() / 2 && alloc->L < L; n++) {
             if (not used_rb->test(n) && alloc->L == 0) {
                 alloc->RB_start = n;
@@ -590,7 +587,7 @@ bool ul_metric_rr::find_ul_allocation_slice(uint32_t L, ul_harq_proc::ul_alloc_t
         }
         return alloc->L == L;
     }
-    if (slice == 2) {
+    if(user->get_qci() == 9){
         const prbmask_t *used_rb = &tti_alloc->get_ul_mask();
         bzero(alloc, sizeof(ul_harq_proc::ul_alloc_t));
         for (uint32_t n = used_rb->size() / 2; n < used_rb->size() && alloc->L < L; n++) {
@@ -616,6 +613,7 @@ bool ul_metric_rr::find_ul_allocation_slice(uint32_t L, ul_harq_proc::ul_alloc_t
         return alloc->L == L;
     }
 }
+
 ul_harq_proc* ul_metric_rr::allocate_user_retx_prbs(sched_ue* user)
 {
   if (tti_alloc->is_ul_alloc(user)) {
@@ -645,7 +643,7 @@ ul_harq_proc* ul_metric_rr::allocate_user_retx_prbs(sched_ue* user)
       return nullptr;
     }
 
-    if (find_allocation(alloc.L, &alloc)) {
+    if (find_ul_allocation_slice(alloc.L, &alloc, user)){
       ret = tti_alloc->alloc_ul_user(user, alloc);
       if (ret == alloc_outcome_t::SUCCESS) {
         return h;
@@ -741,7 +739,7 @@ bool ul_metric_rr::find_ul_allocation_slice(uint32_t L, ul_harq_proc::ul_alloc_t
         }
     }
 }*/
-ul_harq_proc* ul_metric_rr::allocate_ul_user_retx_prbs(sched_ue *user, uint16_t slice)
+/*ul_harq_proc* ul_metric_rr::allocate_ul_user_retx_prbs(sched_ue *user, uint16_t slice)
 {
     if (tti_alloc->is_ul_alloc(user)) {
         return nullptr;
@@ -815,5 +813,5 @@ ul_harq_proc* ul_metric_rr::allocate_ul_user_newtx_prbs(sched_ue *user, uint16_t
         }
     }
     return nullptr;
-}
+}*/
 } // namespace srsenb
