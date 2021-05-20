@@ -569,10 +569,11 @@ alloc_outcome_t sf_grid_t::alloc_ul_data(sched_ue* user, ul_harq_proc::ul_alloc_
                     return alloc_outcome_t::DCI_COLLISION;
                 }
 
-                    ul_mask |= newmask;
+                ul_mask |= newmask;
 
-                    return alloc_outcome_t::SUCCESS;
-                    }else if (user->get_qci() == 9) // Slice 2
+                return alloc_outcome_t::SUCCESS;
+            }
+        }else if (user->get_qci() == 9) // Slice 2
             {
                 if (alloc.RB_start + alloc.L > ul_mask.size()) {
                     return alloc_outcome_t::ERROR;
