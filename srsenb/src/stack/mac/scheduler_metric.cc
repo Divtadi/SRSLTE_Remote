@@ -669,8 +669,7 @@ ul_harq_proc* ul_metric_rr::allocate_user_newtx_prbs(sched_ue* user) {
     if (h->is_empty(0) and pending_data > 0) {
         uint32_t pending_rb = user->get_required_prb_ul(cell_idx, pending_data);
         ul_harq_proc::ul_alloc_t alloc{};
-
-        find_allocation(pending_rb, &alloc);
+        find_ul_allocation_slice(pending_rb, &alloc, user);
         if (alloc.L > 0) { // at least one PRB was scheduled
             alloc_outcome_t ret = tti_alloc->alloc_ul_user(user, alloc);
             if (ret == alloc_outcome_t::SUCCESS) {
