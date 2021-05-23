@@ -375,7 +375,7 @@ void ul_metric_rr::set_params(const sched_cell_params_t& cell_params_)
   log_h  = srslte::logmap::get("MAC ");
 }
 
-void ul_metric_rr::sched_users(std::map<uint16_t, sched_ue>& ue_db, ul_sf_sched_itf* tti_sched)
+void ul_metric_rr::sched_users(std::map<uint16_t, sched_ue>& ue_db, ul_sf_sched_itf* tti_sched)// inputs are rnti, available RB, @alloc?
 {
   tti_alloc   = tti_sched;
   current_tti = tti_alloc->get_tti_tx_ul();
@@ -556,7 +556,7 @@ bool ul_metric_rr::find_allocation(uint32_t L, ul_harq_proc::ul_alloc_t* alloc)
   }
   return alloc->L == L;
 }
-bool ul_metric_rr::find_ul_allocation_slice(uint32_t L, ul_harq_proc::ul_alloc_t *alloc, sched_ue* user) {
+bool ul_metric_rr::find_ul_allocation_slice(uint32_t L, ul_harq_proc::ul_alloc_t *alloc, sched_ue* user) { //user is defined here is it the same as the shed_ue *user?
 
     if (user->get_qci() == 7) {
         const prbmask_t *used_rb = &tti_alloc->get_ul_mask();
@@ -569,7 +569,7 @@ bool ul_metric_rr::find_ul_allocation_slice(uint32_t L, ul_harq_proc::ul_alloc_t
             if (not used_rb->test(n)) {
                 alloc->L++;
             } else if (alloc->L > 0) {
-                    // avoid edges
+                // avoid edges
                 if (n < 3) {
                     alloc->RB_start = 0;
                     alloc->L = 0;
@@ -578,16 +578,8 @@ bool ul_metric_rr::find_ul_allocation_slice(uint32_t L, ul_harq_proc::ul_alloc_t
                 }
             }
         }
-        if (alloc->L == 0) {
-            return false;
-        }
-        // Make sure L is allowed by SC-FDMA modulation
-        while (!srslte_dft_precoding_valid_prb(alloc->L)) {
-            alloc->L--;
-        }
-        return alloc->L == L;
     }
-    if(user->get_qci() == 9){
+    if (user->get_qci() == 9) {
         const prbmask_t *used_rb = &tti_alloc->get_ul_mask();
         bzero(alloc, sizeof(ul_harq_proc::ul_alloc_t));
         for (uint32_t n = used_rb->size() / 2; n < used_rb->size() && alloc->L < L; n++) {
@@ -597,7 +589,7 @@ bool ul_metric_rr::find_ul_allocation_slice(uint32_t L, ul_harq_proc::ul_alloc_t
             if (not used_rb->test(n)) {
                 alloc->L++;
             } else if (alloc->L > 0) {
-                    // avoid edges
+                // avoid edges
                 if (n < 3) {
                     alloc->RB_start = 0;
                     alloc->L = 0;
@@ -606,12 +598,15 @@ bool ul_metric_rr::find_ul_allocation_slice(uint32_t L, ul_harq_proc::ul_alloc_t
                 }
             }
         }
+    }
+        if (alloc->L == 0) {
+            return false;
+        }
         // Make sure L is allowed by SC-FDMA modulation
         while (!srslte_dft_precoding_valid_prb(alloc->L)) {
             alloc->L--;
         }
         return alloc->L == L;
-    }
 }
 
 ul_harq_proc* ul_metric_rr::allocate_user_retx_prbs(sched_ue* user)
