@@ -24,6 +24,7 @@
 #include "srslte/common/log_helper.h"
 #include "srslte/common/logmap.h"
 #include <string.h>
+#include <stdio.h>
 #include <iterator>
 #include <iostream>
 
@@ -559,6 +560,7 @@ bool ul_metric_rr::find_allocation(uint32_t L, ul_harq_proc::ul_alloc_t* alloc)
 bool ul_metric_rr::find_ul_allocation_slice(uint32_t L, ul_harq_proc::ul_alloc_t *alloc, sched_ue* user) { //user is defined here is it the same as the shed_ue *user?
 
     if (user->get_qci() == 7) {
+        std::cout<< "This is the UL slice allocation value:" << alloc << std::endl;
         const prbmask_t *used_rb = &tti_alloc->get_ul_mask();
         bzero(alloc, sizeof(ul_harq_proc::ul_alloc_t));
         //std::cout << used_rb;
@@ -599,6 +601,7 @@ bool ul_metric_rr::find_ul_allocation_slice(uint32_t L, ul_harq_proc::ul_alloc_t
             }
         }
     }
+        std::cout<< "This is the UL slice allocation value:";
         if (alloc->L == 0) {
             return false;
         }
