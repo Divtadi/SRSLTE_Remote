@@ -544,6 +544,15 @@ bool ul_metric_rr::find_allocation(uint32_t L, ul_harq_proc::ul_alloc_t* alloc,s
   const prbmask_t* used_rb = &tti_alloc->get_ul_mask();
   std::cout <<"This is the QCI value from the ue_db.csv file:" << user->get_qci()<< std::endl<<"/n";
   std::cout <<"Divya prb mask: " << used_rb->size()<< std::endl<<"/n";
+  /*//Divya
+  if(user->get_qci() == 7) {
+
+  }
+              //not sure why L prints = 0
+
+
+
+  //Divya*/
   bzero(alloc, sizeof(ul_harq_proc::ul_alloc_t));//not sure why L prints = 0
   std::cout <<"Divya alloc:" << alloc->L << std::endl<<"/n";
   std::cout <<"Divya size of UL alloc: " << sizeof(ul_harq_proc::ul_alloc_t)<< std::endl<<"/n";

@@ -1257,7 +1257,7 @@ void sf_sched::generate_sched_results(sf_sched_result* sf_result)
   sf_result->dl_mask_2 = tti_alloc.get_dl_mask_2();
 
   sf_result->ul_mask    = tti_alloc.get_ul_mask();
-  //std::cout << "Uplink Slicing mask " << get_ul_mask().to_string() << std::endl;//Divya
+  std::cout << "Uplink Slicing mask " << get_ul_mask().to_string() << std::endl;//Divya Today
   //sf_result->ul_mask_1 = tti_alloc.get_ul_mask_1();
   //sf_result->ul_mask_2 = tti_alloc.get_ul_mask_2();
   sf_result->tti_params = tti_params;
