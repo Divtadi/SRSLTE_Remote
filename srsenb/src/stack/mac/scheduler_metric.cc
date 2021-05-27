@@ -379,7 +379,7 @@ void ul_metric_rr::set_params(const sched_cell_params_t& cell_params_)
 void ul_metric_rr::sched_users(std::map<uint16_t, sched_ue>& ue_db, ul_sf_sched_itf* tti_sched)// inputs are rnti, available RB, @alloc?
 {
   //std::cout << "Divya Sched_users:" << sched_ue()<< std::endl;
-  std::cout << " Divya TTIsched val: " << &tti_sched << std::endl<<"\n";
+  //std::cout << " Divya TTIsched val: " <<  << std::endl<<"\n";
   //std::cout << " Divya UL_sf vals: " << ul_sf_sched_itf() << std::endl;
 
   tti_alloc   = tti_sched;
@@ -402,6 +402,12 @@ void ul_metric_rr::sched_users(std::map<uint16_t, sched_ue>& ue_db, ul_sf_sched_
     }
     sched_ue* user = &iter->second;
     allocate_user_retx_prbs(user);
+    std::cout << " Divya user " <<  user << std::endl<<"\n";
+    std::cout << " Divya user priority ID " << priority_idx << std::endl<<"\n";
+    std::cout << " Divya get_tti_tx_ul() " <<  tti_alloc->get_tti_tx_ul() << std::endl<<"\n";
+    std::cout << " Divya current TTI " <<  current_tti << std::endl<<"\n";
+
+
   }
 
   // give priority in a time-domain RR basis
