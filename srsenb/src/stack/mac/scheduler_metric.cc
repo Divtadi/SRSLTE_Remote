@@ -697,18 +697,17 @@ ul_harq_proc* ul_metric_rr::allocate_user_retx_prbs(sched_ue* user)
     }
     if (ret == alloc_outcome_t::DCI_COLLISION) {
       log_h->warning("SCHED: Couldn't find space in PDCCH for UL retx of rnti=0x%x\n", user->get_rnti());
-      std::cout<<"Allocation failed due to DCI collision" << std::endl<<"/n";
+      //std::cout<<"Allocation failed due to DCI collision" << std::endl<<"/n";
       return nullptr;
     }
 
     if (find_allocation(alloc.L, &alloc, user)){ // if (find_ul_allocation_slice(alloc.L, &alloc, user)){//Divya Tadi
-
         ret = tti_alloc->alloc_ul_user(user, alloc);
-      if (ret == alloc_outcome_t::SUCCESS) {
-        std::cout<<"Allocation succesfull inside find allocation if statement! " <<std::endl<<"/n";
-        return h;
+        if (ret == alloc_outcome_t::SUCCESS) {
+          //std::cout<<"Allocation succesfull inside find allocation if statement! " <<std::endl<<"/n";
+          return h;
       }
-      if (ret == alloc_outcome_t::DCI_COLLISION) {
+        if (ret == alloc_outcome_t::DCI_COLLISION) {
         log_h->warning("SCHED: Couldn't find space in PDCCH for UL retx of rnti=0x%x\n", user->get_rnti());
       }
     }
