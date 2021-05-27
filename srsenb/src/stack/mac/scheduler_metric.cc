@@ -602,7 +602,9 @@ bool ul_metric_rr::find_ul_allocation_slice(uint32_t L, ul_harq_proc::ul_alloc_t
             }
         }
     }
-        std::cout<< "This is the UL slice allocation value:";
+        std::cout<< "This is the UL slice allocation value:";//Divya
+        std::cout<<" This is thr RB_Start" << alloc->RB_start;//Divya
+        std::cout<<" This is thr RB_Start" << alloc->L;//Divya
         if (alloc->L == 0) {
             return false;
         }
