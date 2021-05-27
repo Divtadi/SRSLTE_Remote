@@ -544,8 +544,8 @@ bool ul_metric_rr::find_allocation(uint32_t L, ul_harq_proc::ul_alloc_t* alloc)
   const prbmask_t* used_rb = &tti_alloc->get_ul_mask();
   std::cout <<"Divya prb mask:" << used_rb<< std::endl<<"/n";
   bzero(alloc, sizeof(ul_harq_proc::ul_alloc_t));
-    std::cout <<"Divya alloc" << alloc<< std::endl<<"/n";
-    std::cout <<"Divya size of UL lloc" << sizeof(ul_harq_proc::ul_alloc_t)<< std::endl<<"/n";
+  std::cout <<"Divya alloc" << alloc<< std::endl<<"/n";
+  std::cout <<"Divya size of UL lloc" << sizeof(ul_harq_proc::ul_alloc_t)<< std::endl<<"/n";
   for (uint32_t n = 0; n < used_rb->size() && alloc->L < L; n++) {
     std::cout <<"Divya L value" << L << std::endl<<"/n";
     if (not used_rb->test(n) && alloc->L == 0) {
