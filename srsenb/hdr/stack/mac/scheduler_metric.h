@@ -60,7 +60,7 @@ public:
   //void sched_ul_users_s2(std::map<uint16_t, sched_ue*>& ue_db, ul_sf_sched_itf* tti_sched) final;//Divya
 
 private:
-  bool          find_allocation(uint32_t L, ul_harq_proc::ul_alloc_t* alloc, sched_ue* user);// Divya Today
+  bool          find_allocation(uint32_t L, ul_harq_proc::ul_alloc_t* alloc, sched_ue* user);
   bool          find_ul_allocation_slice(uint32_t L, ul_harq_proc::ul_alloc_t* alloc, sched_ue* user);//Divya
   ul_harq_proc* allocate_user_newtx_prbs(sched_ue* user);
   ul_harq_proc* allocate_user_retx_prbs(sched_ue* user);
