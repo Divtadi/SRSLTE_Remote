@@ -560,7 +560,7 @@ bool ul_metric_rr::find_allocation(uint32_t L, ul_harq_proc::ul_alloc_t* alloc)
 bool ul_metric_rr::find_ul_allocation_slice(uint32_t L, ul_harq_proc::ul_alloc_t *alloc, sched_ue* user) { //user is defined here is it the same as the shed_ue *user?
 
     if (user->get_qci() == 7) {
-        std::cout<< "This is the UL slice allocation value: inside the loop of QCI = 7" << alloc << std::endl;
+        //std::cout<< "This is the UL slice allocation value: inside the loop of QCI = 7" << alloc << std::endl;
         const prbmask_t *used_rb = &tti_alloc->get_ul_mask();
         bzero(alloc, sizeof(ul_harq_proc::ul_alloc_t));
         //std::cout << used_rb;
@@ -582,7 +582,7 @@ bool ul_metric_rr::find_ul_allocation_slice(uint32_t L, ul_harq_proc::ul_alloc_t
         }
     }
     if (user->get_qci() == 9) {
-        std::cout<< "This is the UL slice allocation value for QCI =9 :";
+        //std::cout<< "This is the UL slice allocation value for QCI =9 :";
         const prbmask_t *used_rb = &tti_alloc->get_ul_mask();
         bzero(alloc, sizeof(ul_harq_proc::ul_alloc_t));
         for (uint32_t n = used_rb->size() / 2; n < used_rb->size() && alloc->L < L; n++) {
@@ -602,9 +602,9 @@ bool ul_metric_rr::find_ul_allocation_slice(uint32_t L, ul_harq_proc::ul_alloc_t
             }
         }
     }
-        std::cout<< "This is the UL slice allocation value:";//Divya
-        std::cout<<" This is thr RB_Start" << alloc->RB_start;//Divya
-        std::cout<<" This is thr RB_Start" << alloc->L;//Divya
+        //std::cout<< "This is the UL slice allocation value:";//Divya
+        //std::cout<<" This is thr RB_Start" << alloc->RB_start;//Divya
+        //std::cout<<" This is thr RB_Start" << alloc->L;//Divya
         if (alloc->L == 0) {
             return false;
         }
