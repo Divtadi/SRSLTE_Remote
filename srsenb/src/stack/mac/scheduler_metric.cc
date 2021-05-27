@@ -539,9 +539,10 @@ void ul_metric_rr::sched_ul_users_s2(std::map<uint16_t, sched_ue*>& ue_db, ul_sf
  * @param alloc Found allocation. It is guaranteed that 0 <= alloc->L <= L
  * @return true if the requested allocation of size L was strictly met
  */
-bool ul_metric_rr::find_allocation(uint32_t L, ul_harq_proc::ul_alloc_t* alloc)
+bool ul_metric_rr::find_allocation(uint32_t L, ul_harq_proc::ul_alloc_t* alloc,sched_ue* user)
 {
   const prbmask_t* used_rb = &tti_alloc->get_ul_mask();
+  std::cout <<"This is the QCI value from the ue_db.csv file:" << user->get_qci()<< std::endl<<"/n";
   std::cout <<"Divya prb mask: " << used_rb->size()<< std::endl<<"/n";
   bzero(alloc, sizeof(ul_harq_proc::ul_alloc_t));//not sure why L prints = 0
   std::cout <<"Divya alloc:" << alloc->L << std::endl<<"/n";
@@ -655,17 +656,20 @@ ul_harq_proc* ul_metric_rr::allocate_user_retx_prbs(sched_ue* user)
     // If can schedule the same mask, do it
     ret = tti_alloc->alloc_ul_user(user, alloc);
     if (ret == alloc_outcome_t::SUCCESS) {
+      std::cout<<"Allocation succesfull! " <<std::endl<<"/n";
       return h;
     }
     if (ret == alloc_outcome_t::DCI_COLLISION) {
       log_h->warning("SCHED: Couldn't find space in PDCCH for UL retx of rnti=0x%x\n", user->get_rnti());
+      std::cout<<"Allocation failed due to DCI collision" << std::endl<<"/n";
       return nullptr;
     }
 
-    if (find_allocation(alloc.L, &alloc)){ // if (find_ul_allocation_slice(alloc.L, &alloc, user)){
+    if (find_allocation(alloc.L, &alloc, user)){ // if (find_ul_allocation_slice(alloc.L, &alloc, user)){//Divya Tadi
 
         ret = tti_alloc->alloc_ul_user(user, alloc);
       if (ret == alloc_outcome_t::SUCCESS) {
+        std::cout<<"Allocation succesfull inside find allocation if statement! " <<std::endl<<"/n";
         return h;
       }
       if (ret == alloc_outcome_t::DCI_COLLISION) {
@@ -694,8 +698,7 @@ ul_harq_proc* ul_metric_rr::allocate_user_newtx_prbs(sched_ue* user) {
     if (h->is_empty(0) and pending_data > 0) {
         uint32_t pending_rb = user->get_required_prb_ul(cell_idx, pending_data);
         ul_harq_proc::ul_alloc_t alloc{};
-        find_allocation(pending_rb, &alloc); //    if (find_ul_allocation_slice(alloc.L, &alloc, user)){
-
+        find_allocation(pending_rb, &alloc, user); //    if (find_ul_allocation_slice(alloc.L, &alloc, user)){//Divya Today
         if (alloc.L > 0) { // at least one PRB was scheduled
             alloc_outcome_t ret = tti_alloc->alloc_ul_user(user, alloc);
             if (ret == alloc_outcome_t::SUCCESS) {
