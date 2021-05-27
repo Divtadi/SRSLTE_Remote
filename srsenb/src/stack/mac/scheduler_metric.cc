@@ -24,7 +24,7 @@
 #include "srslte/common/log_helper.h"
 #include "srslte/common/logmap.h"
 #include <string.h>
-#include <stdio.h>
+//#include <stdio.h>
 #include <iterator>
 #include <iostream>
 

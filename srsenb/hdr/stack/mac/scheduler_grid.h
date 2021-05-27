@@ -267,7 +267,7 @@ public:
   virtual bool             is_ul_alloc(sched_ue* user) const                             = 0;
   //virtual std::pair<double, double> get_mask_ul_1() const                                = 0;//Divya
   //virtual std::pair<double, double> get_mask_ul_2() const                                = 0;//Divya
-  virtual void block_tti()                                                               = 0;
+  //virtual void block_tti()                                                               = 0;
 };
 
 /** Description: Stores the RAR, broadcast, paging, DL data, UL data allocations for the given subframe
