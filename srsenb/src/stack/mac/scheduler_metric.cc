@@ -557,7 +557,7 @@ bool ul_metric_rr::find_allocation(uint32_t L, ul_harq_proc::ul_alloc_t* alloc)
   }
   return alloc->L == L;
 }
-bool ul_metric_rr::find_ul_allocation_slice(uint32_t L, ul_harq_proc::ul_alloc_t *alloc, sched_ue* user) { //user is defined here is it the same as the shed_ue *user?
+/*bool ul_metric_rr::find_ul_allocation_slice(uint32_t L, ul_harq_proc::ul_alloc_t *alloc, sched_ue* user) { //user is defined here is it the same as the shed_ue *user?
 
     if (user->get_qci() == 7) {
         //std::cout<< "This is the UL slice allocation value:" << alloc << std::endl;
@@ -610,7 +610,7 @@ bool ul_metric_rr::find_ul_allocation_slice(uint32_t L, ul_harq_proc::ul_alloc_t
             alloc->L--;
         }
         return alloc->L == L;
-}
+}*/
 
 ul_harq_proc* ul_metric_rr::allocate_user_retx_prbs(sched_ue* user)
 {
@@ -641,8 +641,9 @@ ul_harq_proc* ul_metric_rr::allocate_user_retx_prbs(sched_ue* user)
       return nullptr;
     }
 
-    if (find_ul_allocation_slice(alloc.L, &alloc, user)){
-      ret = tti_alloc->alloc_ul_user(user, alloc);
+    if (find_allocation(alloc.L, &alloc)){ // if (find_ul_allocation_slice(alloc.L, &alloc, user)){
+
+        ret = tti_alloc->alloc_ul_user(user, alloc);
       if (ret == alloc_outcome_t::SUCCESS) {
         return h;
       }
@@ -672,7 +673,8 @@ ul_harq_proc* ul_metric_rr::allocate_user_newtx_prbs(sched_ue* user) {
     if (h->is_empty(0) and pending_data > 0) {
         uint32_t pending_rb = user->get_required_prb_ul(cell_idx, pending_data);
         ul_harq_proc::ul_alloc_t alloc{};
-        find_ul_allocation_slice(pending_rb, &alloc, user);
+        find_allocation(pending_rb, &alloc); //    if (find_ul_allocation_slice(alloc.L, &alloc, user)){
+
         if (alloc.L > 0) { // at least one PRB was scheduled
             alloc_outcome_t ret = tti_alloc->alloc_ul_user(user, alloc);
             if (ret == alloc_outcome_t::SUCCESS) {
