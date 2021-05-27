@@ -378,6 +378,10 @@ void ul_metric_rr::set_params(const sched_cell_params_t& cell_params_)
 
 void ul_metric_rr::sched_users(std::map<uint16_t, sched_ue>& ue_db, ul_sf_sched_itf* tti_sched)// inputs are rnti, available RB, @alloc?
 {
+  //std::cout << "Divya Sched_users:" << sched_ue()<< std::endl;
+  std::cout << " Divya TTIsched val: " << tti_sched << std::endl<<".\n";
+  //std::cout << " Divya UL_sf vals: " << ul_sf_sched_itf() << std::endl;
+
   tti_alloc   = tti_sched;
   current_tti = tti_alloc->get_tti_tx_ul();
 
