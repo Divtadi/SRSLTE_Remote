@@ -614,8 +614,7 @@ bool ul_metric_rr::find_allocation(uint32_t L, ul_harq_proc::ul_alloc_t* alloc,s
       }
       std::cout << "Divya Finally Allocated PRB value: " << alloc->L << std::endl << "/n";
       //return alloc->L == L; //Divya Today
-  }
-  return alloc->L == L;
+       return alloc->L == L;
 }
 /*bool ul_metric_rr::find_ul_allocation_slice(uint32_t L, ul_harq_proc::ul_alloc_t *alloc, sched_ue* user) { //user is defined here is it the same as the shed_ue *user?
 
