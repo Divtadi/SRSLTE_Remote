@@ -547,6 +547,7 @@ bool ul_metric_rr::find_allocation(uint32_t L, ul_harq_proc::ul_alloc_t* alloc,s
   bzero(alloc, sizeof(ul_harq_proc::ul_alloc_t));//not sure why L prints = 0
   std::cout <<"Divya alloc:" << alloc->L << std::endl<<"/n";
   std::cout <<"Divya size of UL alloc: " << sizeof(ul_harq_proc::ul_alloc_t)<< std::endl<<"/n";
+
   if(user->get_qci() == 7){
       for (uint32_t n = 0; n < used_rb->size() && alloc->L/2 < L; n++) { // div by 2
           std::cout <<"Divya L RBs requested value: " << L << std::endl<<"/n";
@@ -568,7 +569,7 @@ bool ul_metric_rr::find_allocation(uint32_t L, ul_harq_proc::ul_alloc_t* alloc,s
               }
           }
       }
-      if (alloc->L == 0) {
+      /*if (alloc->L == 0) {
           std::cout<<"Divya allocation  = 0, so returning false!" << std::endl<<"/n";
           return false;
       }
@@ -578,10 +579,10 @@ bool ul_metric_rr::find_allocation(uint32_t L, ul_harq_proc::ul_alloc_t* alloc,s
           alloc->L--;
       }
       std::cout <<"Divya Finally Allocated PRB value: " << alloc->L << std::endl<<"/n";
-      //return alloc->L == L;
+      //return alloc->L == L;/*/
   }
   if (user->get_qci() == 9) {
-      for (uint32_t n = alloc->L/2; n < used_rb->size() && alloc->L < L; n++) { // div by 2
+      for (uint32_t n = alloc->L / 2; n < used_rb->size() && alloc->L < L; n++) { // div by 2
           std::cout << "Divya L RBs requested value: " << L << std::endl << "/n";
           if (not used_rb->test(n) && alloc->L == 0) {
               alloc->RB_start = n;
@@ -601,6 +602,7 @@ bool ul_metric_rr::find_allocation(uint32_t L, ul_harq_proc::ul_alloc_t* alloc,s
               }
           }
       }
+  }
       if (alloc->L == 0) {
           std::cout << "Divya allocation  = 0, so returning false!" << std::endl << "/n";
           return false;
@@ -692,7 +694,7 @@ ul_harq_proc* ul_metric_rr::allocate_user_retx_prbs(sched_ue* user)
     // If can schedule the same mask, do it
     ret = tti_alloc->alloc_ul_user(user, alloc);
     if (ret == alloc_outcome_t::SUCCESS) {
-      std::cout<<"Allocation succesfull! " <<std::endl<<"/n";
+      //std::cout<<"Allocation succesfull! " <<std::endl<<"/n";
       return h;
     }
     if (ret == alloc_outcome_t::DCI_COLLISION) {
@@ -733,7 +735,8 @@ ul_harq_proc* ul_metric_rr::allocate_user_newtx_prbs(sched_ue* user) {
     if (h->is_empty(0) and pending_data > 0) {
         uint32_t pending_rb = user->get_required_prb_ul(cell_idx, pending_data);
         ul_harq_proc::ul_alloc_t alloc{};
-        find_allocation(pending_rb, &alloc, user); //    if (find_ul_allocation_slice(alloc.L, &alloc, user)){//Divya Today
+
+        find_allocation(pending_rb, &alloc, user);  //if (find_ul_allocation_slice(alloc.L, &alloc, user)){//Divya Today
         if (alloc.L > 0) { // at least one PRB was scheduled
             alloc_outcome_t ret = tti_alloc->alloc_ul_user(user, alloc);
             if (ret == alloc_outcome_t::SUCCESS) {
@@ -746,6 +749,7 @@ ul_harq_proc* ul_metric_rr::allocate_user_newtx_prbs(sched_ue* user) {
     }
     return nullptr;
 }
+
 /*
 bool ul_metric_rr::find_ul_allocation_slice(uint32_t L, ul_harq_proc::ul_alloc_t *alloc, uint16_t slice, sched_ue* user) {
     if (user->get_qci() == 7){
