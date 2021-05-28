@@ -620,11 +620,10 @@ alloc_outcome_t sf_grid_t::alloc_ul_data(sched_ue* user, ul_harq_proc::ul_alloc_
                     return alloc_outcome_t::DCI_COLLISION;
                 }
             }
-
-            ul_mask |= newmask;
-
-            return alloc_outcome_t::SUCCESS;
         }
+
+            //ul_mask |= newmask;
+            return alloc_outcome_t::SUCCESS;
 }
 
 
