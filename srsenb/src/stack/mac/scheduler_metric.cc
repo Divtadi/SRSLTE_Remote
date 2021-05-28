@@ -548,7 +548,7 @@ bool ul_metric_rr::find_allocation(uint32_t L, ul_harq_proc::ul_alloc_t* alloc,s
   std::cout <<"Divya alloc:" << alloc->L << std::endl<<"/n";
   std::cout <<"Divya size of UL alloc: " << sizeof(ul_harq_proc::ul_alloc_t)<< std::endl<<"/n";
   std::cout <<"Divya user val: " << user << std::endl<<"/n";
-  std::cout <<"Divya user val: " << user->get_rnti() << std::endl<<"/n";
+  std::cout <<"Divya rnti: " << user->get_rnti() << std::endl<<"/n";
 
 
   if(user->get_qci() == 7){
