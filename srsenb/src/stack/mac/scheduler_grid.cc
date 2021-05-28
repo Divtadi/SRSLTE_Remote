@@ -548,7 +548,7 @@ alloc_outcome_t sf_grid_t::alloc_ul_data(sched_ue* user, ul_harq_proc::ul_alloc_
 
         prbmask_t newmask(ul_mask.size());
         std::cout<<"This is the newmask- ul_mask size in grid file: "<< ul_mask.size()<< std::endl<<"/n";
-        newmask.fill(alloc.RB_start, alloc.RB_start + alloc.L);
+        newmask.fill(alloc.RB_start, alloc.RB_start + alloc.L/2);
         std::cout<<"This is the new mask after alloc: "<< newmask.to_string()<< std::endl<<"/n";
         if ((ul_mask & newmask).any()) {
             return alloc_outcome_t::RB_COLLISION;
