@@ -540,6 +540,7 @@ alloc_outcome_t sf_grid_t::alloc_dl_data(sched_ue* user, const rbgmask_t& user_m
 }
 
 alloc_outcome_t sf_grid_t::alloc_ul_data(sched_ue* user, ul_harq_proc::ul_alloc_t alloc, bool needs_pdcch){
+    std::cout<<"Divya Allocation outcome @alloc value in grid: "<< alloc.L <<std::endl<<"/n";
     {
         if (alloc.RB_start + alloc.L > ul_mask.size()) {
             return alloc_outcome_t::ERROR;
