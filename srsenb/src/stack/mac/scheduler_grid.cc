@@ -548,7 +548,8 @@ alloc_outcome_t sf_grid_t::alloc_ul_data(sched_ue* user, ul_harq_proc::ul_alloc_
 
             prbmask_t newmask(ul_mask.size());
             std::cout << "This is the newmask- ul_mask size in grid file: " << ul_mask.size() << std::endl << "/n";
-            std::cout << "This is the QCI value in the grid file inside UL code: " << user->get_qci() << std::endl << "/n";
+            std::cout << "This is the QCI value in the grid file inside UL code: " << user->get_qci() << std::endl
+                      << "/n";
             if (user->get_qci() == 7) {
                 newmask.fill(alloc.RB_start, alloc.RB_start + alloc.L / 2);
                 std::cout << "This is the new mask SLICE 1 after alloc: " << newmask.to_string() << std::endl << "/n";
@@ -557,27 +558,51 @@ alloc_outcome_t sf_grid_t::alloc_ul_data(sched_ue* user, ul_harq_proc::ul_alloc_
                     return alloc_outcome_t::RB_COLLISION;
                 }
 
-            // Generate PDCCH except for RAR and non-adaptive retx
-            if (needs_pdcch) {
-                uint32_t nof_bits = srslte_dci_format_sizeof(&cc_cfg->cfg.cell, nullptr, nullptr, SRSLTE_DCI_FORMAT0);
-                uint32_t aggr_idx = user->get_ue_carrier(cc_cfg->enb_cc_idx)->get_aggr_level(nof_bits);
-                if (not pdcch_alloc.alloc_dci(alloc_type_t::UL_DATA, aggr_idx, user)) {
-                    if (log_h->get_level() == srslte::LOG_LEVEL_DEBUG) {
-                        log_h->debug("No space in PDCCH for rnti=0x%x UL tx. Current PDCCH allocation: %s\n",
-                                     user->get_rnti(),
-                                     pdcch_alloc.result_to_string(true).c_str());
+                // Generate PDCCH except for RAR and non-adaptive retx
+                if (needs_pdcch) {
+                    uint32_t nof_bits = srslte_dci_format_sizeof(&cc_cfg->cfg.cell, nullptr, nullptr,
+                                                                 SRSLTE_DCI_FORMAT0);
+                    uint32_t aggr_idx = user->get_ue_carrier(cc_cfg->enb_cc_idx)->get_aggr_level(nof_bits);
+                    if (not pdcch_alloc.alloc_dci(alloc_type_t::UL_DATA, aggr_idx, user)) {
+                        if (log_h->get_level() == srslte::LOG_LEVEL_DEBUG) {
+                            log_h->debug("No space in PDCCH for rnti=0x%x UL tx. Current PDCCH allocation: %s\n",
+                                         user->get_rnti(),
+                                         pdcch_alloc.result_to_string(true).c_str());
+                        }
+                        return alloc_outcome_t::DCI_COLLISION;
                     }
-                    return alloc_outcome_t::DCI_COLLISION;
                 }
+
+                ul_mask |= newmask;
+
+                return alloc_outcome_t::SUCCESS;
+            } else if (user->get_qci() == 9) {
+                newmask.fill(alloc.L / 2, alloc.RB_start + alloc.L);
+                std::cout << "This is the new mask SLICE 2 after alloc: " << newmask.to_string() << std::endl << "/n";
+
+                if ((ul_mask & newmask).any()) {
+                    return alloc_outcome_t::RB_COLLISION;
+                }
+
+                // Generate PDCCH except for RAR and non-adaptive retx
+                if (needs_pdcch) {
+                    uint32_t nof_bits = srslte_dci_format_sizeof(&cc_cfg->cfg.cell, nullptr, nullptr,
+                                                                 SRSLTE_DCI_FORMAT0);
+                    uint32_t aggr_idx = user->get_ue_carrier(cc_cfg->enb_cc_idx)->get_aggr_level(nof_bits);
+                    if (not pdcch_alloc.alloc_dci(alloc_type_t::UL_DATA, aggr_idx, user)) {
+                        if (log_h->get_level() == srslte::LOG_LEVEL_DEBUG) {
+                            log_h->debug("No space in PDCCH for rnti=0x%x UL tx. Current PDCCH allocation: %s\n",
+                                         user->get_rnti(),
+                                         pdcch_alloc.result_to_string(true).c_str());
+                        }
+                        return alloc_outcome_t::DCI_COLLISION;
+                    }
+                }
+
+                ul_mask |= newmask;
+
+                return alloc_outcome_t::SUCCESS;
             }
-
-            ul_mask |= newmask;
-
-            return alloc_outcome_t::SUCCESS;
-        } else if (user->get_qci() == 9) {
-            newmask.fill(alloc.L / 2, alloc.RB_start + alloc.L);
-            std::cout << "This is the new mask SLICE 2 after alloc: " << newmask.to_string() << std::endl << "/n";
-
             if ((ul_mask & newmask).any()) {
                 return alloc_outcome_t::RB_COLLISION;
             }
@@ -600,27 +625,6 @@ alloc_outcome_t sf_grid_t::alloc_ul_data(sched_ue* user, ul_harq_proc::ul_alloc_
 
             return alloc_outcome_t::SUCCESS;
         }
-    if ((ul_mask & newmask).any()) {
-        return alloc_outcome_t::RB_COLLISION;
-    }
-
-    // Generate PDCCH except for RAR and non-adaptive retx
-    if (needs_pdcch) {
-        uint32_t nof_bits = srslte_dci_format_sizeof(&cc_cfg->cfg.cell, nullptr, nullptr, SRSLTE_DCI_FORMAT0);
-        uint32_t aggr_idx = user->get_ue_carrier(cc_cfg->enb_cc_idx)->get_aggr_level(nof_bits);
-        if (not pdcch_alloc.alloc_dci(alloc_type_t::UL_DATA, aggr_idx, user)) {
-            if (log_h->get_level() == srslte::LOG_LEVEL_DEBUG) {
-                log_h->debug("No space in PDCCH for rnti=0x%x UL tx. Current PDCCH allocation: %s\n",
-                             user->get_rnti(),
-                             pdcch_alloc.result_to_string(true).c_str());
-            }
-            return alloc_outcome_t::DCI_COLLISION;
-        }
-    }
-
-    ul_mask |= newmask;
-
-    return alloc_outcome_t::SUCCESS;
 }
 
 
