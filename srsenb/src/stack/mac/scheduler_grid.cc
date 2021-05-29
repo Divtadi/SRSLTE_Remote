@@ -823,7 +823,7 @@ void sf_sched::new_tti(uint32_t tti_rx_)
   // setup first prb to be used for msg3 alloc. Account for potential PRACH alloc
   last_msg3_prb           = cc_cfg->cfg.nrb_pucch;
   uint32_t tti_msg3_alloc = TTI_ADD(tti_params.tti_tx_ul, MSG3_DELAY_MS);
-  std::cout<<"This is the of new_tti function!"<<std::endl<<"/n";
+  std::cout<<"This is the end of new_tti function!"<<std::endl;
   if (srslte_prach_tti_opportunity_config_fdd(cc_cfg->cfg.prach_config, tti_msg3_alloc, -1)) {
     last_msg3_prb = std::max(last_msg3_prb, cc_cfg->cfg.prach_freq_offset + 6);
   }
@@ -1010,7 +1010,6 @@ alloc_outcome_t sf_sched::alloc_ul(sched_ue*                    user,
                                    sf_sched::ul_alloc_t::type_t alloc_type,
                                    uint32_t                     mcs)
 {
-  std::cout<<" This is the ret variable which contains alloc outcome" <<std::endl<<"/n";
   // Check whether user was already allocated
   if (is_ul_alloc(user)) {
     log_h->warning("SCHED: Attempt to assign multiple ul_harq_proc to the same user rnti=0x%x\n", user->get_rnti());
@@ -1020,6 +1019,7 @@ alloc_outcome_t sf_sched::alloc_ul(sched_ue*                    user,
   // Allocate RBGs and DCI space
   bool            needs_pdcch = alloc_type == ul_alloc_t::ADAPT_RETX or alloc_type == ul_alloc_t::NEWTX;
   alloc_outcome_t ret         = tti_alloc.alloc_ul_data(user, alloc, needs_pdcch);
+  std::cout<<" This is the ret variable which contains alloc outcome" << ret.to_string()<<std::endl<<"/n";
   if (ret != alloc_outcome_t::SUCCESS) {
     return ret;
   }
@@ -1038,8 +1038,7 @@ alloc_outcome_t sf_sched::alloc_ul(sched_ue*                    user,
 
 alloc_outcome_t sf_sched::alloc_ul_user(sched_ue* user, ul_harq_proc::ul_alloc_t alloc)
 {
-  std::cout <<"Start of alloc_outcome function- alloc_ul_user:"<< std::endl<<"/n";
-    // check whether adaptive/non-adaptive retx/newtx
+  // check whether adaptive/non-adaptive retx/newtx
   sf_sched::ul_alloc_t::type_t alloc_type;
   ul_harq_proc*                h = user->get_ul_harq(get_tti_tx_ul(), user->get_cell_index(cc_cfg->enb_cc_idx).second);
   bool                         has_retx = h->has_pending_retx();
@@ -1053,6 +1052,7 @@ alloc_outcome_t sf_sched::alloc_ul_user(sched_ue* user, ul_harq_proc::ul_alloc_t
   } else {
     alloc_type = ul_alloc_t::NEWTX;
   }
+  std::cout <<"Inside harq function- alloc_ul:"<< std::endl<<"/n";
   return alloc_ul(user, alloc, alloc_type);
 }
 
@@ -1088,12 +1088,12 @@ bool sf_sched::alloc_phich(sched_ue* user, sched_interface::ul_sched_res_t* ul_s
 void sf_sched::set_bc_sched_result(const pdcch_grid_t::alloc_result_t& dci_result,
                                    sched_interface::dl_sched_res_t*    dl_result)
 {
-    std::cout<<"This is inside the set_bc_result fctn [dci_result]:"<< std::endl<<"/n";
   for (const auto& bc_alloc : bc_allocs) {
     sched_interface::dl_sched_bc_t* bc = &dl_result->bc[dl_result->nof_bc_elems];
 
     // assign NCCE/L
     bc->dci.location = dci_result[bc_alloc.dci_idx]->dci_pos;
+    std::cout<<"This is inside the set_bc_result fctn [dci_result]:"<< std::endl<<"/n";
 
     /* Generate DCI format1A */
     prb_range_t prb_range = prb_range_t::rbgs_to_prbs(bc_alloc.rbg_range, cc_cfg->P);
