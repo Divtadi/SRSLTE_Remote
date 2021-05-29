@@ -764,13 +764,13 @@ bool sf_grid_t::reserve_ul_prbs(const prbmask_t& prbmask, bool strict)
     log_h->error("There was a collision in UL channel. current mask=0x%s, new alloc mask=0x%s\n",
                  ul_mask.to_hex().c_str(),
                  prbmask.to_hex().c_str());
-                 std::cout <<"This is the ul_mask to hex in the resrv_ul_prbs fctn: " << ul_mask.to_hex().c_str() << std::endl <<"/n";
-                 std::cout <<"This is the prbmask to hex in the resrv_ul_prbs fctn: " << prbmask.to_hex().c_str() << std::endl <<"/n";
+                 //std::cout <<"This is the ul_mask to hex in the resrv_ul_prbs fctn: " << ul_mask.to_hex().c_str() << std::endl <<"/n";
+                 //std::cout <<"This is the prbmask to hex in the resrv_ul_prbs fctn: " << prbmask.to_hex().c_str() << std::endl <<"/n";
     ret = false;
   }
   ul_mask |= prbmask;
-  std::cout <<"This is the ul_mask in the resrv_ul_prbs fctn: " << ul_mask.to_string() << std::endl <<"/n";
-  std::cout <<"This is the prbmask in the resrv_ul_prbs fctn: " << prbmask.to_string() << std::endl <<"/n";
+  //std::cout <<"This is the ul_mask in the resrv_ul_prbs fctn: " << ul_mask.to_string() << std::endl <<"/n";
+  //std::cout <<"This is the prbmask in the resrv_ul_prbs fctn: " << prbmask.to_string() << std::endl <<"/n";
   return ret;
 }
 
