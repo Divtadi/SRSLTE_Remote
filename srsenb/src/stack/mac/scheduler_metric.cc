@@ -556,9 +556,9 @@ bool ul_metric_rr::find_allocation(uint32_t L, ul_harq_proc::ul_alloc_t* alloc,s
   if(user->get_qci() == 7){
       i = 0;
   }else if(user->get_qci() == 9){
-      i = 13;
+      i = 25;
   }else{
-      i = 13;
+      i = 25;
   }
   for (uint32_t n = i; n < used_rb->size() && alloc->L < L; n++) { // div by 2
       std::cout <<"Divya L RBs requested value: " << L << std::endl<<"/n";
