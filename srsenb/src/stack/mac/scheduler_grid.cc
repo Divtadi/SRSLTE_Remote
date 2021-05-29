@@ -549,8 +549,10 @@ alloc_outcome_t sf_grid_t::alloc_ul_data(sched_ue* user, ul_harq_proc::ul_alloc_
         std::cout << "This is the newmask- ul_mask size in grid file: " << ul_mask.size() << std::endl << "/n";
         std::cout << "This is the QCI value in the grid file inside UL code: " << user->get_qci() << std::endl << "/n";
         if (user->get_qci() == 7) {
-            newmask.fill(alloc.RB_start, alloc.RB_start + alloc.L / 2);
+            newmask.fill(alloc.RB_start, alloc.RB_start + (alloc.L / 2));
             std::cout << "This is the new mask SLICE 1 after alloc: " << newmask.to_string() << std::endl << "/n";
+            std::cout << "This is the RB_start insise the QCI7: " << alloc.RB_start <<std::endl<<"/n";
+            std::cout << "This is the end position of mask insise the QCI7: " << alloc.RB_start + (alloc.L/2) <<std::endl<<"/n";
 
             if ((ul_mask & newmask).any()) {
                 return alloc_outcome_t::RB_COLLISION;
@@ -572,11 +574,15 @@ alloc_outcome_t sf_grid_t::alloc_ul_data(sched_ue* user, ul_harq_proc::ul_alloc_
             }
 
             ul_mask |= newmask;
+            std::cout << "This is the ul_mask inside QCI7: "<< ul_mask.to_string() << std::endl<<"/n";
 
             return alloc_outcome_t::SUCCESS;
         } else if (user->get_qci() == 9) {
             newmask.fill(alloc.L / 2, alloc.RB_start + alloc.L);
             std::cout << "This is the new mask SLICE 2 after alloc: " << newmask.to_string() << std::endl << "/n";
+            std::cout << "This is the Start position of mask inside QCI9: "<< alloc.L/2 << std::endl<<"/n";
+            std::cout << "This is the End position of mask inside QCI9: "<< alloc.RB_start + alloc.L << std::endl<<"/n";
+
 
             if ((ul_mask & newmask).any()) {
                 return alloc_outcome_t::RB_COLLISION;
@@ -758,9 +764,13 @@ bool sf_grid_t::reserve_ul_prbs(const prbmask_t& prbmask, bool strict)
     log_h->error("There was a collision in UL channel. current mask=0x%s, new alloc mask=0x%s\n",
                  ul_mask.to_hex().c_str(),
                  prbmask.to_hex().c_str());
+                 std::cout <<"This is the ul_mask to hex in the resrv_ul_prbs fctn: " << ul_mask.to_hex().c_str() << std::endl <<"/n";
+                 std::cout <<"This is the prbmask to hex in the resrv_ul_prbs fctn: " << prbmask.to_hex().c_str() << std::endl <<"/n";
     ret = false;
   }
   ul_mask |= prbmask;
+  std::cout <<"This is the ul_mask in the resrv_ul_prbs fctn: " << ul_mask.to_string() << std::endl <<"/n";
+  std::cout <<"This is the prbmask in the resrv_ul_prbs fctn: " << prbmask.to_string() << std::endl <<"/n";
   return ret;
 }
 
@@ -1017,6 +1027,7 @@ alloc_outcome_t sf_sched::alloc_ul(sched_ue*                    user,
   ul_alloc.mcs        = mcs;
   ul_data_allocs.push_back(ul_alloc);
 
+  //std::cout<<"This is the ul_alloc.alloc value in the functn: "<< alloc_ul_data->alloc << std::endl <<"/n";
   return alloc_outcome_t::SUCCESS;
 }
 
