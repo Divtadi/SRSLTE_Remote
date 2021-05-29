@@ -576,8 +576,8 @@ alloc_outcome_t sf_grid_t::alloc_ul_data(sched_ue* user, ul_harq_proc::ul_alloc_
                     }
                 }
 
-            ul_mask |= newmask;
-            std::cout << "This is the ul_mask inside QCI7: " << ul_mask.to_string() << std::endl << "/n";
+                ul_mask |= newmask;
+                std::cout << "This is the ul_mask inside QCI7: " << ul_mask.to_string() << std::endl << "/n";
 
                 return alloc_outcome_t::SUCCESS;
             } else if (user->get_qci() == 9) {
@@ -605,8 +605,8 @@ alloc_outcome_t sf_grid_t::alloc_ul_data(sched_ue* user, ul_harq_proc::ul_alloc_
                     }
                 }
 
-            ul_mask |= newmask;
-            std::cout << "This is the ul_mask inside QCI7: " << ul_mask.to_string() << std::endl << "/n";
+                ul_mask |= newmask;
+                std::cout << "This is the ul_mask inside QCI7: " << ul_mask.to_string() << std::endl << "/n";
 
                 return alloc_outcome_t::SUCCESS;
             }
@@ -624,13 +624,13 @@ alloc_outcome_t sf_grid_t::alloc_ul_data(sched_ue* user, ul_harq_proc::ul_alloc_
                                      user->get_rnti(),
                                      pdcch_alloc.result_to_string(true).c_str());
                     }
+                    return alloc_outcome_t::DCI_COLLISION;
                 }
             }
-            return alloc_outcome_t::DCI_COLLISION;
-
-            ul_mask |= newmask;
         }
-    return alloc_outcome_t::SUCCESS;
+
+            //ul_mask |= newmask;
+            return alloc_outcome_t::SUCCESS;
 }
 
 
