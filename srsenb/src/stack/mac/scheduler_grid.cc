@@ -630,7 +630,7 @@ alloc_outcome_t sf_grid_t::alloc_ul_data(sched_ue* user, ul_harq_proc::ul_alloc_
         }
 
             //ul_mask |= newmask;
-            std::cout <<"This is the end of default srslte code loop!"<<std::endl;
+            //std::cout <<"This is the end of default srslte code loop!"<<std::endl;
             return alloc_outcome_t::SUCCESS;
 }
 
@@ -823,7 +823,7 @@ void sf_sched::new_tti(uint32_t tti_rx_)
   // setup first prb to be used for msg3 alloc. Account for potential PRACH alloc
   last_msg3_prb           = cc_cfg->cfg.nrb_pucch;
   uint32_t tti_msg3_alloc = TTI_ADD(tti_params.tti_tx_ul, MSG3_DELAY_MS);
-  std::cout<<"This is the end of new_tti function!"<<std::endl;
+  //std::cout<<"This is the end of new_tti function!"<<std::endl;
   if (srslte_prach_tti_opportunity_config_fdd(cc_cfg->cfg.prach_config, tti_msg3_alloc, -1)) {
     last_msg3_prb = std::max(last_msg3_prb, cc_cfg->cfg.prach_freq_offset + 6);
   }
@@ -1019,7 +1019,7 @@ alloc_outcome_t sf_sched::alloc_ul(sched_ue*                    user,
   // Allocate RBGs and DCI space
   bool            needs_pdcch = alloc_type == ul_alloc_t::ADAPT_RETX or alloc_type == ul_alloc_t::NEWTX;
   alloc_outcome_t ret         = tti_alloc.alloc_ul_data(user, alloc, needs_pdcch);
-  std::cout<<" This is the ret variable which contains alloc outcome" << ret.to_string()<<std::endl<<"/n";
+  //std::cout<<" This is the ret variable which contains alloc outcome" << ret.to_string()<<std::endl<<"/n";
   if (ret != alloc_outcome_t::SUCCESS) {
     return ret;
   }
@@ -1052,7 +1052,7 @@ alloc_outcome_t sf_sched::alloc_ul_user(sched_ue* user, ul_harq_proc::ul_alloc_t
   } else {
     alloc_type = ul_alloc_t::NEWTX;
   }
-  std::cout <<"Inside harq function- alloc_ul:"<< std::endl<<"/n";
+  //std::cout <<"Inside harq function- alloc_ul:"<< std::endl<<"/n";
   return alloc_ul(user, alloc, alloc_type);
 }
 
@@ -1060,7 +1060,7 @@ bool sf_sched::alloc_phich(sched_ue* user, sched_interface::ul_sched_res_t* ul_s
 {
   using phich_t    = sched_interface::ul_sched_phich_t;
   auto& phich_list = ul_sf_result->phich[ul_sf_result->nof_phich_elems];
-  std::cout<<"This is inside the alloc_phich_inside fctn"<<std::endl<<"/n";
+  //std::cout<<"This is inside the alloc_phich_inside fctn"<<std::endl<<"/n";
 
   auto p = user->get_cell_index(cc_cfg->enb_cc_idx);
   if (not p.first) {
@@ -1093,7 +1093,7 @@ void sf_sched::set_bc_sched_result(const pdcch_grid_t::alloc_result_t& dci_resul
 
     // assign NCCE/L
     bc->dci.location = dci_result[bc_alloc.dci_idx]->dci_pos;
-    std::cout<<"This is inside the set_bc_result fctn [dci_result]:"<< std::endl<<"/n";
+    //std::cout<<"This is inside the set_bc_result fctn [dci_result]:"<< std::endl<<"/n";
 
     /* Generate DCI format1A */
     prb_range_t prb_range = prb_range_t::rbgs_to_prbs(bc_alloc.rbg_range, cc_cfg->P);
@@ -1159,7 +1159,7 @@ void sf_sched::set_bc_sched_result(const pdcch_grid_t::alloc_result_t& dci_resul
 void sf_sched::set_rar_sched_result(const pdcch_grid_t::alloc_result_t& dci_result,
                                     sched_interface::dl_sched_res_t*    dl_result)
 {
-  std::cout<<"This is inside the RAR function:"<<std::endl;
+  //std::cout<<"This is inside the RAR function:"<<std::endl;
   for (const auto& rar_alloc : rar_allocs) {
     sched_interface::dl_sched_rar_t* rar = &dl_result->rar[dl_result->nof_rar_elems];
 
