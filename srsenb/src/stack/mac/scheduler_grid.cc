@@ -581,7 +581,7 @@ alloc_outcome_t sf_grid_t::alloc_ul_data(sched_ue* user, ul_harq_proc::ul_alloc_
 
                 return alloc_outcome_t::SUCCESS;
             } else if (user->get_qci() == 9) {
-                newmask.fill(alloc.L / 2, alloc.RB_start + alloc.L);
+                newmask.fill(alloc.RB_start+ alloc.L / 2, alloc.RB_start + alloc.L);
                 std::cout << "This is the new mask SLICE 2 after alloc: " << newmask.to_string() << std::endl << "/n";
                 std::cout << "This is the RB_start inside   QCI7: " << alloc.RB_start << std::endl << "/n";
                 std::cout << "This is the ENDPOS inside   QCI7: " << alloc.RB_start + alloc.L/2 << std::endl << "/n";
@@ -606,7 +606,7 @@ alloc_outcome_t sf_grid_t::alloc_ul_data(sched_ue* user, ul_harq_proc::ul_alloc_
                 }
 
                 ul_mask |= newmask;
-                std::cout << "This is the ul_mask inside QCI7: " << ul_mask.to_string() << std::endl << "/n";
+                std::cout << "This is the ul_mask inside QCI9: " << ul_mask.to_string() << std::endl << "/n";
 
                 return alloc_outcome_t::SUCCESS;
             }
