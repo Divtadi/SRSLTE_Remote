@@ -554,9 +554,9 @@ bool ul_metric_rr::find_allocation(uint32_t L, ul_harq_proc::ul_alloc_t* alloc,s
   uint16_t i;
 
   if(user->get_qci() == 7){
-      i = 0;
+      i = 0; //Slice 1
   }else if(user->get_qci() == 9){
-      i = 25;
+      i = 25; //Slice 2
   }else{
       i = 25;
   }
