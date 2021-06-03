@@ -539,6 +539,7 @@ void ul_metric_rr::sched_ul_users_s2(std::map<uint16_t, sched_ue*>& ue_db, ul_sf
  * @param alloc Found allocation. It is guaranteed that 0 <= alloc->L <= L
  * @return true if the requested allocation of size L was strictly met
  */
+
 bool ul_metric_rr::find_allocation(uint32_t L, ul_harq_proc::ul_alloc_t* alloc,sched_ue* user)
 {
   const prbmask_t* used_rb = &tti_alloc->get_ul_mask();
@@ -552,16 +553,19 @@ bool ul_metric_rr::find_allocation(uint32_t L, ul_harq_proc::ul_alloc_t* alloc,s
   std::cout <<"Divya qci 2: " << user->get_qci() << std::endl<<"/n";
 
   uint16_t i;
+  uint16_t j;
 
   if(user->get_qci() == 7){
-      i = 0; //Slice 1
+      i = 0;
+      j = 25;//Slice 1
   }else if(user->get_qci() == 9){
       //i = 25;
-      i = 13;     //Slice 2
+      i = 13;
+      j = 50;//Slice 2
   }else{
       i = 13;
   }
-  for (uint32_t n = i; n < used_rb->size() && alloc->L < L; n++) { // div by 2
+  for (uint32_t n = i; n < used_rb->size() && alloc->L && j < L; n++) { // div by 2
       std::cout <<"Divya L RBs requested value: " << L << std::endl<<"/n";
       if (not used_rb->test(n) && alloc->L == 0) {
           alloc->RB_start = n;
@@ -591,6 +595,7 @@ bool ul_metric_rr::find_allocation(uint32_t L, ul_harq_proc::ul_alloc_t* alloc,s
         alloc->L--;
     }
     std::cout <<"Divya Finally Allocated PRB value: " << alloc->L << std::endl<<"/n";
+    //std::cout <<"Divya Finally Allocated PRB value: " << tti< std::endl<<"/n";
     return alloc->L == L;
 }
 
