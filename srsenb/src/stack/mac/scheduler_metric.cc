@@ -540,7 +540,7 @@ void ul_metric_rr::sched_ul_users_s2(std::map<uint16_t, sched_ue*>& ue_db, ul_sf
  * @return true if the requested allocation of size L was strictly met
  */
 
-bool ul_metric_rr::find_allocation(uint32_t L, ul_harq_proc::ul_alloc_t* alloc,sched_ue* user)
+bool ul_metric_rr::find_allocation(uint32_t L, ul_harq_proc::ul_alloc_t* alloc, sched_ue* user) {
 {
   const prbmask_t* used_rb = &tti_alloc->get_ul_mask();
   std::cout <<"This is the QCI value from the ue_db.csv file:" << user->get_qci()<< std::endl<<"/n";
@@ -554,16 +554,20 @@ bool ul_metric_rr::find_allocation(uint32_t L, ul_harq_proc::ul_alloc_t* alloc,s
 
   uint16_t i=0;
   uint16_t j=0;
+  uint16_t s1_user_count = 1;
+  uint16_t s2_user_count = 1;
 
-  if(L <= 25) {
+  if(s1_user_count==s2_user_count) {
       if (user->get_qci() == 7) { //50-50 configuration
           i = 0;
           j = 25;
       } else if (user->get_qci() == 9) {
           i = 26;
           j = 50;
+          std::cout << "Divya alloc:" << alloc->L << std::endl << "/n";
       }
-  }if(L>25){
+  }
+  if(s1_user_count > s2_user_count){
       if(user->get_qci() == 7){ //75-25 configuration
           i = 0;
           j = 38;
