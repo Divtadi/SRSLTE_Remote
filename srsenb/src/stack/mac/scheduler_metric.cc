@@ -553,17 +553,16 @@ bool ul_metric_rr::find_allocation(uint32_t L, ul_harq_proc::ul_alloc_t* alloc,s
 
   uint16_t i = 0;
   uint16_t j = 0;
-  uint16_t s1_user_count = 1;
-  uint16_t s2_user_count = 1;
+  //uint16_t s1_user_count = 1;
+  //uint16_t s2_user_count = 1;
 
   //if (s1_user_count == s2_user_count) {
   if (user->get_qci() == 7) { //50-50 configuration
       i = 0;
       j = 25;
   } else if (user->get_qci() == 9) {
-      i = 26;
+      i = 25;
       j = 50;
-      std::cout << "Divya alloc:" << alloc->L << std::endl << "/n";
   }
   //}
   /*if (s1_user_count > s2_user_count) {
