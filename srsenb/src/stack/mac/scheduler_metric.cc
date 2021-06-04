@@ -575,7 +575,7 @@ bool ul_metric_rr::find_allocation(uint32_t L, ul_harq_proc::ul_alloc_t* alloc,s
           j = 50;
       }
   }
-  for (uint32_t n = i; n < used_rb->size() && alloc->L && j < L; n++) { // div by 2
+  for (uint32_t n = i; n < used_rb->size() && alloc->L && j ; n++) { // div by 2
       std::cout << "Divya L RBs requested value: " << L << std::endl << "/n";
       if (not used_rb->test(n) && alloc->L == 0) {
           alloc->RB_start = n;
