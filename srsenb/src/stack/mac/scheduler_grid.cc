@@ -568,6 +568,7 @@ alloc_outcome_t sf_grid_t::alloc_ul_data(sched_ue* user, ul_harq_proc::ul_alloc_
 
   ul_mask |= newmask;
   //std::cout << "This is the ul_mask after assigning new mask: " << ul_mask.to_string() << std::endl << "/n";
+
   return alloc_outcome_t::SUCCESS;
 }
 /*
