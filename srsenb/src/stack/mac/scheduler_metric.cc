@@ -552,15 +552,18 @@ bool ul_metric_rr::find_allocation(uint32_t L, ul_harq_proc::ul_alloc_t* alloc,s
   std::cout <<"Divya qci 2: " << user->get_qci() << std::endl<<"/n";
 
   uint16_t i;
+    uint16_t j;
 
   if(user->get_qci() == 7){
       i = 0;
+      j = 25;
   }else if(user->get_qci() == 9){
       i = 25;
+      j = 50;
   }else{
       i = 25;
   }
-  for (uint32_t n = i; n < used_rb->size() && alloc->L < L; n++) { // div by 2
+  for (uint32_t n = i; n < used_rb->size() && alloc->L < L && j; n++) { // div by 2
       std::cout <<"Divya L RBs requested value: " << L << std::endl<<"/n";
       if (not used_rb->test(n) && alloc->L == 0) {
           alloc->RB_start = n;
