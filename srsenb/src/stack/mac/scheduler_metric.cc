@@ -550,19 +550,32 @@ bool ul_metric_rr::find_allocation(uint32_t L, ul_harq_proc::ul_alloc_t* alloc,s
   std::cout <<"Divya user val: " << user << std::endl<<"/n";
   std::cout <<"Divya rnti: " << user->get_rnti() << std::endl<<"/n";
   std::cout <<"Divya qci 2: " << user->get_qci() << std::endl<<"/n";
+  //std::cout <<"Divya qci 2: " << nof_user << std::endl<<"/n";
 
-  uint16_t i;
-    uint16_t j;
+  uint16_t i = 0;
+    uint16_t j = 0;
+    uint16_t users_s1 = 1;
+    uint16_t users_s2 = 1;
+    if (users_s1 == users_s2) {
+        if (user->get_qci() == 7) {
+            i = 0;
+            j = 25;
+        } else if(user->get_qci() == 9) {
+            i = 25;
+            j = 50;
+        } else{
+            std::cout << "users not connected" << std::endl<<"/n";
+        }
+    }else {
+        if (user->get_qci() == 7) {
+            i = 0;
+            j = 13;
+        } else if(user->get_qci() == 9) {
+            i = 13;
+            j = 50;
+        }
+    }
 
-  if(user->get_qci() == 7){
-      i = 0;
-      j = 25;
-  }else if(user->get_qci() == 9){
-      i = 25;
-      j = 50;
-  }else{
-      i = 25;
-  }
   for (uint32_t n = i; n < used_rb->size() && alloc->L < L && j; n++) { // div by 2
       std::cout <<"Divya L RBs requested value: " << L << std::endl<<"/n";
       if (not used_rb->test(n) && alloc->L == 0) {
