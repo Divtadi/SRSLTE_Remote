@@ -596,7 +596,74 @@ bool ul_metric_rr::find_allocation(uint32_t L, ul_harq_proc::ul_alloc_t* alloc,s
     std::cout <<"Divya Finally Allocated PRB value: " << alloc->L << std::endl<<"/n";
     return alloc->L == L;
 }
+/* Code for Automatic selection for slice proportions
+ bool ul_metric_rr::find_allocation(uint32_t L, ul_harq_proc::ul_alloc_t* alloc,sched_ue* user)
+{
+  const prbmask_t* used_rb = &tti_alloc->get_ul_mask();
+  std::cout <<"This is the QCI value from the ue_db.csv file:" << user->get_qci()<< std::endl<<"/n";
+  std::cout <<"Divya prb mask: " << used_rb->size()<< std::endl<<"/n";
+  bzero(alloc, sizeof(ul_harq_proc::ul_alloc_t));//not sure why L prints = 0
+  std::cout <<"Divya alloc:" << alloc->L << std::endl<<"/n";
+  std::cout <<"Divya size of UL alloc: " << sizeof(ul_harq_proc::ul_alloc_t)<< std::endl<<"/n";
+  std::cout <<"Divya user val: " << user << std::endl<<"/n";
+  std::cout <<"Divya rnti: " << user->get_rnti() << std::endl<<"/n";
+  std::cout <<"Divya qci 2: " << user->get_qci() << std::endl<<"/n";
 
+  /*if (users_s1 == users_s2) {
+      if (user->get_qci() == 7) {
+          i = 0;
+          j = 25;
+      } else if(user->get_qci() == 9) {
+          i = 26;
+          j = 50;
+      } else{
+          std::cout << "users not connected" << std::endl<<"/n";
+      }
+}else {
+      if (user->get_qci() == 7) {
+          i = 0;
+          j = 13;
+      } else if(user->get_qci() == 9) {
+          i = 14;
+          j = 50;
+      } else{
+          std::cout << "users not connected" << std::endl<<"/n";
+      }
+  }
+    for (uint32_t n = i; n < used_rb->size() && alloc->L < L && j; n++) { // div by 2
+      std::cout <<"Divya L RBs requested value: " << L << std::endl<<"/n";
+      if (not used_rb->test(n) && alloc->L == 0) {
+          alloc->RB_start = n;
+          std::cout <<"Divya Alloc RB_start value: " << alloc->RB_start << std::endl<<"/n";
+      }
+      if (not used_rb->test(n)) {
+          alloc->L++;
+          std::cout <<"Divya Alloc L++ value: " << alloc->L << std::endl<<"/n";
+      }  else if (alloc->L > 0) {
+            // avoid edges
+         if (n < 3) {
+            std::cout <<"Divya avoid edge" << n << std::endl<<"/n";
+            alloc->RB_start = 0;
+            alloc->L        = 0;
+         } else {
+          break;
+         }
+      }
+  }
+  if (alloc->L == 0) {
+        std::cout<<"Divya allocation  = 0, so returning false!" << std::endl<<"/n";
+        return false;
+    }
+
+    // Make sure L is allowed by SC-FDMA modulation
+    while (!srslte_dft_precoding_valid_prb(alloc->L)) {
+        alloc->L--;
+    }
+    std::cout <<"Divya Finally Allocated PRB value: " << alloc->L << std::endl<<"/n";
+    return alloc->L == L;
+}
+ */
+ */
 /*DIV
 bool ul_metric_rr::find_allocation(uint32_t L, ul_harq_proc::ul_alloc_t* alloc,sched_ue* user)
 {
