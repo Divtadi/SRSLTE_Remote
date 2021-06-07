@@ -554,16 +554,18 @@ bool ul_metric_rr::find_allocation(uint32_t L, ul_harq_proc::ul_alloc_t* alloc,s
 
   uint16_t i = 0;
   uint16_t j = 0;
-  uint16_t users_s1 = 0;
-  uint16_t users_s2 = 0;
-  if (user->get_qci() == 7){
-        users_s1 = users_s1 + 1;
-    }else if(user->get_qci() == 9){
-        users_s2 = users_s2 + 1;
-    }else{
-      std::cout << "users not connected" << std::endl<<"/n";
-  }
-  if (users_s1 == users_s2) {
+  //uint16_t users_s1 = 0;
+  //uint16_t users_s2 = 0;
+  if (user->get_qci() == 7) {
+        i = 0;
+        j = 25;
+    } else if(user->get_qci() == 9) {
+        i = 26;
+        j = 50;
+    } else{
+        std::cout << "users not connected" << std::endl<<"/n";
+    }
+  /*if (users_s1 == users_s2) {
         if (user->get_qci() == 7) {
             i = 0;
             j = 25;
@@ -583,7 +585,7 @@ bool ul_metric_rr::find_allocation(uint32_t L, ul_harq_proc::ul_alloc_t* alloc,s
         } else{
             std::cout << "users not connected" << std::endl<<"/n";
         }
-    }
+    }*/
 
   for (uint32_t n = i; n < used_rb->size() && alloc->L < L && j; n++) { // div by 2
       std::cout <<"Divya L RBs requested value: " << L << std::endl<<"/n";
