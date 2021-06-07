@@ -561,7 +561,7 @@ bool ul_metric_rr::find_allocation(uint32_t L, ul_harq_proc::ul_alloc_t* alloc,s
             i = 0;
             j = 25;
         } else if(user->get_qci() == 9) {
-            i = 25;
+            i = 26;
             j = 50;
         } else{
             std::cout << "users not connected" << std::endl<<"/n";
@@ -571,7 +571,7 @@ bool ul_metric_rr::find_allocation(uint32_t L, ul_harq_proc::ul_alloc_t* alloc,s
             i = 0;
             j = 13;
         } else if(user->get_qci() == 9) {
-            i = 13;
+            i = 14;
             j = 50;
         }
     }
