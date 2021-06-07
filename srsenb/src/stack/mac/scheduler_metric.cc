@@ -556,12 +556,12 @@ bool ul_metric_rr::find_allocation(uint32_t L, ul_harq_proc::ul_alloc_t* alloc,s
 
   if(user->get_qci() == 7){
       i = 0;
-      j = 25;
+      j = 25; //change to 12 for 25-75 configuration
   }else if(user->get_qci() == 9){
-      i = 25;
+      i = 25; //12 for 25-75
       j = 50;
   }else{
-      i = 25;
+      i = 25; //
       j = 50;
   }
   for (uint32_t n = i; n < used_rb->size() && alloc->L < L && j; n++) { // div by 2
