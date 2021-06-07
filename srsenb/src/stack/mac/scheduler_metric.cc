@@ -663,7 +663,6 @@ bool ul_metric_rr::find_allocation(uint32_t L, ul_harq_proc::ul_alloc_t* alloc,s
     return alloc->L == L;
 }
  */
- */
 /*DIV
 bool ul_metric_rr::find_allocation(uint32_t L, ul_harq_proc::ul_alloc_t* alloc,sched_ue* user)
 {
