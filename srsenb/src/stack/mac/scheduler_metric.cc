@@ -557,22 +557,22 @@ bool ul_metric_rr::find_allocation(uint32_t L, ul_harq_proc::ul_alloc_t* alloc,s
   uint16_t s2_user_count = 1;
 
   if (s1_user_count == s2_user_count) {
-  if (user->get_qci() == 7) { //50-50 configuration
-      i = 0;
-      j = 25;
-  } else if (user->get_qci() == 9) {
-      i = 25;
-      j = 50;
+        if (user->get_qci() == 7) { //50-50 configuration
+            i = 0;
+            j = 25;
+        } else if (user->get_qci() == 9) {
+            i = 25;
+            j = 50;
+        }
   }
-  }
-  if (s1_user_count > s2_user_count) {
-      if (user->get_qci() == 7) { //75-25 configuration
-          i = 0;
-          j = 38;
-      } else if (user->get_qci() == 9) {
-          i = 39;
-          j = 50;
-      }
+  else {
+        if (user->get_qci() == 7) { //75-25 configuration
+            i = 0;
+            j = 38;
+        } else if (user->get_qci() == 9) {
+            i = 39;
+            j = 50;
+        }
   }
   for (uint32_t n = i; n < used_rb->size() && alloc->L && j; n++) { // div by 2
       std::cout << "Divya L RBs requested value: " << L << std::endl << "/n";
